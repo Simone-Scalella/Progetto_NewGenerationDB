@@ -1,0 +1,14 @@
+1. The folder 'Templates' contains the templates of the tested SPARQL queries. Here queries '01.q'-'12.q' are the SPARQL queries in the BSBM  benchmark, and '00.q' is a simple query designed by us for testing. The queries are obtained by replacing the values in the SPARQL queries with arguments;
+
+2. The folder 'TemplatesSQL-sc1' are the SQL translations of the SPARQL queries w.r.t. the ontology and the mapping set 'bsbm-mappings-sc1.obda' by Ontop. The concrete translation is dones by replaing the arguments in the SPARQL queries with concrete values, and then replace the corresponding values in the translated SQL queries with the arguments in the SPARQL queries;
+
+3. The queries in the folder 'TemplateSQL-sc2' and 'TemplateSQL-het-hom' are obtained similar to the queries in 'TemplatesSQL-sc1';
+
+4. The folder 'TemplatesSQL-het-hom-opt' contains the queries obtained by rewriting the queries in 'TemplatesSQL-het-hom' only using the hints of empty federated joins and data redundancy;
+
+5. The folder 'TemplatesSQL-het-hom-opt-matv' contains the queries obtained by rewriting the queries in 'TemplatesSQL-het-hom' using all the hints, including materialized views;
+
+6. The folder 'results' contains the evaluation of these queries on our server using obda-mixer;
+
+
+Note that the homogeneous and heterogeneous situation use the same VDB, so the queries evaluated are the same.
