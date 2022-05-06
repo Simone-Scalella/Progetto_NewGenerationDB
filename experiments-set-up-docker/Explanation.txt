@@ -1,0 +1,11 @@
+Set up the different situations (docker environment) of the experiments.
+
+1. Following the README, choose a scalability, i.e., 2K, 20K, and 2M, to generate the data;
+
+2. Following the README, make a copy of the '.env.example' file, and set the SCALE (could be 20000, 200000, and 2000000) and COMPOSE_PROFILES (could be hom, het, sc1 and sc2) argument and then run the command 'docker-compose up' to set up the OBDF and OBDA instances for query answering testing.
+   Here, for simplification, the set up of hom and het also contains the source for materialized views. This means that hom and het are the federation instances with materialization;
+
+
+NOTE THAT: here source s5 (s5p) denotes s2 (s2p) in the paper, and source s2 (s2p) denotes s5 (s5p).
+
+

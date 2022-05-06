@@ -1,0 +1,76 @@
+deploy /resources/db2jcc4-11.1.1.1.jar
+deploy /resources/mssql-jdbc-10.2.0.jre8.jar
+deploy /resources/mysql-connector-java-8.0.28.jar
+deploy /resources/postgresql-42.3.1.jar
+
+/subsystem=datasources/data-source=s1:add( \
+    jndi-name="java:/s1", \
+    driver-name="postgresql-42.3.1.jar", \
+    connection-url="jdbc:postgresql://source-s1:5432/s1", \
+    user-name="${USERID}", \
+    password="${USERPWD}", \
+    enabled=true, \
+    use-java-context=true, \
+    validate-on-match=true, \
+    valid-connection-checker-class-name=org.jboss.jca.adapters.jdbc.extensions.postgres.PostgreSQLValidConnectionChecker \
+)
+
+/subsystem=datasources/data-source=s2:add( \
+    jndi-name="java:/s2", \
+    driver-name="mysql-connector-java-8.0.28.jar", \
+    connection-url="jdbc:mysql://source-s2:3306/s2", \
+    user-name="${USERID}", \
+    password="${USERPWD}", \
+    enabled=true, \
+    use-java-context=true, \
+    validate-on-match=true, \
+    valid-connection-checker-class-name=org.jboss.jca.adapters.jdbc.extensions.mysql.MySQLValidConnectionChecker \
+)
+
+/subsystem=datasources/data-source=s3:add( \
+    jndi-name="java:/s3", \
+    driver-name="mssql-jdbc-10.2.0.jre8.jar", \
+    connection-url="jdbc:sqlserver://source-s3:1433;database=s3;trustServerCertificate=true", \
+    user-name="${USERID}", \
+    password="${USERPWD}", \
+    enabled=true, \
+    use-java-context=true, \
+    validate-on-match=true, \
+    valid-connection-checker-class-name=org.jboss.jca.adapters.jdbc.extensions.mssql.MSSQLValidConnectionChecker \
+)
+
+/subsystem=datasources/data-source=s4:add( \
+    jndi-name="java:/s4", \
+    driver-name="db2jcc4-11.1.1.1.jar", \
+    connection-url="jdbc:db2://source-s4:50000/s4", \
+    enabled=true, \
+    user-name="db2inst1", \
+    password="${USERPWD}", \
+    use-java-context=true, \
+    validate-on-match=true, \
+    valid-connection-checker-class-name=org.jboss.jca.adapters.jdbc.extensions.db2.DB2ValidConnectionChecker \
+)
+
+/subsystem=datasources/data-source=s5:add( \
+    jndi-name="java:/s5", \
+    driver-name="mssql-jdbc-10.2.0.jre8.jar", \
+    connection-url="jdbc:sqlserver://source-s5:1433;database=s5;trustServerCertificate=true", \
+    user-name="${USERID}", \
+    password="${USERPWD}", \
+    enabled=true, \
+    use-java-context=true, \
+    validate-on-match=true, \
+    valid-connection-checker-class-name=org.jboss.jca.adapters.jdbc.extensions.mssql.MSSQLValidConnectionChecker \
+)
+
+/subsystem=datasources/data-source=smatv:add( \
+    jndi-name="java:/smatv", \
+    driver-name="postgresql-42.3.1.jar", \
+    connection-url="jdbc:postgresql://source-smatv:5432/smatv", \
+    user-name="${USERID}", \
+    password="${USERPWD}", \
+    enabled=true, \
+    use-java-context=true, \
+    validate-on-match=true, \
+    valid-connection-checker-class-name=org.jboss.jca.adapters.jdbc.extensions.postgres.PostgreSQLValidConnectionChecker \
+)

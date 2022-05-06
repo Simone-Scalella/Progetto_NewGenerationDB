@@ -1,0 +1,37 @@
+
+deploy /resources/mongodb-driver-sync-4.5.0.jar
+deploy /resources/mssql-jdbc-10.2.0.jre8.jar
+deploy /resources/postgresql-42.3.1.jar
+
+/subsystem=datasources/data-source=s1:add(jndi-name="java:/s1", driver-name="postgresql-42.3.1.jar", connection-url="jdbc:postgresql://source-s1:5432/s1", user-name="${USERID}", password="${USERPWD}", enabled=true, use-java-context=true, validate-on-match=true, valid-connection-checker-class-name=org.jboss.jca.adapters.jdbc.extensions.postgres.PostgreSQLValidConnectionChecker)
+
+batch 
+/subsystem=resource-adapters/resource-adapter=s2p:add(module=org.jboss.teiid.resource-adapter.mongodb)
+/subsystem=resource-adapters/resource-adapter=s2p/connection-definitions=s2p:add(jndi-name="java:/s2p", class-name=org.teiid.resource.adapter.mongodb.MongoDBManagedConnectionFactory, enabled=true, use-java-context=true)
+/subsystem=resource-adapters/resource-adapter=s2p/connection-definitions=s2p/config-properties=RemoteServerList:add(value="source-s2p:27017")
+/subsystem=resource-adapters/resource-adapter=s2p/connection-definitions=s2p/config-properties=AuthDatabase:add(value="admin")
+/subsystem=resource-adapters/resource-adapter=s2p/connection-definitions=s2p/config-properties=Username:add(value="${USERID}")
+/subsystem=resource-adapters/resource-adapter=s2p/connection-definitions=s2p/config-properties=Password:add(value="${USERPWD}")
+/subsystem=resource-adapters/resource-adapter=s2p/connection-definitions=s2p/config-properties=Database:add(value="s2p")
+/subsystem=resource-adapters/resource-adapter=s2p:activate
+run-batch
+
+/subsystem=datasources/data-source=s3:add(jndi-name="java:/s3", driver-name="mssql-jdbc-10.2.0.jre8.jar", connection-url="jdbc:sqlserver://source-s3:1433;database=s3;trustServerCertificate=true", user-name="${USERID}", password="${USERPWD}", enabled=true, use-java-context=true, validate-on-match=true, valid-connection-checker-class-name="org.jboss.jca.adapters.jdbc.extensions.mssql.MSSQLValidConnectionChecker")
+
+batch 
+/subsystem=resource-adapters/resource-adapter=s4p:add(module=org.jboss.teiid.resource-adapter.file)
+/subsystem=resource-adapters/resource-adapter=s4p/connection-definitions=s4p:add(jndi-name=java:/s4p, class-name=org.teiid.resource.adapter.file.FileManagedConnectionFactory, enabled=true, use-java-context=true)
+/subsystem=resource-adapters/resource-adapter=s4p/connection-definitions=s4p/config-properties=ParentDirectory:add(value=/opt/jboss/wildfly/standalone/s4p/)
+/subsystem=resource-adapters/resource-adapter=s4p/connection-definitions=s4p/config-properties=AllowParentPaths:add(value=true)
+/subsystem=resource-adapters/resource-adapter=s4p:activate
+run-batch 
+
+batch 
+/subsystem=resource-adapters/resource-adapter=s5p:add(module=org.jboss.teiid.resource-adapter.file)
+/subsystem=resource-adapters/resource-adapter=s5p/connection-definitions=s5p:add(jndi-name=java:/s5p, class-name=org.teiid.resource.adapter.file.FileManagedConnectionFactory, enabled=true, use-java-context=true)
+/subsystem=resource-adapters/resource-adapter=s5p/connection-definitions=s5p/config-properties=ParentDirectory:add(value=/opt/jboss/wildfly/standalone/s5p/)
+/subsystem=resource-adapters/resource-adapter=s5p/connection-definitions=s5p/config-properties=AllowParentPaths:add(value=true)
+/subsystem=resource-adapters/resource-adapter=s5p:activate
+run-batch
+
+/subsystem=datasources/data-source=smatv:add(jndi-name="java:/smatv", driver-name="postgresql-42.3.1.jar", connection-url="jdbc:postgresql://source-smatv:5432/smatv", user-name="${USERID}", password="${USERPWD}", enabled=true, use-java-context=true, validate-on-match=true, valid-connection-checker-class-name=org.jboss.jca.adapters.jdbc.extensions.postgres.PostgreSQLValidConnectionChecker)
