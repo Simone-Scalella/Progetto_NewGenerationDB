@@ -1,5 +1,7 @@
-# sc
+# ISWC Submission Repository
 
-- `experiments-set-up-docker`: docker profiles for setting up the experiments;
+# Content
 
-- `experiments`: experiments folder, for invoking the `obda-mixer` under different profiles.
+- `Appendix.pdf`: Appendix of the submission.
+- `experiments-set-up-docker`: docker profiles for setting up the experiments.
+- `experiments`: experiments folder, for invoking the `obda-mixer` under the different profiles initialized in the docker.
