@@ -63,3 +63,8 @@ The repository is structured as follows:
 * directory `bin` contains scripts and binaries, including the BSBM ones used to generate test data
 * directory `data` is automatically generated and will contain, in each sub-directory, the data (mainly compressed CSV form) to be loaded into the sources
 * directory `sources` contains SQL and bash scripts to initialize the different sources, with one sub-directory for each source in the experiments
+
+## Notes:
+
+- Here, for simplification, the set up of `hom` and `het` also contains the source for materialized views. This means that `hom` and `het` are the federation instances with materialization;
+- Here, source _s5_ (`s5p`) denotes _s2_ (`s2p`) in the paper, and vice-versa.
