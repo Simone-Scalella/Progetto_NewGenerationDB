@@ -1,4 +1,4 @@
-# Dockerized Experiments 
+# Dockerized Experiments
 
 This repository contains a [Docker Compose](https://docs.docker.com/compose/) application used for the experiments of the paper. Starting from BSBM data (to be generated separately outside Docker), the application allows setting up the populated sources (RDBMS, MongoDB, CSV files) and federation systems (Teiid) used in the experiments.
 
