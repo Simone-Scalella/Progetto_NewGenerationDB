@@ -1,4 +1,4 @@
-# ISWC Submission Repository
+# IJCKG22 Submission Repository
 
 # Content
 
