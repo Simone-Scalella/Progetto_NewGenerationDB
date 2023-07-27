@@ -1,0 +1,3 @@
+- Cambiato le estensioni dei file per generare le istanze dei dati, rinominandole in .sh, da linux a windows per essere eseguite.
+
+-
