@@ -1,3 +1,6 @@
 - Cambiato le estensioni dei file per generare le istanze dei dati, rinominandole in .sh, da linux a windows per essere eseguite.
 
 - Risolto problema di lettura file da CRLF -> LF, altrimenti non legge e non istanzia i container
+
+- Modifica dei comandi per le query, altrimenti non funzionano.
+Esempio: java -jar obda-mixer.jar --conf=configuration-sc1.conf | Out-File -FilePath ./results/mixer-out-pippo.txt
