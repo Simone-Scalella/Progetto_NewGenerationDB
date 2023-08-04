@@ -8,3 +8,7 @@ Esempio: java -jar obda-mixer.jar --conf=configuration-sc1.conf | Out-File -File
 - 02/08/2023
 
 Modifica dei path all'interno del file docker_compose per poter istanziare tutti i contenitori all'interno di docker, in questo modo possiamo eseguire tutti i test contemporaneamente.
+
+04-08-2023
+
+Abbiamo modificato gli indirizzi delle porte, in quanto homogeneo ed eterogeneo, nei file di configurazione erano gli stessi e andava in errore
