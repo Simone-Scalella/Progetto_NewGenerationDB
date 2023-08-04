@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-for table in producer product1 product2 producttype producttypeproduct1 producttypeproduct2 productfeature productfeatureproduct1 productfeatureproduct2 vendor offer person review; do
+for table in producer product product1 product2 producttype producttypeproduct1 producttypeproduct2 productfeature productfeatureproduct productfeatureproduct1 productfeatureproduct2 vendor offer person review; do
 	csv=/data/$table.csv.gz
 	if [ -f "$csv" ]; then
 		echo -e "\nLoading $csv"

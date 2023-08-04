@@ -2,6 +2,8 @@ alter table product1 add constraint fk_product1_producer foreign key(producer) r
 
 alter table product2 add constraint fk_product2_producer foreign key(producer) references producer(nr);
 
+alter table product add constraint fk_product_producer foreign key(producer) references producer(nr);
+
 -- alter table offer add constraint fk_offer_product foreign key(product) references product(nr);
 
 -- alter table review add constraint fk_review_product foreign key(product) references product(nr);
