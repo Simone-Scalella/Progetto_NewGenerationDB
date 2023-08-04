@@ -60,6 +60,29 @@ CREATE TABLE product1
     CONSTRAINT product1_pkey PRIMARY KEY (nr)
 );
 
+CREATE TABLE product
+(
+    nr integer NOT NULL,
+    label character varying(100) COLLATE pg_catalog."default",
+    comment character varying(2000) COLLATE pg_catalog."default",
+    producer integer,
+    propertynum1 integer,
+    propertynum2 integer,
+    propertynum3 integer,
+    propertynum4 integer,
+    propertynum5 integer,
+    propertynum6 integer,
+    propertytex1 character varying(250) COLLATE pg_catalog."default",
+    propertytex2 character varying(250) COLLATE pg_catalog."default",
+    propertytex3 character varying(250) COLLATE pg_catalog."default",
+    propertytex4 character varying(250) COLLATE pg_catalog."default",
+    propertytex5 character varying(250) COLLATE pg_catalog."default",
+    propertytex6 character varying(250) COLLATE pg_catalog."default",
+    publisher integer,
+    publishdate date,
+    CONSTRAINT product_pkey PRIMARY KEY (nr)
+);
+
 CREATE TABLE product2
 (
     nr integer NOT NULL,
@@ -92,6 +115,14 @@ CREATE TABLE productfeature
     publishdate date,
     CONSTRAINT productfeature_pkey PRIMARY KEY (nr)
 );
+
+CREATE TABLE productfeatureproduct
+(
+    product integer NOT NULL,
+    productfeature integer NOT NULL,
+    CONSTRAINT productfeatureproduct_pkey PRIMARY KEY (product, productfeature)
+);
+
 
 CREATE TABLE productfeatureproduct1
 (

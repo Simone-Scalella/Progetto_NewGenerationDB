@@ -43,7 +43,7 @@ hetOptMat () {
 # profiles: source-sc1, source-sc2, homogeneous, heterogeneous
 
 do_tests () {
-    for i in 20000 # 200000 2000000
+    for i in 2000000 200000
     do
         DIR=$PWD
         cd ../../edbt2022-docker
