@@ -289,8 +289,7 @@ services:
     depends_on:
     - teiid-het
     entrypoint: [
-      '/ontop/jdbc/wait-for-it.sh', 'teiid-het:31000', '--timeout=0', '--strict', '--',
-      '/entrypoint.sh' ]
+      '/ontop/jdbc/wait-for-it.sh', 'teiid-het:31000', '--timeout=0', '--strict', '--']
 
   ontop-hom:
     build: ./ontop
@@ -317,8 +316,7 @@ services:
     depends_on:
     - teiid-hom
     entrypoint: [
-      '/ontop/jdbc/wait-for-it.sh', 'teiid-hom:31000', '--timeout=0', '--strict', '--',
-      '/ontop/entrypoint.sh' ]
+      '/ontop/jdbc/wait-for-it.sh', 'teiid-hom:31000', '--timeout=0', '--strict', '--']
 
   ontop-sc1:
     build: ./ontop
@@ -345,8 +343,7 @@ services:
     depends_on:
     - source-sc1
     entrypoint: [
-      '/ontop/jdbc/wait-for-it.sh', 'source-sc1:5432', '--timeout=0', '--strict', '--',
-      '/ontop/entrypoint.sh' ]
+      '/ontop/jdbc/wait-for-it.sh', 'source-sc1:5432', '--timeout=0', '--strict', '--']
 
   ontop-sc2:
     build: ./ontop
@@ -373,8 +370,7 @@ services:
     depends_on:
     - source-sc2
     entrypoint: [
-      '/ontop/jdbc/wait-for-it.sh', 'source-sc2:5432', '--timeout=0', '--strict', '--',
-      '/ontop/entrypoint.sh' ]
+      '/ontop/jdbc/wait-for-it.sh', 'source-sc2:5432', '--timeout=0', '--strict', '--']
 
 volumes:
   data-source-s1:
