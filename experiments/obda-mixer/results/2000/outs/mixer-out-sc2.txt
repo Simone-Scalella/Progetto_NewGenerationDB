@@ -1,0 +1,16 @@
+18:59:49.422 [main] ERROR it.unibz.inf.mixer_main.execution.MixerMain - I could not find the configuration file, currently set at "configuration-sc2.conf". To specify another path, use the --conf option.
+Exception in thread "main" java.lang.RuntimeException: java.io.FileNotFoundException: configuration-sc2.conf (No such file or directory)
+	at it.unibz.inf.mixer_main.execution.MixerMain.closeEverything(MixerMain.java:265)
+	at it.unibz.inf.mixer_main.configuration.ConfParser.searchTag(ConfParser.java:219)
+	at it.unibz.inf.mixer_main.configuration.ConfParser.numRuns(ConfParser.java:160)
+	at it.unibz.inf.mixer_main.execution.MixerMain.configure(MixerMain.java:70)
+	at it.unibz.inf.mixer_main.execution.MixerMain.<init>(MixerMain.java:59)
+	at it.unibz.inf.mixer_main.execution.MixerMain.main(MixerMain.java:257)
+Caused by: java.io.FileNotFoundException: configuration-sc2.conf (No such file or directory)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:112)
+	at java.base/java.io.FileReader.<init>(FileReader.java:60)
+	at it.unibz.inf.mixer_main.configuration.ConfParser.searchTag(ConfParser.java:198)
+	... 4 more

@@ -1,0 +1,23 @@
+20:48:54.991 [main] ERROR it.unibz.inf.mixer_main.execution.MixerMain - Failed to instantiate JDBCMixer
+Exception in thread "main" java.lang.RuntimeException: org.postgresql.util.PSQLException: An error occurred while setting up the SSL connection.
+	at it.unibz.inf.mixer_main.execution.MixerMain.closeEverything(MixerMain.java:265)
+	at it.unibz.inf.mixer_main.execution.MixerMain.instantiateJDBCMixer(MixerMain.java:139)
+	at it.unibz.inf.mixer_main.execution.MixerMain.instantiateMixer(MixerMain.java:122)
+	at it.unibz.inf.mixer_main.execution.MixerMain.<init>(MixerMain.java:60)
+	at it.unibz.inf.mixer_main.execution.MixerMain.main(MixerMain.java:257)
+Caused by: org.postgresql.util.PSQLException: An error occurred while setting up the SSL connection.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.enableSSL(ConnectionFactoryImpl.java:575)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:168)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:235)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:49)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:223)
+	at org.postgresql.Driver.makeConnection(Driver.java:400)
+	at org.postgresql.Driver.connect(Driver.java:259)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
+	at it.unibz.inf.mixer_db_connection.DBMSConnectionPostgres.connect(DBMSConnectionPostgres.java:17)
+	at it.unibz.inf.mixer_db_connection.DBMSConnectionPostgres.<init>(DBMSConnectionPostgres.java:13)
+	at it.unibz.inf.mixer_jdbc.core.MixerJDBC.establishConnection(MixerJDBC.java:31)
+	at it.unibz.inf.mixer_jdbc.core.MixerJDBC.<init>(MixerJDBC.java:17)
+	at it.unibz.inf.mixer_main.execution.MixerMain.instantiateJDBCMixer(MixerMain.java:137)
+	... 3 more
