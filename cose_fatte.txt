@@ -11,4 +11,5 @@ Modifica dei path all'interno del file docker_compose per poter istanziare tutti
 
 04-08-2023
 
-Abbiamo modificato gli indirizzi delle porte, in quanto homogeneo ed eterogeneo, nei file di configurazione erano gli stessi e andava in errore
+Abbiamo modificato gli indirizzi delle porte, in quanto homogeneo ed eterogeneo, nei file di configurazione erano gli stessi e andava in errore.
+Sono stati creati due file di configurazione che mancavano e senza i quali non potevamo fare le query
