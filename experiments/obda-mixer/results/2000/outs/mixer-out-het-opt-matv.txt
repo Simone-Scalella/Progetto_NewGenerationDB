@@ -1,6 +1,6 @@
-19:14:10.459 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 00.sql
-19:14:10.468 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:10.498 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - -- 2
+16:47:07.436 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 00.sql
+16:47:07.447 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:07.479 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - -- 2
 
 SELECT v12."nr2m23" AS "nr2m23", COUNT(*) AS "v1"
 FROM (
@@ -14,9 +14,9 @@ FROM (
     ) v12
 GROUP BY v12."nr2m23"
 
-19:14:10.686 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 01.sql
-19:14:10.695 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:10.698 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - -- 44
+16:47:07.705 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 01.sql
+16:47:07.709 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:07.713 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - -- 44
 -- 45
 -- 992
 
@@ -56,9 +56,9 @@ FROM (
 WHERE (v5."nr0m55" = v15."nr0m1" AND v5."nr0m55" = v20."nr0m2")
 )
 
-19:14:10.787 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 02.sql
-19:14:10.798 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:10.799 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - -- 4
+16:47:07.814 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 02.sql
+16:47:07.819 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:07.821 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - -- 4
 
 SELECT v76."comment10m20" AS "comment10m20", v76."label10m18" AS "label10m18", v76."label10m46" AS "label10m46", v76."label10m6" AS "label10m6", v76."propertynum1m25" AS "propertynum1m25", v76."propertynum1m40" AS "propertynum1m40", v76."propertynum1m41" AS "propertynum1m41", v76."propertytex1m30" AS "propertytex1m30", v76."propertytex1m31" AS "propertytex1m31", v76."propertytex1m32" AS "propertytex1m32", v76."propertytex1m33" AS "propertytex1m33", v76."propertytex1m34" AS "propertytex1m34"
 FROM (
@@ -87,9 +87,9 @@ FROM (
 	  )
 ) v76
 
-19:14:10.824 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 03.sql
-19:14:10.829 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:10.831 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - -- 49
+16:47:07.835 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 03.sql
+16:47:07.840 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:07.843 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - -- 49
 -- 52
 
 SELECT v37."label10m46" AS "label10m46", v37."nr0m55" AS "nr0m55"
@@ -151,9 +151,9 @@ FROM (
      )
 ) v37
 
-19:14:10.909 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 04.sql
-19:14:10.915 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:10.919 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - -- 52
+16:47:07.898 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 04.sql
+16:47:07.905 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:07.908 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - -- 52
 -- 560
 -- 561
 
@@ -227,9 +227,9 @@ FROM (
        WHERE (v36."nr0m10" = v46."nr0m11" AND v36."nr0m10" = v51."nr0m12")
 ) v63
 
-19:14:11.127 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 05.sql
-19:14:11.142 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:11.144 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - -- 7
+16:47:08.099 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 05.sql
+16:47:08.103 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:08.105 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - -- 7
 
 SELECT v37."label10m46" AS "label10m46", v37."product0m4" AS "product0m4"
 FROM (
@@ -278,9 +278,9 @@ FROM (
               v10."productfeature2m2" = v5."productfeature2m1")
 ) v37
 
-19:14:11.363 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 06.sql
-19:14:11.368 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:11.369 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - -- trowsers diagraph cronyism
+16:47:08.335 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 06.sql
+16:47:08.342 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:08.344 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - -- trowsers diagraph cronyism
 
 SELECT v24."label10m46" AS "label10m46", v24."nr1m1" AS "nr1m1", v24."nr3m2" AS "nr3m2", v24."nr8m3" AS "nr8m3", v24."v0" AS "v0"
 FROM (SELECT v18."label10m46" AS "label10m46", v18."nr1m1" AS "nr1m1", NULL AS "nr3m2", NULL AS "nr8m3", 0 AS "v0"
@@ -306,9 +306,9 @@ FROM (SELECT v18."label10m46" AS "label10m46", v18."nr1m1" AS "nr1m1", NULL AS "
       WHERE ((POSITION('trowsers diagraph cronyism' IN v22."label") > 0) AND v22."label" IS NOT NULL AND v22."publisher" IS NOT NULL)
      ) v24
 
-19:14:11.459 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 07.sql
-19:14:11.464 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:11.467 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - -- 9
+16:47:08.438 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 07.sql
+16:47:08.445 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:08.449 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - -- 9
 -- 2008-04-20
 
 SELECT v36."label10m4" AS "label10m4", v36."label10m46" AS "label10m46", v36."name1m12" AS "name1m12", v36."nr0m4" AS "nr0m4", v36."nr1m5" AS "nr1m5", v36."person2m7" AS "person2m7", v36."price1m39" AS "price1m39", v36."rating1m16" AS "rating1m16", v36."rating1m17" AS "rating1m17", v36."title2m11" AS "title2m11", v36."vendor1m8" AS "vendor1m8"
@@ -364,9 +364,9 @@ FROM (
      ) v34 ON v12."nr0m4" = v34."nr0m5"  ON 1 = 1
 ) v36
 
-19:14:12.126 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 08.sql
-19:14:12.137 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:12.139 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - -- 1035
+16:47:09.167 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 08.sql
+16:47:09.171 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:09.173 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - -- 1035
 
 SELECT v49."name1m12" AS "name1m12", v49."person2m7" AS "person2m7", v49."rating1m13" AS "rating1m13", v49."rating1m15" AS "rating1m15", v49."rating1m16" AS "rating1m16", v49."rating1m17" AS "rating1m17", v49."reviewdate2m43" AS "reviewdate2m43", v49."text2m14" AS "text2m14", v49."title2m11" AS "title2m11"
 FROM (
@@ -392,9 +392,9 @@ FROM (
                    ) v27 ON (v5."person2m7" = v27."nr")
 ) v49
 
-19:14:12.156 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 09.sql
-19:14:12.167 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:12.169 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - -- 11
+16:47:09.190 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 09.sql
+16:47:09.196 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:09.198 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - -- 11
 
 SELECT v24."country3m1" AS "country3m1", v24."mbox_sha1sum1m47" AS "mbox_sha1sum1m47", v24."nr0m4" AS "nr0m4", v24."person2m7" AS "person2m7", v24."product2m4" AS "product2m4", v24."title2m11" AS "title2m11"
 FROM (
@@ -419,9 +419,9 @@ FROM (
            WHERE (v7."person2m7" = v12."person2m0" AND v12."nr0m4" = v17."nr0m1" AND v12."nr0m4" = v22."nr0m2")
 ) v24
 
-19:14:12.265 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 10.sql
-19:14:12.282 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:12.286 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - -- 12
+16:47:09.319 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 10.sql
+16:47:09.322 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:09.325 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - -- 12
 -- US
 
 SELECT DISTINCT v9."nr1m5" AS "nr1m5", v9."product1m5" AS "product1m5"
@@ -435,9 +435,9 @@ FROM (
       WHERE ((v1."o_deliverydays" <= 3) AND (v1."p_nr" <= 12) AND v1."o_deliverydays" IS NOT NULL AND v1."o_price" IS NOT NULL AND v1."o_validto" IS NOT NULL AND v1."o_vendor" = v7."nr" AND 'US' = v7."country")
 ) v9
 
-19:14:12.313 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 11.sql
-19:14:12.321 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:12.323 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - -- 13
+16:47:09.333 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 11.sql
+16:47:09.337 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:09.339 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - -- 13
 
 SELECT v25."v26" AS "v26", v25."v6" AS "v6", v25."v9" AS "v9"
 FROM (SELECT 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Offer' AS "v26", 0 AS "v6", 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type' AS "v9"
@@ -489,9 +489,9 @@ FROM "ss4"."offer" v23
 WHERE (v23."validto" IS NOT NULL AND 13 = v23."nr")
 ) v25
 
-19:14:14.141 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 12.sql
-19:14:14.150 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:14.151 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - -- 14
+16:47:10.981 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 12.sql
+16:47:10.985 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:10.987 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - -- 14
 
 SELECT v11."deliverydays1m37" AS "deliverydays1m37", v11."label10m4" AS "label10m4", v11."label10m46" AS "label10m46", v11."nr1m21" AS "nr1m21", v11."offerwebpage1m24" AS "offerwebpage1m24", v11."price1m39" AS "price1m39", v11."product1m5" AS "product1m5", v11."validto1m45" AS "validto1m45", v11."vendor1m8" AS "vendor1m8"
 FROM (
@@ -518,10 +518,10 @@ FROM (
            ) v9
 ) v11
 
-19:14:14.162 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - null
-19:14:14.164 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 00.sql
-19:14:14.168 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:14.169 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - -- 15
+16:47:10.995 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - null
+16:47:10.999 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 00.sql
+16:47:11.005 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:11.007 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - -- 15
 
 SELECT v12."nr2m23" AS "nr2m23", COUNT(*) AS "v1"
 FROM (
@@ -535,9 +535,9 @@ FROM (
     ) v12
 GROUP BY v12."nr2m23"
 
-19:14:14.262 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 01.sql
-19:14:14.266 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:14.269 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - -- 2733
+16:47:11.139 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 01.sql
+16:47:11.144 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:11.148 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - -- 2733
 -- 2735
 -- 969
 
@@ -577,9 +577,9 @@ FROM (
 WHERE (v5."nr0m55" = v15."nr0m1" AND v5."nr0m55" = v20."nr0m2")
 )
 
-19:14:14.375 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 02.sql
-19:14:14.380 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:14.382 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - -- 17
+16:47:11.248 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 02.sql
+16:47:11.252 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:11.254 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - -- 17
 
 SELECT v76."comment10m20" AS "comment10m20", v76."label10m18" AS "label10m18", v76."label10m46" AS "label10m46", v76."label10m6" AS "label10m6", v76."propertynum1m25" AS "propertynum1m25", v76."propertynum1m40" AS "propertynum1m40", v76."propertynum1m41" AS "propertynum1m41", v76."propertytex1m30" AS "propertytex1m30", v76."propertytex1m31" AS "propertytex1m31", v76."propertytex1m32" AS "propertytex1m32", v76."propertytex1m33" AS "propertytex1m33", v76."propertytex1m34" AS "propertytex1m34"
 FROM (
@@ -608,9 +608,9 @@ FROM (
 	  )
 ) v76
 
-19:14:14.408 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 03.sql
-19:14:14.411 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:14.414 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - -- 2736
+16:47:11.271 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 03.sql
+16:47:11.278 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:11.281 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - -- 2736
 -- 2748
 
 SELECT v37."label10m46" AS "label10m46", v37."nr0m55" AS "nr0m55"
@@ -672,9 +672,9 @@ FROM (
      )
 ) v37
 
-19:14:14.513 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 04.sql
-19:14:14.517 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:14.520 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - -- 2748
+16:47:11.395 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 04.sql
+16:47:11.400 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:11.403 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - -- 2748
 -- 2752
 -- 2754
 
@@ -748,9 +748,9 @@ FROM (
        WHERE (v36."nr0m10" = v46."nr0m11" AND v36."nr0m10" = v51."nr0m12")
 ) v63
 
-19:14:14.692 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 05.sql
-19:14:14.695 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:14.697 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - -- 20
+16:47:11.597 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 05.sql
+16:47:11.601 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:11.603 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - -- 20
 
 SELECT v37."label10m46" AS "label10m46", v37."product0m4" AS "product0m4"
 FROM (
@@ -799,9 +799,9 @@ FROM (
               v10."productfeature2m2" = v5."productfeature2m1")
 ) v37
 
-19:14:14.886 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 06.sql
-19:14:14.890 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:14.891 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - -- petrolatum burs
+16:47:11.829 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 06.sql
+16:47:11.836 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:11.837 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - -- petrolatum burs
 
 SELECT v24."label10m46" AS "label10m46", v24."nr1m1" AS "nr1m1", v24."nr3m2" AS "nr3m2", v24."nr8m3" AS "nr8m3", v24."v0" AS "v0"
 FROM (SELECT v18."label10m46" AS "label10m46", v18."nr1m1" AS "nr1m1", NULL AS "nr3m2", NULL AS "nr8m3", 0 AS "v0"
@@ -827,9 +827,9 @@ FROM (SELECT v18."label10m46" AS "label10m46", v18."nr1m1" AS "nr1m1", NULL AS "
       WHERE ((POSITION('petrolatum burs' IN v22."label") > 0) AND v22."label" IS NOT NULL AND v22."publisher" IS NOT NULL)
      ) v24
 
-19:14:14.978 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 07.sql
-19:14:14.982 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:14.985 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - -- 22
+16:47:11.922 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 07.sql
+16:47:11.927 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:11.929 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - -- 22
 -- 2008-07-16
 
 SELECT v36."label10m4" AS "label10m4", v36."label10m46" AS "label10m46", v36."name1m12" AS "name1m12", v36."nr0m4" AS "nr0m4", v36."nr1m5" AS "nr1m5", v36."person2m7" AS "person2m7", v36."price1m39" AS "price1m39", v36."rating1m16" AS "rating1m16", v36."rating1m17" AS "rating1m17", v36."title2m11" AS "title2m11", v36."vendor1m8" AS "vendor1m8"
@@ -885,9 +885,9 @@ FROM (
      ) v34 ON v12."nr0m4" = v34."nr0m5"  ON 1 = 1
 ) v36
 
-19:14:15.655 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 08.sql
-19:14:15.660 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:15.661 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - -- 507
+16:47:12.747 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 08.sql
+16:47:12.751 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:12.753 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - -- 507
 
 SELECT v49."name1m12" AS "name1m12", v49."person2m7" AS "person2m7", v49."rating1m13" AS "rating1m13", v49."rating1m15" AS "rating1m15", v49."rating1m16" AS "rating1m16", v49."rating1m17" AS "rating1m17", v49."reviewdate2m43" AS "reviewdate2m43", v49."text2m14" AS "text2m14", v49."title2m11" AS "title2m11"
 FROM (
@@ -913,9 +913,9 @@ FROM (
                    ) v27 ON (v5."person2m7" = v27."nr")
 ) v49
 
-19:14:15.675 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 09.sql
-19:14:15.678 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:15.680 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - -- 24
+16:47:12.766 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 09.sql
+16:47:12.770 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:12.771 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - -- 24
 
 SELECT v24."country3m1" AS "country3m1", v24."mbox_sha1sum1m47" AS "mbox_sha1sum1m47", v24."nr0m4" AS "nr0m4", v24."person2m7" AS "person2m7", v24."product2m4" AS "product2m4", v24."title2m11" AS "title2m11"
 FROM (
@@ -940,9 +940,9 @@ FROM (
            WHERE (v7."person2m7" = v12."person2m0" AND v12."nr0m4" = v17."nr0m1" AND v12."nr0m4" = v22."nr0m2")
 ) v24
 
-19:14:15.778 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 10.sql
-19:14:15.782 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:15.788 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - -- 25
+16:47:12.883 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 10.sql
+16:47:12.886 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:12.892 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - -- 25
 -- CN
 
 SELECT DISTINCT v9."nr1m5" AS "nr1m5", v9."product1m5" AS "product1m5"
@@ -956,9 +956,9 @@ FROM (
       WHERE ((v1."o_deliverydays" <= 3) AND (v1."p_nr" <= 25) AND v1."o_deliverydays" IS NOT NULL AND v1."o_price" IS NOT NULL AND v1."o_validto" IS NOT NULL AND v1."o_vendor" = v7."nr" AND 'CN' = v7."country")
 ) v9
 
-19:14:15.815 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 11.sql
-19:14:15.818 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:15.820 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - -- 26
+16:47:12.901 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 11.sql
+16:47:12.905 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:12.907 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - -- 26
 
 SELECT v25."v26" AS "v26", v25."v6" AS "v6", v25."v9" AS "v9"
 FROM (SELECT 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Offer' AS "v26", 0 AS "v6", 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type' AS "v9"
@@ -1010,9 +1010,9 @@ FROM "ss4"."offer" v23
 WHERE (v23."validto" IS NOT NULL AND 26 = v23."nr")
 ) v25
 
-19:14:17.673 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 12.sql
-19:14:17.677 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:17.678 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - -- 27
+16:47:14.594 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 12.sql
+16:47:14.599 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:14.601 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - -- 27
 
 SELECT v11."deliverydays1m37" AS "deliverydays1m37", v11."label10m4" AS "label10m4", v11."label10m46" AS "label10m46", v11."nr1m21" AS "nr1m21", v11."offerwebpage1m24" AS "offerwebpage1m24", v11."price1m39" AS "price1m39", v11."product1m5" AS "product1m5", v11."validto1m45" AS "validto1m45", v11."vendor1m8" AS "vendor1m8"
 FROM (
@@ -1039,10 +1039,10 @@ FROM (
            ) v9
 ) v11
 
-19:14:17.685 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - null
-19:14:17.687 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 00.sql
-19:14:17.691 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:17.693 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 28
+16:47:14.609 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - null
+16:47:14.612 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 00.sql
+16:47:14.617 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:14.620 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 28
 
 SELECT v12."nr2m23" AS "nr2m23", COUNT(*) AS "v1"
 FROM (
@@ -1070,9 +1070,9 @@ FROM (
     ) v12
 GROUP BY v12."nr2m23"
 
-19:14:17.799 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 01.sql
-19:14:17.803 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:17.806 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 898
+16:47:14.736 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 01.sql
+16:47:14.740 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:14.743 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 898
 -- 899
 -- 809
 
@@ -1152,9 +1152,9 @@ FROM (
 WHERE (v5."nr0m55" = v15."nr0m1" AND v5."nr0m55" = v20."nr0m2")
 )
 
-19:14:17.936 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 02.sql
-19:14:17.940 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:17.942 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 30
+16:47:14.880 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 02.sql
+16:47:14.884 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:14.885 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 30
 
 SELECT v76."comment10m20" AS "comment10m20", v76."label10m18" AS "label10m18", v76."label10m46" AS "label10m46", v76."label10m6" AS "label10m6", v76."propertynum1m25" AS "propertynum1m25", v76."propertynum1m40" AS "propertynum1m40", v76."propertynum1m41" AS "propertynum1m41", v76."propertytex1m30" AS "propertytex1m30", v76."propertytex1m31" AS "propertytex1m31", v76."propertytex1m32" AS "propertytex1m32", v76."propertytex1m33" AS "propertytex1m33", v76."propertytex1m34" AS "propertytex1m34"
 FROM (
@@ -1212,9 +1212,9 @@ FROM (
 	  )
 ) v76
 
-19:14:17.973 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 03.sql
-19:14:17.976 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:17.978 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 901
+16:47:14.903 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 03.sql
+16:47:14.906 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:14.908 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 901
 -- 906
 
 SELECT v37."label10m46" AS "label10m46", v37."nr0m55" AS "nr0m55"
@@ -1338,9 +1338,9 @@ FROM (
      )
 ) v37
 
-19:14:18.117 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 04.sql
-19:14:18.120 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:18.123 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 906
+16:47:15.044 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 04.sql
+16:47:15.049 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:15.052 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 906
 -- 908
 -- 910
 
@@ -1488,9 +1488,9 @@ FROM (
        WHERE (v36."nr0m10" = v46."nr0m11" AND v36."nr0m10" = v51."nr0m12")
 ) v63
 
-19:14:18.314 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 05.sql
-19:14:18.317 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:18.319 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 33
+16:47:15.219 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 05.sql
+16:47:15.223 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:15.225 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 33
 
 SELECT v37."label10m46" AS "label10m46", v37."product0m4" AS "product0m4"
 FROM (
@@ -1588,9 +1588,9 @@ FROM (
               v10."productfeature2m2" = v5."productfeature2m1")
 ) v37
 
-19:14:18.519 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 06.sql
-19:14:18.526 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:18.528 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- enchanter pelters
+16:47:15.463 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 06.sql
+16:47:15.470 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:15.471 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- enchanter pelters
 
 SELECT v24."label10m46" AS "label10m46", v24."nr1m1" AS "nr1m1", v24."nr3m2" AS "nr3m2", v24."nr8m3" AS "nr8m3", v24."v0" AS "v0"
 FROM (SELECT v18."label10m46" AS "label10m46", v18."nr1m1" AS "nr1m1", NULL AS "nr3m2", NULL AS "nr8m3", 0 AS "v0"
@@ -1642,9 +1642,9 @@ FROM (SELECT v18."label10m46" AS "label10m46", v18."nr1m1" AS "nr1m1", NULL AS "
       WHERE ((POSITION('enchanter pelters' IN v22."label") > 0) AND v22."label" IS NOT NULL AND v22."publisher" IS NOT NULL)
      ) v24
 
-19:14:18.621 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 07.sql
-19:14:18.625 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:18.628 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 35
+16:47:15.567 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 07.sql
+16:47:15.572 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:15.574 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 35
 -- 2008-05-08
 
 SELECT v36."label10m4" AS "label10m4", v36."label10m46" AS "label10m46", v36."name1m12" AS "name1m12", v36."nr0m4" AS "nr0m4", v36."nr1m5" AS "nr1m5", v36."person2m7" AS "person2m7", v36."price1m39" AS "price1m39", v36."rating1m16" AS "rating1m16", v36."rating1m17" AS "rating1m17", v36."title2m11" AS "title2m11", v36."vendor1m8" AS "vendor1m8"
@@ -1756,9 +1756,9 @@ FROM (
      ) v34 ON v12."nr0m4" = v34."nr0m5"  ON 1 = 1
 ) v36
 
-19:14:19.361 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 08.sql
-19:14:19.364 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:19.365 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 57
+16:47:16.331 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 08.sql
+16:47:16.336 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:16.338 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 57
 
 SELECT v49."name1m12" AS "name1m12", v49."person2m7" AS "person2m7", v49."rating1m13" AS "rating1m13", v49."rating1m15" AS "rating1m15", v49."rating1m16" AS "rating1m16", v49."rating1m17" AS "rating1m17", v49."reviewdate2m43" AS "reviewdate2m43", v49."text2m14" AS "text2m14", v49."title2m11" AS "title2m11"
 FROM (
@@ -1810,9 +1810,9 @@ FROM (
                    ) v27 ON (v5."person2m7" = v27."nr")
 ) v49
 
-19:14:19.381 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 09.sql
-19:14:19.385 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:19.387 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 37
+16:47:16.354 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 09.sql
+16:47:16.359 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:16.362 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 37
 
 SELECT v24."country3m1" AS "country3m1", v24."mbox_sha1sum1m47" AS "mbox_sha1sum1m47", v24."nr0m4" AS "nr0m4", v24."person2m7" AS "person2m7", v24."product2m4" AS "product2m4", v24."title2m11" AS "title2m11"
 FROM (
@@ -1862,9 +1862,9 @@ FROM (
            WHERE (v7."person2m7" = v12."person2m0" AND v12."nr0m4" = v17."nr0m1" AND v12."nr0m4" = v22."nr0m2")
 ) v24
 
-19:14:19.483 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 10.sql
-19:14:19.487 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:19.491 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 38
+16:47:16.471 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 10.sql
+16:47:16.476 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:16.479 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 38
 -- CN
 
 SELECT DISTINCT v9."nr1m5" AS "nr1m5", v9."product1m5" AS "product1m5"
@@ -1892,9 +1892,9 @@ FROM (
       WHERE ((v1."o_deliverydays" <= 3) AND (v1."p_nr" <= 38) AND v1."o_deliverydays" IS NOT NULL AND v1."o_price" IS NOT NULL AND v1."o_validto" IS NOT NULL AND v1."o_vendor" = v7."nr" AND 'CN' = v7."country")
 ) v9
 
-19:14:19.520 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 11.sql
-19:14:19.525 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:19.527 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 39
+16:47:16.489 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 11.sql
+16:47:16.493 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:16.495 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 39
 
 SELECT v25."v26" AS "v26", v25."v6" AS "v6", v25."v9" AS "v9"
 FROM (SELECT 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Offer' AS "v26", 0 AS "v6", 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type' AS "v9"
@@ -1998,9 +1998,9 @@ FROM "ss4"."offer" v23
 WHERE (v23."validto" IS NOT NULL AND 39 = v23."nr")
 ) v25
 
-19:14:21.777 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 12.sql
-19:14:21.782 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:21.783 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 40
+16:47:18.758 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 12.sql
+16:47:18.764 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:18.766 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 40
 
 SELECT v11."deliverydays1m37" AS "deliverydays1m37", v11."label10m4" AS "label10m4", v11."label10m46" AS "label10m46", v11."nr1m21" AS "nr1m21", v11."offerwebpage1m24" AS "offerwebpage1m24", v11."price1m39" AS "price1m39", v11."product1m5" AS "product1m5", v11."validto1m45" AS "validto1m45", v11."vendor1m8" AS "vendor1m8"
 FROM (
@@ -2054,11 +2054,11 @@ FROM (
            ) v9
 ) v11
 
-19:14:21.791 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - null
+16:47:18.773 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - null
 null
-19:14:21.794 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 00.sql
-19:14:21.799 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:21.800 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 41
+16:47:18.776 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 00.sql
+16:47:18.781 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:18.782 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 41
 
 SELECT v12."nr2m23" AS "nr2m23", COUNT(*) AS "v1"
 FROM (
@@ -2086,9 +2086,9 @@ FROM (
     ) v12
 GROUP BY v12."nr2m23"
 
-19:14:21.887 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 01.sql
-19:14:21.890 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:21.893 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 3442
+16:47:18.889 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 01.sql
+16:47:18.895 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:18.899 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 3442
 -- 3444
 -- 27
 
@@ -2168,9 +2168,9 @@ FROM (
 WHERE (v5."nr0m55" = v15."nr0m1" AND v5."nr0m55" = v20."nr0m2")
 )
 
-19:14:22.001 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 02.sql
-19:14:22.005 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:22.007 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 43
+16:47:19.013 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 02.sql
+16:47:19.017 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:19.019 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 43
 
 SELECT v76."comment10m20" AS "comment10m20", v76."label10m18" AS "label10m18", v76."label10m46" AS "label10m46", v76."label10m6" AS "label10m6", v76."propertynum1m25" AS "propertynum1m25", v76."propertynum1m40" AS "propertynum1m40", v76."propertynum1m41" AS "propertynum1m41", v76."propertytex1m30" AS "propertytex1m30", v76."propertytex1m31" AS "propertytex1m31", v76."propertytex1m32" AS "propertytex1m32", v76."propertytex1m33" AS "propertytex1m33", v76."propertytex1m34" AS "propertytex1m34"
 FROM (
@@ -2228,9 +2228,9 @@ FROM (
 	  )
 ) v76
 
-19:14:22.037 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 03.sql
-19:14:22.040 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:22.042 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 3446
+16:47:19.041 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 03.sql
+16:47:19.046 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:19.049 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 3446
 -- 3460
 
 SELECT v37."label10m46" AS "label10m46", v37."nr0m55" AS "nr0m55"
@@ -2354,9 +2354,9 @@ FROM (
      )
 ) v37
 
-19:14:22.202 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 04.sql
-19:14:22.207 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:22.209 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 3460
+16:47:19.199 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 04.sql
+16:47:19.202 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:19.204 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 3460
 -- 3461
 -- 3463
 
@@ -2504,9 +2504,9 @@ FROM (
        WHERE (v36."nr0m10" = v46."nr0m11" AND v36."nr0m10" = v51."nr0m12")
 ) v63
 
-19:14:22.368 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 05.sql
-19:14:22.372 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:22.373 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 46
+16:47:19.411 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 05.sql
+16:47:19.415 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:19.417 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 46
 
 SELECT v37."label10m46" AS "label10m46", v37."product0m4" AS "product0m4"
 FROM (
@@ -2604,9 +2604,9 @@ FROM (
               v10."productfeature2m2" = v5."productfeature2m1")
 ) v37
 
-19:14:22.522 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 06.sql
-19:14:22.526 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:22.528 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- sprightliness masterly psychosomatics
+16:47:19.624 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 06.sql
+16:47:19.629 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:19.634 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- sprightliness masterly psychosomatics
 
 SELECT v24."label10m46" AS "label10m46", v24."nr1m1" AS "nr1m1", v24."nr3m2" AS "nr3m2", v24."nr8m3" AS "nr8m3", v24."v0" AS "v0"
 FROM (SELECT v18."label10m46" AS "label10m46", v18."nr1m1" AS "nr1m1", NULL AS "nr3m2", NULL AS "nr8m3", 0 AS "v0"
@@ -2658,9 +2658,9 @@ FROM (SELECT v18."label10m46" AS "label10m46", v18."nr1m1" AS "nr1m1", NULL AS "
       WHERE ((POSITION('sprightliness masterly psychosomatics' IN v22."label") > 0) AND v22."label" IS NOT NULL AND v22."publisher" IS NOT NULL)
      ) v24
 
-19:14:22.616 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 07.sql
-19:14:22.620 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:22.623 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 48
+16:47:19.726 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 07.sql
+16:47:19.734 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:19.737 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 48
 -- 2008-06-29
 
 SELECT v36."label10m4" AS "label10m4", v36."label10m46" AS "label10m46", v36."name1m12" AS "name1m12", v36."nr0m4" AS "nr0m4", v36."nr1m5" AS "nr1m5", v36."person2m7" AS "person2m7", v36."price1m39" AS "price1m39", v36."rating1m16" AS "rating1m16", v36."rating1m17" AS "rating1m17", v36."title2m11" AS "title2m11", v36."vendor1m8" AS "vendor1m8"
@@ -2772,9 +2772,9 @@ FROM (
      ) v34 ON v12."nr0m4" = v34."nr0m5"  ON 1 = 1
 ) v36
 
-19:14:23.361 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 08.sql
-19:14:23.366 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:23.368 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 1779
+16:47:20.425 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 08.sql
+16:47:20.430 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:20.432 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 1779
 
 SELECT v49."name1m12" AS "name1m12", v49."person2m7" AS "person2m7", v49."rating1m13" AS "rating1m13", v49."rating1m15" AS "rating1m15", v49."rating1m16" AS "rating1m16", v49."rating1m17" AS "rating1m17", v49."reviewdate2m43" AS "reviewdate2m43", v49."text2m14" AS "text2m14", v49."title2m11" AS "title2m11"
 FROM (
@@ -2826,9 +2826,9 @@ FROM (
                    ) v27 ON (v5."person2m7" = v27."nr")
 ) v49
 
-19:14:23.384 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 09.sql
-19:14:23.388 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:23.389 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 50
+16:47:20.446 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 09.sql
+16:47:20.450 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:20.451 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 50
 
 SELECT v24."country3m1" AS "country3m1", v24."mbox_sha1sum1m47" AS "mbox_sha1sum1m47", v24."nr0m4" AS "nr0m4", v24."person2m7" AS "person2m7", v24."product2m4" AS "product2m4", v24."title2m11" AS "title2m11"
 FROM (
@@ -2878,9 +2878,9 @@ FROM (
            WHERE (v7."person2m7" = v12."person2m0" AND v12."nr0m4" = v17."nr0m1" AND v12."nr0m4" = v22."nr0m2")
 ) v24
 
-19:14:23.493 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 10.sql
-19:14:23.496 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:23.499 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 51
+16:47:20.550 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 10.sql
+16:47:20.554 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:20.557 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 51
 -- CN
 
 SELECT DISTINCT v9."nr1m5" AS "nr1m5", v9."product1m5" AS "product1m5"
@@ -2908,9 +2908,9 @@ FROM (
       WHERE ((v1."o_deliverydays" <= 3) AND (v1."p_nr" <= 51) AND v1."o_deliverydays" IS NOT NULL AND v1."o_price" IS NOT NULL AND v1."o_validto" IS NOT NULL AND v1."o_vendor" = v7."nr" AND 'CN' = v7."country")
 ) v9
 
-19:14:23.527 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 11.sql
-19:14:23.530 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:23.531 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 52
+16:47:20.566 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 11.sql
+16:47:20.570 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:20.571 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 52
 
 SELECT v25."v26" AS "v26", v25."v6" AS "v6", v25."v9" AS "v9"
 FROM (SELECT 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Offer' AS "v26", 0 AS "v6", 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type' AS "v9"
@@ -3014,9 +3014,9 @@ FROM "ss4"."offer" v23
 WHERE (v23."validto" IS NOT NULL AND 52 = v23."nr")
 ) v25
 
-19:14:25.651 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 12.sql
-19:14:25.654 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:25.655 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 53
+16:47:22.401 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 12.sql
+16:47:22.404 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:22.405 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 53
 
 SELECT v11."deliverydays1m37" AS "deliverydays1m37", v11."label10m4" AS "label10m4", v11."label10m46" AS "label10m46", v11."nr1m21" AS "nr1m21", v11."offerwebpage1m24" AS "offerwebpage1m24", v11."price1m39" AS "price1m39", v11."product1m5" AS "product1m5", v11."validto1m45" AS "validto1m45", v11."vendor1m8" AS "vendor1m8"
 FROM (
@@ -3070,11 +3070,11 @@ FROM (
            ) v9
 ) v11
 
-19:14:25.662 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - null
+16:47:22.412 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - null
 null
-19:14:25.664 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 00.sql
-19:14:25.667 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:25.669 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 54
+16:47:22.415 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 00.sql
+16:47:22.418 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:22.419 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 54
 
 SELECT v12."nr2m23" AS "nr2m23", COUNT(*) AS "v1"
 FROM (
@@ -3102,9 +3102,9 @@ FROM (
     ) v12
 GROUP BY v12."nr2m23"
 
-19:14:25.759 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 01.sql
-19:14:25.764 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:25.766 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 2656
+16:47:22.511 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 01.sql
+16:47:22.516 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:22.519 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 2656
 -- 2658
 -- 1665
 
@@ -3184,9 +3184,9 @@ FROM (
 WHERE (v5."nr0m55" = v15."nr0m1" AND v5."nr0m55" = v20."nr0m2")
 )
 
-19:14:25.881 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 02.sql
-19:14:25.885 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:25.887 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 56
+16:47:22.640 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 02.sql
+16:47:22.645 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:22.647 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 56
 
 SELECT v76."comment10m20" AS "comment10m20", v76."label10m18" AS "label10m18", v76."label10m46" AS "label10m46", v76."label10m6" AS "label10m6", v76."propertynum1m25" AS "propertynum1m25", v76."propertynum1m40" AS "propertynum1m40", v76."propertynum1m41" AS "propertynum1m41", v76."propertytex1m30" AS "propertytex1m30", v76."propertytex1m31" AS "propertytex1m31", v76."propertytex1m32" AS "propertytex1m32", v76."propertytex1m33" AS "propertytex1m33", v76."propertytex1m34" AS "propertytex1m34"
 FROM (
@@ -3244,9 +3244,9 @@ FROM (
 	  )
 ) v76
 
-19:14:25.908 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 03.sql
-19:14:25.912 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:25.913 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 2660
+16:47:22.670 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 03.sql
+16:47:22.673 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:22.675 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 2660
 -- 2666
 
 SELECT v37."label10m46" AS "label10m46", v37."nr0m55" AS "nr0m55"
@@ -3370,9 +3370,9 @@ FROM (
      )
 ) v37
 
-19:14:26.077 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 04.sql
-19:14:26.081 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:26.084 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 2666
+16:47:22.803 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 04.sql
+16:47:22.805 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:22.808 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 2666
 -- 2670
 -- 2674
 
@@ -3520,9 +3520,9 @@ FROM (
        WHERE (v36."nr0m10" = v46."nr0m11" AND v36."nr0m10" = v51."nr0m12")
 ) v63
 
-19:14:26.246 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 05.sql
-19:14:26.251 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:26.253 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 59
+16:47:22.974 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 05.sql
+16:47:22.978 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:22.980 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 59
 
 SELECT v37."label10m46" AS "label10m46", v37."product0m4" AS "product0m4"
 FROM (
@@ -3620,9 +3620,9 @@ FROM (
               v10."productfeature2m2" = v5."productfeature2m1")
 ) v37
 
-19:14:26.457 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 06.sql
-19:14:26.461 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:26.463 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- kickshaw needlepoints
+16:47:23.223 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 06.sql
+16:47:23.228 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:23.230 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- kickshaw needlepoints
 
 SELECT v24."label10m46" AS "label10m46", v24."nr1m1" AS "nr1m1", v24."nr3m2" AS "nr3m2", v24."nr8m3" AS "nr8m3", v24."v0" AS "v0"
 FROM (SELECT v18."label10m46" AS "label10m46", v18."nr1m1" AS "nr1m1", NULL AS "nr3m2", NULL AS "nr8m3", 0 AS "v0"
@@ -3674,9 +3674,9 @@ FROM (SELECT v18."label10m46" AS "label10m46", v18."nr1m1" AS "nr1m1", NULL AS "
       WHERE ((POSITION('kickshaw needlepoints' IN v22."label") > 0) AND v22."label" IS NOT NULL AND v22."publisher" IS NOT NULL)
      ) v24
 
-19:14:26.550 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 07.sql
-19:14:26.554 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:26.556 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 61
+16:47:23.338 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 07.sql
+16:47:23.342 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:23.345 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 61
 -- 2008-06-20
 
 SELECT v36."label10m4" AS "label10m4", v36."label10m46" AS "label10m46", v36."name1m12" AS "name1m12", v36."nr0m4" AS "nr0m4", v36."nr1m5" AS "nr1m5", v36."person2m7" AS "person2m7", v36."price1m39" AS "price1m39", v36."rating1m16" AS "rating1m16", v36."rating1m17" AS "rating1m17", v36."title2m11" AS "title2m11", v36."vendor1m8" AS "vendor1m8"
@@ -3788,9 +3788,9 @@ FROM (
      ) v34 ON v12."nr0m4" = v34."nr0m5"  ON 1 = 1
 ) v36
 
-19:14:27.231 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 08.sql
-19:14:27.236 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:27.237 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 703
+16:47:24.130 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 08.sql
+16:47:24.141 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:24.143 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 703
 
 SELECT v49."name1m12" AS "name1m12", v49."person2m7" AS "person2m7", v49."rating1m13" AS "rating1m13", v49."rating1m15" AS "rating1m15", v49."rating1m16" AS "rating1m16", v49."rating1m17" AS "rating1m17", v49."reviewdate2m43" AS "reviewdate2m43", v49."text2m14" AS "text2m14", v49."title2m11" AS "title2m11"
 FROM (
@@ -3842,9 +3842,9 @@ FROM (
                    ) v27 ON (v5."person2m7" = v27."nr")
 ) v49
 
-19:14:27.253 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 09.sql
-19:14:27.256 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:27.258 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 63
+16:47:24.159 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 09.sql
+16:47:24.163 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:24.164 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 63
 
 SELECT v24."country3m1" AS "country3m1", v24."mbox_sha1sum1m47" AS "mbox_sha1sum1m47", v24."nr0m4" AS "nr0m4", v24."person2m7" AS "person2m7", v24."product2m4" AS "product2m4", v24."title2m11" AS "title2m11"
 FROM (
@@ -3894,9 +3894,9 @@ FROM (
            WHERE (v7."person2m7" = v12."person2m0" AND v12."nr0m4" = v17."nr0m1" AND v12."nr0m4" = v22."nr0m2")
 ) v24
 
-19:14:27.367 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 10.sql
-19:14:27.373 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:27.375 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 64
+16:47:24.280 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 10.sql
+16:47:24.287 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:24.290 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 64
 -- CN
 
 SELECT DISTINCT v9."nr1m5" AS "nr1m5", v9."product1m5" AS "product1m5"
@@ -3924,9 +3924,9 @@ FROM (
       WHERE ((v1."o_deliverydays" <= 3) AND (v1."p_nr" <= 64) AND v1."o_deliverydays" IS NOT NULL AND v1."o_price" IS NOT NULL AND v1."o_validto" IS NOT NULL AND v1."o_vendor" = v7."nr" AND 'CN' = v7."country")
 ) v9
 
-19:14:27.396 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 11.sql
-19:14:27.399 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:27.400 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 65
+16:47:24.301 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 11.sql
+16:47:24.305 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:24.307 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 65
 
 SELECT v25."v26" AS "v26", v25."v6" AS "v6", v25."v9" AS "v9"
 FROM (SELECT 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Offer' AS "v26", 0 AS "v6", 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type' AS "v9"
@@ -4030,9 +4030,9 @@ FROM "ss4"."offer" v23
 WHERE (v23."validto" IS NOT NULL AND 65 = v23."nr")
 ) v25
 
-19:14:29.573 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 12.sql
-19:14:29.577 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:29.578 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 66
+16:47:26.531 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 12.sql
+16:47:26.535 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:26.536 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 66
 
 SELECT v11."deliverydays1m37" AS "deliverydays1m37", v11."label10m4" AS "label10m4", v11."label10m46" AS "label10m46", v11."nr1m21" AS "nr1m21", v11."offerwebpage1m24" AS "offerwebpage1m24", v11."price1m39" AS "price1m39", v11."product1m5" AS "product1m5", v11."validto1m45" AS "validto1m45", v11."vendor1m8" AS "vendor1m8"
 FROM (
@@ -4086,11 +4086,11 @@ FROM (
            ) v9
 ) v11
 
-19:14:29.585 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - null
+16:47:26.544 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - null
 null
-19:14:29.587 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 00.sql
-19:14:29.591 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:29.593 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 67
+16:47:26.547 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 00.sql
+16:47:26.550 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:26.552 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 67
 
 SELECT v12."nr2m23" AS "nr2m23", COUNT(*) AS "v1"
 FROM (
@@ -4118,9 +4118,9 @@ FROM (
     ) v12
 GROUP BY v12."nr2m23"
 
-19:14:29.687 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 01.sql
-19:14:29.691 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:29.693 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 74
+16:47:26.664 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 01.sql
+16:47:26.668 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:26.671 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 74
 -- 922
 -- 741
 
@@ -4200,9 +4200,9 @@ FROM (
 WHERE (v5."nr0m55" = v15."nr0m1" AND v5."nr0m55" = v20."nr0m2")
 )
 
-19:14:29.810 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 02.sql
-19:14:29.814 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:29.815 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 69
+16:47:26.807 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 02.sql
+16:47:26.811 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:26.813 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 69
 
 SELECT v76."comment10m20" AS "comment10m20", v76."label10m18" AS "label10m18", v76."label10m46" AS "label10m46", v76."label10m6" AS "label10m6", v76."propertynum1m25" AS "propertynum1m25", v76."propertynum1m40" AS "propertynum1m40", v76."propertynum1m41" AS "propertynum1m41", v76."propertytex1m30" AS "propertytex1m30", v76."propertytex1m31" AS "propertytex1m31", v76."propertytex1m32" AS "propertytex1m32", v76."propertytex1m33" AS "propertytex1m33", v76."propertytex1m34" AS "propertytex1m34"
 FROM (
@@ -4260,9 +4260,9 @@ FROM (
 	  )
 ) v76
 
-19:14:29.843 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 03.sql
-19:14:29.846 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:29.848 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 923
+16:47:26.839 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 03.sql
+16:47:26.842 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:26.845 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 923
 -- 924
 
 SELECT v37."label10m46" AS "label10m46", v37."nr0m55" AS "nr0m55"
@@ -4386,9 +4386,9 @@ FROM (
      )
 ) v37
 
-19:14:30.011 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 04.sql
-19:14:30.016 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:30.019 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 924
+16:47:26.990 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 04.sql
+16:47:26.993 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:26.996 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 924
 -- 934
 -- 936
 
@@ -4536,9 +4536,9 @@ FROM (
        WHERE (v36."nr0m10" = v46."nr0m11" AND v36."nr0m10" = v51."nr0m12")
 ) v63
 
-19:14:30.189 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 05.sql
-19:14:30.194 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:30.196 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 72
+16:47:27.181 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 05.sql
+16:47:27.185 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:27.187 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 72
 
 SELECT v37."label10m46" AS "label10m46", v37."product0m4" AS "product0m4"
 FROM (
@@ -4636,9 +4636,9 @@ FROM (
               v10."productfeature2m2" = v5."productfeature2m1")
 ) v37
 
-19:14:30.371 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 06.sql
-19:14:30.376 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:30.377 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- plodder
+16:47:27.382 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 06.sql
+16:47:27.389 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:27.390 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- plodder
 
 SELECT v24."label10m46" AS "label10m46", v24."nr1m1" AS "nr1m1", v24."nr3m2" AS "nr3m2", v24."nr8m3" AS "nr8m3", v24."v0" AS "v0"
 FROM (SELECT v18."label10m46" AS "label10m46", v18."nr1m1" AS "nr1m1", NULL AS "nr3m2", NULL AS "nr8m3", 0 AS "v0"
@@ -4690,9 +4690,9 @@ FROM (SELECT v18."label10m46" AS "label10m46", v18."nr1m1" AS "nr1m1", NULL AS "
       WHERE ((POSITION('plodder' IN v22."label") > 0) AND v22."label" IS NOT NULL AND v22."publisher" IS NOT NULL)
      ) v24
 
-19:14:30.467 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 07.sql
-19:14:30.471 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:30.473 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 74
+16:47:27.483 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 07.sql
+16:47:27.486 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:27.488 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 74
 -- 2008-05-10
 
 SELECT v36."label10m4" AS "label10m4", v36."label10m46" AS "label10m46", v36."name1m12" AS "name1m12", v36."nr0m4" AS "nr0m4", v36."nr1m5" AS "nr1m5", v36."person2m7" AS "person2m7", v36."price1m39" AS "price1m39", v36."rating1m16" AS "rating1m16", v36."rating1m17" AS "rating1m17", v36."title2m11" AS "title2m11", v36."vendor1m8" AS "vendor1m8"
@@ -4804,9 +4804,9 @@ FROM (
      ) v34 ON v12."nr0m4" = v34."nr0m5"  ON 1 = 1
 ) v36
 
-19:14:31.157 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 08.sql
-19:14:31.161 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:31.162 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 831
+16:47:28.283 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 08.sql
+16:47:28.287 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:28.288 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 831
 
 SELECT v49."name1m12" AS "name1m12", v49."person2m7" AS "person2m7", v49."rating1m13" AS "rating1m13", v49."rating1m15" AS "rating1m15", v49."rating1m16" AS "rating1m16", v49."rating1m17" AS "rating1m17", v49."reviewdate2m43" AS "reviewdate2m43", v49."text2m14" AS "text2m14", v49."title2m11" AS "title2m11"
 FROM (
@@ -4858,9 +4858,9 @@ FROM (
                    ) v27 ON (v5."person2m7" = v27."nr")
 ) v49
 
-19:14:31.175 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 09.sql
-19:14:31.179 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:31.181 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 76
+16:47:28.303 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 09.sql
+16:47:28.307 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:28.309 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 76
 
 SELECT v24."country3m1" AS "country3m1", v24."mbox_sha1sum1m47" AS "mbox_sha1sum1m47", v24."nr0m4" AS "nr0m4", v24."person2m7" AS "person2m7", v24."product2m4" AS "product2m4", v24."title2m11" AS "title2m11"
 FROM (
@@ -4910,9 +4910,9 @@ FROM (
            WHERE (v7."person2m7" = v12."person2m0" AND v12."nr0m4" = v17."nr0m1" AND v12."nr0m4" = v22."nr0m2")
 ) v24
 
-19:14:31.296 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 10.sql
-19:14:31.300 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:31.304 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 77
+16:47:28.424 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 10.sql
+16:47:28.429 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:28.432 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 77
 -- CN
 
 SELECT DISTINCT v9."nr1m5" AS "nr1m5", v9."product1m5" AS "product1m5"
@@ -4940,9 +4940,9 @@ FROM (
       WHERE ((v1."o_deliverydays" <= 3) AND (v1."p_nr" <= 77) AND v1."o_deliverydays" IS NOT NULL AND v1."o_price" IS NOT NULL AND v1."o_validto" IS NOT NULL AND v1."o_vendor" = v7."nr" AND 'CN' = v7."country")
 ) v9
 
-19:14:31.316 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 11.sql
-19:14:31.321 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:31.324 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 78
+16:47:28.442 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 11.sql
+16:47:28.446 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:28.448 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 78
 
 SELECT v25."v26" AS "v26", v25."v6" AS "v6", v25."v9" AS "v9"
 FROM (SELECT 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Offer' AS "v26", 0 AS "v6", 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type' AS "v9"
@@ -5046,9 +5046,9 @@ FROM "ss4"."offer" v23
 WHERE (v23."validto" IS NOT NULL AND 78 = v23."nr")
 ) v25
 
-19:14:33.527 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 12.sql
-19:14:33.532 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:33.533 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 79
+16:47:30.598 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 12.sql
+16:47:30.602 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:30.604 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 79
 
 SELECT v11."deliverydays1m37" AS "deliverydays1m37", v11."label10m4" AS "label10m4", v11."label10m46" AS "label10m46", v11."nr1m21" AS "nr1m21", v11."offerwebpage1m24" AS "offerwebpage1m24", v11."price1m39" AS "price1m39", v11."product1m5" AS "product1m5", v11."validto1m45" AS "validto1m45", v11."vendor1m8" AS "vendor1m8"
 FROM (
@@ -5102,11 +5102,11 @@ FROM (
            ) v9
 ) v11
 
-19:14:33.540 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - null
+16:47:30.611 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - null
 null
-19:14:33.542 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 00.sql
-19:14:33.546 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:33.548 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 80
+16:47:30.614 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 00.sql
+16:47:30.619 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:30.621 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 80
 
 SELECT v12."nr2m23" AS "nr2m23", COUNT(*) AS "v1"
 FROM (
@@ -5134,9 +5134,9 @@ FROM (
     ) v12
 GROUP BY v12."nr2m23"
 
-19:14:33.635 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 01.sql
-19:14:33.638 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:33.640 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 3500
+16:47:30.721 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 01.sql
+16:47:30.725 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:30.730 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 3500
 -- 3509
 -- 646
 
@@ -5216,9 +5216,9 @@ FROM (
 WHERE (v5."nr0m55" = v15."nr0m1" AND v5."nr0m55" = v20."nr0m2")
 )
 
-19:14:33.756 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 02.sql
-19:14:33.759 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:33.761 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 82
+16:47:30.885 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 02.sql
+16:47:30.890 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:30.892 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 82
 
 SELECT v76."comment10m20" AS "comment10m20", v76."label10m18" AS "label10m18", v76."label10m46" AS "label10m46", v76."label10m6" AS "label10m6", v76."propertynum1m25" AS "propertynum1m25", v76."propertynum1m40" AS "propertynum1m40", v76."propertynum1m41" AS "propertynum1m41", v76."propertytex1m30" AS "propertytex1m30", v76."propertytex1m31" AS "propertytex1m31", v76."propertytex1m32" AS "propertytex1m32", v76."propertytex1m33" AS "propertytex1m33", v76."propertytex1m34" AS "propertytex1m34"
 FROM (
@@ -5276,9 +5276,9 @@ FROM (
 	  )
 ) v76
 
-19:14:33.786 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 03.sql
-19:14:33.789 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:33.791 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 3516
+16:47:30.922 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 03.sql
+16:47:30.927 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:30.930 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 3516
 -- 3518
 
 SELECT v37."label10m46" AS "label10m46", v37."nr0m55" AS "nr0m55"
@@ -5402,9 +5402,9 @@ FROM (
      )
 ) v37
 
-19:14:33.939 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 04.sql
-19:14:33.944 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:33.948 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 3518
+16:47:31.090 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 04.sql
+16:47:31.095 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:31.098 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 3518
 -- 3522
 -- 31
 
@@ -5552,9 +5552,9 @@ FROM (
        WHERE (v36."nr0m10" = v46."nr0m11" AND v36."nr0m10" = v51."nr0m12")
 ) v63
 
-19:14:34.134 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 05.sql
-19:14:34.137 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:34.138 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 85
+16:47:31.287 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 05.sql
+16:47:31.290 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:31.292 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 85
 
 SELECT v37."label10m46" AS "label10m46", v37."product0m4" AS "product0m4"
 FROM (
@@ -5652,9 +5652,9 @@ FROM (
               v10."productfeature2m2" = v5."productfeature2m1")
 ) v37
 
-19:14:34.352 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 06.sql
-19:14:34.359 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:34.361 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- oceanology exorciser comity
+16:47:31.539 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 06.sql
+16:47:31.543 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:31.545 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- oceanology exorciser comity
 
 SELECT v24."label10m46" AS "label10m46", v24."nr1m1" AS "nr1m1", v24."nr3m2" AS "nr3m2", v24."nr8m3" AS "nr8m3", v24."v0" AS "v0"
 FROM (SELECT v18."label10m46" AS "label10m46", v18."nr1m1" AS "nr1m1", NULL AS "nr3m2", NULL AS "nr8m3", 0 AS "v0"
@@ -5706,9 +5706,9 @@ FROM (SELECT v18."label10m46" AS "label10m46", v18."nr1m1" AS "nr1m1", NULL AS "
       WHERE ((POSITION('oceanology exorciser comity' IN v22."label") > 0) AND v22."label" IS NOT NULL AND v22."publisher" IS NOT NULL)
      ) v24
 
-19:14:34.441 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 07.sql
-19:14:34.446 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:34.448 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 87
+16:47:31.649 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 07.sql
+16:47:31.654 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:31.656 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 87
 -- 2008-06-28
 
 SELECT v36."label10m4" AS "label10m4", v36."label10m46" AS "label10m46", v36."name1m12" AS "name1m12", v36."nr0m4" AS "nr0m4", v36."nr1m5" AS "nr1m5", v36."person2m7" AS "person2m7", v36."price1m39" AS "price1m39", v36."rating1m16" AS "rating1m16", v36."rating1m17" AS "rating1m17", v36."title2m11" AS "title2m11", v36."vendor1m8" AS "vendor1m8"
@@ -5820,9 +5820,9 @@ FROM (
      ) v34 ON v12."nr0m4" = v34."nr0m5"  ON 1 = 1
 ) v36
 
-19:14:35.128 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 08.sql
-19:14:35.134 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:35.136 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 1140
+16:47:32.443 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 08.sql
+16:47:32.448 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:32.449 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 1140
 
 SELECT v49."name1m12" AS "name1m12", v49."person2m7" AS "person2m7", v49."rating1m13" AS "rating1m13", v49."rating1m15" AS "rating1m15", v49."rating1m16" AS "rating1m16", v49."rating1m17" AS "rating1m17", v49."reviewdate2m43" AS "reviewdate2m43", v49."text2m14" AS "text2m14", v49."title2m11" AS "title2m11"
 FROM (
@@ -5874,9 +5874,9 @@ FROM (
                    ) v27 ON (v5."person2m7" = v27."nr")
 ) v49
 
-19:14:35.149 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 09.sql
-19:14:35.153 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:35.155 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 89
+16:47:32.462 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 09.sql
+16:47:32.466 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:32.467 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 89
 
 SELECT v24."country3m1" AS "country3m1", v24."mbox_sha1sum1m47" AS "mbox_sha1sum1m47", v24."nr0m4" AS "nr0m4", v24."person2m7" AS "person2m7", v24."product2m4" AS "product2m4", v24."title2m11" AS "title2m11"
 FROM (
@@ -5926,9 +5926,9 @@ FROM (
            WHERE (v7."person2m7" = v12."person2m0" AND v12."nr0m4" = v17."nr0m1" AND v12."nr0m4" = v22."nr0m2")
 ) v24
 
-19:14:35.256 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 10.sql
-19:14:35.262 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:35.266 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 90
+16:47:32.557 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 10.sql
+16:47:32.561 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:32.563 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 90
 -- CN
 
 SELECT DISTINCT v9."nr1m5" AS "nr1m5", v9."product1m5" AS "product1m5"
@@ -5956,9 +5956,9 @@ FROM (
       WHERE ((v1."o_deliverydays" <= 3) AND (v1."p_nr" <= 90) AND v1."o_deliverydays" IS NOT NULL AND v1."o_price" IS NOT NULL AND v1."o_validto" IS NOT NULL AND v1."o_vendor" = v7."nr" AND 'CN' = v7."country")
 ) v9
 
-19:14:35.278 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 11.sql
-19:14:35.282 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:35.284 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 91
+16:47:32.573 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 11.sql
+16:47:32.576 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:32.578 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 91
 
 SELECT v25."v26" AS "v26", v25."v6" AS "v6", v25."v9" AS "v9"
 FROM (SELECT 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Offer' AS "v26", 0 AS "v6", 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type' AS "v9"
@@ -6062,9 +6062,9 @@ FROM "ss4"."offer" v23
 WHERE (v23."validto" IS NOT NULL AND 91 = v23."nr")
 ) v25
 
-19:14:37.400 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 12.sql
-19:14:37.403 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:37.404 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 92
+16:47:35.126 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 12.sql
+16:47:35.130 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:35.131 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 92
 
 SELECT v11."deliverydays1m37" AS "deliverydays1m37", v11."label10m4" AS "label10m4", v11."label10m46" AS "label10m46", v11."nr1m21" AS "nr1m21", v11."offerwebpage1m24" AS "offerwebpage1m24", v11."price1m39" AS "price1m39", v11."product1m5" AS "product1m5", v11."validto1m45" AS "validto1m45", v11."vendor1m8" AS "vendor1m8"
 FROM (
@@ -6118,11 +6118,11 @@ FROM (
            ) v9
 ) v11
 
-19:14:37.411 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - null
+16:47:35.138 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - null
 null
-19:14:37.413 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 00.sql
-19:14:37.416 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:37.417 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 93
+16:47:35.140 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 00.sql
+16:47:35.144 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:35.145 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 93
 
 SELECT v12."nr2m23" AS "nr2m23", COUNT(*) AS "v1"
 FROM (
@@ -6150,9 +6150,9 @@ FROM (
     ) v12
 GROUP BY v12."nr2m23"
 
-19:14:37.507 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 01.sql
-19:14:37.511 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:37.514 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 2530
+16:47:35.237 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 01.sql
+16:47:35.242 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:35.245 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 2530
 -- 2534
 -- 625
 
@@ -6232,9 +6232,9 @@ FROM (
 WHERE (v5."nr0m55" = v15."nr0m1" AND v5."nr0m55" = v20."nr0m2")
 )
 
-19:14:37.632 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 02.sql
-19:14:37.635 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:37.636 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 95
+16:47:35.345 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 02.sql
+16:47:35.350 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:35.351 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 95
 
 SELECT v76."comment10m20" AS "comment10m20", v76."label10m18" AS "label10m18", v76."label10m46" AS "label10m46", v76."label10m6" AS "label10m6", v76."propertynum1m25" AS "propertynum1m25", v76."propertynum1m40" AS "propertynum1m40", v76."propertynum1m41" AS "propertynum1m41", v76."propertytex1m30" AS "propertytex1m30", v76."propertytex1m31" AS "propertytex1m31", v76."propertytex1m32" AS "propertytex1m32", v76."propertytex1m33" AS "propertytex1m33", v76."propertytex1m34" AS "propertytex1m34"
 FROM (
@@ -6292,9 +6292,9 @@ FROM (
 	  )
 ) v76
 
-19:14:37.665 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 03.sql
-19:14:37.668 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:37.670 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 2538
+16:47:35.378 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 03.sql
+16:47:35.381 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:35.383 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 2538
 -- 2541
 
 SELECT v37."label10m46" AS "label10m46", v37."nr0m55" AS "nr0m55"
@@ -6418,9 +6418,9 @@ FROM (
      )
 ) v37
 
-19:14:37.790 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 04.sql
-19:14:37.793 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:37.795 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 2541
+16:47:35.515 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 04.sql
+16:47:35.518 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:35.520 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 2541
 -- 2548
 -- 2550
 
@@ -6568,9 +6568,9 @@ FROM (
        WHERE (v36."nr0m10" = v46."nr0m11" AND v36."nr0m10" = v51."nr0m12")
 ) v63
 
-19:14:37.991 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 05.sql
-19:14:37.995 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:37.997 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 98
+16:47:35.694 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 05.sql
+16:47:35.699 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:35.701 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 98
 
 SELECT v37."label10m46" AS "label10m46", v37."product0m4" AS "product0m4"
 FROM (
@@ -6668,9 +6668,9 @@ FROM (
               v10."productfeature2m2" = v5."productfeature2m1")
 ) v37
 
-19:14:38.190 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 06.sql
-19:14:38.195 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:38.197 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- flab paddlers
+16:47:35.945 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 06.sql
+16:47:35.948 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:35.950 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- flab paddlers
 
 SELECT v24."label10m46" AS "label10m46", v24."nr1m1" AS "nr1m1", v24."nr3m2" AS "nr3m2", v24."nr8m3" AS "nr8m3", v24."v0" AS "v0"
 FROM (SELECT v18."label10m46" AS "label10m46", v18."nr1m1" AS "nr1m1", NULL AS "nr3m2", NULL AS "nr8m3", 0 AS "v0"
@@ -6722,9 +6722,9 @@ FROM (SELECT v18."label10m46" AS "label10m46", v18."nr1m1" AS "nr1m1", NULL AS "
       WHERE ((POSITION('flab paddlers' IN v22."label") > 0) AND v22."label" IS NOT NULL AND v22."publisher" IS NOT NULL)
      ) v24
 
-19:14:38.288 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 07.sql
-19:14:38.292 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:38.294 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 100
+16:47:36.039 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 07.sql
+16:47:36.044 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:36.046 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 100
 -- 2008-07-01
 
 SELECT v36."label10m4" AS "label10m4", v36."label10m46" AS "label10m46", v36."name1m12" AS "name1m12", v36."nr0m4" AS "nr0m4", v36."nr1m5" AS "nr1m5", v36."person2m7" AS "person2m7", v36."price1m39" AS "price1m39", v36."rating1m16" AS "rating1m16", v36."rating1m17" AS "rating1m17", v36."title2m11" AS "title2m11", v36."vendor1m8" AS "vendor1m8"
@@ -6836,9 +6836,9 @@ FROM (
      ) v34 ON v12."nr0m4" = v34."nr0m5"  ON 1 = 1
 ) v36
 
-19:14:38.924 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 08.sql
-19:14:38.927 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:38.928 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 208
+16:47:36.788 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 08.sql
+16:47:36.792 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:36.793 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 208
 
 SELECT v49."name1m12" AS "name1m12", v49."person2m7" AS "person2m7", v49."rating1m13" AS "rating1m13", v49."rating1m15" AS "rating1m15", v49."rating1m16" AS "rating1m16", v49."rating1m17" AS "rating1m17", v49."reviewdate2m43" AS "reviewdate2m43", v49."text2m14" AS "text2m14", v49."title2m11" AS "title2m11"
 FROM (
@@ -6890,9 +6890,9 @@ FROM (
                    ) v27 ON (v5."person2m7" = v27."nr")
 ) v49
 
-19:14:38.942 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 09.sql
-19:14:38.947 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:38.949 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 102
+16:47:36.807 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 09.sql
+16:47:36.810 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:36.812 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 102
 
 SELECT v24."country3m1" AS "country3m1", v24."mbox_sha1sum1m47" AS "mbox_sha1sum1m47", v24."nr0m4" AS "nr0m4", v24."person2m7" AS "person2m7", v24."product2m4" AS "product2m4", v24."title2m11" AS "title2m11"
 FROM (
@@ -6942,9 +6942,9 @@ FROM (
            WHERE (v7."person2m7" = v12."person2m0" AND v12."nr0m4" = v17."nr0m1" AND v12."nr0m4" = v22."nr0m2")
 ) v24
 
-19:14:39.058 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 10.sql
-19:14:39.064 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:39.067 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 103
+16:47:36.935 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 10.sql
+16:47:36.939 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:36.943 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 103
 -- CN
 
 SELECT DISTINCT v9."nr1m5" AS "nr1m5", v9."product1m5" AS "product1m5"
@@ -6972,9 +6972,9 @@ FROM (
       WHERE ((v1."o_deliverydays" <= 3) AND (v1."p_nr" <= 103) AND v1."o_deliverydays" IS NOT NULL AND v1."o_price" IS NOT NULL AND v1."o_validto" IS NOT NULL AND v1."o_vendor" = v7."nr" AND 'CN' = v7."country")
 ) v9
 
-19:14:39.080 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 11.sql
-19:14:39.085 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:39.086 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 104
+16:47:36.954 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 11.sql
+16:47:36.958 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:36.959 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 104
 
 SELECT v25."v26" AS "v26", v25."v6" AS "v6", v25."v9" AS "v9"
 FROM (SELECT 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Offer' AS "v26", 0 AS "v6", 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type' AS "v9"
@@ -7078,9 +7078,9 @@ FROM "ss4"."offer" v23
 WHERE (v23."validto" IS NOT NULL AND 104 = v23."nr")
 ) v25
 
-19:14:41.164 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 12.sql
-19:14:41.168 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:41.169 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 105
+16:47:39.148 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 12.sql
+16:47:39.152 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:39.154 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 105
 
 SELECT v11."deliverydays1m37" AS "deliverydays1m37", v11."label10m4" AS "label10m4", v11."label10m46" AS "label10m46", v11."nr1m21" AS "nr1m21", v11."offerwebpage1m24" AS "offerwebpage1m24", v11."price1m39" AS "price1m39", v11."product1m5" AS "product1m5", v11."validto1m45" AS "validto1m45", v11."vendor1m8" AS "vendor1m8"
 FROM (
@@ -7134,11 +7134,11 @@ FROM (
            ) v9
 ) v11
 
-19:14:41.176 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - null
+16:47:39.161 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - null
 null
-19:14:41.179 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 00.sql
-19:14:41.181 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:41.183 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 106
+16:47:39.166 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 00.sql
+16:47:39.170 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:39.171 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 106
 
 SELECT v12."nr2m23" AS "nr2m23", COUNT(*) AS "v1"
 FROM (
@@ -7166,9 +7166,9 @@ FROM (
     ) v12
 GROUP BY v12."nr2m23"
 
-19:14:41.283 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 01.sql
-19:14:41.287 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:41.291 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 95
+16:47:39.275 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 01.sql
+16:47:39.279 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:39.282 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 95
 -- 97
 -- 867
 
@@ -7248,9 +7248,9 @@ FROM (
 WHERE (v5."nr0m55" = v15."nr0m1" AND v5."nr0m55" = v20."nr0m2")
 )
 
-19:14:41.416 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 02.sql
-19:14:41.419 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:41.420 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 108
+16:47:39.402 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 02.sql
+16:47:39.405 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:39.407 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 108
 
 SELECT v76."comment10m20" AS "comment10m20", v76."label10m18" AS "label10m18", v76."label10m46" AS "label10m46", v76."label10m6" AS "label10m6", v76."propertynum1m25" AS "propertynum1m25", v76."propertynum1m40" AS "propertynum1m40", v76."propertynum1m41" AS "propertynum1m41", v76."propertytex1m30" AS "propertytex1m30", v76."propertytex1m31" AS "propertytex1m31", v76."propertytex1m32" AS "propertytex1m32", v76."propertytex1m33" AS "propertytex1m33", v76."propertytex1m34" AS "propertytex1m34"
 FROM (
@@ -7308,9 +7308,9 @@ FROM (
 	  )
 ) v76
 
-19:14:41.452 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 03.sql
-19:14:41.455 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:41.456 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 98
+16:47:39.438 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 03.sql
+16:47:39.443 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:39.445 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 98
 -- 1154
 
 SELECT v37."label10m46" AS "label10m46", v37."nr0m55" AS "nr0m55"
@@ -7434,9 +7434,9 @@ FROM (
      )
 ) v37
 
-19:14:41.606 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 04.sql
-19:14:41.610 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:41.612 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 1154
+16:47:39.592 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 04.sql
+16:47:39.598 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:39.601 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 1154
 -- 1157
 -- 1160
 
@@ -7584,9 +7584,9 @@ FROM (
        WHERE (v36."nr0m10" = v46."nr0m11" AND v36."nr0m10" = v51."nr0m12")
 ) v63
 
-19:14:41.764 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 05.sql
-19:14:41.769 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:41.770 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 111
+16:47:39.773 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 05.sql
+16:47:39.777 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:39.779 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 111
 
 SELECT v37."label10m46" AS "label10m46", v37."product0m4" AS "product0m4"
 FROM (
@@ -7684,9 +7684,9 @@ FROM (
               v10."productfeature2m2" = v5."productfeature2m1")
 ) v37
 
-19:14:41.968 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 06.sql
-19:14:41.973 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:41.974 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- walkaway
+16:47:39.994 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 06.sql
+16:47:39.997 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:39.999 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- walkaway
 
 SELECT v24."label10m46" AS "label10m46", v24."nr1m1" AS "nr1m1", v24."nr3m2" AS "nr3m2", v24."nr8m3" AS "nr8m3", v24."v0" AS "v0"
 FROM (SELECT v18."label10m46" AS "label10m46", v18."nr1m1" AS "nr1m1", NULL AS "nr3m2", NULL AS "nr8m3", 0 AS "v0"
@@ -7738,9 +7738,9 @@ FROM (SELECT v18."label10m46" AS "label10m46", v18."nr1m1" AS "nr1m1", NULL AS "
       WHERE ((POSITION('walkaway' IN v22."label") > 0) AND v22."label" IS NOT NULL AND v22."publisher" IS NOT NULL)
      ) v24
 
-19:14:42.063 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 07.sql
-19:14:42.067 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:42.069 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 113
+16:47:40.096 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 07.sql
+16:47:40.099 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:40.102 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 113
 -- 2008-07-14
 
 SELECT v36."label10m4" AS "label10m4", v36."label10m46" AS "label10m46", v36."name1m12" AS "name1m12", v36."nr0m4" AS "nr0m4", v36."nr1m5" AS "nr1m5", v36."person2m7" AS "person2m7", v36."price1m39" AS "price1m39", v36."rating1m16" AS "rating1m16", v36."rating1m17" AS "rating1m17", v36."title2m11" AS "title2m11", v36."vendor1m8" AS "vendor1m8"
@@ -7852,9 +7852,9 @@ FROM (
      ) v34 ON v12."nr0m4" = v34."nr0m5"  ON 1 = 1
 ) v36
 
-19:14:42.754 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 08.sql
-19:14:42.759 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:42.760 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 591
+16:47:40.864 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 08.sql
+16:47:40.867 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:40.869 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 591
 
 SELECT v49."name1m12" AS "name1m12", v49."person2m7" AS "person2m7", v49."rating1m13" AS "rating1m13", v49."rating1m15" AS "rating1m15", v49."rating1m16" AS "rating1m16", v49."rating1m17" AS "rating1m17", v49."reviewdate2m43" AS "reviewdate2m43", v49."text2m14" AS "text2m14", v49."title2m11" AS "title2m11"
 FROM (
@@ -7906,9 +7906,9 @@ FROM (
                    ) v27 ON (v5."person2m7" = v27."nr")
 ) v49
 
-19:14:42.774 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 09.sql
-19:14:42.777 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:42.778 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 115
+16:47:40.882 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 09.sql
+16:47:40.886 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:40.887 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 115
 
 SELECT v24."country3m1" AS "country3m1", v24."mbox_sha1sum1m47" AS "mbox_sha1sum1m47", v24."nr0m4" AS "nr0m4", v24."person2m7" AS "person2m7", v24."product2m4" AS "product2m4", v24."title2m11" AS "title2m11"
 FROM (
@@ -7958,9 +7958,9 @@ FROM (
            WHERE (v7."person2m7" = v12."person2m0" AND v12."nr0m4" = v17."nr0m1" AND v12."nr0m4" = v22."nr0m2")
 ) v24
 
-19:14:42.879 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 10.sql
-19:14:42.885 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:42.889 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 116
+16:47:40.991 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 10.sql
+16:47:40.997 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:40.999 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 116
 -- CN
 
 SELECT DISTINCT v9."nr1m5" AS "nr1m5", v9."product1m5" AS "product1m5"
@@ -7988,9 +7988,9 @@ FROM (
       WHERE ((v1."o_deliverydays" <= 3) AND (v1."p_nr" <= 116) AND v1."o_deliverydays" IS NOT NULL AND v1."o_price" IS NOT NULL AND v1."o_validto" IS NOT NULL AND v1."o_vendor" = v7."nr" AND 'CN' = v7."country")
 ) v9
 
-19:14:42.901 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 11.sql
-19:14:42.906 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:42.907 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 117
+16:47:41.009 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 11.sql
+16:47:41.012 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:41.014 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 117
 
 SELECT v25."v26" AS "v26", v25."v6" AS "v6", v25."v9" AS "v9"
 FROM (SELECT 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Offer' AS "v26", 0 AS "v6", 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type' AS "v9"
@@ -8094,9 +8094,9 @@ FROM "ss4"."offer" v23
 WHERE (v23."validto" IS NOT NULL AND 117 = v23."nr")
 ) v25
 
-19:14:45.096 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 12.sql
-19:14:45.099 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:45.100 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 118
+16:47:43.501 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 12.sql
+16:47:43.504 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:43.506 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 118
 
 SELECT v11."deliverydays1m37" AS "deliverydays1m37", v11."label10m4" AS "label10m4", v11."label10m46" AS "label10m46", v11."nr1m21" AS "nr1m21", v11."offerwebpage1m24" AS "offerwebpage1m24", v11."price1m39" AS "price1m39", v11."product1m5" AS "product1m5", v11."validto1m45" AS "validto1m45", v11."vendor1m8" AS "vendor1m8"
 FROM (
@@ -8150,11 +8150,11 @@ FROM (
            ) v9
 ) v11
 
-19:14:45.108 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - null
+16:47:43.512 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - null
 null
-19:14:45.110 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 00.sql
-19:14:45.113 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:45.115 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 119
+16:47:43.515 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 00.sql
+16:47:43.517 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:43.519 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 119
 
 SELECT v12."nr2m23" AS "nr2m23", COUNT(*) AS "v1"
 FROM (
@@ -8182,9 +8182,9 @@ FROM (
     ) v12
 GROUP BY v12."nr2m23"
 
-19:14:45.206 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 01.sql
-19:14:45.210 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:45.212 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 3923
+16:47:43.609 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 01.sql
+16:47:43.615 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:43.618 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 3923
 -- 3926
 -- 317
 
@@ -8264,9 +8264,9 @@ FROM (
 WHERE (v5."nr0m55" = v15."nr0m1" AND v5."nr0m55" = v20."nr0m2")
 )
 
-19:14:45.320 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 02.sql
-19:14:45.326 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:45.327 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 121
+16:47:43.738 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 02.sql
+16:47:43.742 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:43.744 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 121
 
 SELECT v76."comment10m20" AS "comment10m20", v76."label10m18" AS "label10m18", v76."label10m46" AS "label10m46", v76."label10m6" AS "label10m6", v76."propertynum1m25" AS "propertynum1m25", v76."propertynum1m40" AS "propertynum1m40", v76."propertynum1m41" AS "propertynum1m41", v76."propertytex1m30" AS "propertytex1m30", v76."propertytex1m31" AS "propertytex1m31", v76."propertytex1m32" AS "propertytex1m32", v76."propertytex1m33" AS "propertytex1m33", v76."propertytex1m34" AS "propertytex1m34"
 FROM (
@@ -8324,9 +8324,9 @@ FROM (
 	  )
 ) v76
 
-19:14:45.361 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 03.sql
-19:14:45.366 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:45.368 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 57
+16:47:43.776 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 03.sql
+16:47:43.779 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:43.781 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 57
 -- 60
 
 SELECT v37."label10m46" AS "label10m46", v37."nr0m55" AS "nr0m55"
@@ -8450,9 +8450,9 @@ FROM (
      )
 ) v37
 
-19:14:45.507 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 04.sql
-19:14:45.510 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:45.513 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 60
+16:47:43.905 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 04.sql
+16:47:43.908 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:43.911 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 60
 -- 63
 -- 64
 
@@ -8600,9 +8600,9 @@ FROM (
        WHERE (v36."nr0m10" = v46."nr0m11" AND v36."nr0m10" = v51."nr0m12")
 ) v63
 
-19:14:45.708 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 05.sql
-19:14:45.711 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:45.712 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 124
+16:47:44.076 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 05.sql
+16:47:44.080 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:44.082 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 124
 
 SELECT v37."label10m46" AS "label10m46", v37."product0m4" AS "product0m4"
 FROM (
@@ -8700,9 +8700,9 @@ FROM (
               v10."productfeature2m2" = v5."productfeature2m1")
 ) v37
 
-19:14:45.914 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 06.sql
-19:14:45.918 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:45.920 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- temporized extrauterine unbeloved
+16:47:44.310 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 06.sql
+16:47:44.315 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:44.317 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- temporized extrauterine unbeloved
 
 SELECT v24."label10m46" AS "label10m46", v24."nr1m1" AS "nr1m1", v24."nr3m2" AS "nr3m2", v24."nr8m3" AS "nr8m3", v24."v0" AS "v0"
 FROM (SELECT v18."label10m46" AS "label10m46", v18."nr1m1" AS "nr1m1", NULL AS "nr3m2", NULL AS "nr8m3", 0 AS "v0"
@@ -8754,9 +8754,9 @@ FROM (SELECT v18."label10m46" AS "label10m46", v18."nr1m1" AS "nr1m1", NULL AS "
       WHERE ((POSITION('temporized extrauterine unbeloved' IN v22."label") > 0) AND v22."label" IS NOT NULL AND v22."publisher" IS NOT NULL)
      ) v24
 
-19:14:46.008 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 07.sql
-19:14:46.013 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:46.015 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 126
+16:47:44.415 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 07.sql
+16:47:44.420 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:44.422 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 126
 -- 2008-05-16
 
 SELECT v36."label10m4" AS "label10m4", v36."label10m46" AS "label10m46", v36."name1m12" AS "name1m12", v36."nr0m4" AS "nr0m4", v36."nr1m5" AS "nr1m5", v36."person2m7" AS "person2m7", v36."price1m39" AS "price1m39", v36."rating1m16" AS "rating1m16", v36."rating1m17" AS "rating1m17", v36."title2m11" AS "title2m11", v36."vendor1m8" AS "vendor1m8"
@@ -8868,9 +8868,9 @@ FROM (
      ) v34 ON v12."nr0m4" = v34."nr0m5"  ON 1 = 1
 ) v36
 
-19:14:46.657 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 08.sql
-19:14:46.661 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:46.663 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 1316
+16:47:45.173 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 08.sql
+16:47:45.178 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:45.179 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 1316
 
 SELECT v49."name1m12" AS "name1m12", v49."person2m7" AS "person2m7", v49."rating1m13" AS "rating1m13", v49."rating1m15" AS "rating1m15", v49."rating1m16" AS "rating1m16", v49."rating1m17" AS "rating1m17", v49."reviewdate2m43" AS "reviewdate2m43", v49."text2m14" AS "text2m14", v49."title2m11" AS "title2m11"
 FROM (
@@ -8922,9 +8922,9 @@ FROM (
                    ) v27 ON (v5."person2m7" = v27."nr")
 ) v49
 
-19:14:46.676 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 09.sql
-19:14:46.680 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:46.682 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 128
+16:47:45.193 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 09.sql
+16:47:45.196 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:45.198 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 128
 
 SELECT v24."country3m1" AS "country3m1", v24."mbox_sha1sum1m47" AS "mbox_sha1sum1m47", v24."nr0m4" AS "nr0m4", v24."person2m7" AS "person2m7", v24."product2m4" AS "product2m4", v24."title2m11" AS "title2m11"
 FROM (
@@ -8974,9 +8974,9 @@ FROM (
            WHERE (v7."person2m7" = v12."person2m0" AND v12."nr0m4" = v17."nr0m1" AND v12."nr0m4" = v22."nr0m2")
 ) v24
 
-19:14:46.793 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 10.sql
-19:14:46.799 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:46.802 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 129
+16:47:45.298 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 10.sql
+16:47:45.302 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:45.305 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 129
 -- CN
 
 SELECT DISTINCT v9."nr1m5" AS "nr1m5", v9."product1m5" AS "product1m5"
@@ -9004,9 +9004,9 @@ FROM (
       WHERE ((v1."o_deliverydays" <= 3) AND (v1."p_nr" <= 129) AND v1."o_deliverydays" IS NOT NULL AND v1."o_price" IS NOT NULL AND v1."o_validto" IS NOT NULL AND v1."o_vendor" = v7."nr" AND 'CN' = v7."country")
 ) v9
 
-19:14:46.814 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 11.sql
-19:14:46.818 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:46.819 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 130
+16:47:45.316 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 11.sql
+16:47:45.320 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:45.321 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 130
 
 SELECT v25."v26" AS "v26", v25."v6" AS "v6", v25."v9" AS "v9"
 FROM (SELECT 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Offer' AS "v26", 0 AS "v6", 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type' AS "v9"
@@ -9110,9 +9110,9 @@ FROM "ss4"."offer" v23
 WHERE (v23."validto" IS NOT NULL AND 130 = v23."nr")
 ) v25
 
-19:14:48.957 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 12.sql
-19:14:48.960 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:48.961 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 131
+16:47:47.679 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 12.sql
+16:47:47.683 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:47.685 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 131
 
 SELECT v11."deliverydays1m37" AS "deliverydays1m37", v11."label10m4" AS "label10m4", v11."label10m46" AS "label10m46", v11."nr1m21" AS "nr1m21", v11."offerwebpage1m24" AS "offerwebpage1m24", v11."price1m39" AS "price1m39", v11."product1m5" AS "product1m5", v11."validto1m45" AS "validto1m45", v11."vendor1m8" AS "vendor1m8"
 FROM (
@@ -9166,11 +9166,11 @@ FROM (
            ) v9
 ) v11
 
-19:14:48.969 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - null
+16:47:47.691 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - null
 null
-19:14:48.971 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 00.sql
-19:14:48.974 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:48.975 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 132
+16:47:47.693 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 00.sql
+16:47:47.696 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:47.697 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 132
 
 SELECT v12."nr2m23" AS "nr2m23", COUNT(*) AS "v1"
 FROM (
@@ -9198,9 +9198,9 @@ FROM (
     ) v12
 GROUP BY v12."nr2m23"
 
-19:14:49.063 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 01.sql
-19:14:49.068 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:49.070 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 894
+16:47:47.794 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 01.sql
+16:47:47.799 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:47.803 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 894
 -- 895
 -- 1270
 
@@ -9280,9 +9280,9 @@ FROM (
 WHERE (v5."nr0m55" = v15."nr0m1" AND v5."nr0m55" = v20."nr0m2")
 )
 
-19:14:49.190 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 02.sql
-19:14:49.194 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:49.195 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 134
+16:47:47.923 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 02.sql
+16:47:47.927 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:47.928 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 134
 
 SELECT v76."comment10m20" AS "comment10m20", v76."label10m18" AS "label10m18", v76."label10m46" AS "label10m46", v76."label10m6" AS "label10m6", v76."propertynum1m25" AS "propertynum1m25", v76."propertynum1m40" AS "propertynum1m40", v76."propertynum1m41" AS "propertynum1m41", v76."propertytex1m30" AS "propertytex1m30", v76."propertytex1m31" AS "propertytex1m31", v76."propertytex1m32" AS "propertytex1m32", v76."propertytex1m33" AS "propertytex1m33", v76."propertytex1m34" AS "propertytex1m34"
 FROM (
@@ -9340,9 +9340,9 @@ FROM (
 	  )
 ) v76
 
-19:14:49.234 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 03.sql
-19:14:49.237 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:49.239 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 3402
+16:47:47.964 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 03.sql
+16:47:47.966 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:47.968 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 3402
 -- 3403
 
 SELECT v37."label10m46" AS "label10m46", v37."nr0m55" AS "nr0m55"
@@ -9466,9 +9466,9 @@ FROM (
      )
 ) v37
 
-19:14:49.384 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 04.sql
-19:14:49.387 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:49.389 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 3403
+16:47:48.090 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 04.sql
+16:47:48.095 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:48.098 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 3403
 -- 3406
 -- 3408
 
@@ -9616,9 +9616,9 @@ FROM (
        WHERE (v36."nr0m10" = v46."nr0m11" AND v36."nr0m10" = v51."nr0m12")
 ) v63
 
-19:14:49.553 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 05.sql
-19:14:49.556 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:49.557 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 137
+16:47:48.282 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 05.sql
+16:47:48.287 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:48.288 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 137
 
 SELECT v37."label10m46" AS "label10m46", v37."product0m4" AS "product0m4"
 FROM (
@@ -9716,9 +9716,9 @@ FROM (
               v10."productfeature2m2" = v5."productfeature2m1")
 ) v37
 
-19:14:49.740 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 06.sql
-19:14:49.747 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:49.749 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- rowboats disunited scalpel
+16:47:48.485 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 06.sql
+16:47:48.488 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:48.489 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- rowboats disunited scalpel
 
 SELECT v24."label10m46" AS "label10m46", v24."nr1m1" AS "nr1m1", v24."nr3m2" AS "nr3m2", v24."nr8m3" AS "nr8m3", v24."v0" AS "v0"
 FROM (SELECT v18."label10m46" AS "label10m46", v18."nr1m1" AS "nr1m1", NULL AS "nr3m2", NULL AS "nr8m3", 0 AS "v0"
@@ -9770,9 +9770,9 @@ FROM (SELECT v18."label10m46" AS "label10m46", v18."nr1m1" AS "nr1m1", NULL AS "
       WHERE ((POSITION('rowboats disunited scalpel' IN v22."label") > 0) AND v22."label" IS NOT NULL AND v22."publisher" IS NOT NULL)
      ) v24
 
-19:14:49.845 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 07.sql
-19:14:49.849 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:49.851 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 139
+16:47:48.580 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 07.sql
+16:47:48.585 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:48.587 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 139
 -- 2008-08-18
 
 SELECT v36."label10m4" AS "label10m4", v36."label10m46" AS "label10m46", v36."name1m12" AS "name1m12", v36."nr0m4" AS "nr0m4", v36."nr1m5" AS "nr1m5", v36."person2m7" AS "person2m7", v36."price1m39" AS "price1m39", v36."rating1m16" AS "rating1m16", v36."rating1m17" AS "rating1m17", v36."title2m11" AS "title2m11", v36."vendor1m8" AS "vendor1m8"
@@ -9884,9 +9884,9 @@ FROM (
      ) v34 ON v12."nr0m4" = v34."nr0m5"  ON 1 = 1
 ) v36
 
-19:14:50.549 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 08.sql
-19:14:50.552 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:50.553 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 1264
+16:47:49.366 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 08.sql
+16:47:49.370 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:49.372 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 1264
 
 SELECT v49."name1m12" AS "name1m12", v49."person2m7" AS "person2m7", v49."rating1m13" AS "rating1m13", v49."rating1m15" AS "rating1m15", v49."rating1m16" AS "rating1m16", v49."rating1m17" AS "rating1m17", v49."reviewdate2m43" AS "reviewdate2m43", v49."text2m14" AS "text2m14", v49."title2m11" AS "title2m11"
 FROM (
@@ -9938,9 +9938,9 @@ FROM (
                    ) v27 ON (v5."person2m7" = v27."nr")
 ) v49
 
-19:14:50.566 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 09.sql
-19:14:50.570 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:50.571 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 141
+16:47:49.384 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 09.sql
+16:47:49.387 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:49.388 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 141
 
 SELECT v24."country3m1" AS "country3m1", v24."mbox_sha1sum1m47" AS "mbox_sha1sum1m47", v24."nr0m4" AS "nr0m4", v24."person2m7" AS "person2m7", v24."product2m4" AS "product2m4", v24."title2m11" AS "title2m11"
 FROM (
@@ -9990,9 +9990,9 @@ FROM (
            WHERE (v7."person2m7" = v12."person2m0" AND v12."nr0m4" = v17."nr0m1" AND v12."nr0m4" = v22."nr0m2")
 ) v24
 
-19:14:50.674 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 10.sql
-19:14:50.681 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:50.684 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 142
+16:47:49.508 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 10.sql
+16:47:49.512 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:49.515 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 142
 -- CN
 
 SELECT DISTINCT v9."nr1m5" AS "nr1m5", v9."product1m5" AS "product1m5"
@@ -10020,9 +10020,9 @@ FROM (
       WHERE ((v1."o_deliverydays" <= 3) AND (v1."p_nr" <= 142) AND v1."o_deliverydays" IS NOT NULL AND v1."o_price" IS NOT NULL AND v1."o_validto" IS NOT NULL AND v1."o_vendor" = v7."nr" AND 'CN' = v7."country")
 ) v9
 
-19:14:50.696 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 11.sql
-19:14:50.700 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:50.702 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 143
+16:47:49.526 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 11.sql
+16:47:49.529 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:49.530 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 143
 
 SELECT v25."v26" AS "v26", v25."v6" AS "v6", v25."v9" AS "v9"
 FROM (SELECT 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Offer' AS "v26", 0 AS "v6", 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type' AS "v9"
@@ -10126,9 +10126,9 @@ FROM "ss4"."offer" v23
 WHERE (v23."validto" IS NOT NULL AND 143 = v23."nr")
 ) v25
 
-19:14:52.537 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 12.sql
-19:14:52.540 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:52.541 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 144
+16:47:52.002 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 12.sql
+16:47:52.006 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:52.007 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 144
 
 SELECT v11."deliverydays1m37" AS "deliverydays1m37", v11."label10m4" AS "label10m4", v11."label10m46" AS "label10m46", v11."nr1m21" AS "nr1m21", v11."offerwebpage1m24" AS "offerwebpage1m24", v11."price1m39" AS "price1m39", v11."product1m5" AS "product1m5", v11."validto1m45" AS "validto1m45", v11."vendor1m8" AS "vendor1m8"
 FROM (
@@ -10182,11 +10182,11 @@ FROM (
            ) v9
 ) v11
 
-19:14:52.548 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - null
+16:47:52.014 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - null
 null
-19:14:52.550 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 00.sql
-19:14:52.553 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:52.555 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 145
+16:47:52.016 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 00.sql
+16:47:52.019 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:52.020 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 145
 
 SELECT v12."nr2m23" AS "nr2m23", COUNT(*) AS "v1"
 FROM (
@@ -10214,9 +10214,9 @@ FROM (
     ) v12
 GROUP BY v12."nr2m23"
 
-19:14:52.644 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 01.sql
-19:14:52.650 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:52.652 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 57
+16:47:52.112 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 01.sql
+16:47:52.117 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:52.120 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 57
 -- 60
 -- 1032
 
@@ -10296,9 +10296,9 @@ FROM (
 WHERE (v5."nr0m55" = v15."nr0m1" AND v5."nr0m55" = v20."nr0m2")
 )
 
-19:14:52.768 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 02.sql
-19:14:52.772 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:52.774 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 147
+16:47:52.243 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 02.sql
+16:47:52.246 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:52.248 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 147
 
 SELECT v76."comment10m20" AS "comment10m20", v76."label10m18" AS "label10m18", v76."label10m46" AS "label10m46", v76."label10m6" AS "label10m6", v76."propertynum1m25" AS "propertynum1m25", v76."propertynum1m40" AS "propertynum1m40", v76."propertynum1m41" AS "propertynum1m41", v76."propertytex1m30" AS "propertytex1m30", v76."propertytex1m31" AS "propertytex1m31", v76."propertytex1m32" AS "propertytex1m32", v76."propertytex1m33" AS "propertytex1m33", v76."propertytex1m34" AS "propertytex1m34"
 FROM (
@@ -10356,9 +10356,9 @@ FROM (
 	  )
 ) v76
 
-19:14:52.814 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 03.sql
-19:14:52.818 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:52.820 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 66
+16:47:52.289 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 03.sql
+16:47:52.292 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:52.295 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 66
 -- 69
 
 SELECT v37."label10m46" AS "label10m46", v37."nr0m55" AS "nr0m55"
@@ -10482,9 +10482,9 @@ FROM (
      )
 ) v37
 
-19:14:52.933 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 04.sql
-19:14:52.938 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:52.940 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 69
+16:47:52.450 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 04.sql
+16:47:52.454 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:52.456 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 69
 -- 1006
 -- 1010
 
@@ -10632,9 +10632,9 @@ FROM (
        WHERE (v36."nr0m10" = v46."nr0m11" AND v36."nr0m10" = v51."nr0m12")
 ) v63
 
-19:14:53.128 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 05.sql
-19:14:53.131 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:53.133 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 150
+16:47:52.628 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 05.sql
+16:47:52.631 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:52.633 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 150
 
 SELECT v37."label10m46" AS "label10m46", v37."product0m4" AS "product0m4"
 FROM (
@@ -10732,9 +10732,9 @@ FROM (
               v10."productfeature2m2" = v5."productfeature2m1")
 ) v37
 
-19:14:53.332 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 06.sql
-19:14:53.336 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:53.338 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- arcanum signification
+16:47:52.860 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 06.sql
+16:47:52.864 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:52.865 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- arcanum signification
 
 SELECT v24."label10m46" AS "label10m46", v24."nr1m1" AS "nr1m1", v24."nr3m2" AS "nr3m2", v24."nr8m3" AS "nr8m3", v24."v0" AS "v0"
 FROM (SELECT v18."label10m46" AS "label10m46", v18."nr1m1" AS "nr1m1", NULL AS "nr3m2", NULL AS "nr8m3", 0 AS "v0"
@@ -10786,9 +10786,9 @@ FROM (SELECT v18."label10m46" AS "label10m46", v18."nr1m1" AS "nr1m1", NULL AS "
       WHERE ((POSITION('arcanum signification' IN v22."label") > 0) AND v22."label" IS NOT NULL AND v22."publisher" IS NOT NULL)
      ) v24
 
-19:14:53.429 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 07.sql
-19:14:53.432 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:53.435 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 152
+16:47:52.949 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 07.sql
+16:47:52.954 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:52.956 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 152
 -- 2008-06-04
 
 SELECT v36."label10m4" AS "label10m4", v36."label10m46" AS "label10m46", v36."name1m12" AS "name1m12", v36."nr0m4" AS "nr0m4", v36."nr1m5" AS "nr1m5", v36."person2m7" AS "person2m7", v36."price1m39" AS "price1m39", v36."rating1m16" AS "rating1m16", v36."rating1m17" AS "rating1m17", v36."title2m11" AS "title2m11", v36."vendor1m8" AS "vendor1m8"
@@ -10900,9 +10900,9 @@ FROM (
      ) v34 ON v12."nr0m4" = v34."nr0m5"  ON 1 = 1
 ) v36
 
-19:14:54.136 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 08.sql
-19:14:54.139 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:54.140 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 802
+16:47:53.657 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 08.sql
+16:47:53.661 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:53.663 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 802
 
 SELECT v49."name1m12" AS "name1m12", v49."person2m7" AS "person2m7", v49."rating1m13" AS "rating1m13", v49."rating1m15" AS "rating1m15", v49."rating1m16" AS "rating1m16", v49."rating1m17" AS "rating1m17", v49."reviewdate2m43" AS "reviewdate2m43", v49."text2m14" AS "text2m14", v49."title2m11" AS "title2m11"
 FROM (
@@ -10954,9 +10954,9 @@ FROM (
                    ) v27 ON (v5."person2m7" = v27."nr")
 ) v49
 
-19:14:54.153 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 09.sql
-19:14:54.156 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:54.158 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 154
+16:47:53.676 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 09.sql
+16:47:53.680 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:53.681 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 154
 
 SELECT v24."country3m1" AS "country3m1", v24."mbox_sha1sum1m47" AS "mbox_sha1sum1m47", v24."nr0m4" AS "nr0m4", v24."person2m7" AS "person2m7", v24."product2m4" AS "product2m4", v24."title2m11" AS "title2m11"
 FROM (
@@ -11006,9 +11006,9 @@ FROM (
            WHERE (v7."person2m7" = v12."person2m0" AND v12."nr0m4" = v17."nr0m1" AND v12."nr0m4" = v22."nr0m2")
 ) v24
 
-19:14:54.255 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 10.sql
-19:14:54.261 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:54.264 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 155
+16:47:53.794 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 10.sql
+16:47:53.799 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:53.802 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 155
 -- CN
 
 SELECT DISTINCT v9."nr1m5" AS "nr1m5", v9."product1m5" AS "product1m5"
@@ -11036,9 +11036,9 @@ FROM (
       WHERE ((v1."o_deliverydays" <= 3) AND (v1."p_nr" <= 155) AND v1."o_deliverydays" IS NOT NULL AND v1."o_price" IS NOT NULL AND v1."o_validto" IS NOT NULL AND v1."o_vendor" = v7."nr" AND 'CN' = v7."country")
 ) v9
 
-19:14:54.275 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 11.sql
-19:14:54.278 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:54.280 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 156
+16:47:53.812 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 11.sql
+16:47:53.815 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:53.817 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 156
 
 SELECT v25."v26" AS "v26", v25."v6" AS "v6", v25."v9" AS "v9"
 FROM (SELECT 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Offer' AS "v26", 0 AS "v6", 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type' AS "v9"
@@ -11142,9 +11142,9 @@ FROM "ss4"."offer" v23
 WHERE (v23."validto" IS NOT NULL AND 156 = v23."nr")
 ) v25
 
-19:14:56.508 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 12.sql
-19:14:56.512 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:14:56.513 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 157
+16:47:55.705 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 12.sql
+16:47:55.708 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+16:47:55.710 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 157
 
 SELECT v11."deliverydays1m37" AS "deliverydays1m37", v11."label10m4" AS "label10m4", v11."label10m46" AS "label10m46", v11."nr1m21" AS "nr1m21", v11."offerwebpage1m24" AS "offerwebpage1m24", v11."price1m39" AS "price1m39", v11."product1m5" AS "product1m5", v11."validto1m45" AS "validto1m45", v11."vendor1m8" AS "vendor1m8"
 FROM (
@@ -11198,5 +11198,5 @@ FROM (
            ) v9
 ) v11
 
-19:14:56.520 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - null
+16:47:55.718 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - null
 null
