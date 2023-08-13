@@ -126,7 +126,7 @@ public class ResultToCSVfull {
     public static void main(String[] args){
 
         ResultToCSVfull RTA = new ResultToCSVfull();
-        String[] data = {"2000", "200000", "2000000"};
+        String[] data = {"20000", "200000", "2000000"};
 
         for (String i : data) {
             RTA.format1ToCSV("./obda-mixer/results/"+i+"/","./obdf-resultAnalysis/resultFiles/"+i+".csv");
