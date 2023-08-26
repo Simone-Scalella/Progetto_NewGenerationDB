@@ -2,7 +2,7 @@
 -- ${2:productfeatureproduct.productfeature:percent}
 -- ${1:product.propertynum1:none}
 
-SELECT v2."product" AS "Prodotti", AVG(v1."propertynum1") AS "mean"
+SELECT v2."productfeature" AS "Feature", AVG(v1."propertynum1") AS "mean"
 FROM "product" v1, "productfeatureproduct" v2, "productfeature" v3
 WHERE (
         (v3."nr" >= 5000) AND
@@ -12,5 +12,5 @@ WHERE (
         v1."nr" = v2."product" AND
          v2."productfeature" = v3."nr"
         )
-GROUP BY v2."product"
+GROUP BY v2."productfeature"
 

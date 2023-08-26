@@ -1,6 +1,6 @@
 -- ${1:product.nr:percent}
 
-SELECT v12."product" AS "Prodotti", AVG(v12."propertynum1") AS "mean"
+SELECT v12."productfeature" AS "Feature", AVG(v12."propertynum1") AS "mean"
 FROM (
     SELECT DISTINCT v5."nr_product" AS "nr_product", v10."productfeature" AS "productfeature", v5."propertynum1" AS "propertynum1", v10."product"
     FROM (
@@ -40,6 +40,6 @@ FROM (
         v11."nr_pf" = v10."productfeature"
     )
 ) v12
-GROUP BY v12."product"
+GROUP BY v12."productfeature"
 
 --

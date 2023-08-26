@@ -1,8 +1,8 @@
 -- ${1:product.nr:percent}
 
-SELECT v12."product" AS "Prodotti", AVG(v12."propertynum1") AS "mean"
+SELECT v12."productfeature" AS "Feature", AVG(v12."propertynum1") AS "mean"
 FROM(
-        SELECT v1."propertynum1",v2."product"
+        SELECT v1."propertynum1",v2."productfeature"
         FROM "product1" v1, "productfeatureproduct1" v2, "productfeature" v3
         WHERE (
             (v3."nr" >= 5000) AND
@@ -15,7 +15,7 @@ FROM(
 
     UNION ALL
 
-        SELECT v4."propertynum1", v5."product"
+        SELECT v4."propertynum1", v5."productfeature"
         FROM "product2" v4, "productfeatureproduct2" v5, "productfeature" v6
         WHERE (
             (v6."nr" >= 5000) AND
@@ -26,6 +26,6 @@ FROM(
             v5."productfeature" = v6."nr"
             )
         ) as v12
-GROUP BY v12."product"
+GROUP BY v12."productfeature"
 
     
