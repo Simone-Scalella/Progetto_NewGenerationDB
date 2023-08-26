@@ -1,0 +1,420 @@
+18:44:56.915 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 00.sql
+18:44:56.925 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+18:44:56.957 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - -- 2
+
+SELECT v12."nr2m23" AS "nr2m23", COUNT(*) AS "v1"
+FROM (SELECT DISTINCT v5."nr2m23" AS "nr2m23", v10."productfeature2m2" AS "productfeature2m2"
+FROM (
+SELECT v3."nr" AS "nr2m23"
+FROM "ss5"."product2" v3
+
+) v5, (
+SELECT v8."product" AS "nr2m0", v8."productfeature" AS "productfeature2m2"
+FROM "ss5"."productfeatureproduct2" v8
+
+) v10
+WHERE v5."nr2m23" = v10."nr2m0"
+) v12
+GROUP BY v12."nr2m23"
+
+18:44:58.512 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - null
+18:44:58.514 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 00.sql
+18:44:58.518 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+18:44:58.520 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - -- 3
+
+SELECT v12."nr2m23" AS "nr2m23", COUNT(*) AS "v1"
+FROM (SELECT DISTINCT v5."nr2m23" AS "nr2m23", v10."productfeature2m2" AS "productfeature2m2"
+FROM (
+SELECT v3."nr" AS "nr2m23"
+FROM "ss5"."product2" v3
+
+) v5, (
+SELECT v8."product" AS "nr2m0", v8."productfeature" AS "productfeature2m2"
+FROM "ss5"."productfeatureproduct2" v8
+
+) v10
+WHERE v5."nr2m23" = v10."nr2m0"
+) v12
+GROUP BY v12."nr2m23"
+
+18:44:59.559 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - null
+18:44:59.562 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 00.sql
+18:44:59.566 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+18:44:59.568 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 4
+
+SELECT v12."nr2m23" AS "nr2m23", COUNT(*) AS "v1"
+FROM (SELECT DISTINCT v5."nr2m23" AS "nr2m23", v10."productfeature2m2" AS "productfeature2m2"
+FROM (
+SELECT v3."nr" AS "nr2m23"
+FROM "ss5"."product2" v3
+
+) v5, (
+SELECT v8."product" AS "nr2m0", v8."productfeature" AS "productfeature2m2"
+FROM "ss5"."productfeatureproduct2" v8
+
+) v10
+WHERE v5."nr2m23" = v10."nr2m0"
+) v12
+GROUP BY v12."nr2m23"
+
+-- 4
+
+SELECT v12."nr2m23" AS "nr2m23", COUNT(*) AS "v1"
+FROM (SELECT DISTINCT v5."nr2m23" AS "nr2m23", v10."productfeature2m2" AS "productfeature2m2"
+FROM (
+SELECT v3."nr" AS "nr2m23"
+FROM "ss5"."product2" v3
+
+) v5, (
+SELECT v8."product" AS "nr2m0", v8."productfeature" AS "productfeature2m2"
+FROM "ss5"."productfeatureproduct2" v8
+
+) v10
+WHERE v5."nr2m23" = v10."nr2m0"
+) v12
+GROUP BY v12."nr2m23"
+
+18:45:00.964 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - null
+null
+18:45:00.967 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 00.sql
+18:45:00.973 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+18:45:00.974 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 5
+
+SELECT v12."nr2m23" AS "nr2m23", COUNT(*) AS "v1"
+FROM (SELECT DISTINCT v5."nr2m23" AS "nr2m23", v10."productfeature2m2" AS "productfeature2m2"
+FROM (
+SELECT v3."nr" AS "nr2m23"
+FROM "ss5"."product2" v3
+
+) v5, (
+SELECT v8."product" AS "nr2m0", v8."productfeature" AS "productfeature2m2"
+FROM "ss5"."productfeatureproduct2" v8
+
+) v10
+WHERE v5."nr2m23" = v10."nr2m0"
+) v12
+GROUP BY v12."nr2m23"
+
+-- 5
+
+SELECT v12."nr2m23" AS "nr2m23", COUNT(*) AS "v1"
+FROM (SELECT DISTINCT v5."nr2m23" AS "nr2m23", v10."productfeature2m2" AS "productfeature2m2"
+FROM (
+SELECT v3."nr" AS "nr2m23"
+FROM "ss5"."product2" v3
+
+) v5, (
+SELECT v8."product" AS "nr2m0", v8."productfeature" AS "productfeature2m2"
+FROM "ss5"."productfeatureproduct2" v8
+
+) v10
+WHERE v5."nr2m23" = v10."nr2m0"
+) v12
+GROUP BY v12."nr2m23"
+
+18:45:02.223 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - null
+null
+18:45:02.227 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 00.sql
+18:45:02.231 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+18:45:02.233 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 6
+
+SELECT v12."nr2m23" AS "nr2m23", COUNT(*) AS "v1"
+FROM (SELECT DISTINCT v5."nr2m23" AS "nr2m23", v10."productfeature2m2" AS "productfeature2m2"
+FROM (
+SELECT v3."nr" AS "nr2m23"
+FROM "ss5"."product2" v3
+
+) v5, (
+SELECT v8."product" AS "nr2m0", v8."productfeature" AS "productfeature2m2"
+FROM "ss5"."productfeatureproduct2" v8
+
+) v10
+WHERE v5."nr2m23" = v10."nr2m0"
+) v12
+GROUP BY v12."nr2m23"
+
+-- 6
+
+SELECT v12."nr2m23" AS "nr2m23", COUNT(*) AS "v1"
+FROM (SELECT DISTINCT v5."nr2m23" AS "nr2m23", v10."productfeature2m2" AS "productfeature2m2"
+FROM (
+SELECT v3."nr" AS "nr2m23"
+FROM "ss5"."product2" v3
+
+) v5, (
+SELECT v8."product" AS "nr2m0", v8."productfeature" AS "productfeature2m2"
+FROM "ss5"."productfeatureproduct2" v8
+
+) v10
+WHERE v5."nr2m23" = v10."nr2m0"
+) v12
+GROUP BY v12."nr2m23"
+
+18:45:03.348 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - null
+null
+18:45:03.351 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 00.sql
+18:45:03.354 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+18:45:03.356 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 7
+
+SELECT v12."nr2m23" AS "nr2m23", COUNT(*) AS "v1"
+FROM (SELECT DISTINCT v5."nr2m23" AS "nr2m23", v10."productfeature2m2" AS "productfeature2m2"
+FROM (
+SELECT v3."nr" AS "nr2m23"
+FROM "ss5"."product2" v3
+
+) v5, (
+SELECT v8."product" AS "nr2m0", v8."productfeature" AS "productfeature2m2"
+FROM "ss5"."productfeatureproduct2" v8
+
+) v10
+WHERE v5."nr2m23" = v10."nr2m0"
+) v12
+GROUP BY v12."nr2m23"
+
+-- 7
+
+SELECT v12."nr2m23" AS "nr2m23", COUNT(*) AS "v1"
+FROM (SELECT DISTINCT v5."nr2m23" AS "nr2m23", v10."productfeature2m2" AS "productfeature2m2"
+FROM (
+SELECT v3."nr" AS "nr2m23"
+FROM "ss5"."product2" v3
+
+) v5, (
+SELECT v8."product" AS "nr2m0", v8."productfeature" AS "productfeature2m2"
+FROM "ss5"."productfeatureproduct2" v8
+
+) v10
+WHERE v5."nr2m23" = v10."nr2m0"
+) v12
+GROUP BY v12."nr2m23"
+
+18:45:04.437 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - null
+null
+18:45:04.440 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 00.sql
+18:45:04.444 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+18:45:04.445 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 8
+
+SELECT v12."nr2m23" AS "nr2m23", COUNT(*) AS "v1"
+FROM (SELECT DISTINCT v5."nr2m23" AS "nr2m23", v10."productfeature2m2" AS "productfeature2m2"
+FROM (
+SELECT v3."nr" AS "nr2m23"
+FROM "ss5"."product2" v3
+
+) v5, (
+SELECT v8."product" AS "nr2m0", v8."productfeature" AS "productfeature2m2"
+FROM "ss5"."productfeatureproduct2" v8
+
+) v10
+WHERE v5."nr2m23" = v10."nr2m0"
+) v12
+GROUP BY v12."nr2m23"
+
+-- 8
+
+SELECT v12."nr2m23" AS "nr2m23", COUNT(*) AS "v1"
+FROM (SELECT DISTINCT v5."nr2m23" AS "nr2m23", v10."productfeature2m2" AS "productfeature2m2"
+FROM (
+SELECT v3."nr" AS "nr2m23"
+FROM "ss5"."product2" v3
+
+) v5, (
+SELECT v8."product" AS "nr2m0", v8."productfeature" AS "productfeature2m2"
+FROM "ss5"."productfeatureproduct2" v8
+
+) v10
+WHERE v5."nr2m23" = v10."nr2m0"
+) v12
+GROUP BY v12."nr2m23"
+
+18:45:05.577 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - null
+null
+18:45:05.580 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 00.sql
+18:45:05.585 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+18:45:05.587 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 9
+
+SELECT v12."nr2m23" AS "nr2m23", COUNT(*) AS "v1"
+FROM (SELECT DISTINCT v5."nr2m23" AS "nr2m23", v10."productfeature2m2" AS "productfeature2m2"
+FROM (
+SELECT v3."nr" AS "nr2m23"
+FROM "ss5"."product2" v3
+
+) v5, (
+SELECT v8."product" AS "nr2m0", v8."productfeature" AS "productfeature2m2"
+FROM "ss5"."productfeatureproduct2" v8
+
+) v10
+WHERE v5."nr2m23" = v10."nr2m0"
+) v12
+GROUP BY v12."nr2m23"
+
+-- 9
+
+SELECT v12."nr2m23" AS "nr2m23", COUNT(*) AS "v1"
+FROM (SELECT DISTINCT v5."nr2m23" AS "nr2m23", v10."productfeature2m2" AS "productfeature2m2"
+FROM (
+SELECT v3."nr" AS "nr2m23"
+FROM "ss5"."product2" v3
+
+) v5, (
+SELECT v8."product" AS "nr2m0", v8."productfeature" AS "productfeature2m2"
+FROM "ss5"."productfeatureproduct2" v8
+
+) v10
+WHERE v5."nr2m23" = v10."nr2m0"
+) v12
+GROUP BY v12."nr2m23"
+
+18:45:06.895 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - null
+null
+18:45:06.899 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 00.sql
+18:45:06.905 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+18:45:06.907 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 10
+
+SELECT v12."nr2m23" AS "nr2m23", COUNT(*) AS "v1"
+FROM (SELECT DISTINCT v5."nr2m23" AS "nr2m23", v10."productfeature2m2" AS "productfeature2m2"
+FROM (
+SELECT v3."nr" AS "nr2m23"
+FROM "ss5"."product2" v3
+
+) v5, (
+SELECT v8."product" AS "nr2m0", v8."productfeature" AS "productfeature2m2"
+FROM "ss5"."productfeatureproduct2" v8
+
+) v10
+WHERE v5."nr2m23" = v10."nr2m0"
+) v12
+GROUP BY v12."nr2m23"
+
+-- 10
+
+SELECT v12."nr2m23" AS "nr2m23", COUNT(*) AS "v1"
+FROM (SELECT DISTINCT v5."nr2m23" AS "nr2m23", v10."productfeature2m2" AS "productfeature2m2"
+FROM (
+SELECT v3."nr" AS "nr2m23"
+FROM "ss5"."product2" v3
+
+) v5, (
+SELECT v8."product" AS "nr2m0", v8."productfeature" AS "productfeature2m2"
+FROM "ss5"."productfeatureproduct2" v8
+
+) v10
+WHERE v5."nr2m23" = v10."nr2m0"
+) v12
+GROUP BY v12."nr2m23"
+
+18:45:07.971 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - null
+null
+18:45:07.975 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 00.sql
+18:45:07.978 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+18:45:07.979 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 11
+
+SELECT v12."nr2m23" AS "nr2m23", COUNT(*) AS "v1"
+FROM (SELECT DISTINCT v5."nr2m23" AS "nr2m23", v10."productfeature2m2" AS "productfeature2m2"
+FROM (
+SELECT v3."nr" AS "nr2m23"
+FROM "ss5"."product2" v3
+
+) v5, (
+SELECT v8."product" AS "nr2m0", v8."productfeature" AS "productfeature2m2"
+FROM "ss5"."productfeatureproduct2" v8
+
+) v10
+WHERE v5."nr2m23" = v10."nr2m0"
+) v12
+GROUP BY v12."nr2m23"
+
+-- 11
+
+SELECT v12."nr2m23" AS "nr2m23", COUNT(*) AS "v1"
+FROM (SELECT DISTINCT v5."nr2m23" AS "nr2m23", v10."productfeature2m2" AS "productfeature2m2"
+FROM (
+SELECT v3."nr" AS "nr2m23"
+FROM "ss5"."product2" v3
+
+) v5, (
+SELECT v8."product" AS "nr2m0", v8."productfeature" AS "productfeature2m2"
+FROM "ss5"."productfeatureproduct2" v8
+
+) v10
+WHERE v5."nr2m23" = v10."nr2m0"
+) v12
+GROUP BY v12."nr2m23"
+
+18:45:09.039 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - null
+null
+18:45:09.042 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 00.sql
+18:45:09.044 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+18:45:09.046 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 12
+
+SELECT v12."nr2m23" AS "nr2m23", COUNT(*) AS "v1"
+FROM (SELECT DISTINCT v5."nr2m23" AS "nr2m23", v10."productfeature2m2" AS "productfeature2m2"
+FROM (
+SELECT v3."nr" AS "nr2m23"
+FROM "ss5"."product2" v3
+
+) v5, (
+SELECT v8."product" AS "nr2m0", v8."productfeature" AS "productfeature2m2"
+FROM "ss5"."productfeatureproduct2" v8
+
+) v10
+WHERE v5."nr2m23" = v10."nr2m0"
+) v12
+GROUP BY v12."nr2m23"
+
+-- 12
+
+SELECT v12."nr2m23" AS "nr2m23", COUNT(*) AS "v1"
+FROM (SELECT DISTINCT v5."nr2m23" AS "nr2m23", v10."productfeature2m2" AS "productfeature2m2"
+FROM (
+SELECT v3."nr" AS "nr2m23"
+FROM "ss5"."product2" v3
+
+) v5, (
+SELECT v8."product" AS "nr2m0", v8."productfeature" AS "productfeature2m2"
+FROM "ss5"."productfeatureproduct2" v8
+
+) v10
+WHERE v5."nr2m23" = v10."nr2m0"
+) v12
+GROUP BY v12."nr2m23"
+
+18:45:10.185 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - null
+null
+18:45:10.189 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 00.sql
+18:45:10.195 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+18:45:10.196 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 13
+
+SELECT v12."nr2m23" AS "nr2m23", COUNT(*) AS "v1"
+FROM (SELECT DISTINCT v5."nr2m23" AS "nr2m23", v10."productfeature2m2" AS "productfeature2m2"
+FROM (
+SELECT v3."nr" AS "nr2m23"
+FROM "ss5"."product2" v3
+
+) v5, (
+SELECT v8."product" AS "nr2m0", v8."productfeature" AS "productfeature2m2"
+FROM "ss5"."productfeatureproduct2" v8
+
+) v10
+WHERE v5."nr2m23" = v10."nr2m0"
+) v12
+GROUP BY v12."nr2m23"
+
+-- 13
+
+SELECT v12."nr2m23" AS "nr2m23", COUNT(*) AS "v1"
+FROM (SELECT DISTINCT v5."nr2m23" AS "nr2m23", v10."productfeature2m2" AS "productfeature2m2"
+FROM (
+SELECT v3."nr" AS "nr2m23"
+FROM "ss5"."product2" v3
+
+) v5, (
+SELECT v8."product" AS "nr2m0", v8."productfeature" AS "productfeature2m2"
+FROM "ss5"."productfeatureproduct2" v8
+
+) v10
+WHERE v5."nr2m23" = v10."nr2m0"
+) v12
+GROUP BY v12."nr2m23"
+
+18:45:11.291 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - null
+null
