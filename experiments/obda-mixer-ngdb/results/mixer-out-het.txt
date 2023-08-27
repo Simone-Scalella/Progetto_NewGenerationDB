@@ -1,6 +1,6 @@
-23:50:26.667 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 00.sql
-23:50:26.683 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-23:50:26.729 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - -- 2
+22:09:37.435 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 00.sql
+22:09:37.441 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+22:09:37.468 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - -- 2
 
 SELECT v12."nr2m23" AS "nr2m23", COUNT(*) AS "v1"
 FROM (SELECT DISTINCT v5."nr2m23" AS "nr2m23", v10."productfeature2m2" AS "productfeature2m2"
@@ -17,9 +17,9 @@ WHERE v5."nr2m23" = v10."nr2m0"
 ) v12
 GROUP BY v12."nr2m23"
 
-23:50:28.906 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 01.sql
-23:50:28.912 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-23:50:28.914 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - -- 3
+22:09:38.989 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 01.sql
+22:09:38.992 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+22:09:38.994 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - -- 3
 
 SELECT v12."productfeature" AS "Feature", AVG(v12."propertynum1") AS "mean"
 FROM (
@@ -65,9 +65,9 @@ GROUP BY v12."productfeature"
 
 --
 
-23:50:30.439 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 02.sql
-23:50:30.447 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-23:50:30.450 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - -- 4
+22:09:40.126 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 02.sql
+22:09:40.131 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+22:09:40.133 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - -- 4
 
 SELECT v25."v26" AS "v26", v25."v6" AS "v6", v25."v9" AS "v9"
 FROM (SELECT 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Offer' AS "v26", 0 AS "v6", 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type' AS "v9"
@@ -119,64 +119,25 @@ FROM "ss4"."offer" v23
 WHERE (v23."validto" IS NOT NULL AND MOD(v23."deliverydays",3) = 0 AND v23."nr" <= 200000)
 ) v25
 
-23:50:31.302 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 11.sql
-23:50:31.307 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-23:50:31.309 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - -- 5
+22:09:40.829 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 03.sql
+22:09:40.833 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+22:09:40.833 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - -- 125
+-- CN
 
-SELECT v25."v26" AS "v26", v25."v6" AS "v6", v25."v9" AS "v9"
-FROM (SELECT 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Offer' AS "v26", 0 AS "v6", 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type' AS "v9"
-FROM "ss4"."offer" v1
-WHERE 5 = v1."nr"
-UNION ALL 
-SELECT 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product' AS "v26", 0 AS "v6", 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type' AS "v9"
-FROM "ss4"."offer" v3
-WHERE (v3."vendor" IS NOT NULL AND 5 = v3."nr")
-UNION ALL 
-SELECT ('http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromProducer/Product' || CAST(v5."product" AS STRING)) AS "v26", 0 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/product' AS "v9"
-FROM "ss4"."offer" v5
-WHERE (v5."product" IS NOT NULL AND 5 = v5."nr")
-UNION ALL 
-SELECT ('http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromVendor/Vendor' || CAST(v7."vendor" AS STRING)) AS "v26", 0 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/vendor' AS "v9"
-FROM "ss4"."offer" v7
-WHERE (v7."vendor" IS NOT NULL AND 5 = v7."nr")
-UNION ALL 
-SELECT ('http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromVendor/Vendor' || CAST(v9."vendor" AS STRING)) AS "v26", 0 AS "v6", 'http://purl.org/dc/elements/1.1/publisher' AS "v9"
-FROM "ss4"."offer" v9
-WHERE (v9."vendor" IS NOT NULL AND 5 = v9."nr")
-UNION ALL 
-SELECT '5' AS "v26", 1 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/offerId' AS "v9"
-FROM "ss4"."offer" v11
-WHERE 5 = v11."nr"
-UNION ALL 
-SELECT CAST(v13."publishdate" AS STRING) AS "v26", 2 AS "v6", 'http://purl.org/dc/elements/1.1/date' AS "v9"
-FROM "ss4"."offer" v13
-WHERE (v13."publishdate" IS NOT NULL AND 5 = v13."nr")
-UNION ALL 
-SELECT v15."offerwebpage" AS "v26", 3 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/offerWebpage' AS "v9"
-FROM "ss4"."offer" v15
-WHERE (v15."offerwebpage" IS NOT NULL AND 5 = v15."nr")
-UNION ALL 
-SELECT CAST(v17."deliverydays" AS STRING) AS "v26", 1 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/deliveryDays' AS "v9"
-FROM "ss4"."offer" v17
-WHERE (v17."deliverydays" IS NOT NULL AND 5 = v17."nr")
-UNION ALL 
-SELECT CAST(v19."price" AS STRING) AS "v26", 4 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/price' AS "v9"
-FROM "ss4"."offer" v19
-WHERE (v19."price" IS NOT NULL AND 5 = v19."nr")
-UNION ALL 
-SELECT CAST(v21."validfrom" AS STRING) AS "v26", 2 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/validFrom' AS "v9"
-FROM "ss4"."offer" v21
-WHERE (v21."validfrom" IS NOT NULL AND 5 = v21."nr")
-UNION ALL 
-SELECT CAST(v23."validto" AS STRING) AS "v26", 2 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/validTo' AS "v9"
-FROM "ss4"."offer" v23
-WHERE (v23."validto" IS NOT NULL AND 5 = v23."nr")
-) v25
+SELECT DISTINCT v9."nr1m5" AS "nr1m5", v9."product1m5" AS "product1m5"
+FROM (SELECT v2."deliverydays" AS "deliverydays1m37", v2."nr" AS "nr1m5", v2."price" AS "price1m39", v1."nr" AS "product1m5", v2."validto" AS "validto1m45"
+FROM "ss1"."product1" v1, "ss4"."offer" v2, "ss4"."vendor" v3
+WHERE ((v2."deliverydays" <= 3) AND (v1."nr" <= 125) AND v2."deliverydays" IS NOT NULL AND v2."price" IS NOT NULL AND v2."validto" IS NOT NULL AND v1."nr" = v2."product" AND v2."vendor" = v3."nr" AND 'CN' = v3."country")
+UNION ALL
+SELECT v6."deliverydays" AS "deliverydays1m37", v6."nr" AS "nr1m5", v6."price" AS "price1m39", v5."nr" AS "product1m5", v6."validto" AS "validto1m45"
+FROM "ss5"."product2" v5, "ss4"."offer" v6, "ss4"."vendor" v7
+WHERE ((v6."deliverydays" <= 3) AND (v5."nr" <= 125) AND v6."deliverydays" IS NOT NULL AND v6."price" IS NOT NULL AND v6."validto" IS NOT NULL AND v5."nr" = v6."product" AND v6."vendor" = v7."nr" AND 'CN' = v7."country")
+) v9
 
-23:50:52.086 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - null
-23:50:52.094 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 00.sql
-23:50:52.102 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-23:50:52.108 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - -- 6
+22:09:46.531 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - null
+22:09:46.535 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 00.sql
+22:09:46.539 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+22:09:46.541 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - -- 6
 
 SELECT v12."nr2m23" AS "nr2m23", COUNT(*) AS "v1"
 FROM (SELECT DISTINCT v5."nr2m23" AS "nr2m23", v10."productfeature2m2" AS "productfeature2m2"
@@ -193,9 +154,9 @@ WHERE v5."nr2m23" = v10."nr2m0"
 ) v12
 GROUP BY v12."nr2m23"
 
-23:50:54.129 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 01.sql
-23:50:54.136 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-23:50:54.141 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - -- 7
+22:09:47.673 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 01.sql
+22:09:47.677 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+22:09:47.679 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - -- 7
 
 SELECT v12."productfeature" AS "Feature", AVG(v12."propertynum1") AS "mean"
 FROM (
@@ -241,9 +202,9 @@ GROUP BY v12."productfeature"
 
 --
 
-23:50:55.544 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 02.sql
-23:50:55.550 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-23:50:55.553 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - -- 8
+22:09:48.742 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 02.sql
+22:09:48.746 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+22:09:48.748 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - -- 8
 
 SELECT v25."v26" AS "v26", v25."v6" AS "v6", v25."v9" AS "v9"
 FROM (SELECT 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Offer' AS "v26", 0 AS "v6", 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type' AS "v9"
@@ -295,64 +256,25 @@ FROM "ss4"."offer" v23
 WHERE (v23."validto" IS NOT NULL AND MOD(v23."deliverydays",3) = 0 AND v23."nr" <= 200000)
 ) v25
 
-23:50:56.219 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 11.sql
-23:50:56.224 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-23:50:56.230 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - -- 9
+22:09:49.243 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 03.sql
+22:09:49.247 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+22:09:49.247 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - -- 125
+-- CN
 
-SELECT v25."v26" AS "v26", v25."v6" AS "v6", v25."v9" AS "v9"
-FROM (SELECT 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Offer' AS "v26", 0 AS "v6", 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type' AS "v9"
-FROM "ss4"."offer" v1
-WHERE 9 = v1."nr"
-UNION ALL 
-SELECT 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product' AS "v26", 0 AS "v6", 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type' AS "v9"
-FROM "ss4"."offer" v3
-WHERE (v3."vendor" IS NOT NULL AND 9 = v3."nr")
-UNION ALL 
-SELECT ('http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromProducer/Product' || CAST(v5."product" AS STRING)) AS "v26", 0 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/product' AS "v9"
-FROM "ss4"."offer" v5
-WHERE (v5."product" IS NOT NULL AND 9 = v5."nr")
-UNION ALL 
-SELECT ('http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromVendor/Vendor' || CAST(v7."vendor" AS STRING)) AS "v26", 0 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/vendor' AS "v9"
-FROM "ss4"."offer" v7
-WHERE (v7."vendor" IS NOT NULL AND 9 = v7."nr")
-UNION ALL 
-SELECT ('http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromVendor/Vendor' || CAST(v9."vendor" AS STRING)) AS "v26", 0 AS "v6", 'http://purl.org/dc/elements/1.1/publisher' AS "v9"
-FROM "ss4"."offer" v9
-WHERE (v9."vendor" IS NOT NULL AND 9 = v9."nr")
-UNION ALL 
-SELECT '9' AS "v26", 1 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/offerId' AS "v9"
-FROM "ss4"."offer" v11
-WHERE 9 = v11."nr"
-UNION ALL 
-SELECT CAST(v13."publishdate" AS STRING) AS "v26", 2 AS "v6", 'http://purl.org/dc/elements/1.1/date' AS "v9"
-FROM "ss4"."offer" v13
-WHERE (v13."publishdate" IS NOT NULL AND 9 = v13."nr")
-UNION ALL 
-SELECT v15."offerwebpage" AS "v26", 3 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/offerWebpage' AS "v9"
-FROM "ss4"."offer" v15
-WHERE (v15."offerwebpage" IS NOT NULL AND 9 = v15."nr")
-UNION ALL 
-SELECT CAST(v17."deliverydays" AS STRING) AS "v26", 1 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/deliveryDays' AS "v9"
-FROM "ss4"."offer" v17
-WHERE (v17."deliverydays" IS NOT NULL AND 9 = v17."nr")
-UNION ALL 
-SELECT CAST(v19."price" AS STRING) AS "v26", 4 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/price' AS "v9"
-FROM "ss4"."offer" v19
-WHERE (v19."price" IS NOT NULL AND 9 = v19."nr")
-UNION ALL 
-SELECT CAST(v21."validfrom" AS STRING) AS "v26", 2 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/validFrom' AS "v9"
-FROM "ss4"."offer" v21
-WHERE (v21."validfrom" IS NOT NULL AND 9 = v21."nr")
-UNION ALL 
-SELECT CAST(v23."validto" AS STRING) AS "v26", 2 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/validTo' AS "v9"
-FROM "ss4"."offer" v23
-WHERE (v23."validto" IS NOT NULL AND 9 = v23."nr")
-) v25
+SELECT DISTINCT v9."nr1m5" AS "nr1m5", v9."product1m5" AS "product1m5"
+FROM (SELECT v2."deliverydays" AS "deliverydays1m37", v2."nr" AS "nr1m5", v2."price" AS "price1m39", v1."nr" AS "product1m5", v2."validto" AS "validto1m45"
+FROM "ss1"."product1" v1, "ss4"."offer" v2, "ss4"."vendor" v3
+WHERE ((v2."deliverydays" <= 3) AND (v1."nr" <= 125) AND v2."deliverydays" IS NOT NULL AND v2."price" IS NOT NULL AND v2."validto" IS NOT NULL AND v1."nr" = v2."product" AND v2."vendor" = v3."nr" AND 'CN' = v3."country")
+UNION ALL
+SELECT v6."deliverydays" AS "deliverydays1m37", v6."nr" AS "nr1m5", v6."price" AS "price1m39", v5."nr" AS "product1m5", v6."validto" AS "validto1m45"
+FROM "ss5"."product2" v5, "ss4"."offer" v6, "ss4"."vendor" v7
+WHERE ((v6."deliverydays" <= 3) AND (v5."nr" <= 125) AND v6."deliverydays" IS NOT NULL AND v6."price" IS NOT NULL AND v6."validto" IS NOT NULL AND v5."nr" = v6."product" AND v6."vendor" = v7."nr" AND 'CN' = v7."country")
+) v9
 
-23:51:18.706 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - null
-23:51:18.710 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 00.sql
-23:51:18.714 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-23:51:18.717 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 10
+22:09:55.785 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - null
+22:09:55.787 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 00.sql
+22:09:55.790 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+22:09:55.792 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 10
 
 SELECT v12."nr2m23" AS "nr2m23", COUNT(*) AS "v1"
 FROM (SELECT DISTINCT v5."nr2m23" AS "nr2m23", v10."productfeature2m2" AS "productfeature2m2"
@@ -386,9 +308,9 @@ WHERE v5."nr2m23" = v10."nr2m0"
 ) v12
 GROUP BY v12."nr2m23"
 
-23:51:20.890 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 01.sql
-23:51:20.894 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-23:51:20.896 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 11
+22:09:57.109 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 01.sql
+22:09:57.113 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+22:09:57.115 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 11
 
 SELECT v12."productfeature" AS "Feature", AVG(v12."propertynum1") AS "mean"
 FROM (
@@ -480,9 +402,9 @@ GROUP BY v12."productfeature"
 
 --
 
-23:51:22.613 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 02.sql
-23:51:22.619 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-23:51:22.622 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 12
+22:09:58.311 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 02.sql
+22:09:58.316 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+22:09:58.318 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 12
 
 SELECT v25."v26" AS "v26", v25."v6" AS "v6", v25."v9" AS "v9"
 FROM (SELECT 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Offer' AS "v26", 0 AS "v6", 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type' AS "v9"
@@ -586,117 +508,39 @@ FROM "ss4"."offer" v23
 WHERE (v23."validto" IS NOT NULL AND MOD(v23."deliverydays",3) = 0 AND v23."nr" <= 200000)
 ) v25
 
-23:51:50.670 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 11.sql
-23:51:50.679 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-23:51:50.682 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 13
+22:10:26.598 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 03.sql
+22:10:26.607 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+22:10:26.608 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 125
+-- CN
 
-SELECT v25."v26" AS "v26", v25."v6" AS "v6", v25."v9" AS "v9"
-FROM (SELECT 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Offer' AS "v26", 0 AS "v6", 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type' AS "v9"
-FROM "ss4"."offer" v1
-WHERE 13 = v1."nr"
-UNION ALL 
-SELECT 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product' AS "v26", 0 AS "v6", 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type' AS "v9"
-FROM "ss4"."offer" v3
-WHERE (v3."vendor" IS NOT NULL AND 13 = v3."nr")
-UNION ALL 
-SELECT ('http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromProducer/Product' || CAST(v5."product" AS STRING)) AS "v26", 0 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/product' AS "v9"
-FROM "ss4"."offer" v5
-WHERE (v5."product" IS NOT NULL AND 13 = v5."nr")
-UNION ALL 
-SELECT ('http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromVendor/Vendor' || CAST(v7."vendor" AS STRING)) AS "v26", 0 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/vendor' AS "v9"
-FROM "ss4"."offer" v7
-WHERE (v7."vendor" IS NOT NULL AND 13 = v7."nr")
-UNION ALL 
-SELECT ('http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromVendor/Vendor' || CAST(v9."vendor" AS STRING)) AS "v26", 0 AS "v6", 'http://purl.org/dc/elements/1.1/publisher' AS "v9"
-FROM "ss4"."offer" v9
-WHERE (v9."vendor" IS NOT NULL AND 13 = v9."nr")
-UNION ALL 
-SELECT '13' AS "v26", 1 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/offerId' AS "v9"
-FROM "ss4"."offer" v11
-WHERE 13 = v11."nr"
-UNION ALL 
-SELECT CAST(v13."publishdate" AS STRING) AS "v26", 2 AS "v6", 'http://purl.org/dc/elements/1.1/date' AS "v9"
-FROM "ss4"."offer" v13
-WHERE (v13."publishdate" IS NOT NULL AND 13 = v13."nr")
-UNION ALL 
-SELECT v15."offerwebpage" AS "v26", 3 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/offerWebpage' AS "v9"
-FROM "ss4"."offer" v15
-WHERE (v15."offerwebpage" IS NOT NULL AND 13 = v15."nr")
-UNION ALL 
-SELECT CAST(v17."deliverydays" AS STRING) AS "v26", 1 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/deliveryDays' AS "v9"
-FROM "ss4"."offer" v17
-WHERE (v17."deliverydays" IS NOT NULL AND 13 = v17."nr")
-UNION ALL 
-SELECT CAST(v19."price" AS STRING) AS "v26", 4 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/price' AS "v9"
-FROM "ss4"."offer" v19
-WHERE (v19."price" IS NOT NULL AND 13 = v19."nr")
-UNION ALL 
-SELECT CAST(v21."validfrom" AS STRING) AS "v26", 2 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/validFrom' AS "v9"
-FROM "ss4"."offer" v21
-WHERE (v21."validfrom" IS NOT NULL AND 13 = v21."nr")
-UNION ALL 
-SELECT CAST(v23."validto" AS STRING) AS "v26", 2 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/validTo' AS "v9"
-FROM "ss4"."offer" v23
-WHERE (v23."validto" IS NOT NULL AND 13 = v23."nr")
-) v25
+SELECT DISTINCT v9."nr1m5" AS "nr1m5", v9."product1m5" AS "product1m5"
+FROM (SELECT v2."deliverydays" AS "deliverydays1m37", v2."nr" AS "nr1m5", v2."price" AS "price1m39", v1."nr" AS "product1m5", v2."validto" AS "validto1m45"
+FROM "ss1"."product1" v1, "ss4"."offer" v2, "ss4"."vendor" v3
+WHERE ((v2."deliverydays" <= 3) AND (v1."nr" <= 125) AND v2."deliverydays" IS NOT NULL AND v2."price" IS NOT NULL AND v2."validto" IS NOT NULL AND v1."nr" = v2."product" AND v2."vendor" = v3."nr" AND 'CN' = v3."country")
+UNION ALL
+SELECT v6."deliverydays" AS "deliverydays1m37", v6."nr" AS "nr1m5", v6."price" AS "price1m39", v5."nr" AS "product1m5", v6."validto" AS "validto1m45"
+FROM "ss5"."product2" v5, "ss4"."offer" v6, "ss4"."vendor" v7
+WHERE ((v6."deliverydays" <= 3) AND (v5."nr" <= 125) AND v6."deliverydays" IS NOT NULL AND v6."price" IS NOT NULL AND v6."validto" IS NOT NULL AND v5."nr" = v6."product" AND v6."vendor" = v7."nr" AND 'CN' = v7."country")
+) v9
 
--- 13
+-- 125
+-- CN
 
-SELECT v25."v26" AS "v26", v25."v6" AS "v6", v25."v9" AS "v9"
-FROM (SELECT 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Offer' AS "v26", 0 AS "v6", 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type' AS "v9"
-FROM "ss4"."offer" v1
-WHERE 13 = v1."nr"
-UNION ALL 
-SELECT 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product' AS "v26", 0 AS "v6", 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type' AS "v9"
-FROM "ss4"."offer" v3
-WHERE (v3."vendor" IS NOT NULL AND 13 = v3."nr")
-UNION ALL 
-SELECT ('http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromProducer/Product' || CAST(v5."product" AS STRING)) AS "v26", 0 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/product' AS "v9"
-FROM "ss4"."offer" v5
-WHERE (v5."product" IS NOT NULL AND 13 = v5."nr")
-UNION ALL 
-SELECT ('http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromVendor/Vendor' || CAST(v7."vendor" AS STRING)) AS "v26", 0 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/vendor' AS "v9"
-FROM "ss4"."offer" v7
-WHERE (v7."vendor" IS NOT NULL AND 13 = v7."nr")
-UNION ALL 
-SELECT ('http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromVendor/Vendor' || CAST(v9."vendor" AS STRING)) AS "v26", 0 AS "v6", 'http://purl.org/dc/elements/1.1/publisher' AS "v9"
-FROM "ss4"."offer" v9
-WHERE (v9."vendor" IS NOT NULL AND 13 = v9."nr")
-UNION ALL 
-SELECT '13' AS "v26", 1 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/offerId' AS "v9"
-FROM "ss4"."offer" v11
-WHERE 13 = v11."nr"
-UNION ALL 
-SELECT CAST(v13."publishdate" AS STRING) AS "v26", 2 AS "v6", 'http://purl.org/dc/elements/1.1/date' AS "v9"
-FROM "ss4"."offer" v13
-WHERE (v13."publishdate" IS NOT NULL AND 13 = v13."nr")
-UNION ALL 
-SELECT v15."offerwebpage" AS "v26", 3 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/offerWebpage' AS "v9"
-FROM "ss4"."offer" v15
-WHERE (v15."offerwebpage" IS NOT NULL AND 13 = v15."nr")
-UNION ALL 
-SELECT CAST(v17."deliverydays" AS STRING) AS "v26", 1 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/deliveryDays' AS "v9"
-FROM "ss4"."offer" v17
-WHERE (v17."deliverydays" IS NOT NULL AND 13 = v17."nr")
-UNION ALL 
-SELECT CAST(v19."price" AS STRING) AS "v26", 4 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/price' AS "v9"
-FROM "ss4"."offer" v19
-WHERE (v19."price" IS NOT NULL AND 13 = v19."nr")
-UNION ALL 
-SELECT CAST(v21."validfrom" AS STRING) AS "v26", 2 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/validFrom' AS "v9"
-FROM "ss4"."offer" v21
-WHERE (v21."validfrom" IS NOT NULL AND 13 = v21."nr")
-UNION ALL 
-SELECT CAST(v23."validto" AS STRING) AS "v26", 2 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/validTo' AS "v9"
-FROM "ss4"."offer" v23
-WHERE (v23."validto" IS NOT NULL AND 13 = v23."nr")
-) v25
+SELECT DISTINCT v9."nr1m5" AS "nr1m5", v9."product1m5" AS "product1m5"
+FROM (SELECT v2."deliverydays" AS "deliverydays1m37", v2."nr" AS "nr1m5", v2."price" AS "price1m39", v1."nr" AS "product1m5", v2."validto" AS "validto1m45"
+FROM "ss1"."product1" v1, "ss4"."offer" v2, "ss4"."vendor" v3
+WHERE ((v2."deliverydays" <= 3) AND (v1."nr" <= 125) AND v2."deliverydays" IS NOT NULL AND v2."price" IS NOT NULL AND v2."validto" IS NOT NULL AND v1."nr" = v2."product" AND v2."vendor" = v3."nr" AND 'CN' = v3."country")
+UNION ALL
+SELECT v6."deliverydays" AS "deliverydays1m37", v6."nr" AS "nr1m5", v6."price" AS "price1m39", v5."nr" AS "product1m5", v6."validto" AS "validto1m45"
+FROM "ss5"."product2" v5, "ss4"."offer" v6, "ss4"."vendor" v7
+WHERE ((v6."deliverydays" <= 3) AND (v5."nr" <= 125) AND v6."deliverydays" IS NOT NULL AND v6."price" IS NOT NULL AND v6."validto" IS NOT NULL AND v5."nr" = v6."product" AND v6."vendor" = v7."nr" AND 'CN' = v7."country")
+) v9
 
-23:52:15.239 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - null
+22:10:35.140 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - null
 null
-23:52:15.246 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 00.sql
-23:52:15.257 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-23:52:15.259 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 14
+22:10:35.144 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 00.sql
+22:10:35.148 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+22:10:35.156 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 14
 
 SELECT v12."nr2m23" AS "nr2m23", COUNT(*) AS "v1"
 FROM (SELECT DISTINCT v5."nr2m23" AS "nr2m23", v10."productfeature2m2" AS "productfeature2m2"
@@ -730,9 +574,9 @@ WHERE v5."nr2m23" = v10."nr2m0"
 ) v12
 GROUP BY v12."nr2m23"
 
-23:52:16.861 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 01.sql
-23:52:16.872 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-23:52:16.903 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 15
+22:10:37.371 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 01.sql
+22:10:37.376 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+22:10:37.380 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 15
 
 SELECT v12."productfeature" AS "Feature", AVG(v12."propertynum1") AS "mean"
 FROM (
@@ -824,9 +668,9 @@ GROUP BY v12."productfeature"
 
 --
 
-23:52:18.402 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 02.sql
-23:52:18.409 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-23:52:18.411 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 16
+22:10:39.032 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 02.sql
+22:10:39.036 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+22:10:39.038 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 16
 
 SELECT v25."v26" AS "v26", v25."v6" AS "v6", v25."v9" AS "v9"
 FROM (SELECT 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Offer' AS "v26", 0 AS "v6", 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type' AS "v9"
@@ -930,117 +774,39 @@ FROM "ss4"."offer" v23
 WHERE (v23."validto" IS NOT NULL AND MOD(v23."deliverydays",3) = 0 AND v23."nr" <= 200000)
 ) v25
 
-23:52:45.960 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 11.sql
-23:52:45.968 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-23:52:45.970 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 17
+22:11:04.838 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 03.sql
+22:11:04.843 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+22:11:04.843 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 125
+-- CN
 
-SELECT v25."v26" AS "v26", v25."v6" AS "v6", v25."v9" AS "v9"
-FROM (SELECT 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Offer' AS "v26", 0 AS "v6", 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type' AS "v9"
-FROM "ss4"."offer" v1
-WHERE 17 = v1."nr"
-UNION ALL 
-SELECT 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product' AS "v26", 0 AS "v6", 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type' AS "v9"
-FROM "ss4"."offer" v3
-WHERE (v3."vendor" IS NOT NULL AND 17 = v3."nr")
-UNION ALL 
-SELECT ('http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromProducer/Product' || CAST(v5."product" AS STRING)) AS "v26", 0 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/product' AS "v9"
-FROM "ss4"."offer" v5
-WHERE (v5."product" IS NOT NULL AND 17 = v5."nr")
-UNION ALL 
-SELECT ('http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromVendor/Vendor' || CAST(v7."vendor" AS STRING)) AS "v26", 0 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/vendor' AS "v9"
-FROM "ss4"."offer" v7
-WHERE (v7."vendor" IS NOT NULL AND 17 = v7."nr")
-UNION ALL 
-SELECT ('http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromVendor/Vendor' || CAST(v9."vendor" AS STRING)) AS "v26", 0 AS "v6", 'http://purl.org/dc/elements/1.1/publisher' AS "v9"
-FROM "ss4"."offer" v9
-WHERE (v9."vendor" IS NOT NULL AND 17 = v9."nr")
-UNION ALL 
-SELECT '17' AS "v26", 1 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/offerId' AS "v9"
-FROM "ss4"."offer" v11
-WHERE 17 = v11."nr"
-UNION ALL 
-SELECT CAST(v13."publishdate" AS STRING) AS "v26", 2 AS "v6", 'http://purl.org/dc/elements/1.1/date' AS "v9"
-FROM "ss4"."offer" v13
-WHERE (v13."publishdate" IS NOT NULL AND 17 = v13."nr")
-UNION ALL 
-SELECT v15."offerwebpage" AS "v26", 3 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/offerWebpage' AS "v9"
-FROM "ss4"."offer" v15
-WHERE (v15."offerwebpage" IS NOT NULL AND 17 = v15."nr")
-UNION ALL 
-SELECT CAST(v17."deliverydays" AS STRING) AS "v26", 1 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/deliveryDays' AS "v9"
-FROM "ss4"."offer" v17
-WHERE (v17."deliverydays" IS NOT NULL AND 17 = v17."nr")
-UNION ALL 
-SELECT CAST(v19."price" AS STRING) AS "v26", 4 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/price' AS "v9"
-FROM "ss4"."offer" v19
-WHERE (v19."price" IS NOT NULL AND 17 = v19."nr")
-UNION ALL 
-SELECT CAST(v21."validfrom" AS STRING) AS "v26", 2 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/validFrom' AS "v9"
-FROM "ss4"."offer" v21
-WHERE (v21."validfrom" IS NOT NULL AND 17 = v21."nr")
-UNION ALL 
-SELECT CAST(v23."validto" AS STRING) AS "v26", 2 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/validTo' AS "v9"
-FROM "ss4"."offer" v23
-WHERE (v23."validto" IS NOT NULL AND 17 = v23."nr")
-) v25
+SELECT DISTINCT v9."nr1m5" AS "nr1m5", v9."product1m5" AS "product1m5"
+FROM (SELECT v2."deliverydays" AS "deliverydays1m37", v2."nr" AS "nr1m5", v2."price" AS "price1m39", v1."nr" AS "product1m5", v2."validto" AS "validto1m45"
+FROM "ss1"."product1" v1, "ss4"."offer" v2, "ss4"."vendor" v3
+WHERE ((v2."deliverydays" <= 3) AND (v1."nr" <= 125) AND v2."deliverydays" IS NOT NULL AND v2."price" IS NOT NULL AND v2."validto" IS NOT NULL AND v1."nr" = v2."product" AND v2."vendor" = v3."nr" AND 'CN' = v3."country")
+UNION ALL
+SELECT v6."deliverydays" AS "deliverydays1m37", v6."nr" AS "nr1m5", v6."price" AS "price1m39", v5."nr" AS "product1m5", v6."validto" AS "validto1m45"
+FROM "ss5"."product2" v5, "ss4"."offer" v6, "ss4"."vendor" v7
+WHERE ((v6."deliverydays" <= 3) AND (v5."nr" <= 125) AND v6."deliverydays" IS NOT NULL AND v6."price" IS NOT NULL AND v6."validto" IS NOT NULL AND v5."nr" = v6."product" AND v6."vendor" = v7."nr" AND 'CN' = v7."country")
+) v9
 
--- 17
+-- 125
+-- CN
 
-SELECT v25."v26" AS "v26", v25."v6" AS "v6", v25."v9" AS "v9"
-FROM (SELECT 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Offer' AS "v26", 0 AS "v6", 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type' AS "v9"
-FROM "ss4"."offer" v1
-WHERE 17 = v1."nr"
-UNION ALL 
-SELECT 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product' AS "v26", 0 AS "v6", 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type' AS "v9"
-FROM "ss4"."offer" v3
-WHERE (v3."vendor" IS NOT NULL AND 17 = v3."nr")
-UNION ALL 
-SELECT ('http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromProducer/Product' || CAST(v5."product" AS STRING)) AS "v26", 0 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/product' AS "v9"
-FROM "ss4"."offer" v5
-WHERE (v5."product" IS NOT NULL AND 17 = v5."nr")
-UNION ALL 
-SELECT ('http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromVendor/Vendor' || CAST(v7."vendor" AS STRING)) AS "v26", 0 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/vendor' AS "v9"
-FROM "ss4"."offer" v7
-WHERE (v7."vendor" IS NOT NULL AND 17 = v7."nr")
-UNION ALL 
-SELECT ('http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromVendor/Vendor' || CAST(v9."vendor" AS STRING)) AS "v26", 0 AS "v6", 'http://purl.org/dc/elements/1.1/publisher' AS "v9"
-FROM "ss4"."offer" v9
-WHERE (v9."vendor" IS NOT NULL AND 17 = v9."nr")
-UNION ALL 
-SELECT '17' AS "v26", 1 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/offerId' AS "v9"
-FROM "ss4"."offer" v11
-WHERE 17 = v11."nr"
-UNION ALL 
-SELECT CAST(v13."publishdate" AS STRING) AS "v26", 2 AS "v6", 'http://purl.org/dc/elements/1.1/date' AS "v9"
-FROM "ss4"."offer" v13
-WHERE (v13."publishdate" IS NOT NULL AND 17 = v13."nr")
-UNION ALL 
-SELECT v15."offerwebpage" AS "v26", 3 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/offerWebpage' AS "v9"
-FROM "ss4"."offer" v15
-WHERE (v15."offerwebpage" IS NOT NULL AND 17 = v15."nr")
-UNION ALL 
-SELECT CAST(v17."deliverydays" AS STRING) AS "v26", 1 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/deliveryDays' AS "v9"
-FROM "ss4"."offer" v17
-WHERE (v17."deliverydays" IS NOT NULL AND 17 = v17."nr")
-UNION ALL 
-SELECT CAST(v19."price" AS STRING) AS "v26", 4 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/price' AS "v9"
-FROM "ss4"."offer" v19
-WHERE (v19."price" IS NOT NULL AND 17 = v19."nr")
-UNION ALL 
-SELECT CAST(v21."validfrom" AS STRING) AS "v26", 2 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/validFrom' AS "v9"
-FROM "ss4"."offer" v21
-WHERE (v21."validfrom" IS NOT NULL AND 17 = v21."nr")
-UNION ALL 
-SELECT CAST(v23."validto" AS STRING) AS "v26", 2 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/validTo' AS "v9"
-FROM "ss4"."offer" v23
-WHERE (v23."validto" IS NOT NULL AND 17 = v23."nr")
-) v25
+SELECT DISTINCT v9."nr1m5" AS "nr1m5", v9."product1m5" AS "product1m5"
+FROM (SELECT v2."deliverydays" AS "deliverydays1m37", v2."nr" AS "nr1m5", v2."price" AS "price1m39", v1."nr" AS "product1m5", v2."validto" AS "validto1m45"
+FROM "ss1"."product1" v1, "ss4"."offer" v2, "ss4"."vendor" v3
+WHERE ((v2."deliverydays" <= 3) AND (v1."nr" <= 125) AND v2."deliverydays" IS NOT NULL AND v2."price" IS NOT NULL AND v2."validto" IS NOT NULL AND v1."nr" = v2."product" AND v2."vendor" = v3."nr" AND 'CN' = v3."country")
+UNION ALL
+SELECT v6."deliverydays" AS "deliverydays1m37", v6."nr" AS "nr1m5", v6."price" AS "price1m39", v5."nr" AS "product1m5", v6."validto" AS "validto1m45"
+FROM "ss5"."product2" v5, "ss4"."offer" v6, "ss4"."vendor" v7
+WHERE ((v6."deliverydays" <= 3) AND (v5."nr" <= 125) AND v6."deliverydays" IS NOT NULL AND v6."price" IS NOT NULL AND v6."validto" IS NOT NULL AND v5."nr" = v6."product" AND v6."vendor" = v7."nr" AND 'CN' = v7."country")
+) v9
 
-23:53:11.880 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - null
+22:11:11.943 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - null
 null
-23:53:11.887 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 00.sql
-23:53:11.894 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-23:53:11.896 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 18
+22:11:11.946 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 00.sql
+22:11:11.949 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+22:11:11.950 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 18
 
 SELECT v12."nr2m23" AS "nr2m23", COUNT(*) AS "v1"
 FROM (SELECT DISTINCT v5."nr2m23" AS "nr2m23", v10."productfeature2m2" AS "productfeature2m2"
@@ -1074,9 +840,9 @@ WHERE v5."nr2m23" = v10."nr2m0"
 ) v12
 GROUP BY v12."nr2m23"
 
-23:53:13.673 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 01.sql
-23:53:13.678 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-23:53:13.680 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 19
+22:11:13.359 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 01.sql
+22:11:13.365 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+22:11:13.367 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 19
 
 SELECT v12."productfeature" AS "Feature", AVG(v12."propertynum1") AS "mean"
 FROM (
@@ -1168,9 +934,9 @@ GROUP BY v12."productfeature"
 
 --
 
-23:53:15.115 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 02.sql
-23:53:15.122 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-23:53:15.124 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 20
+22:11:14.601 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 02.sql
+22:11:14.605 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+22:11:14.607 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 20
 
 SELECT v25."v26" AS "v26", v25."v6" AS "v6", v25."v9" AS "v9"
 FROM (SELECT 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Offer' AS "v26", 0 AS "v6", 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type' AS "v9"
@@ -1274,117 +1040,39 @@ FROM "ss4"."offer" v23
 WHERE (v23."validto" IS NOT NULL AND MOD(v23."deliverydays",3) = 0 AND v23."nr" <= 200000)
 ) v25
 
-23:53:43.253 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 11.sql
-23:53:43.262 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-23:53:43.264 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 21
+22:11:39.214 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 03.sql
+22:11:39.219 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+22:11:39.219 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 125
+-- CN
 
-SELECT v25."v26" AS "v26", v25."v6" AS "v6", v25."v9" AS "v9"
-FROM (SELECT 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Offer' AS "v26", 0 AS "v6", 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type' AS "v9"
-FROM "ss4"."offer" v1
-WHERE 21 = v1."nr"
-UNION ALL 
-SELECT 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product' AS "v26", 0 AS "v6", 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type' AS "v9"
-FROM "ss4"."offer" v3
-WHERE (v3."vendor" IS NOT NULL AND 21 = v3."nr")
-UNION ALL 
-SELECT ('http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromProducer/Product' || CAST(v5."product" AS STRING)) AS "v26", 0 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/product' AS "v9"
-FROM "ss4"."offer" v5
-WHERE (v5."product" IS NOT NULL AND 21 = v5."nr")
-UNION ALL 
-SELECT ('http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromVendor/Vendor' || CAST(v7."vendor" AS STRING)) AS "v26", 0 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/vendor' AS "v9"
-FROM "ss4"."offer" v7
-WHERE (v7."vendor" IS NOT NULL AND 21 = v7."nr")
-UNION ALL 
-SELECT ('http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromVendor/Vendor' || CAST(v9."vendor" AS STRING)) AS "v26", 0 AS "v6", 'http://purl.org/dc/elements/1.1/publisher' AS "v9"
-FROM "ss4"."offer" v9
-WHERE (v9."vendor" IS NOT NULL AND 21 = v9."nr")
-UNION ALL 
-SELECT '21' AS "v26", 1 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/offerId' AS "v9"
-FROM "ss4"."offer" v11
-WHERE 21 = v11."nr"
-UNION ALL 
-SELECT CAST(v13."publishdate" AS STRING) AS "v26", 2 AS "v6", 'http://purl.org/dc/elements/1.1/date' AS "v9"
-FROM "ss4"."offer" v13
-WHERE (v13."publishdate" IS NOT NULL AND 21 = v13."nr")
-UNION ALL 
-SELECT v15."offerwebpage" AS "v26", 3 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/offerWebpage' AS "v9"
-FROM "ss4"."offer" v15
-WHERE (v15."offerwebpage" IS NOT NULL AND 21 = v15."nr")
-UNION ALL 
-SELECT CAST(v17."deliverydays" AS STRING) AS "v26", 1 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/deliveryDays' AS "v9"
-FROM "ss4"."offer" v17
-WHERE (v17."deliverydays" IS NOT NULL AND 21 = v17."nr")
-UNION ALL 
-SELECT CAST(v19."price" AS STRING) AS "v26", 4 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/price' AS "v9"
-FROM "ss4"."offer" v19
-WHERE (v19."price" IS NOT NULL AND 21 = v19."nr")
-UNION ALL 
-SELECT CAST(v21."validfrom" AS STRING) AS "v26", 2 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/validFrom' AS "v9"
-FROM "ss4"."offer" v21
-WHERE (v21."validfrom" IS NOT NULL AND 21 = v21."nr")
-UNION ALL 
-SELECT CAST(v23."validto" AS STRING) AS "v26", 2 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/validTo' AS "v9"
-FROM "ss4"."offer" v23
-WHERE (v23."validto" IS NOT NULL AND 21 = v23."nr")
-) v25
+SELECT DISTINCT v9."nr1m5" AS "nr1m5", v9."product1m5" AS "product1m5"
+FROM (SELECT v2."deliverydays" AS "deliverydays1m37", v2."nr" AS "nr1m5", v2."price" AS "price1m39", v1."nr" AS "product1m5", v2."validto" AS "validto1m45"
+FROM "ss1"."product1" v1, "ss4"."offer" v2, "ss4"."vendor" v3
+WHERE ((v2."deliverydays" <= 3) AND (v1."nr" <= 125) AND v2."deliverydays" IS NOT NULL AND v2."price" IS NOT NULL AND v2."validto" IS NOT NULL AND v1."nr" = v2."product" AND v2."vendor" = v3."nr" AND 'CN' = v3."country")
+UNION ALL
+SELECT v6."deliverydays" AS "deliverydays1m37", v6."nr" AS "nr1m5", v6."price" AS "price1m39", v5."nr" AS "product1m5", v6."validto" AS "validto1m45"
+FROM "ss5"."product2" v5, "ss4"."offer" v6, "ss4"."vendor" v7
+WHERE ((v6."deliverydays" <= 3) AND (v5."nr" <= 125) AND v6."deliverydays" IS NOT NULL AND v6."price" IS NOT NULL AND v6."validto" IS NOT NULL AND v5."nr" = v6."product" AND v6."vendor" = v7."nr" AND 'CN' = v7."country")
+) v9
 
--- 21
+-- 125
+-- CN
 
-SELECT v25."v26" AS "v26", v25."v6" AS "v6", v25."v9" AS "v9"
-FROM (SELECT 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Offer' AS "v26", 0 AS "v6", 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type' AS "v9"
-FROM "ss4"."offer" v1
-WHERE 21 = v1."nr"
-UNION ALL 
-SELECT 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product' AS "v26", 0 AS "v6", 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type' AS "v9"
-FROM "ss4"."offer" v3
-WHERE (v3."vendor" IS NOT NULL AND 21 = v3."nr")
-UNION ALL 
-SELECT ('http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromProducer/Product' || CAST(v5."product" AS STRING)) AS "v26", 0 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/product' AS "v9"
-FROM "ss4"."offer" v5
-WHERE (v5."product" IS NOT NULL AND 21 = v5."nr")
-UNION ALL 
-SELECT ('http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromVendor/Vendor' || CAST(v7."vendor" AS STRING)) AS "v26", 0 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/vendor' AS "v9"
-FROM "ss4"."offer" v7
-WHERE (v7."vendor" IS NOT NULL AND 21 = v7."nr")
-UNION ALL 
-SELECT ('http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromVendor/Vendor' || CAST(v9."vendor" AS STRING)) AS "v26", 0 AS "v6", 'http://purl.org/dc/elements/1.1/publisher' AS "v9"
-FROM "ss4"."offer" v9
-WHERE (v9."vendor" IS NOT NULL AND 21 = v9."nr")
-UNION ALL 
-SELECT '21' AS "v26", 1 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/offerId' AS "v9"
-FROM "ss4"."offer" v11
-WHERE 21 = v11."nr"
-UNION ALL 
-SELECT CAST(v13."publishdate" AS STRING) AS "v26", 2 AS "v6", 'http://purl.org/dc/elements/1.1/date' AS "v9"
-FROM "ss4"."offer" v13
-WHERE (v13."publishdate" IS NOT NULL AND 21 = v13."nr")
-UNION ALL 
-SELECT v15."offerwebpage" AS "v26", 3 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/offerWebpage' AS "v9"
-FROM "ss4"."offer" v15
-WHERE (v15."offerwebpage" IS NOT NULL AND 21 = v15."nr")
-UNION ALL 
-SELECT CAST(v17."deliverydays" AS STRING) AS "v26", 1 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/deliveryDays' AS "v9"
-FROM "ss4"."offer" v17
-WHERE (v17."deliverydays" IS NOT NULL AND 21 = v17."nr")
-UNION ALL 
-SELECT CAST(v19."price" AS STRING) AS "v26", 4 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/price' AS "v9"
-FROM "ss4"."offer" v19
-WHERE (v19."price" IS NOT NULL AND 21 = v19."nr")
-UNION ALL 
-SELECT CAST(v21."validfrom" AS STRING) AS "v26", 2 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/validFrom' AS "v9"
-FROM "ss4"."offer" v21
-WHERE (v21."validfrom" IS NOT NULL AND 21 = v21."nr")
-UNION ALL 
-SELECT CAST(v23."validto" AS STRING) AS "v26", 2 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/validTo' AS "v9"
-FROM "ss4"."offer" v23
-WHERE (v23."validto" IS NOT NULL AND 21 = v23."nr")
-) v25
+SELECT DISTINCT v9."nr1m5" AS "nr1m5", v9."product1m5" AS "product1m5"
+FROM (SELECT v2."deliverydays" AS "deliverydays1m37", v2."nr" AS "nr1m5", v2."price" AS "price1m39", v1."nr" AS "product1m5", v2."validto" AS "validto1m45"
+FROM "ss1"."product1" v1, "ss4"."offer" v2, "ss4"."vendor" v3
+WHERE ((v2."deliverydays" <= 3) AND (v1."nr" <= 125) AND v2."deliverydays" IS NOT NULL AND v2."price" IS NOT NULL AND v2."validto" IS NOT NULL AND v1."nr" = v2."product" AND v2."vendor" = v3."nr" AND 'CN' = v3."country")
+UNION ALL
+SELECT v6."deliverydays" AS "deliverydays1m37", v6."nr" AS "nr1m5", v6."price" AS "price1m39", v5."nr" AS "product1m5", v6."validto" AS "validto1m45"
+FROM "ss5"."product2" v5, "ss4"."offer" v6, "ss4"."vendor" v7
+WHERE ((v6."deliverydays" <= 3) AND (v5."nr" <= 125) AND v6."deliverydays" IS NOT NULL AND v6."price" IS NOT NULL AND v6."validto" IS NOT NULL AND v5."nr" = v6."product" AND v6."vendor" = v7."nr" AND 'CN' = v7."country")
+) v9
 
-23:54:10.124 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - null
+22:11:46.108 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - null
 null
-23:54:10.128 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 00.sql
-23:54:10.136 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-23:54:10.138 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 22
+22:11:46.112 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 00.sql
+22:11:46.126 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+22:11:46.127 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 22
 
 SELECT v12."nr2m23" AS "nr2m23", COUNT(*) AS "v1"
 FROM (SELECT DISTINCT v5."nr2m23" AS "nr2m23", v10."productfeature2m2" AS "productfeature2m2"
@@ -1418,9 +1106,9 @@ WHERE v5."nr2m23" = v10."nr2m0"
 ) v12
 GROUP BY v12."nr2m23"
 
-23:54:11.783 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 01.sql
-23:54:11.793 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-23:54:11.795 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 23
+22:11:47.366 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 01.sql
+22:11:47.371 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+22:11:47.373 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 23
 
 SELECT v12."productfeature" AS "Feature", AVG(v12."propertynum1") AS "mean"
 FROM (
@@ -1512,9 +1200,9 @@ GROUP BY v12."productfeature"
 
 --
 
-23:54:13.260 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 02.sql
-23:54:13.266 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-23:54:13.268 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 24
+22:11:48.563 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 02.sql
+22:11:48.567 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+22:11:48.569 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 24
 
 SELECT v25."v26" AS "v26", v25."v6" AS "v6", v25."v9" AS "v9"
 FROM (SELECT 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Offer' AS "v26", 0 AS "v6", 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type' AS "v9"
@@ -1618,117 +1306,39 @@ FROM "ss4"."offer" v23
 WHERE (v23."validto" IS NOT NULL AND MOD(v23."deliverydays",3) = 0 AND v23."nr" <= 200000)
 ) v25
 
-23:54:40.141 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 11.sql
-23:54:40.150 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-23:54:40.152 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 25
+22:12:12.088 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 03.sql
+22:12:12.092 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+22:12:12.092 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 125
+-- CN
 
-SELECT v25."v26" AS "v26", v25."v6" AS "v6", v25."v9" AS "v9"
-FROM (SELECT 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Offer' AS "v26", 0 AS "v6", 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type' AS "v9"
-FROM "ss4"."offer" v1
-WHERE 25 = v1."nr"
-UNION ALL 
-SELECT 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product' AS "v26", 0 AS "v6", 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type' AS "v9"
-FROM "ss4"."offer" v3
-WHERE (v3."vendor" IS NOT NULL AND 25 = v3."nr")
-UNION ALL 
-SELECT ('http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromProducer/Product' || CAST(v5."product" AS STRING)) AS "v26", 0 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/product' AS "v9"
-FROM "ss4"."offer" v5
-WHERE (v5."product" IS NOT NULL AND 25 = v5."nr")
-UNION ALL 
-SELECT ('http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromVendor/Vendor' || CAST(v7."vendor" AS STRING)) AS "v26", 0 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/vendor' AS "v9"
-FROM "ss4"."offer" v7
-WHERE (v7."vendor" IS NOT NULL AND 25 = v7."nr")
-UNION ALL 
-SELECT ('http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromVendor/Vendor' || CAST(v9."vendor" AS STRING)) AS "v26", 0 AS "v6", 'http://purl.org/dc/elements/1.1/publisher' AS "v9"
-FROM "ss4"."offer" v9
-WHERE (v9."vendor" IS NOT NULL AND 25 = v9."nr")
-UNION ALL 
-SELECT '25' AS "v26", 1 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/offerId' AS "v9"
-FROM "ss4"."offer" v11
-WHERE 25 = v11."nr"
-UNION ALL 
-SELECT CAST(v13."publishdate" AS STRING) AS "v26", 2 AS "v6", 'http://purl.org/dc/elements/1.1/date' AS "v9"
-FROM "ss4"."offer" v13
-WHERE (v13."publishdate" IS NOT NULL AND 25 = v13."nr")
-UNION ALL 
-SELECT v15."offerwebpage" AS "v26", 3 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/offerWebpage' AS "v9"
-FROM "ss4"."offer" v15
-WHERE (v15."offerwebpage" IS NOT NULL AND 25 = v15."nr")
-UNION ALL 
-SELECT CAST(v17."deliverydays" AS STRING) AS "v26", 1 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/deliveryDays' AS "v9"
-FROM "ss4"."offer" v17
-WHERE (v17."deliverydays" IS NOT NULL AND 25 = v17."nr")
-UNION ALL 
-SELECT CAST(v19."price" AS STRING) AS "v26", 4 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/price' AS "v9"
-FROM "ss4"."offer" v19
-WHERE (v19."price" IS NOT NULL AND 25 = v19."nr")
-UNION ALL 
-SELECT CAST(v21."validfrom" AS STRING) AS "v26", 2 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/validFrom' AS "v9"
-FROM "ss4"."offer" v21
-WHERE (v21."validfrom" IS NOT NULL AND 25 = v21."nr")
-UNION ALL 
-SELECT CAST(v23."validto" AS STRING) AS "v26", 2 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/validTo' AS "v9"
-FROM "ss4"."offer" v23
-WHERE (v23."validto" IS NOT NULL AND 25 = v23."nr")
-) v25
+SELECT DISTINCT v9."nr1m5" AS "nr1m5", v9."product1m5" AS "product1m5"
+FROM (SELECT v2."deliverydays" AS "deliverydays1m37", v2."nr" AS "nr1m5", v2."price" AS "price1m39", v1."nr" AS "product1m5", v2."validto" AS "validto1m45"
+FROM "ss1"."product1" v1, "ss4"."offer" v2, "ss4"."vendor" v3
+WHERE ((v2."deliverydays" <= 3) AND (v1."nr" <= 125) AND v2."deliverydays" IS NOT NULL AND v2."price" IS NOT NULL AND v2."validto" IS NOT NULL AND v1."nr" = v2."product" AND v2."vendor" = v3."nr" AND 'CN' = v3."country")
+UNION ALL
+SELECT v6."deliverydays" AS "deliverydays1m37", v6."nr" AS "nr1m5", v6."price" AS "price1m39", v5."nr" AS "product1m5", v6."validto" AS "validto1m45"
+FROM "ss5"."product2" v5, "ss4"."offer" v6, "ss4"."vendor" v7
+WHERE ((v6."deliverydays" <= 3) AND (v5."nr" <= 125) AND v6."deliverydays" IS NOT NULL AND v6."price" IS NOT NULL AND v6."validto" IS NOT NULL AND v5."nr" = v6."product" AND v6."vendor" = v7."nr" AND 'CN' = v7."country")
+) v9
 
--- 25
+-- 125
+-- CN
 
-SELECT v25."v26" AS "v26", v25."v6" AS "v6", v25."v9" AS "v9"
-FROM (SELECT 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Offer' AS "v26", 0 AS "v6", 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type' AS "v9"
-FROM "ss4"."offer" v1
-WHERE 25 = v1."nr"
-UNION ALL 
-SELECT 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product' AS "v26", 0 AS "v6", 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type' AS "v9"
-FROM "ss4"."offer" v3
-WHERE (v3."vendor" IS NOT NULL AND 25 = v3."nr")
-UNION ALL 
-SELECT ('http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromProducer/Product' || CAST(v5."product" AS STRING)) AS "v26", 0 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/product' AS "v9"
-FROM "ss4"."offer" v5
-WHERE (v5."product" IS NOT NULL AND 25 = v5."nr")
-UNION ALL 
-SELECT ('http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromVendor/Vendor' || CAST(v7."vendor" AS STRING)) AS "v26", 0 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/vendor' AS "v9"
-FROM "ss4"."offer" v7
-WHERE (v7."vendor" IS NOT NULL AND 25 = v7."nr")
-UNION ALL 
-SELECT ('http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromVendor/Vendor' || CAST(v9."vendor" AS STRING)) AS "v26", 0 AS "v6", 'http://purl.org/dc/elements/1.1/publisher' AS "v9"
-FROM "ss4"."offer" v9
-WHERE (v9."vendor" IS NOT NULL AND 25 = v9."nr")
-UNION ALL 
-SELECT '25' AS "v26", 1 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/offerId' AS "v9"
-FROM "ss4"."offer" v11
-WHERE 25 = v11."nr"
-UNION ALL 
-SELECT CAST(v13."publishdate" AS STRING) AS "v26", 2 AS "v6", 'http://purl.org/dc/elements/1.1/date' AS "v9"
-FROM "ss4"."offer" v13
-WHERE (v13."publishdate" IS NOT NULL AND 25 = v13."nr")
-UNION ALL 
-SELECT v15."offerwebpage" AS "v26", 3 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/offerWebpage' AS "v9"
-FROM "ss4"."offer" v15
-WHERE (v15."offerwebpage" IS NOT NULL AND 25 = v15."nr")
-UNION ALL 
-SELECT CAST(v17."deliverydays" AS STRING) AS "v26", 1 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/deliveryDays' AS "v9"
-FROM "ss4"."offer" v17
-WHERE (v17."deliverydays" IS NOT NULL AND 25 = v17."nr")
-UNION ALL 
-SELECT CAST(v19."price" AS STRING) AS "v26", 4 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/price' AS "v9"
-FROM "ss4"."offer" v19
-WHERE (v19."price" IS NOT NULL AND 25 = v19."nr")
-UNION ALL 
-SELECT CAST(v21."validfrom" AS STRING) AS "v26", 2 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/validFrom' AS "v9"
-FROM "ss4"."offer" v21
-WHERE (v21."validfrom" IS NOT NULL AND 25 = v21."nr")
-UNION ALL 
-SELECT CAST(v23."validto" AS STRING) AS "v26", 2 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/validTo' AS "v9"
-FROM "ss4"."offer" v23
-WHERE (v23."validto" IS NOT NULL AND 25 = v23."nr")
-) v25
+SELECT DISTINCT v9."nr1m5" AS "nr1m5", v9."product1m5" AS "product1m5"
+FROM (SELECT v2."deliverydays" AS "deliverydays1m37", v2."nr" AS "nr1m5", v2."price" AS "price1m39", v1."nr" AS "product1m5", v2."validto" AS "validto1m45"
+FROM "ss1"."product1" v1, "ss4"."offer" v2, "ss4"."vendor" v3
+WHERE ((v2."deliverydays" <= 3) AND (v1."nr" <= 125) AND v2."deliverydays" IS NOT NULL AND v2."price" IS NOT NULL AND v2."validto" IS NOT NULL AND v1."nr" = v2."product" AND v2."vendor" = v3."nr" AND 'CN' = v3."country")
+UNION ALL
+SELECT v6."deliverydays" AS "deliverydays1m37", v6."nr" AS "nr1m5", v6."price" AS "price1m39", v5."nr" AS "product1m5", v6."validto" AS "validto1m45"
+FROM "ss5"."product2" v5, "ss4"."offer" v6, "ss4"."vendor" v7
+WHERE ((v6."deliverydays" <= 3) AND (v5."nr" <= 125) AND v6."deliverydays" IS NOT NULL AND v6."price" IS NOT NULL AND v6."validto" IS NOT NULL AND v5."nr" = v6."product" AND v6."vendor" = v7."nr" AND 'CN' = v7."country")
+) v9
 
-23:55:04.925 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - null
+22:12:18.970 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - null
 null
-23:55:04.930 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 00.sql
-23:55:04.937 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-23:55:04.940 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 26
+22:12:18.973 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 00.sql
+22:12:18.979 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+22:12:18.981 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 26
 
 SELECT v12."nr2m23" AS "nr2m23", COUNT(*) AS "v1"
 FROM (SELECT DISTINCT v5."nr2m23" AS "nr2m23", v10."productfeature2m2" AS "productfeature2m2"
@@ -1762,9 +1372,9 @@ WHERE v5."nr2m23" = v10."nr2m0"
 ) v12
 GROUP BY v12."nr2m23"
 
-23:55:06.276 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 01.sql
-23:55:06.283 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-23:55:06.286 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 27
+22:12:20.298 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 01.sql
+22:12:20.304 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+22:12:20.305 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 27
 
 SELECT v12."productfeature" AS "Feature", AVG(v12."propertynum1") AS "mean"
 FROM (
@@ -1856,9 +1466,9 @@ GROUP BY v12."productfeature"
 
 --
 
-23:55:07.578 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 02.sql
-23:55:07.586 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-23:55:07.588 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 28
+22:12:21.467 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 02.sql
+22:12:21.470 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+22:12:21.472 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 28
 
 SELECT v25."v26" AS "v26", v25."v6" AS "v6", v25."v9" AS "v9"
 FROM (SELECT 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Offer' AS "v26", 0 AS "v6", 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type' AS "v9"
@@ -1962,117 +1572,39 @@ FROM "ss4"."offer" v23
 WHERE (v23."validto" IS NOT NULL AND MOD(v23."deliverydays",3) = 0 AND v23."nr" <= 200000)
 ) v25
 
-23:55:34.296 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 11.sql
-23:55:34.303 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-23:55:34.306 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 29
+22:12:46.397 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 03.sql
+22:12:46.400 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+22:12:46.400 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 125
+-- CN
 
-SELECT v25."v26" AS "v26", v25."v6" AS "v6", v25."v9" AS "v9"
-FROM (SELECT 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Offer' AS "v26", 0 AS "v6", 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type' AS "v9"
-FROM "ss4"."offer" v1
-WHERE 29 = v1."nr"
-UNION ALL 
-SELECT 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product' AS "v26", 0 AS "v6", 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type' AS "v9"
-FROM "ss4"."offer" v3
-WHERE (v3."vendor" IS NOT NULL AND 29 = v3."nr")
-UNION ALL 
-SELECT ('http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromProducer/Product' || CAST(v5."product" AS STRING)) AS "v26", 0 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/product' AS "v9"
-FROM "ss4"."offer" v5
-WHERE (v5."product" IS NOT NULL AND 29 = v5."nr")
-UNION ALL 
-SELECT ('http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromVendor/Vendor' || CAST(v7."vendor" AS STRING)) AS "v26", 0 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/vendor' AS "v9"
-FROM "ss4"."offer" v7
-WHERE (v7."vendor" IS NOT NULL AND 29 = v7."nr")
-UNION ALL 
-SELECT ('http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromVendor/Vendor' || CAST(v9."vendor" AS STRING)) AS "v26", 0 AS "v6", 'http://purl.org/dc/elements/1.1/publisher' AS "v9"
-FROM "ss4"."offer" v9
-WHERE (v9."vendor" IS NOT NULL AND 29 = v9."nr")
-UNION ALL 
-SELECT '29' AS "v26", 1 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/offerId' AS "v9"
-FROM "ss4"."offer" v11
-WHERE 29 = v11."nr"
-UNION ALL 
-SELECT CAST(v13."publishdate" AS STRING) AS "v26", 2 AS "v6", 'http://purl.org/dc/elements/1.1/date' AS "v9"
-FROM "ss4"."offer" v13
-WHERE (v13."publishdate" IS NOT NULL AND 29 = v13."nr")
-UNION ALL 
-SELECT v15."offerwebpage" AS "v26", 3 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/offerWebpage' AS "v9"
-FROM "ss4"."offer" v15
-WHERE (v15."offerwebpage" IS NOT NULL AND 29 = v15."nr")
-UNION ALL 
-SELECT CAST(v17."deliverydays" AS STRING) AS "v26", 1 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/deliveryDays' AS "v9"
-FROM "ss4"."offer" v17
-WHERE (v17."deliverydays" IS NOT NULL AND 29 = v17."nr")
-UNION ALL 
-SELECT CAST(v19."price" AS STRING) AS "v26", 4 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/price' AS "v9"
-FROM "ss4"."offer" v19
-WHERE (v19."price" IS NOT NULL AND 29 = v19."nr")
-UNION ALL 
-SELECT CAST(v21."validfrom" AS STRING) AS "v26", 2 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/validFrom' AS "v9"
-FROM "ss4"."offer" v21
-WHERE (v21."validfrom" IS NOT NULL AND 29 = v21."nr")
-UNION ALL 
-SELECT CAST(v23."validto" AS STRING) AS "v26", 2 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/validTo' AS "v9"
-FROM "ss4"."offer" v23
-WHERE (v23."validto" IS NOT NULL AND 29 = v23."nr")
-) v25
+SELECT DISTINCT v9."nr1m5" AS "nr1m5", v9."product1m5" AS "product1m5"
+FROM (SELECT v2."deliverydays" AS "deliverydays1m37", v2."nr" AS "nr1m5", v2."price" AS "price1m39", v1."nr" AS "product1m5", v2."validto" AS "validto1m45"
+FROM "ss1"."product1" v1, "ss4"."offer" v2, "ss4"."vendor" v3
+WHERE ((v2."deliverydays" <= 3) AND (v1."nr" <= 125) AND v2."deliverydays" IS NOT NULL AND v2."price" IS NOT NULL AND v2."validto" IS NOT NULL AND v1."nr" = v2."product" AND v2."vendor" = v3."nr" AND 'CN' = v3."country")
+UNION ALL
+SELECT v6."deliverydays" AS "deliverydays1m37", v6."nr" AS "nr1m5", v6."price" AS "price1m39", v5."nr" AS "product1m5", v6."validto" AS "validto1m45"
+FROM "ss5"."product2" v5, "ss4"."offer" v6, "ss4"."vendor" v7
+WHERE ((v6."deliverydays" <= 3) AND (v5."nr" <= 125) AND v6."deliverydays" IS NOT NULL AND v6."price" IS NOT NULL AND v6."validto" IS NOT NULL AND v5."nr" = v6."product" AND v6."vendor" = v7."nr" AND 'CN' = v7."country")
+) v9
 
--- 29
+-- 125
+-- CN
 
-SELECT v25."v26" AS "v26", v25."v6" AS "v6", v25."v9" AS "v9"
-FROM (SELECT 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Offer' AS "v26", 0 AS "v6", 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type' AS "v9"
-FROM "ss4"."offer" v1
-WHERE 29 = v1."nr"
-UNION ALL 
-SELECT 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product' AS "v26", 0 AS "v6", 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type' AS "v9"
-FROM "ss4"."offer" v3
-WHERE (v3."vendor" IS NOT NULL AND 29 = v3."nr")
-UNION ALL 
-SELECT ('http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromProducer/Product' || CAST(v5."product" AS STRING)) AS "v26", 0 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/product' AS "v9"
-FROM "ss4"."offer" v5
-WHERE (v5."product" IS NOT NULL AND 29 = v5."nr")
-UNION ALL 
-SELECT ('http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromVendor/Vendor' || CAST(v7."vendor" AS STRING)) AS "v26", 0 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/vendor' AS "v9"
-FROM "ss4"."offer" v7
-WHERE (v7."vendor" IS NOT NULL AND 29 = v7."nr")
-UNION ALL 
-SELECT ('http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromVendor/Vendor' || CAST(v9."vendor" AS STRING)) AS "v26", 0 AS "v6", 'http://purl.org/dc/elements/1.1/publisher' AS "v9"
-FROM "ss4"."offer" v9
-WHERE (v9."vendor" IS NOT NULL AND 29 = v9."nr")
-UNION ALL 
-SELECT '29' AS "v26", 1 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/offerId' AS "v9"
-FROM "ss4"."offer" v11
-WHERE 29 = v11."nr"
-UNION ALL 
-SELECT CAST(v13."publishdate" AS STRING) AS "v26", 2 AS "v6", 'http://purl.org/dc/elements/1.1/date' AS "v9"
-FROM "ss4"."offer" v13
-WHERE (v13."publishdate" IS NOT NULL AND 29 = v13."nr")
-UNION ALL 
-SELECT v15."offerwebpage" AS "v26", 3 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/offerWebpage' AS "v9"
-FROM "ss4"."offer" v15
-WHERE (v15."offerwebpage" IS NOT NULL AND 29 = v15."nr")
-UNION ALL 
-SELECT CAST(v17."deliverydays" AS STRING) AS "v26", 1 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/deliveryDays' AS "v9"
-FROM "ss4"."offer" v17
-WHERE (v17."deliverydays" IS NOT NULL AND 29 = v17."nr")
-UNION ALL 
-SELECT CAST(v19."price" AS STRING) AS "v26", 4 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/price' AS "v9"
-FROM "ss4"."offer" v19
-WHERE (v19."price" IS NOT NULL AND 29 = v19."nr")
-UNION ALL 
-SELECT CAST(v21."validfrom" AS STRING) AS "v26", 2 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/validFrom' AS "v9"
-FROM "ss4"."offer" v21
-WHERE (v21."validfrom" IS NOT NULL AND 29 = v21."nr")
-UNION ALL 
-SELECT CAST(v23."validto" AS STRING) AS "v26", 2 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/validTo' AS "v9"
-FROM "ss4"."offer" v23
-WHERE (v23."validto" IS NOT NULL AND 29 = v23."nr")
-) v25
+SELECT DISTINCT v9."nr1m5" AS "nr1m5", v9."product1m5" AS "product1m5"
+FROM (SELECT v2."deliverydays" AS "deliverydays1m37", v2."nr" AS "nr1m5", v2."price" AS "price1m39", v1."nr" AS "product1m5", v2."validto" AS "validto1m45"
+FROM "ss1"."product1" v1, "ss4"."offer" v2, "ss4"."vendor" v3
+WHERE ((v2."deliverydays" <= 3) AND (v1."nr" <= 125) AND v2."deliverydays" IS NOT NULL AND v2."price" IS NOT NULL AND v2."validto" IS NOT NULL AND v1."nr" = v2."product" AND v2."vendor" = v3."nr" AND 'CN' = v3."country")
+UNION ALL
+SELECT v6."deliverydays" AS "deliverydays1m37", v6."nr" AS "nr1m5", v6."price" AS "price1m39", v5."nr" AS "product1m5", v6."validto" AS "validto1m45"
+FROM "ss5"."product2" v5, "ss4"."offer" v6, "ss4"."vendor" v7
+WHERE ((v6."deliverydays" <= 3) AND (v5."nr" <= 125) AND v6."deliverydays" IS NOT NULL AND v6."price" IS NOT NULL AND v6."validto" IS NOT NULL AND v5."nr" = v6."product" AND v6."vendor" = v7."nr" AND 'CN' = v7."country")
+) v9
 
-23:56:00.748 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - null
+22:12:53.552 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - null
 null
-23:56:00.754 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 00.sql
-23:56:00.763 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-23:56:00.765 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 30
+22:12:53.555 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 00.sql
+22:12:53.559 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+22:12:53.561 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 30
 
 SELECT v12."nr2m23" AS "nr2m23", COUNT(*) AS "v1"
 FROM (SELECT DISTINCT v5."nr2m23" AS "nr2m23", v10."productfeature2m2" AS "productfeature2m2"
@@ -2106,9 +1638,9 @@ WHERE v5."nr2m23" = v10."nr2m0"
 ) v12
 GROUP BY v12."nr2m23"
 
-23:56:02.424 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 01.sql
-23:56:02.431 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-23:56:02.433 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 31
+22:12:54.827 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 01.sql
+22:12:54.831 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+22:12:54.833 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 31
 
 SELECT v12."productfeature" AS "Feature", AVG(v12."propertynum1") AS "mean"
 FROM (
@@ -2200,9 +1732,9 @@ GROUP BY v12."productfeature"
 
 --
 
-23:56:03.892 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 02.sql
-23:56:03.902 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-23:56:03.904 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 32
+22:12:55.950 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 02.sql
+22:12:55.953 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+22:12:55.955 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 32
 
 SELECT v25."v26" AS "v26", v25."v6" AS "v6", v25."v9" AS "v9"
 FROM (SELECT 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Offer' AS "v26", 0 AS "v6", 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type' AS "v9"
@@ -2306,117 +1838,39 @@ FROM "ss4"."offer" v23
 WHERE (v23."validto" IS NOT NULL AND MOD(v23."deliverydays",3) = 0 AND v23."nr" <= 200000)
 ) v25
 
-23:56:30.984 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 11.sql
-23:56:30.992 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-23:56:30.994 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 33
+22:13:21.015 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 03.sql
+22:13:21.020 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+22:13:21.021 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 125
+-- CN
 
-SELECT v25."v26" AS "v26", v25."v6" AS "v6", v25."v9" AS "v9"
-FROM (SELECT 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Offer' AS "v26", 0 AS "v6", 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type' AS "v9"
-FROM "ss4"."offer" v1
-WHERE 33 = v1."nr"
-UNION ALL 
-SELECT 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product' AS "v26", 0 AS "v6", 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type' AS "v9"
-FROM "ss4"."offer" v3
-WHERE (v3."vendor" IS NOT NULL AND 33 = v3."nr")
-UNION ALL 
-SELECT ('http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromProducer/Product' || CAST(v5."product" AS STRING)) AS "v26", 0 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/product' AS "v9"
-FROM "ss4"."offer" v5
-WHERE (v5."product" IS NOT NULL AND 33 = v5."nr")
-UNION ALL 
-SELECT ('http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromVendor/Vendor' || CAST(v7."vendor" AS STRING)) AS "v26", 0 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/vendor' AS "v9"
-FROM "ss4"."offer" v7
-WHERE (v7."vendor" IS NOT NULL AND 33 = v7."nr")
-UNION ALL 
-SELECT ('http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromVendor/Vendor' || CAST(v9."vendor" AS STRING)) AS "v26", 0 AS "v6", 'http://purl.org/dc/elements/1.1/publisher' AS "v9"
-FROM "ss4"."offer" v9
-WHERE (v9."vendor" IS NOT NULL AND 33 = v9."nr")
-UNION ALL 
-SELECT '33' AS "v26", 1 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/offerId' AS "v9"
-FROM "ss4"."offer" v11
-WHERE 33 = v11."nr"
-UNION ALL 
-SELECT CAST(v13."publishdate" AS STRING) AS "v26", 2 AS "v6", 'http://purl.org/dc/elements/1.1/date' AS "v9"
-FROM "ss4"."offer" v13
-WHERE (v13."publishdate" IS NOT NULL AND 33 = v13."nr")
-UNION ALL 
-SELECT v15."offerwebpage" AS "v26", 3 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/offerWebpage' AS "v9"
-FROM "ss4"."offer" v15
-WHERE (v15."offerwebpage" IS NOT NULL AND 33 = v15."nr")
-UNION ALL 
-SELECT CAST(v17."deliverydays" AS STRING) AS "v26", 1 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/deliveryDays' AS "v9"
-FROM "ss4"."offer" v17
-WHERE (v17."deliverydays" IS NOT NULL AND 33 = v17."nr")
-UNION ALL 
-SELECT CAST(v19."price" AS STRING) AS "v26", 4 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/price' AS "v9"
-FROM "ss4"."offer" v19
-WHERE (v19."price" IS NOT NULL AND 33 = v19."nr")
-UNION ALL 
-SELECT CAST(v21."validfrom" AS STRING) AS "v26", 2 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/validFrom' AS "v9"
-FROM "ss4"."offer" v21
-WHERE (v21."validfrom" IS NOT NULL AND 33 = v21."nr")
-UNION ALL 
-SELECT CAST(v23."validto" AS STRING) AS "v26", 2 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/validTo' AS "v9"
-FROM "ss4"."offer" v23
-WHERE (v23."validto" IS NOT NULL AND 33 = v23."nr")
-) v25
+SELECT DISTINCT v9."nr1m5" AS "nr1m5", v9."product1m5" AS "product1m5"
+FROM (SELECT v2."deliverydays" AS "deliverydays1m37", v2."nr" AS "nr1m5", v2."price" AS "price1m39", v1."nr" AS "product1m5", v2."validto" AS "validto1m45"
+FROM "ss1"."product1" v1, "ss4"."offer" v2, "ss4"."vendor" v3
+WHERE ((v2."deliverydays" <= 3) AND (v1."nr" <= 125) AND v2."deliverydays" IS NOT NULL AND v2."price" IS NOT NULL AND v2."validto" IS NOT NULL AND v1."nr" = v2."product" AND v2."vendor" = v3."nr" AND 'CN' = v3."country")
+UNION ALL
+SELECT v6."deliverydays" AS "deliverydays1m37", v6."nr" AS "nr1m5", v6."price" AS "price1m39", v5."nr" AS "product1m5", v6."validto" AS "validto1m45"
+FROM "ss5"."product2" v5, "ss4"."offer" v6, "ss4"."vendor" v7
+WHERE ((v6."deliverydays" <= 3) AND (v5."nr" <= 125) AND v6."deliverydays" IS NOT NULL AND v6."price" IS NOT NULL AND v6."validto" IS NOT NULL AND v5."nr" = v6."product" AND v6."vendor" = v7."nr" AND 'CN' = v7."country")
+) v9
 
--- 33
+-- 125
+-- CN
 
-SELECT v25."v26" AS "v26", v25."v6" AS "v6", v25."v9" AS "v9"
-FROM (SELECT 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Offer' AS "v26", 0 AS "v6", 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type' AS "v9"
-FROM "ss4"."offer" v1
-WHERE 33 = v1."nr"
-UNION ALL 
-SELECT 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product' AS "v26", 0 AS "v6", 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type' AS "v9"
-FROM "ss4"."offer" v3
-WHERE (v3."vendor" IS NOT NULL AND 33 = v3."nr")
-UNION ALL 
-SELECT ('http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromProducer/Product' || CAST(v5."product" AS STRING)) AS "v26", 0 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/product' AS "v9"
-FROM "ss4"."offer" v5
-WHERE (v5."product" IS NOT NULL AND 33 = v5."nr")
-UNION ALL 
-SELECT ('http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromVendor/Vendor' || CAST(v7."vendor" AS STRING)) AS "v26", 0 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/vendor' AS "v9"
-FROM "ss4"."offer" v7
-WHERE (v7."vendor" IS NOT NULL AND 33 = v7."nr")
-UNION ALL 
-SELECT ('http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromVendor/Vendor' || CAST(v9."vendor" AS STRING)) AS "v26", 0 AS "v6", 'http://purl.org/dc/elements/1.1/publisher' AS "v9"
-FROM "ss4"."offer" v9
-WHERE (v9."vendor" IS NOT NULL AND 33 = v9."nr")
-UNION ALL 
-SELECT '33' AS "v26", 1 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/offerId' AS "v9"
-FROM "ss4"."offer" v11
-WHERE 33 = v11."nr"
-UNION ALL 
-SELECT CAST(v13."publishdate" AS STRING) AS "v26", 2 AS "v6", 'http://purl.org/dc/elements/1.1/date' AS "v9"
-FROM "ss4"."offer" v13
-WHERE (v13."publishdate" IS NOT NULL AND 33 = v13."nr")
-UNION ALL 
-SELECT v15."offerwebpage" AS "v26", 3 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/offerWebpage' AS "v9"
-FROM "ss4"."offer" v15
-WHERE (v15."offerwebpage" IS NOT NULL AND 33 = v15."nr")
-UNION ALL 
-SELECT CAST(v17."deliverydays" AS STRING) AS "v26", 1 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/deliveryDays' AS "v9"
-FROM "ss4"."offer" v17
-WHERE (v17."deliverydays" IS NOT NULL AND 33 = v17."nr")
-UNION ALL 
-SELECT CAST(v19."price" AS STRING) AS "v26", 4 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/price' AS "v9"
-FROM "ss4"."offer" v19
-WHERE (v19."price" IS NOT NULL AND 33 = v19."nr")
-UNION ALL 
-SELECT CAST(v21."validfrom" AS STRING) AS "v26", 2 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/validFrom' AS "v9"
-FROM "ss4"."offer" v21
-WHERE (v21."validfrom" IS NOT NULL AND 33 = v21."nr")
-UNION ALL 
-SELECT CAST(v23."validto" AS STRING) AS "v26", 2 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/validTo' AS "v9"
-FROM "ss4"."offer" v23
-WHERE (v23."validto" IS NOT NULL AND 33 = v23."nr")
-) v25
+SELECT DISTINCT v9."nr1m5" AS "nr1m5", v9."product1m5" AS "product1m5"
+FROM (SELECT v2."deliverydays" AS "deliverydays1m37", v2."nr" AS "nr1m5", v2."price" AS "price1m39", v1."nr" AS "product1m5", v2."validto" AS "validto1m45"
+FROM "ss1"."product1" v1, "ss4"."offer" v2, "ss4"."vendor" v3
+WHERE ((v2."deliverydays" <= 3) AND (v1."nr" <= 125) AND v2."deliverydays" IS NOT NULL AND v2."price" IS NOT NULL AND v2."validto" IS NOT NULL AND v1."nr" = v2."product" AND v2."vendor" = v3."nr" AND 'CN' = v3."country")
+UNION ALL
+SELECT v6."deliverydays" AS "deliverydays1m37", v6."nr" AS "nr1m5", v6."price" AS "price1m39", v5."nr" AS "product1m5", v6."validto" AS "validto1m45"
+FROM "ss5"."product2" v5, "ss4"."offer" v6, "ss4"."vendor" v7
+WHERE ((v6."deliverydays" <= 3) AND (v5."nr" <= 125) AND v6."deliverydays" IS NOT NULL AND v6."price" IS NOT NULL AND v6."validto" IS NOT NULL AND v5."nr" = v6."product" AND v6."vendor" = v7."nr" AND 'CN' = v7."country")
+) v9
 
-23:56:57.026 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - null
+22:13:27.921 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - null
 null
-23:56:57.030 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 00.sql
-23:56:57.036 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-23:56:57.038 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 34
+22:13:27.924 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 00.sql
+22:13:27.927 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+22:13:27.929 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 34
 
 SELECT v12."nr2m23" AS "nr2m23", COUNT(*) AS "v1"
 FROM (SELECT DISTINCT v5."nr2m23" AS "nr2m23", v10."productfeature2m2" AS "productfeature2m2"
@@ -2450,9 +1904,9 @@ WHERE v5."nr2m23" = v10."nr2m0"
 ) v12
 GROUP BY v12."nr2m23"
 
-23:56:58.706 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 01.sql
-23:56:58.711 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-23:56:58.713 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 35
+22:13:29.141 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 01.sql
+22:13:29.145 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+22:13:29.147 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 35
 
 SELECT v12."productfeature" AS "Feature", AVG(v12."propertynum1") AS "mean"
 FROM (
@@ -2544,9 +1998,9 @@ GROUP BY v12."productfeature"
 
 --
 
-23:57:00.131 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 02.sql
-23:57:00.139 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-23:57:00.141 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 36
+22:13:30.318 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 02.sql
+22:13:30.323 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+22:13:30.325 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 36
 
 SELECT v25."v26" AS "v26", v25."v6" AS "v6", v25."v9" AS "v9"
 FROM (SELECT 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Offer' AS "v26", 0 AS "v6", 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type' AS "v9"
@@ -2650,117 +2104,39 @@ FROM "ss4"."offer" v23
 WHERE (v23."validto" IS NOT NULL AND MOD(v23."deliverydays",3) = 0 AND v23."nr" <= 200000)
 ) v25
 
-23:57:27.645 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 11.sql
-23:57:27.651 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-23:57:27.653 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 37
+22:13:55.228 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 03.sql
+22:13:55.233 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+22:13:55.233 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 125
+-- CN
 
-SELECT v25."v26" AS "v26", v25."v6" AS "v6", v25."v9" AS "v9"
-FROM (SELECT 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Offer' AS "v26", 0 AS "v6", 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type' AS "v9"
-FROM "ss4"."offer" v1
-WHERE 37 = v1."nr"
-UNION ALL 
-SELECT 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product' AS "v26", 0 AS "v6", 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type' AS "v9"
-FROM "ss4"."offer" v3
-WHERE (v3."vendor" IS NOT NULL AND 37 = v3."nr")
-UNION ALL 
-SELECT ('http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromProducer/Product' || CAST(v5."product" AS STRING)) AS "v26", 0 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/product' AS "v9"
-FROM "ss4"."offer" v5
-WHERE (v5."product" IS NOT NULL AND 37 = v5."nr")
-UNION ALL 
-SELECT ('http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromVendor/Vendor' || CAST(v7."vendor" AS STRING)) AS "v26", 0 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/vendor' AS "v9"
-FROM "ss4"."offer" v7
-WHERE (v7."vendor" IS NOT NULL AND 37 = v7."nr")
-UNION ALL 
-SELECT ('http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromVendor/Vendor' || CAST(v9."vendor" AS STRING)) AS "v26", 0 AS "v6", 'http://purl.org/dc/elements/1.1/publisher' AS "v9"
-FROM "ss4"."offer" v9
-WHERE (v9."vendor" IS NOT NULL AND 37 = v9."nr")
-UNION ALL 
-SELECT '37' AS "v26", 1 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/offerId' AS "v9"
-FROM "ss4"."offer" v11
-WHERE 37 = v11."nr"
-UNION ALL 
-SELECT CAST(v13."publishdate" AS STRING) AS "v26", 2 AS "v6", 'http://purl.org/dc/elements/1.1/date' AS "v9"
-FROM "ss4"."offer" v13
-WHERE (v13."publishdate" IS NOT NULL AND 37 = v13."nr")
-UNION ALL 
-SELECT v15."offerwebpage" AS "v26", 3 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/offerWebpage' AS "v9"
-FROM "ss4"."offer" v15
-WHERE (v15."offerwebpage" IS NOT NULL AND 37 = v15."nr")
-UNION ALL 
-SELECT CAST(v17."deliverydays" AS STRING) AS "v26", 1 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/deliveryDays' AS "v9"
-FROM "ss4"."offer" v17
-WHERE (v17."deliverydays" IS NOT NULL AND 37 = v17."nr")
-UNION ALL 
-SELECT CAST(v19."price" AS STRING) AS "v26", 4 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/price' AS "v9"
-FROM "ss4"."offer" v19
-WHERE (v19."price" IS NOT NULL AND 37 = v19."nr")
-UNION ALL 
-SELECT CAST(v21."validfrom" AS STRING) AS "v26", 2 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/validFrom' AS "v9"
-FROM "ss4"."offer" v21
-WHERE (v21."validfrom" IS NOT NULL AND 37 = v21."nr")
-UNION ALL 
-SELECT CAST(v23."validto" AS STRING) AS "v26", 2 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/validTo' AS "v9"
-FROM "ss4"."offer" v23
-WHERE (v23."validto" IS NOT NULL AND 37 = v23."nr")
-) v25
+SELECT DISTINCT v9."nr1m5" AS "nr1m5", v9."product1m5" AS "product1m5"
+FROM (SELECT v2."deliverydays" AS "deliverydays1m37", v2."nr" AS "nr1m5", v2."price" AS "price1m39", v1."nr" AS "product1m5", v2."validto" AS "validto1m45"
+FROM "ss1"."product1" v1, "ss4"."offer" v2, "ss4"."vendor" v3
+WHERE ((v2."deliverydays" <= 3) AND (v1."nr" <= 125) AND v2."deliverydays" IS NOT NULL AND v2."price" IS NOT NULL AND v2."validto" IS NOT NULL AND v1."nr" = v2."product" AND v2."vendor" = v3."nr" AND 'CN' = v3."country")
+UNION ALL
+SELECT v6."deliverydays" AS "deliverydays1m37", v6."nr" AS "nr1m5", v6."price" AS "price1m39", v5."nr" AS "product1m5", v6."validto" AS "validto1m45"
+FROM "ss5"."product2" v5, "ss4"."offer" v6, "ss4"."vendor" v7
+WHERE ((v6."deliverydays" <= 3) AND (v5."nr" <= 125) AND v6."deliverydays" IS NOT NULL AND v6."price" IS NOT NULL AND v6."validto" IS NOT NULL AND v5."nr" = v6."product" AND v6."vendor" = v7."nr" AND 'CN' = v7."country")
+) v9
 
--- 37
+-- 125
+-- CN
 
-SELECT v25."v26" AS "v26", v25."v6" AS "v6", v25."v9" AS "v9"
-FROM (SELECT 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Offer' AS "v26", 0 AS "v6", 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type' AS "v9"
-FROM "ss4"."offer" v1
-WHERE 37 = v1."nr"
-UNION ALL 
-SELECT 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product' AS "v26", 0 AS "v6", 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type' AS "v9"
-FROM "ss4"."offer" v3
-WHERE (v3."vendor" IS NOT NULL AND 37 = v3."nr")
-UNION ALL 
-SELECT ('http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromProducer/Product' || CAST(v5."product" AS STRING)) AS "v26", 0 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/product' AS "v9"
-FROM "ss4"."offer" v5
-WHERE (v5."product" IS NOT NULL AND 37 = v5."nr")
-UNION ALL 
-SELECT ('http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromVendor/Vendor' || CAST(v7."vendor" AS STRING)) AS "v26", 0 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/vendor' AS "v9"
-FROM "ss4"."offer" v7
-WHERE (v7."vendor" IS NOT NULL AND 37 = v7."nr")
-UNION ALL 
-SELECT ('http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromVendor/Vendor' || CAST(v9."vendor" AS STRING)) AS "v26", 0 AS "v6", 'http://purl.org/dc/elements/1.1/publisher' AS "v9"
-FROM "ss4"."offer" v9
-WHERE (v9."vendor" IS NOT NULL AND 37 = v9."nr")
-UNION ALL 
-SELECT '37' AS "v26", 1 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/offerId' AS "v9"
-FROM "ss4"."offer" v11
-WHERE 37 = v11."nr"
-UNION ALL 
-SELECT CAST(v13."publishdate" AS STRING) AS "v26", 2 AS "v6", 'http://purl.org/dc/elements/1.1/date' AS "v9"
-FROM "ss4"."offer" v13
-WHERE (v13."publishdate" IS NOT NULL AND 37 = v13."nr")
-UNION ALL 
-SELECT v15."offerwebpage" AS "v26", 3 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/offerWebpage' AS "v9"
-FROM "ss4"."offer" v15
-WHERE (v15."offerwebpage" IS NOT NULL AND 37 = v15."nr")
-UNION ALL 
-SELECT CAST(v17."deliverydays" AS STRING) AS "v26", 1 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/deliveryDays' AS "v9"
-FROM "ss4"."offer" v17
-WHERE (v17."deliverydays" IS NOT NULL AND 37 = v17."nr")
-UNION ALL 
-SELECT CAST(v19."price" AS STRING) AS "v26", 4 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/price' AS "v9"
-FROM "ss4"."offer" v19
-WHERE (v19."price" IS NOT NULL AND 37 = v19."nr")
-UNION ALL 
-SELECT CAST(v21."validfrom" AS STRING) AS "v26", 2 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/validFrom' AS "v9"
-FROM "ss4"."offer" v21
-WHERE (v21."validfrom" IS NOT NULL AND 37 = v21."nr")
-UNION ALL 
-SELECT CAST(v23."validto" AS STRING) AS "v26", 2 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/validTo' AS "v9"
-FROM "ss4"."offer" v23
-WHERE (v23."validto" IS NOT NULL AND 37 = v23."nr")
-) v25
+SELECT DISTINCT v9."nr1m5" AS "nr1m5", v9."product1m5" AS "product1m5"
+FROM (SELECT v2."deliverydays" AS "deliverydays1m37", v2."nr" AS "nr1m5", v2."price" AS "price1m39", v1."nr" AS "product1m5", v2."validto" AS "validto1m45"
+FROM "ss1"."product1" v1, "ss4"."offer" v2, "ss4"."vendor" v3
+WHERE ((v2."deliverydays" <= 3) AND (v1."nr" <= 125) AND v2."deliverydays" IS NOT NULL AND v2."price" IS NOT NULL AND v2."validto" IS NOT NULL AND v1."nr" = v2."product" AND v2."vendor" = v3."nr" AND 'CN' = v3."country")
+UNION ALL
+SELECT v6."deliverydays" AS "deliverydays1m37", v6."nr" AS "nr1m5", v6."price" AS "price1m39", v5."nr" AS "product1m5", v6."validto" AS "validto1m45"
+FROM "ss5"."product2" v5, "ss4"."offer" v6, "ss4"."vendor" v7
+WHERE ((v6."deliverydays" <= 3) AND (v5."nr" <= 125) AND v6."deliverydays" IS NOT NULL AND v6."price" IS NOT NULL AND v6."validto" IS NOT NULL AND v5."nr" = v6."product" AND v6."vendor" = v7."nr" AND 'CN' = v7."country")
+) v9
 
-23:57:53.035 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - null
+22:14:02.412 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - null
 null
-23:57:53.042 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 00.sql
-23:57:53.050 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-23:57:53.052 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 38
+22:14:02.415 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 00.sql
+22:14:02.418 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+22:14:02.420 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 38
 
 SELECT v12."nr2m23" AS "nr2m23", COUNT(*) AS "v1"
 FROM (SELECT DISTINCT v5."nr2m23" AS "nr2m23", v10."productfeature2m2" AS "productfeature2m2"
@@ -2794,9 +2170,9 @@ WHERE v5."nr2m23" = v10."nr2m0"
 ) v12
 GROUP BY v12."nr2m23"
 
-23:57:54.535 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 01.sql
-23:57:54.538 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-23:57:54.540 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 39
+22:14:03.786 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 01.sql
+22:14:03.791 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+22:14:03.793 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 39
 
 SELECT v12."productfeature" AS "Feature", AVG(v12."propertynum1") AS "mean"
 FROM (
@@ -2888,9 +2264,9 @@ GROUP BY v12."productfeature"
 
 --
 
-23:57:55.702 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 02.sql
-23:57:55.706 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-23:57:55.707 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 40
+22:14:04.914 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 02.sql
+22:14:04.917 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+22:14:04.918 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 40
 
 SELECT v25."v26" AS "v26", v25."v6" AS "v6", v25."v9" AS "v9"
 FROM (SELECT 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Offer' AS "v26", 0 AS "v6", 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type' AS "v9"
@@ -2994,109 +2370,565 @@ FROM "ss4"."offer" v23
 WHERE (v23."validto" IS NOT NULL AND MOD(v23."deliverydays",3) = 0 AND v23."nr" <= 200000)
 ) v25
 
-23:58:20.433 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 11.sql
-23:58:20.438 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-23:58:20.439 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 41
+22:14:28.224 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 03.sql
+22:14:28.227 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+22:14:28.227 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 125
+-- CN
+
+SELECT DISTINCT v9."nr1m5" AS "nr1m5", v9."product1m5" AS "product1m5"
+FROM (SELECT v2."deliverydays" AS "deliverydays1m37", v2."nr" AS "nr1m5", v2."price" AS "price1m39", v1."nr" AS "product1m5", v2."validto" AS "validto1m45"
+FROM "ss1"."product1" v1, "ss4"."offer" v2, "ss4"."vendor" v3
+WHERE ((v2."deliverydays" <= 3) AND (v1."nr" <= 125) AND v2."deliverydays" IS NOT NULL AND v2."price" IS NOT NULL AND v2."validto" IS NOT NULL AND v1."nr" = v2."product" AND v2."vendor" = v3."nr" AND 'CN' = v3."country")
+UNION ALL
+SELECT v6."deliverydays" AS "deliverydays1m37", v6."nr" AS "nr1m5", v6."price" AS "price1m39", v5."nr" AS "product1m5", v6."validto" AS "validto1m45"
+FROM "ss5"."product2" v5, "ss4"."offer" v6, "ss4"."vendor" v7
+WHERE ((v6."deliverydays" <= 3) AND (v5."nr" <= 125) AND v6."deliverydays" IS NOT NULL AND v6."price" IS NOT NULL AND v6."validto" IS NOT NULL AND v5."nr" = v6."product" AND v6."vendor" = v7."nr" AND 'CN' = v7."country")
+) v9
+
+-- 125
+-- CN
+
+SELECT DISTINCT v9."nr1m5" AS "nr1m5", v9."product1m5" AS "product1m5"
+FROM (SELECT v2."deliverydays" AS "deliverydays1m37", v2."nr" AS "nr1m5", v2."price" AS "price1m39", v1."nr" AS "product1m5", v2."validto" AS "validto1m45"
+FROM "ss1"."product1" v1, "ss4"."offer" v2, "ss4"."vendor" v3
+WHERE ((v2."deliverydays" <= 3) AND (v1."nr" <= 125) AND v2."deliverydays" IS NOT NULL AND v2."price" IS NOT NULL AND v2."validto" IS NOT NULL AND v1."nr" = v2."product" AND v2."vendor" = v3."nr" AND 'CN' = v3."country")
+UNION ALL
+SELECT v6."deliverydays" AS "deliverydays1m37", v6."nr" AS "nr1m5", v6."price" AS "price1m39", v5."nr" AS "product1m5", v6."validto" AS "validto1m45"
+FROM "ss5"."product2" v5, "ss4"."offer" v6, "ss4"."vendor" v7
+WHERE ((v6."deliverydays" <= 3) AND (v5."nr" <= 125) AND v6."deliverydays" IS NOT NULL AND v6."price" IS NOT NULL AND v6."validto" IS NOT NULL AND v5."nr" = v6."product" AND v6."vendor" = v7."nr" AND 'CN' = v7."country")
+) v9
+
+22:14:35.209 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - null
+null
+22:14:35.212 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 00.sql
+22:14:35.215 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+22:14:35.217 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 42
+
+SELECT v12."nr2m23" AS "nr2m23", COUNT(*) AS "v1"
+FROM (SELECT DISTINCT v5."nr2m23" AS "nr2m23", v10."productfeature2m2" AS "productfeature2m2"
+FROM (
+SELECT v3."nr" AS "nr2m23"
+FROM "ss5"."product2" v3
+
+) v5, (
+SELECT v8."product" AS "nr2m0", v8."productfeature" AS "productfeature2m2"
+FROM "ss5"."productfeatureproduct2" v8
+
+) v10
+WHERE v5."nr2m23" = v10."nr2m0"
+) v12
+GROUP BY v12."nr2m23"
+
+-- 42
+
+SELECT v12."nr2m23" AS "nr2m23", COUNT(*) AS "v1"
+FROM (SELECT DISTINCT v5."nr2m23" AS "nr2m23", v10."productfeature2m2" AS "productfeature2m2"
+FROM (
+SELECT v3."nr" AS "nr2m23"
+FROM "ss5"."product2" v3
+
+) v5, (
+SELECT v8."product" AS "nr2m0", v8."productfeature" AS "productfeature2m2"
+FROM "ss5"."productfeatureproduct2" v8
+
+) v10
+WHERE v5."nr2m23" = v10."nr2m0"
+) v12
+GROUP BY v12."nr2m23"
+
+22:14:36.618 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 01.sql
+22:14:36.622 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+22:14:36.623 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 43
+
+SELECT v12."productfeature" AS "Feature", AVG(v12."propertynum1") AS "mean"
+FROM (
+    SELECT DISTINCT v5."nr_product" AS "nr_product", v10."productfeature" AS "productfeature", v5."propertynum1" AS "propertynum1", v10."product"
+    FROM (
+        SELECT v1."nr" AS "nr_product", v1."propertynum1" AS "propertynum1"
+        FROM "ss1"."product1" v1
+        WHERE (
+            v1."label" IS NOT NULL AND
+            v1."propertynum1" IS NOT NULL
+        )
+        UNION ALL
+        SELECT v3."nr" AS "nr_product", v3."propertynum1" AS "propertynum1"
+        FROM "ss5"."product2" v3
+        WHERE (
+            v3."label" IS NOT NULL AND
+            v3."propertynum1" IS NOT NULL
+        )
+    ) v5, 
+    (
+        SELECT v6."product" AS "product", v6."productfeature" AS "productfeature"
+        FROM "ss1"."productfeatureproduct1" v6
+        WHERE (v6."product" <= 15000)
+        UNION ALL
+        SELECT v8."product" AS "product", v8."productfeature" AS "productfeature"
+        FROM "ss5"."productfeatureproduct2" v8
+        WHERE (v8."product" <= 15000)
+    ) v10,
+    (
+        SELECT v9."nr" as "nr_pf"
+        FROM "ss3"."productfeature" v9
+        WHERE (
+            v9."nr" >= 5000
+        )
+    ) v11
+
+    WHERE (
+        v5."nr_product" = v10."product" AND
+        v11."nr_pf" = v10."productfeature"
+    )
+) v12
+GROUP BY v12."productfeature"
+
+--
+
+-- 43
+
+SELECT v12."productfeature" AS "Feature", AVG(v12."propertynum1") AS "mean"
+FROM (
+    SELECT DISTINCT v5."nr_product" AS "nr_product", v10."productfeature" AS "productfeature", v5."propertynum1" AS "propertynum1", v10."product"
+    FROM (
+        SELECT v1."nr" AS "nr_product", v1."propertynum1" AS "propertynum1"
+        FROM "ss1"."product1" v1
+        WHERE (
+            v1."label" IS NOT NULL AND
+            v1."propertynum1" IS NOT NULL
+        )
+        UNION ALL
+        SELECT v3."nr" AS "nr_product", v3."propertynum1" AS "propertynum1"
+        FROM "ss5"."product2" v3
+        WHERE (
+            v3."label" IS NOT NULL AND
+            v3."propertynum1" IS NOT NULL
+        )
+    ) v5, 
+    (
+        SELECT v6."product" AS "product", v6."productfeature" AS "productfeature"
+        FROM "ss1"."productfeatureproduct1" v6
+        WHERE (v6."product" <= 15000)
+        UNION ALL
+        SELECT v8."product" AS "product", v8."productfeature" AS "productfeature"
+        FROM "ss5"."productfeatureproduct2" v8
+        WHERE (v8."product" <= 15000)
+    ) v10,
+    (
+        SELECT v9."nr" as "nr_pf"
+        FROM "ss3"."productfeature" v9
+        WHERE (
+            v9."nr" >= 5000
+        )
+    ) v11
+
+    WHERE (
+        v5."nr_product" = v10."product" AND
+        v11."nr_pf" = v10."productfeature"
+    )
+) v12
+GROUP BY v12."productfeature"
+
+--
+
+22:14:37.775 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 02.sql
+22:14:37.778 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+22:14:37.780 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 44
 
 SELECT v25."v26" AS "v26", v25."v6" AS "v6", v25."v9" AS "v9"
 FROM (SELECT 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Offer' AS "v26", 0 AS "v6", 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type' AS "v9"
 FROM "ss4"."offer" v1
-WHERE 41 = v1."nr"
+WHERE MOD(v1."deliverydays",3) = 0 AND v1."nr" <= 200000
 UNION ALL 
 SELECT 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product' AS "v26", 0 AS "v6", 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type' AS "v9"
 FROM "ss4"."offer" v3
-WHERE (v3."vendor" IS NOT NULL AND 41 = v3."nr")
+WHERE (v3."vendor" IS NOT NULL AND MOD(v3."deliverydays",3) = 0 AND v3."nr" <= 200000)
 UNION ALL 
 SELECT ('http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromProducer/Product' || CAST(v5."product" AS STRING)) AS "v26", 0 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/product' AS "v9"
 FROM "ss4"."offer" v5
-WHERE (v5."product" IS NOT NULL AND 41 = v5."nr")
+WHERE (v5."product" IS NOT NULL AND MOD(v5."deliverydays",3) = 0 AND v5."nr" <= 200000)
 UNION ALL 
 SELECT ('http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromVendor/Vendor' || CAST(v7."vendor" AS STRING)) AS "v26", 0 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/vendor' AS "v9"
 FROM "ss4"."offer" v7
-WHERE (v7."vendor" IS NOT NULL AND 41 = v7."nr")
+WHERE (v7."vendor" IS NOT NULL AND MOD(v7."deliverydays",3) = 0 AND v7."nr" <= 200000)
 UNION ALL 
 SELECT ('http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromVendor/Vendor' || CAST(v9."vendor" AS STRING)) AS "v26", 0 AS "v6", 'http://purl.org/dc/elements/1.1/publisher' AS "v9"
 FROM "ss4"."offer" v9
-WHERE (v9."vendor" IS NOT NULL AND 41 = v9."nr")
+WHERE (v9."vendor" IS NOT NULL AND MOD(v9."deliverydays",3) = 0 AND v9."nr" <= 200000)
 UNION ALL 
-SELECT '41' AS "v26", 1 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/offerId' AS "v9"
+SELECT '44' AS "v26", 1 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/offerId' AS "v9"
 FROM "ss4"."offer" v11
-WHERE 41 = v11."nr"
+WHERE MOD(v11."deliverydays",3) = 0 AND v11."nr" <= 200000
 UNION ALL 
 SELECT CAST(v13."publishdate" AS STRING) AS "v26", 2 AS "v6", 'http://purl.org/dc/elements/1.1/date' AS "v9"
 FROM "ss4"."offer" v13
-WHERE (v13."publishdate" IS NOT NULL AND 41 = v13."nr")
+WHERE (v13."publishdate" IS NOT NULL AND MOD(v13."deliverydays",3) = 0 AND v13."nr" <= 200000)
 UNION ALL 
 SELECT v15."offerwebpage" AS "v26", 3 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/offerWebpage' AS "v9"
 FROM "ss4"."offer" v15
-WHERE (v15."offerwebpage" IS NOT NULL AND 41 = v15."nr")
+WHERE (v15."offerwebpage" IS NOT NULL AND MOD(v15."deliverydays",3) = 0 AND v15."nr" <= 200000)
 UNION ALL 
 SELECT CAST(v17."deliverydays" AS STRING) AS "v26", 1 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/deliveryDays' AS "v9"
 FROM "ss4"."offer" v17
-WHERE (v17."deliverydays" IS NOT NULL AND 41 = v17."nr")
+WHERE (v17."deliverydays" IS NOT NULL AND MOD(v17."deliverydays",3) = 0 AND v17."nr" <= 200000)
 UNION ALL 
 SELECT CAST(v19."price" AS STRING) AS "v26", 4 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/price' AS "v9"
 FROM "ss4"."offer" v19
-WHERE (v19."price" IS NOT NULL AND 41 = v19."nr")
+WHERE (v19."price" IS NOT NULL AND MOD(v19."deliverydays",3) = 0 AND v19."nr" <= 200000)
 UNION ALL 
 SELECT CAST(v21."validfrom" AS STRING) AS "v26", 2 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/validFrom' AS "v9"
 FROM "ss4"."offer" v21
-WHERE (v21."validfrom" IS NOT NULL AND 41 = v21."nr")
+WHERE (v21."validfrom" IS NOT NULL AND MOD(v21."deliverydays",3) = 0 AND v21."nr" <= 200000)
 UNION ALL 
 SELECT CAST(v23."validto" AS STRING) AS "v26", 2 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/validTo' AS "v9"
 FROM "ss4"."offer" v23
-WHERE (v23."validto" IS NOT NULL AND 41 = v23."nr")
+WHERE (v23."validto" IS NOT NULL AND MOD(v23."deliverydays",3) = 0 AND v23."nr" <= 200000)
 ) v25
 
--- 41
+-- 44
 
 SELECT v25."v26" AS "v26", v25."v6" AS "v6", v25."v9" AS "v9"
 FROM (SELECT 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Offer' AS "v26", 0 AS "v6", 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type' AS "v9"
 FROM "ss4"."offer" v1
-WHERE 41 = v1."nr"
+WHERE MOD(v1."deliverydays",3) = 0 AND v1."nr" <= 200000
 UNION ALL 
 SELECT 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product' AS "v26", 0 AS "v6", 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type' AS "v9"
 FROM "ss4"."offer" v3
-WHERE (v3."vendor" IS NOT NULL AND 41 = v3."nr")
+WHERE (v3."vendor" IS NOT NULL AND MOD(v3."deliverydays",3) = 0 AND v3."nr" <= 200000)
 UNION ALL 
 SELECT ('http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromProducer/Product' || CAST(v5."product" AS STRING)) AS "v26", 0 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/product' AS "v9"
 FROM "ss4"."offer" v5
-WHERE (v5."product" IS NOT NULL AND 41 = v5."nr")
+WHERE (v5."product" IS NOT NULL AND MOD(v5."deliverydays",3) = 0 AND v5."nr" <= 200000)
 UNION ALL 
 SELECT ('http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromVendor/Vendor' || CAST(v7."vendor" AS STRING)) AS "v26", 0 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/vendor' AS "v9"
 FROM "ss4"."offer" v7
-WHERE (v7."vendor" IS NOT NULL AND 41 = v7."nr")
+WHERE (v7."vendor" IS NOT NULL AND MOD(v7."deliverydays",3) = 0 AND v7."nr" <= 200000)
 UNION ALL 
 SELECT ('http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromVendor/Vendor' || CAST(v9."vendor" AS STRING)) AS "v26", 0 AS "v6", 'http://purl.org/dc/elements/1.1/publisher' AS "v9"
 FROM "ss4"."offer" v9
-WHERE (v9."vendor" IS NOT NULL AND 41 = v9."nr")
+WHERE (v9."vendor" IS NOT NULL AND MOD(v9."deliverydays",3) = 0 AND v9."nr" <= 200000)
 UNION ALL 
-SELECT '41' AS "v26", 1 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/offerId' AS "v9"
+SELECT '44' AS "v26", 1 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/offerId' AS "v9"
 FROM "ss4"."offer" v11
-WHERE 41 = v11."nr"
+WHERE MOD(v11."deliverydays",3) = 0 AND v11."nr" <= 200000
 UNION ALL 
 SELECT CAST(v13."publishdate" AS STRING) AS "v26", 2 AS "v6", 'http://purl.org/dc/elements/1.1/date' AS "v9"
 FROM "ss4"."offer" v13
-WHERE (v13."publishdate" IS NOT NULL AND 41 = v13."nr")
+WHERE (v13."publishdate" IS NOT NULL AND MOD(v13."deliverydays",3) = 0 AND v13."nr" <= 200000)
 UNION ALL 
 SELECT v15."offerwebpage" AS "v26", 3 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/offerWebpage' AS "v9"
 FROM "ss4"."offer" v15
-WHERE (v15."offerwebpage" IS NOT NULL AND 41 = v15."nr")
+WHERE (v15."offerwebpage" IS NOT NULL AND MOD(v15."deliverydays",3) = 0 AND v15."nr" <= 200000)
 UNION ALL 
 SELECT CAST(v17."deliverydays" AS STRING) AS "v26", 1 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/deliveryDays' AS "v9"
 FROM "ss4"."offer" v17
-WHERE (v17."deliverydays" IS NOT NULL AND 41 = v17."nr")
+WHERE (v17."deliverydays" IS NOT NULL AND MOD(v17."deliverydays",3) = 0 AND v17."nr" <= 200000)
 UNION ALL 
 SELECT CAST(v19."price" AS STRING) AS "v26", 4 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/price' AS "v9"
 FROM "ss4"."offer" v19
-WHERE (v19."price" IS NOT NULL AND 41 = v19."nr")
+WHERE (v19."price" IS NOT NULL AND MOD(v19."deliverydays",3) = 0 AND v19."nr" <= 200000)
 UNION ALL 
 SELECT CAST(v21."validfrom" AS STRING) AS "v26", 2 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/validFrom' AS "v9"
 FROM "ss4"."offer" v21
-WHERE (v21."validfrom" IS NOT NULL AND 41 = v21."nr")
+WHERE (v21."validfrom" IS NOT NULL AND MOD(v21."deliverydays",3) = 0 AND v21."nr" <= 200000)
 UNION ALL 
 SELECT CAST(v23."validto" AS STRING) AS "v26", 2 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/validTo' AS "v9"
 FROM "ss4"."offer" v23
-WHERE (v23."validto" IS NOT NULL AND 41 = v23."nr")
+WHERE (v23."validto" IS NOT NULL AND MOD(v23."deliverydays",3) = 0 AND v23."nr" <= 200000)
 ) v25
 
+22:15:01.994 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 03.sql
+22:15:01.997 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+22:15:01.998 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 125
+-- CN
+
+SELECT DISTINCT v9."nr1m5" AS "nr1m5", v9."product1m5" AS "product1m5"
+FROM (SELECT v2."deliverydays" AS "deliverydays1m37", v2."nr" AS "nr1m5", v2."price" AS "price1m39", v1."nr" AS "product1m5", v2."validto" AS "validto1m45"
+FROM "ss1"."product1" v1, "ss4"."offer" v2, "ss4"."vendor" v3
+WHERE ((v2."deliverydays" <= 3) AND (v1."nr" <= 125) AND v2."deliverydays" IS NOT NULL AND v2."price" IS NOT NULL AND v2."validto" IS NOT NULL AND v1."nr" = v2."product" AND v2."vendor" = v3."nr" AND 'CN' = v3."country")
+UNION ALL
+SELECT v6."deliverydays" AS "deliverydays1m37", v6."nr" AS "nr1m5", v6."price" AS "price1m39", v5."nr" AS "product1m5", v6."validto" AS "validto1m45"
+FROM "ss5"."product2" v5, "ss4"."offer" v6, "ss4"."vendor" v7
+WHERE ((v6."deliverydays" <= 3) AND (v5."nr" <= 125) AND v6."deliverydays" IS NOT NULL AND v6."price" IS NOT NULL AND v6."validto" IS NOT NULL AND v5."nr" = v6."product" AND v6."vendor" = v7."nr" AND 'CN' = v7."country")
+) v9
+
+-- 125
+-- CN
+
+SELECT DISTINCT v9."nr1m5" AS "nr1m5", v9."product1m5" AS "product1m5"
+FROM (SELECT v2."deliverydays" AS "deliverydays1m37", v2."nr" AS "nr1m5", v2."price" AS "price1m39", v1."nr" AS "product1m5", v2."validto" AS "validto1m45"
+FROM "ss1"."product1" v1, "ss4"."offer" v2, "ss4"."vendor" v3
+WHERE ((v2."deliverydays" <= 3) AND (v1."nr" <= 125) AND v2."deliverydays" IS NOT NULL AND v2."price" IS NOT NULL AND v2."validto" IS NOT NULL AND v1."nr" = v2."product" AND v2."vendor" = v3."nr" AND 'CN' = v3."country")
+UNION ALL
+SELECT v6."deliverydays" AS "deliverydays1m37", v6."nr" AS "nr1m5", v6."price" AS "price1m39", v5."nr" AS "product1m5", v6."validto" AS "validto1m45"
+FROM "ss5"."product2" v5, "ss4"."offer" v6, "ss4"."vendor" v7
+WHERE ((v6."deliverydays" <= 3) AND (v5."nr" <= 125) AND v6."deliverydays" IS NOT NULL AND v6."price" IS NOT NULL AND v6."validto" IS NOT NULL AND v5."nr" = v6."product" AND v6."vendor" = v7."nr" AND 'CN' = v7."country")
+) v9
+
+22:15:08.934 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - null
+null
+22:15:08.937 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 00.sql
+22:15:08.940 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+22:15:08.941 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 46
+
+SELECT v12."nr2m23" AS "nr2m23", COUNT(*) AS "v1"
+FROM (SELECT DISTINCT v5."nr2m23" AS "nr2m23", v10."productfeature2m2" AS "productfeature2m2"
+FROM (
+SELECT v3."nr" AS "nr2m23"
+FROM "ss5"."product2" v3
+
+) v5, (
+SELECT v8."product" AS "nr2m0", v8."productfeature" AS "productfeature2m2"
+FROM "ss5"."productfeatureproduct2" v8
+
+) v10
+WHERE v5."nr2m23" = v10."nr2m0"
+) v12
+GROUP BY v12."nr2m23"
+
+-- 46
+
+SELECT v12."nr2m23" AS "nr2m23", COUNT(*) AS "v1"
+FROM (SELECT DISTINCT v5."nr2m23" AS "nr2m23", v10."productfeature2m2" AS "productfeature2m2"
+FROM (
+SELECT v3."nr" AS "nr2m23"
+FROM "ss5"."product2" v3
+
+) v5, (
+SELECT v8."product" AS "nr2m0", v8."productfeature" AS "productfeature2m2"
+FROM "ss5"."productfeatureproduct2" v8
+
+) v10
+WHERE v5."nr2m23" = v10."nr2m0"
+) v12
+GROUP BY v12."nr2m23"
+
+22:15:10.273 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 01.sql
+22:15:10.277 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+22:15:10.278 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 47
+
+SELECT v12."productfeature" AS "Feature", AVG(v12."propertynum1") AS "mean"
+FROM (
+    SELECT DISTINCT v5."nr_product" AS "nr_product", v10."productfeature" AS "productfeature", v5."propertynum1" AS "propertynum1", v10."product"
+    FROM (
+        SELECT v1."nr" AS "nr_product", v1."propertynum1" AS "propertynum1"
+        FROM "ss1"."product1" v1
+        WHERE (
+            v1."label" IS NOT NULL AND
+            v1."propertynum1" IS NOT NULL
+        )
+        UNION ALL
+        SELECT v3."nr" AS "nr_product", v3."propertynum1" AS "propertynum1"
+        FROM "ss5"."product2" v3
+        WHERE (
+            v3."label" IS NOT NULL AND
+            v3."propertynum1" IS NOT NULL
+        )
+    ) v5, 
+    (
+        SELECT v6."product" AS "product", v6."productfeature" AS "productfeature"
+        FROM "ss1"."productfeatureproduct1" v6
+        WHERE (v6."product" <= 15000)
+        UNION ALL
+        SELECT v8."product" AS "product", v8."productfeature" AS "productfeature"
+        FROM "ss5"."productfeatureproduct2" v8
+        WHERE (v8."product" <= 15000)
+    ) v10,
+    (
+        SELECT v9."nr" as "nr_pf"
+        FROM "ss3"."productfeature" v9
+        WHERE (
+            v9."nr" >= 5000
+        )
+    ) v11
+
+    WHERE (
+        v5."nr_product" = v10."product" AND
+        v11."nr_pf" = v10."productfeature"
+    )
+) v12
+GROUP BY v12."productfeature"
+
+--
+
+-- 47
+
+SELECT v12."productfeature" AS "Feature", AVG(v12."propertynum1") AS "mean"
+FROM (
+    SELECT DISTINCT v5."nr_product" AS "nr_product", v10."productfeature" AS "productfeature", v5."propertynum1" AS "propertynum1", v10."product"
+    FROM (
+        SELECT v1."nr" AS "nr_product", v1."propertynum1" AS "propertynum1"
+        FROM "ss1"."product1" v1
+        WHERE (
+            v1."label" IS NOT NULL AND
+            v1."propertynum1" IS NOT NULL
+        )
+        UNION ALL
+        SELECT v3."nr" AS "nr_product", v3."propertynum1" AS "propertynum1"
+        FROM "ss5"."product2" v3
+        WHERE (
+            v3."label" IS NOT NULL AND
+            v3."propertynum1" IS NOT NULL
+        )
+    ) v5, 
+    (
+        SELECT v6."product" AS "product", v6."productfeature" AS "productfeature"
+        FROM "ss1"."productfeatureproduct1" v6
+        WHERE (v6."product" <= 15000)
+        UNION ALL
+        SELECT v8."product" AS "product", v8."productfeature" AS "productfeature"
+        FROM "ss5"."productfeatureproduct2" v8
+        WHERE (v8."product" <= 15000)
+    ) v10,
+    (
+        SELECT v9."nr" as "nr_pf"
+        FROM "ss3"."productfeature" v9
+        WHERE (
+            v9."nr" >= 5000
+        )
+    ) v11
+
+    WHERE (
+        v5."nr_product" = v10."product" AND
+        v11."nr_pf" = v10."productfeature"
+    )
+) v12
+GROUP BY v12."productfeature"
+
+--
+
+22:15:11.394 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 02.sql
+22:15:11.398 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+22:15:11.399 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 48
+
+SELECT v25."v26" AS "v26", v25."v6" AS "v6", v25."v9" AS "v9"
+FROM (SELECT 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Offer' AS "v26", 0 AS "v6", 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type' AS "v9"
+FROM "ss4"."offer" v1
+WHERE MOD(v1."deliverydays",3) = 0 AND v1."nr" <= 200000
+UNION ALL 
+SELECT 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product' AS "v26", 0 AS "v6", 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type' AS "v9"
+FROM "ss4"."offer" v3
+WHERE (v3."vendor" IS NOT NULL AND MOD(v3."deliverydays",3) = 0 AND v3."nr" <= 200000)
+UNION ALL 
+SELECT ('http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromProducer/Product' || CAST(v5."product" AS STRING)) AS "v26", 0 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/product' AS "v9"
+FROM "ss4"."offer" v5
+WHERE (v5."product" IS NOT NULL AND MOD(v5."deliverydays",3) = 0 AND v5."nr" <= 200000)
+UNION ALL 
+SELECT ('http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromVendor/Vendor' || CAST(v7."vendor" AS STRING)) AS "v26", 0 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/vendor' AS "v9"
+FROM "ss4"."offer" v7
+WHERE (v7."vendor" IS NOT NULL AND MOD(v7."deliverydays",3) = 0 AND v7."nr" <= 200000)
+UNION ALL 
+SELECT ('http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromVendor/Vendor' || CAST(v9."vendor" AS STRING)) AS "v26", 0 AS "v6", 'http://purl.org/dc/elements/1.1/publisher' AS "v9"
+FROM "ss4"."offer" v9
+WHERE (v9."vendor" IS NOT NULL AND MOD(v9."deliverydays",3) = 0 AND v9."nr" <= 200000)
+UNION ALL 
+SELECT '48' AS "v26", 1 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/offerId' AS "v9"
+FROM "ss4"."offer" v11
+WHERE MOD(v11."deliverydays",3) = 0 AND v11."nr" <= 200000
+UNION ALL 
+SELECT CAST(v13."publishdate" AS STRING) AS "v26", 2 AS "v6", 'http://purl.org/dc/elements/1.1/date' AS "v9"
+FROM "ss4"."offer" v13
+WHERE (v13."publishdate" IS NOT NULL AND MOD(v13."deliverydays",3) = 0 AND v13."nr" <= 200000)
+UNION ALL 
+SELECT v15."offerwebpage" AS "v26", 3 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/offerWebpage' AS "v9"
+FROM "ss4"."offer" v15
+WHERE (v15."offerwebpage" IS NOT NULL AND MOD(v15."deliverydays",3) = 0 AND v15."nr" <= 200000)
+UNION ALL 
+SELECT CAST(v17."deliverydays" AS STRING) AS "v26", 1 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/deliveryDays' AS "v9"
+FROM "ss4"."offer" v17
+WHERE (v17."deliverydays" IS NOT NULL AND MOD(v17."deliverydays",3) = 0 AND v17."nr" <= 200000)
+UNION ALL 
+SELECT CAST(v19."price" AS STRING) AS "v26", 4 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/price' AS "v9"
+FROM "ss4"."offer" v19
+WHERE (v19."price" IS NOT NULL AND MOD(v19."deliverydays",3) = 0 AND v19."nr" <= 200000)
+UNION ALL 
+SELECT CAST(v21."validfrom" AS STRING) AS "v26", 2 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/validFrom' AS "v9"
+FROM "ss4"."offer" v21
+WHERE (v21."validfrom" IS NOT NULL AND MOD(v21."deliverydays",3) = 0 AND v21."nr" <= 200000)
+UNION ALL 
+SELECT CAST(v23."validto" AS STRING) AS "v26", 2 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/validTo' AS "v9"
+FROM "ss4"."offer" v23
+WHERE (v23."validto" IS NOT NULL AND MOD(v23."deliverydays",3) = 0 AND v23."nr" <= 200000)
+) v25
+
+-- 48
+
+SELECT v25."v26" AS "v26", v25."v6" AS "v6", v25."v9" AS "v9"
+FROM (SELECT 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Offer' AS "v26", 0 AS "v6", 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type' AS "v9"
+FROM "ss4"."offer" v1
+WHERE MOD(v1."deliverydays",3) = 0 AND v1."nr" <= 200000
+UNION ALL 
+SELECT 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product' AS "v26", 0 AS "v6", 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type' AS "v9"
+FROM "ss4"."offer" v3
+WHERE (v3."vendor" IS NOT NULL AND MOD(v3."deliverydays",3) = 0 AND v3."nr" <= 200000)
+UNION ALL 
+SELECT ('http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromProducer/Product' || CAST(v5."product" AS STRING)) AS "v26", 0 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/product' AS "v9"
+FROM "ss4"."offer" v5
+WHERE (v5."product" IS NOT NULL AND MOD(v5."deliverydays",3) = 0 AND v5."nr" <= 200000)
+UNION ALL 
+SELECT ('http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromVendor/Vendor' || CAST(v7."vendor" AS STRING)) AS "v26", 0 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/vendor' AS "v9"
+FROM "ss4"."offer" v7
+WHERE (v7."vendor" IS NOT NULL AND MOD(v7."deliverydays",3) = 0 AND v7."nr" <= 200000)
+UNION ALL 
+SELECT ('http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromVendor/Vendor' || CAST(v9."vendor" AS STRING)) AS "v26", 0 AS "v6", 'http://purl.org/dc/elements/1.1/publisher' AS "v9"
+FROM "ss4"."offer" v9
+WHERE (v9."vendor" IS NOT NULL AND MOD(v9."deliverydays",3) = 0 AND v9."nr" <= 200000)
+UNION ALL 
+SELECT '48' AS "v26", 1 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/offerId' AS "v9"
+FROM "ss4"."offer" v11
+WHERE MOD(v11."deliverydays",3) = 0 AND v11."nr" <= 200000
+UNION ALL 
+SELECT CAST(v13."publishdate" AS STRING) AS "v26", 2 AS "v6", 'http://purl.org/dc/elements/1.1/date' AS "v9"
+FROM "ss4"."offer" v13
+WHERE (v13."publishdate" IS NOT NULL AND MOD(v13."deliverydays",3) = 0 AND v13."nr" <= 200000)
+UNION ALL 
+SELECT v15."offerwebpage" AS "v26", 3 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/offerWebpage' AS "v9"
+FROM "ss4"."offer" v15
+WHERE (v15."offerwebpage" IS NOT NULL AND MOD(v15."deliverydays",3) = 0 AND v15."nr" <= 200000)
+UNION ALL 
+SELECT CAST(v17."deliverydays" AS STRING) AS "v26", 1 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/deliveryDays' AS "v9"
+FROM "ss4"."offer" v17
+WHERE (v17."deliverydays" IS NOT NULL AND MOD(v17."deliverydays",3) = 0 AND v17."nr" <= 200000)
+UNION ALL 
+SELECT CAST(v19."price" AS STRING) AS "v26", 4 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/price' AS "v9"
+FROM "ss4"."offer" v19
+WHERE (v19."price" IS NOT NULL AND MOD(v19."deliverydays",3) = 0 AND v19."nr" <= 200000)
+UNION ALL 
+SELECT CAST(v21."validfrom" AS STRING) AS "v26", 2 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/validFrom' AS "v9"
+FROM "ss4"."offer" v21
+WHERE (v21."validfrom" IS NOT NULL AND MOD(v21."deliverydays",3) = 0 AND v21."nr" <= 200000)
+UNION ALL 
+SELECT CAST(v23."validto" AS STRING) AS "v26", 2 AS "v6", 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/validTo' AS "v9"
+FROM "ss4"."offer" v23
+WHERE (v23."validto" IS NOT NULL AND MOD(v23."deliverydays",3) = 0 AND v23."nr" <= 200000)
+) v25
+
+22:15:35.100 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 03.sql
+22:15:35.104 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+22:15:35.105 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 125
+-- CN
+
+SELECT DISTINCT v9."nr1m5" AS "nr1m5", v9."product1m5" AS "product1m5"
+FROM (SELECT v2."deliverydays" AS "deliverydays1m37", v2."nr" AS "nr1m5", v2."price" AS "price1m39", v1."nr" AS "product1m5", v2."validto" AS "validto1m45"
+FROM "ss1"."product1" v1, "ss4"."offer" v2, "ss4"."vendor" v3
+WHERE ((v2."deliverydays" <= 3) AND (v1."nr" <= 125) AND v2."deliverydays" IS NOT NULL AND v2."price" IS NOT NULL AND v2."validto" IS NOT NULL AND v1."nr" = v2."product" AND v2."vendor" = v3."nr" AND 'CN' = v3."country")
+UNION ALL
+SELECT v6."deliverydays" AS "deliverydays1m37", v6."nr" AS "nr1m5", v6."price" AS "price1m39", v5."nr" AS "product1m5", v6."validto" AS "validto1m45"
+FROM "ss5"."product2" v5, "ss4"."offer" v6, "ss4"."vendor" v7
+WHERE ((v6."deliverydays" <= 3) AND (v5."nr" <= 125) AND v6."deliverydays" IS NOT NULL AND v6."price" IS NOT NULL AND v6."validto" IS NOT NULL AND v5."nr" = v6."product" AND v6."vendor" = v7."nr" AND 'CN' = v7."country")
+) v9
+
+-- 125
+-- CN
+
+SELECT DISTINCT v9."nr1m5" AS "nr1m5", v9."product1m5" AS "product1m5"
+FROM (SELECT v2."deliverydays" AS "deliverydays1m37", v2."nr" AS "nr1m5", v2."price" AS "price1m39", v1."nr" AS "product1m5", v2."validto" AS "validto1m45"
+FROM "ss1"."product1" v1, "ss4"."offer" v2, "ss4"."vendor" v3
+WHERE ((v2."deliverydays" <= 3) AND (v1."nr" <= 125) AND v2."deliverydays" IS NOT NULL AND v2."price" IS NOT NULL AND v2."validto" IS NOT NULL AND v1."nr" = v2."product" AND v2."vendor" = v3."nr" AND 'CN' = v3."country")
+UNION ALL
+SELECT v6."deliverydays" AS "deliverydays1m37", v6."nr" AS "nr1m5", v6."price" AS "price1m39", v5."nr" AS "product1m5", v6."validto" AS "validto1m45"
+FROM "ss5"."product2" v5, "ss4"."offer" v6, "ss4"."vendor" v7
+WHERE ((v6."deliverydays" <= 3) AND (v5."nr" <= 125) AND v6."deliverydays" IS NOT NULL AND v6."price" IS NOT NULL AND v6."validto" IS NOT NULL AND v5."nr" = v6."product" AND v6."vendor" = v7."nr" AND 'CN' = v7."country")
+) v9
+
+22:15:42.195 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - null
+null
