@@ -13,3 +13,10 @@ Modifica dei path all'interno del file docker_compose per poter istanziare tutti
 
 Abbiamo modificato gli indirizzi delle porte, in quanto homogeneo ed eterogeneo, nei file di configurazione erano gli stessi e andava in errore.
 Sono stati creati due file di configurazione che mancavano e senza i quali non potevamo fare le query
+
+
+- 30-08-2023
+
+Domanda: l'ottimizzazione che propongono lavora a livello del modulo obdf system o a livello di data federated ?
+        Il meccanismo di riscrittura è chiaro ?
+        I risultati prodotti sono analoghi a quelli precedenti
