@@ -4,6 +4,8 @@
 
 - Modifica dei comandi per le query, altrimenti non funzionano.
 Esempio: java -jar obda-mixer.jar --conf=configuration-sc1.conf | Out-File -FilePath ./results/mixer-out-pippo.txt
+Abbiamo ricostruito dei file di configurazione che mancavano all'interno della repo.
+Abbiamo anche cambiato gli indirizzi nei file di ocnfig.
 
 - 02/08/2023
 
@@ -22,3 +24,10 @@ Domanda: l'ottimizzazione che propongono lavora a livello del modulo obdf system
         I risultati prodotti sono analoghi a quelli precedenti
 
 Aggiornamento del 05-09-2023
+
+Sono state modificate delle porte anche nel docker compose.
+Abbiamo creato uno script con comandi shel per eseguire tutte le query su tutti i profili.
+Abbiamo creato uno script che converte in automatico tutti i risultati in csv, così che possano essere utilizzati per fare i grafici in python.
+Per far partire gli ontop abbiamo dovuto modificare dei path per l'environment.
+Per dataset più grandi dobbiamo aumentare l'heap.
+Le query scritte in sparql vengono tradotte nel terminale del container in sql, da lì devono essere spostate e tradotte.
