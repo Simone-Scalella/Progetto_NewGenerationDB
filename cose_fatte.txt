@@ -20,3 +20,5 @@ Sono stati creati due file di configurazione che mancavano e senza i quali non p
 Domanda: l'ottimizzazione che propongono lavora a livello del modulo obdf system o a livello di data federated ?
         Il meccanismo di riscrittura è chiaro ?
         I risultati prodotti sono analoghi a quelli precedenti
+
+Aggiornamento del 05-09-2023

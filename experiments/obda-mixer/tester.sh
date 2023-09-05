@@ -1,6 +1,11 @@
 #!/bin/bash
 
 # Experiment over source s1
+obdf () {
+    java -jar obda-mixer.jar --conf=configuration-jdbc-mode.conf &> results/mixer-out-obdf.txt
+}
+
+# Experiment over source s1
 sc1 () {
     java -jar obda-mixer.jar --conf=configuration-sc1.conf &> results/mixer-out-sc1.txt
 }
