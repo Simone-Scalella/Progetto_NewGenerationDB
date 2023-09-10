@@ -1,29 +1,38 @@
--- ${1:product.nr:percent}
-
-SELECT v12."productfeature" AS "Feature", AVG(v12."propertynum1") AS "mean"
-FROM(
-        SELECT v1."propertynum1", v2."productfeature"
-        FROM "ss1"."product1" v1, "ss1"."productfeatureproduct1" v2, "ss3"."productfeature" v3
-        WHERE (
-            (v3."nr" >= 5000) AND
-            (v2."product" <= 15000) AND
-            v1."label" IS NOT NULL AND
-            v1."propertynum1" IS NOT NULL AND
-            v1."nr" = v2."product" AND
-            v2."productfeature" = v3."nr"
-            )
-
-    UNION ALL
-
-        SELECT v4."propertynum1", v5."productfeature"
-        FROM "ss5"."product2" v4, "ss5"."productfeatureproduct2" v5, "ss3"."productfeature" v6
-        WHERE (
-            (v6."nr" >= 5000) AND
-            (v5."product" <= 15000) AND
-            v4."label" IS NOT NULL AND
-            v4."propertynum1" IS NOT NULL AND
-            v4."nr" = v5."product" AND
-            v5."productfeature" = v6."nr"
-            )
-        ) as v12
-GROUP BY v12."productfeature"
+-- 5000
+-- 5000
+-- ${1:product.propertynum1:none}
+(
+SELECT DISTINCT v5."label10m46" AS "label10m46", v5."nr0m55" AS "nr0m55"
+FROM (
+	  SELECT v1."label" AS "label10m46", v1."nr" AS "nr0m55"
+      FROM "ss1"."product1" v1
+      WHERE (v1."nr" IS NOT NULL AND v1."label" IS NOT NULL AND v1."propertynum1" IS NOT NULL) AND (v1."propertynum1" <= ${1:product.propertynum1:none})
+     ) v5, (
+			SELECT v11."product" AS "nr0m1"
+            FROM "ss1"."productfeatureproduct1" v11
+            WHERE 5000 = v11."productfeature"
+           ) v15, (
+				   SELECT v16."product" AS "nr0m2"
+                   FROM "ss1"."productfeatureproduct1" v16
+                   WHERE 5000 = v16."productfeature"
+                  ) v20
+WHERE (v5."nr0m55" = v15."nr0m1" AND v5."nr0m55" = v20."nr0m2")
+)
+UNION ALL
+(
+SELECT DISTINCT v5."label10m46" AS "label10m46", v5."nr0m55" AS "nr0m55"
+FROM (
+      SELECT v3."label" AS "label10m46", v3."nr" AS "nr0m55"
+      FROM "ss5"."product2" v3
+      WHERE (v3."nr" IS NOT NULL AND v3."label" IS NOT NULL AND v3."propertynum1" IS NOT NULL) AND (v3."propertynum1" <= ${1:product.propertynum1:none})
+     ) v5, (
+            SELECT v13."product" AS "nr0m1"
+            FROM "ss5"."productfeatureproduct2" v13
+            WHERE 5000 = v13."productfeature"
+           ) v15, (
+                   SELECT v18."product" AS "nr0m2"
+                   FROM "ss5"."productfeatureproduct2" v18
+                   WHERE 5000 = v18."productfeature"
+                  ) v20
+WHERE (v5."nr0m55" = v15."nr0m1" AND v5."nr0m55" = v20."nr0m2")
+)
