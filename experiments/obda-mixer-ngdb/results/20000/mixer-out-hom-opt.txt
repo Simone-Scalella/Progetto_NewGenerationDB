@@ -1,50 +1,63 @@
-19:41:56.173 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 00.sql
-19:41:56.181 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:41:56.200 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - -- 2
+17:39:32.527 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 00.sql
+17:39:32.534 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+17:39:32.534 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - -- 2000
 
 SELECT v12."nr2m23" AS "nr2m23", COUNT(*) AS "v1"
 FROM (
+	  SELECT DISTINCT v1."nr" AS "nr2m23", v6."productfeature" AS "productfeature2m2"
+	  FROM "ss1"."product1" v1, "ss1"."productfeatureproduct1" v6
+	  WHERE v1."nr" <= 2000 AND v1."nr"=v6."product"
+	  UNION ALL
 	  SELECT DISTINCT v3."nr" AS "nr2m23", v8."productfeature" AS "productfeature2m2"
 	  FROM "ss5"."product2" v3, "ss5"."productfeatureproduct2" v8
-	  WHERE v3."nr"=v8."product"
+	  WHERE v3."nr" <= 2000 AND v3."nr"=v8."product"
     ) v12
 GROUP BY v12."nr2m23"
 
-19:41:56.316 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 01.sql
-19:41:56.319 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:41:56.320 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - -- 3
+17:39:32.702 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 01.sql
+17:39:32.705 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+17:39:32.725 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - -- 5000
+-- 5000
+-- 992
+(
+SELECT DISTINCT v5."label10m46" AS "label10m46", v5."nr0m55" AS "nr0m55"
+FROM (
+	  SELECT v1."label" AS "label10m46", v1."nr" AS "nr0m55"
+      FROM "ss1"."product1" v1
+      WHERE (v1."nr" IS NOT NULL AND v1."label" IS NOT NULL AND v1."propertynum1" IS NOT NULL) AND (v1."propertynum1" <= 992)
+     ) v5, (
+			SELECT v11."product" AS "nr0m1"
+            FROM "ss1"."productfeatureproduct1" v11
+            WHERE 5000 = v11."productfeature"
+           ) v15, (
+				   SELECT v16."product" AS "nr0m2"
+                   FROM "ss1"."productfeatureproduct1" v16
+                   WHERE 5000 = v16."productfeature"
+                  ) v20
+WHERE (v5."nr0m55" = v15."nr0m1" AND v5."nr0m55" = v20."nr0m2")
+)
+UNION ALL
+(
+SELECT DISTINCT v5."label10m46" AS "label10m46", v5."nr0m55" AS "nr0m55"
+FROM (
+      SELECT v3."label" AS "label10m46", v3."nr" AS "nr0m55"
+      FROM "ss5"."product2" v3
+      WHERE (v3."nr" IS NOT NULL AND v3."label" IS NOT NULL AND v3."propertynum1" IS NOT NULL) AND (v3."propertynum1" <= 992)
+     ) v5, (
+            SELECT v13."product" AS "nr0m1"
+            FROM "ss5"."productfeatureproduct2" v13
+            WHERE 5000 = v13."productfeature"
+           ) v15, (
+                   SELECT v18."product" AS "nr0m2"
+                   FROM "ss5"."productfeatureproduct2" v18
+                   WHERE 5000 = v18."productfeature"
+                  ) v20
+WHERE (v5."nr0m55" = v15."nr0m1" AND v5."nr0m55" = v20."nr0m2")
+)
 
-SELECT v12."productfeature" AS "Feature", AVG(v12."propertynum1") AS "mean"
-FROM(
-        SELECT v1."propertynum1", v2."productfeature"
-        FROM "ss1"."product1" v1, "ss1"."productfeatureproduct1" v2, "ss3"."productfeature" v3
-        WHERE (
-            (v3."nr" >= 5000) AND
-            (v2."product" <= 15000) AND
-            v1."label" IS NOT NULL AND
-            v1."propertynum1" IS NOT NULL AND
-            v1."nr" = v2."product" AND
-            v2."productfeature" = v3."nr"
-            )
-
-    UNION ALL
-
-        SELECT v4."propertynum1", v5."productfeature"
-        FROM "ss5"."product2" v4, "ss5"."productfeatureproduct2" v5, "ss3"."productfeature" v6
-        WHERE (
-            (v6."nr" >= 5000) AND
-            (v5."product" <= 15000) AND
-            v4."label" IS NOT NULL AND
-            v4."propertynum1" IS NOT NULL AND
-            v4."nr" = v5."product" AND
-            v5."productfeature" = v6."nr"
-            )
-        ) as v12
-GROUP BY v12."productfeature"
-
-19:41:56.540 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 02.sql
-19:41:56.543 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:41:56.545 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - -- 4
+17:39:32.748 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 02.sql
+17:39:32.750 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+17:39:32.753 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - -- 4
 
 SELECT v25."v26" AS "v26", v25."v6" AS "v6", v25."v9" AS "v9"
 FROM (SELECT 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Offer' AS "v26", 0 AS "v6", 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type' AS "v9"
@@ -96,9 +109,9 @@ FROM "ss4"."offer" v23
 WHERE (v23."validto" IS NOT NULL AND MOD(v23."deliverydays",3) = 0 AND v23."nr" <= 200000)
 ) v25
 
-19:41:56.564 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 03.sql
-19:41:56.567 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:41:56.568 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - -- 125
+17:39:32.766 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 03.sql
+17:39:32.768 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+17:39:32.768 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - -- 125
 -- CN
 
 SELECT DISTINCT v9."nr1m5" AS "nr1m5", v9."product1m5" AS "product1m5"
@@ -111,9 +124,9 @@ FROM "ss5"."product2" v5, "ss4"."offer" v6, "ss4"."vendor" v7
 WHERE ((v6."deliverydays" <= 3) AND (v5."nr" <= 125) AND v6."deliverydays" IS NOT NULL AND v6."price" IS NOT NULL AND v6."validto" IS NOT NULL AND v5."nr" = v6."product" AND v6."vendor" = v7."nr" AND 'CN' = v7."country")
 ) v9
 
-19:41:56.580 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 04.sql
-19:41:56.584 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:41:56.584 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - -- 15000
+17:39:32.781 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 04.sql
+17:39:32.785 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+17:39:32.785 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - -- 15000
 
 SELECT v76."comment10m20" AS "comment10m20", v76."label10m18" AS "label10m18", v76."label10m46" AS "label10m46", v76."label10m6" AS "label10m6", v76."propertynum1m25" AS "propertynum1m25", v76."propertynum1m40" AS "propertynum1m40", v76."propertynum1m41" AS "propertynum1m41", v76."propertytex1m30" AS "propertytex1m30", v76."propertytex1m31" AS "propertytex1m31", v76."propertytex1m32" AS "propertytex1m32", v76."propertytex1m33" AS "propertytex1m33", v76."propertytex1m34" AS "propertytex1m34"
 FROM (
@@ -166,54 +179,67 @@ FROM (
          )
      ) v76
 
-19:41:57.045 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - null
-19:41:57.047 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 00.sql
-19:41:57.056 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:41:57.058 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - -- 7
+17:39:33.374 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - null
+17:39:33.377 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 00.sql
+17:39:33.382 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+17:39:33.382 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - -- 2000
 
 SELECT v12."nr2m23" AS "nr2m23", COUNT(*) AS "v1"
 FROM (
+	  SELECT DISTINCT v1."nr" AS "nr2m23", v6."productfeature" AS "productfeature2m2"
+	  FROM "ss1"."product1" v1, "ss1"."productfeatureproduct1" v6
+	  WHERE v1."nr" <= 2000 AND v1."nr"=v6."product"
+	  UNION ALL
 	  SELECT DISTINCT v3."nr" AS "nr2m23", v8."productfeature" AS "productfeature2m2"
 	  FROM "ss5"."product2" v3, "ss5"."productfeatureproduct2" v8
-	  WHERE v3."nr"=v8."product"
+	  WHERE v3."nr" <= 2000 AND v3."nr"=v8."product"
     ) v12
 GROUP BY v12."nr2m23"
 
-19:41:57.115 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 01.sql
-19:41:57.118 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:41:57.120 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - -- 8
+17:39:33.466 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 01.sql
+17:39:33.470 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+17:39:33.473 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - -- 5000
+-- 5000
+-- 1743
+(
+SELECT DISTINCT v5."label10m46" AS "label10m46", v5."nr0m55" AS "nr0m55"
+FROM (
+	  SELECT v1."label" AS "label10m46", v1."nr" AS "nr0m55"
+      FROM "ss1"."product1" v1
+      WHERE (v1."nr" IS NOT NULL AND v1."label" IS NOT NULL AND v1."propertynum1" IS NOT NULL) AND (v1."propertynum1" <= 1743)
+     ) v5, (
+			SELECT v11."product" AS "nr0m1"
+            FROM "ss1"."productfeatureproduct1" v11
+            WHERE 5000 = v11."productfeature"
+           ) v15, (
+				   SELECT v16."product" AS "nr0m2"
+                   FROM "ss1"."productfeatureproduct1" v16
+                   WHERE 5000 = v16."productfeature"
+                  ) v20
+WHERE (v5."nr0m55" = v15."nr0m1" AND v5."nr0m55" = v20."nr0m2")
+)
+UNION ALL
+(
+SELECT DISTINCT v5."label10m46" AS "label10m46", v5."nr0m55" AS "nr0m55"
+FROM (
+      SELECT v3."label" AS "label10m46", v3."nr" AS "nr0m55"
+      FROM "ss5"."product2" v3
+      WHERE (v3."nr" IS NOT NULL AND v3."label" IS NOT NULL AND v3."propertynum1" IS NOT NULL) AND (v3."propertynum1" <= 1743)
+     ) v5, (
+            SELECT v13."product" AS "nr0m1"
+            FROM "ss5"."productfeatureproduct2" v13
+            WHERE 5000 = v13."productfeature"
+           ) v15, (
+                   SELECT v18."product" AS "nr0m2"
+                   FROM "ss5"."productfeatureproduct2" v18
+                   WHERE 5000 = v18."productfeature"
+                  ) v20
+WHERE (v5."nr0m55" = v15."nr0m1" AND v5."nr0m55" = v20."nr0m2")
+)
 
-SELECT v12."productfeature" AS "Feature", AVG(v12."propertynum1") AS "mean"
-FROM(
-        SELECT v1."propertynum1", v2."productfeature"
-        FROM "ss1"."product1" v1, "ss1"."productfeatureproduct1" v2, "ss3"."productfeature" v3
-        WHERE (
-            (v3."nr" >= 5000) AND
-            (v2."product" <= 15000) AND
-            v1."label" IS NOT NULL AND
-            v1."propertynum1" IS NOT NULL AND
-            v1."nr" = v2."product" AND
-            v2."productfeature" = v3."nr"
-            )
-
-    UNION ALL
-
-        SELECT v4."propertynum1", v5."productfeature"
-        FROM "ss5"."product2" v4, "ss5"."productfeatureproduct2" v5, "ss3"."productfeature" v6
-        WHERE (
-            (v6."nr" >= 5000) AND
-            (v5."product" <= 15000) AND
-            v4."label" IS NOT NULL AND
-            v4."propertynum1" IS NOT NULL AND
-            v4."nr" = v5."product" AND
-            v5."productfeature" = v6."nr"
-            )
-        ) as v12
-GROUP BY v12."productfeature"
-
-19:41:57.364 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 02.sql
-19:41:57.368 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:41:57.370 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - -- 9
+17:39:33.500 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 02.sql
+17:39:33.504 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+17:39:33.506 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - -- 9
 
 SELECT v25."v26" AS "v26", v25."v6" AS "v6", v25."v9" AS "v9"
 FROM (SELECT 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Offer' AS "v26", 0 AS "v6", 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type' AS "v9"
@@ -265,9 +291,9 @@ FROM "ss4"."offer" v23
 WHERE (v23."validto" IS NOT NULL AND MOD(v23."deliverydays",3) = 0 AND v23."nr" <= 200000)
 ) v25
 
-19:41:57.406 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 03.sql
-19:41:57.410 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:41:57.410 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - -- 125
+17:39:33.521 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 03.sql
+17:39:33.523 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+17:39:33.523 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - -- 125
 -- CN
 
 SELECT DISTINCT v9."nr1m5" AS "nr1m5", v9."product1m5" AS "product1m5"
@@ -280,9 +306,9 @@ FROM "ss5"."product2" v5, "ss4"."offer" v6, "ss4"."vendor" v7
 WHERE ((v6."deliverydays" <= 3) AND (v5."nr" <= 125) AND v6."deliverydays" IS NOT NULL AND v6."price" IS NOT NULL AND v6."validto" IS NOT NULL AND v5."nr" = v6."product" AND v6."vendor" = v7."nr" AND 'CN' = v7."country")
 ) v9
 
-19:41:57.417 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 04.sql
-19:41:57.421 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:41:57.421 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - -- 15000
+17:39:33.533 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 04.sql
+17:39:33.537 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+17:39:33.537 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - -- 15000
 
 SELECT v76."comment10m20" AS "comment10m20", v76."label10m18" AS "label10m18", v76."label10m46" AS "label10m46", v76."label10m6" AS "label10m6", v76."propertynum1m25" AS "propertynum1m25", v76."propertynum1m40" AS "propertynum1m40", v76."propertynum1m41" AS "propertynum1m41", v76."propertytex1m30" AS "propertytex1m30", v76."propertytex1m31" AS "propertytex1m31", v76."propertytex1m32" AS "propertytex1m32", v76."propertytex1m33" AS "propertytex1m33", v76."propertytex1m34" AS "propertytex1m34"
 FROM (
@@ -335,94 +361,120 @@ FROM (
          )
      ) v76
 
-19:41:57.940 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - null
-19:41:57.943 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 00.sql
-19:41:57.949 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:41:57.955 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 12
+17:39:34.084 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - null
+17:39:34.087 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 00.sql
+17:39:34.092 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+17:39:34.093 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 2000
 
 SELECT v12."nr2m23" AS "nr2m23", COUNT(*) AS "v1"
 FROM (
+	  SELECT DISTINCT v1."nr" AS "nr2m23", v6."productfeature" AS "productfeature2m2"
+	  FROM "ss1"."product1" v1, "ss1"."productfeatureproduct1" v6
+	  WHERE v1."nr" <= 2000 AND v1."nr"=v6."product"
+	  UNION ALL
 	  SELECT DISTINCT v3."nr" AS "nr2m23", v8."productfeature" AS "productfeature2m2"
 	  FROM "ss5"."product2" v3, "ss5"."productfeatureproduct2" v8
-	  WHERE v3."nr"=v8."product"
+	  WHERE v3."nr" <= 2000 AND v3."nr"=v8."product"
     ) v12
 GROUP BY v12."nr2m23"
 
--- 12
+-- 2000
 
 SELECT v12."nr2m23" AS "nr2m23", COUNT(*) AS "v1"
 FROM (
+	  SELECT DISTINCT v1."nr" AS "nr2m23", v6."productfeature" AS "productfeature2m2"
+	  FROM "ss1"."product1" v1, "ss1"."productfeatureproduct1" v6
+	  WHERE v1."nr" <= 2000 AND v1."nr"=v6."product"
+	  UNION ALL
 	  SELECT DISTINCT v3."nr" AS "nr2m23", v8."productfeature" AS "productfeature2m2"
 	  FROM "ss5"."product2" v3, "ss5"."productfeatureproduct2" v8
-	  WHERE v3."nr"=v8."product"
+	  WHERE v3."nr" <= 2000 AND v3."nr"=v8."product"
     ) v12
 GROUP BY v12."nr2m23"
 
-19:41:58.016 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 01.sql
-19:41:58.020 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:41:58.025 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 13
+17:39:34.182 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 01.sql
+17:39:34.185 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+17:39:34.191 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 5000
+-- 5000
+-- 226
+(
+SELECT DISTINCT v5."label10m46" AS "label10m46", v5."nr0m55" AS "nr0m55"
+FROM (
+	  SELECT v1."label" AS "label10m46", v1."nr" AS "nr0m55"
+      FROM "ss1"."product1" v1
+      WHERE (v1."nr" IS NOT NULL AND v1."label" IS NOT NULL AND v1."propertynum1" IS NOT NULL) AND (v1."propertynum1" <= 226)
+     ) v5, (
+			SELECT v11."product" AS "nr0m1"
+            FROM "ss1"."productfeatureproduct1" v11
+            WHERE 5000 = v11."productfeature"
+           ) v15, (
+				   SELECT v16."product" AS "nr0m2"
+                   FROM "ss1"."productfeatureproduct1" v16
+                   WHERE 5000 = v16."productfeature"
+                  ) v20
+WHERE (v5."nr0m55" = v15."nr0m1" AND v5."nr0m55" = v20."nr0m2")
+)
+UNION ALL
+(
+SELECT DISTINCT v5."label10m46" AS "label10m46", v5."nr0m55" AS "nr0m55"
+FROM (
+      SELECT v3."label" AS "label10m46", v3."nr" AS "nr0m55"
+      FROM "ss5"."product2" v3
+      WHERE (v3."nr" IS NOT NULL AND v3."label" IS NOT NULL AND v3."propertynum1" IS NOT NULL) AND (v3."propertynum1" <= 226)
+     ) v5, (
+            SELECT v13."product" AS "nr0m1"
+            FROM "ss5"."productfeatureproduct2" v13
+            WHERE 5000 = v13."productfeature"
+           ) v15, (
+                   SELECT v18."product" AS "nr0m2"
+                   FROM "ss5"."productfeatureproduct2" v18
+                   WHERE 5000 = v18."productfeature"
+                  ) v20
+WHERE (v5."nr0m55" = v15."nr0m1" AND v5."nr0m55" = v20."nr0m2")
+)
 
-SELECT v12."productfeature" AS "Feature", AVG(v12."propertynum1") AS "mean"
-FROM(
-        SELECT v1."propertynum1", v2."productfeature"
-        FROM "ss1"."product1" v1, "ss1"."productfeatureproduct1" v2, "ss3"."productfeature" v3
-        WHERE (
-            (v3."nr" >= 5000) AND
-            (v2."product" <= 15000) AND
-            v1."label" IS NOT NULL AND
-            v1."propertynum1" IS NOT NULL AND
-            v1."nr" = v2."product" AND
-            v2."productfeature" = v3."nr"
-            )
+-- 5000
+-- 5000
+-- 226
+(
+SELECT DISTINCT v5."label10m46" AS "label10m46", v5."nr0m55" AS "nr0m55"
+FROM (
+	  SELECT v1."label" AS "label10m46", v1."nr" AS "nr0m55"
+      FROM "ss1"."product1" v1
+      WHERE (v1."nr" IS NOT NULL AND v1."label" IS NOT NULL AND v1."propertynum1" IS NOT NULL) AND (v1."propertynum1" <= 226)
+     ) v5, (
+			SELECT v11."product" AS "nr0m1"
+            FROM "ss1"."productfeatureproduct1" v11
+            WHERE 5000 = v11."productfeature"
+           ) v15, (
+				   SELECT v16."product" AS "nr0m2"
+                   FROM "ss1"."productfeatureproduct1" v16
+                   WHERE 5000 = v16."productfeature"
+                  ) v20
+WHERE (v5."nr0m55" = v15."nr0m1" AND v5."nr0m55" = v20."nr0m2")
+)
+UNION ALL
+(
+SELECT DISTINCT v5."label10m46" AS "label10m46", v5."nr0m55" AS "nr0m55"
+FROM (
+      SELECT v3."label" AS "label10m46", v3."nr" AS "nr0m55"
+      FROM "ss5"."product2" v3
+      WHERE (v3."nr" IS NOT NULL AND v3."label" IS NOT NULL AND v3."propertynum1" IS NOT NULL) AND (v3."propertynum1" <= 226)
+     ) v5, (
+            SELECT v13."product" AS "nr0m1"
+            FROM "ss5"."productfeatureproduct2" v13
+            WHERE 5000 = v13."productfeature"
+           ) v15, (
+                   SELECT v18."product" AS "nr0m2"
+                   FROM "ss5"."productfeatureproduct2" v18
+                   WHERE 5000 = v18."productfeature"
+                  ) v20
+WHERE (v5."nr0m55" = v15."nr0m1" AND v5."nr0m55" = v20."nr0m2")
+)
 
-    UNION ALL
-
-        SELECT v4."propertynum1", v5."productfeature"
-        FROM "ss5"."product2" v4, "ss5"."productfeatureproduct2" v5, "ss3"."productfeature" v6
-        WHERE (
-            (v6."nr" >= 5000) AND
-            (v5."product" <= 15000) AND
-            v4."label" IS NOT NULL AND
-            v4."propertynum1" IS NOT NULL AND
-            v4."nr" = v5."product" AND
-            v5."productfeature" = v6."nr"
-            )
-        ) as v12
-GROUP BY v12."productfeature"
-
--- 13
-
-SELECT v12."productfeature" AS "Feature", AVG(v12."propertynum1") AS "mean"
-FROM(
-        SELECT v1."propertynum1", v2."productfeature"
-        FROM "ss1"."product1" v1, "ss1"."productfeatureproduct1" v2, "ss3"."productfeature" v3
-        WHERE (
-            (v3."nr" >= 5000) AND
-            (v2."product" <= 15000) AND
-            v1."label" IS NOT NULL AND
-            v1."propertynum1" IS NOT NULL AND
-            v1."nr" = v2."product" AND
-            v2."productfeature" = v3."nr"
-            )
-
-    UNION ALL
-
-        SELECT v4."propertynum1", v5."productfeature"
-        FROM "ss5"."product2" v4, "ss5"."productfeatureproduct2" v5, "ss3"."productfeature" v6
-        WHERE (
-            (v6."nr" >= 5000) AND
-            (v5."product" <= 15000) AND
-            v4."label" IS NOT NULL AND
-            v4."propertynum1" IS NOT NULL AND
-            v4."nr" = v5."product" AND
-            v5."productfeature" = v6."nr"
-            )
-        ) as v12
-GROUP BY v12."productfeature"
-
-19:41:58.359 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 02.sql
-19:41:58.363 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:41:58.364 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 14
+17:39:34.251 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 02.sql
+17:39:34.255 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+17:39:34.260 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 14
 
 SELECT v25."v26" AS "v26", v25."v6" AS "v6", v25."v9" AS "v9"
 FROM (SELECT 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Offer' AS "v26", 0 AS "v6", 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type' AS "v9"
@@ -526,9 +578,9 @@ FROM "ss4"."offer" v23
 WHERE (v23."validto" IS NOT NULL AND MOD(v23."deliverydays",3) = 0 AND v23."nr" <= 200000)
 ) v25
 
-19:41:58.387 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 03.sql
-19:41:58.390 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:41:58.390 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 125
+17:39:34.275 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 03.sql
+17:39:34.278 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+17:39:34.279 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 125
 -- CN
 
 SELECT DISTINCT v9."nr1m5" AS "nr1m5", v9."product1m5" AS "product1m5"
@@ -554,9 +606,9 @@ FROM "ss5"."product2" v5, "ss4"."offer" v6, "ss4"."vendor" v7
 WHERE ((v6."deliverydays" <= 3) AND (v5."nr" <= 125) AND v6."deliverydays" IS NOT NULL AND v6."price" IS NOT NULL AND v6."validto" IS NOT NULL AND v5."nr" = v6."product" AND v6."vendor" = v7."nr" AND 'CN' = v7."country")
 ) v9
 
-19:41:58.410 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 04.sql
-19:41:58.414 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:41:58.415 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 15000
+17:39:34.288 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 04.sql
+17:39:34.292 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+17:39:34.293 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 15000
 
 SELECT v76."comment10m20" AS "comment10m20", v76."label10m18" AS "label10m18", v76."label10m46" AS "label10m46", v76."label10m6" AS "label10m6", v76."propertynum1m25" AS "propertynum1m25", v76."propertynum1m40" AS "propertynum1m40", v76."propertynum1m41" AS "propertynum1m41", v76."propertytex1m30" AS "propertytex1m30", v76."propertytex1m31" AS "propertytex1m31", v76."propertytex1m32" AS "propertytex1m32", v76."propertytex1m33" AS "propertytex1m33", v76."propertytex1m34" AS "propertytex1m34"
 FROM (
@@ -662,95 +714,121 @@ FROM (
          )
      ) v76
 
-19:42:04.309 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - null
+17:39:40.179 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - null
 null
-19:42:04.312 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 00.sql
-19:42:04.315 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:42:04.316 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 17
+17:39:40.181 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 00.sql
+17:39:40.185 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+17:39:40.185 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 2000
 
 SELECT v12."nr2m23" AS "nr2m23", COUNT(*) AS "v1"
 FROM (
+	  SELECT DISTINCT v1."nr" AS "nr2m23", v6."productfeature" AS "productfeature2m2"
+	  FROM "ss1"."product1" v1, "ss1"."productfeatureproduct1" v6
+	  WHERE v1."nr" <= 2000 AND v1."nr"=v6."product"
+	  UNION ALL
 	  SELECT DISTINCT v3."nr" AS "nr2m23", v8."productfeature" AS "productfeature2m2"
 	  FROM "ss5"."product2" v3, "ss5"."productfeatureproduct2" v8
-	  WHERE v3."nr"=v8."product"
+	  WHERE v3."nr" <= 2000 AND v3."nr"=v8."product"
     ) v12
 GROUP BY v12."nr2m23"
 
--- 17
+-- 2000
 
 SELECT v12."nr2m23" AS "nr2m23", COUNT(*) AS "v1"
 FROM (
+	  SELECT DISTINCT v1."nr" AS "nr2m23", v6."productfeature" AS "productfeature2m2"
+	  FROM "ss1"."product1" v1, "ss1"."productfeatureproduct1" v6
+	  WHERE v1."nr" <= 2000 AND v1."nr"=v6."product"
+	  UNION ALL
 	  SELECT DISTINCT v3."nr" AS "nr2m23", v8."productfeature" AS "productfeature2m2"
 	  FROM "ss5"."product2" v3, "ss5"."productfeatureproduct2" v8
-	  WHERE v3."nr"=v8."product"
+	  WHERE v3."nr" <= 2000 AND v3."nr"=v8."product"
     ) v12
 GROUP BY v12."nr2m23"
 
-19:42:04.353 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 01.sql
-19:42:04.356 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:42:04.357 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 18
+17:39:40.240 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 01.sql
+17:39:40.243 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+17:39:40.245 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 5000
+-- 5000
+-- 968
+(
+SELECT DISTINCT v5."label10m46" AS "label10m46", v5."nr0m55" AS "nr0m55"
+FROM (
+	  SELECT v1."label" AS "label10m46", v1."nr" AS "nr0m55"
+      FROM "ss1"."product1" v1
+      WHERE (v1."nr" IS NOT NULL AND v1."label" IS NOT NULL AND v1."propertynum1" IS NOT NULL) AND (v1."propertynum1" <= 968)
+     ) v5, (
+			SELECT v11."product" AS "nr0m1"
+            FROM "ss1"."productfeatureproduct1" v11
+            WHERE 5000 = v11."productfeature"
+           ) v15, (
+				   SELECT v16."product" AS "nr0m2"
+                   FROM "ss1"."productfeatureproduct1" v16
+                   WHERE 5000 = v16."productfeature"
+                  ) v20
+WHERE (v5."nr0m55" = v15."nr0m1" AND v5."nr0m55" = v20."nr0m2")
+)
+UNION ALL
+(
+SELECT DISTINCT v5."label10m46" AS "label10m46", v5."nr0m55" AS "nr0m55"
+FROM (
+      SELECT v3."label" AS "label10m46", v3."nr" AS "nr0m55"
+      FROM "ss5"."product2" v3
+      WHERE (v3."nr" IS NOT NULL AND v3."label" IS NOT NULL AND v3."propertynum1" IS NOT NULL) AND (v3."propertynum1" <= 968)
+     ) v5, (
+            SELECT v13."product" AS "nr0m1"
+            FROM "ss5"."productfeatureproduct2" v13
+            WHERE 5000 = v13."productfeature"
+           ) v15, (
+                   SELECT v18."product" AS "nr0m2"
+                   FROM "ss5"."productfeatureproduct2" v18
+                   WHERE 5000 = v18."productfeature"
+                  ) v20
+WHERE (v5."nr0m55" = v15."nr0m1" AND v5."nr0m55" = v20."nr0m2")
+)
 
-SELECT v12."productfeature" AS "Feature", AVG(v12."propertynum1") AS "mean"
-FROM(
-        SELECT v1."propertynum1", v2."productfeature"
-        FROM "ss1"."product1" v1, "ss1"."productfeatureproduct1" v2, "ss3"."productfeature" v3
-        WHERE (
-            (v3."nr" >= 5000) AND
-            (v2."product" <= 15000) AND
-            v1."label" IS NOT NULL AND
-            v1."propertynum1" IS NOT NULL AND
-            v1."nr" = v2."product" AND
-            v2."productfeature" = v3."nr"
-            )
+-- 5000
+-- 5000
+-- 968
+(
+SELECT DISTINCT v5."label10m46" AS "label10m46", v5."nr0m55" AS "nr0m55"
+FROM (
+	  SELECT v1."label" AS "label10m46", v1."nr" AS "nr0m55"
+      FROM "ss1"."product1" v1
+      WHERE (v1."nr" IS NOT NULL AND v1."label" IS NOT NULL AND v1."propertynum1" IS NOT NULL) AND (v1."propertynum1" <= 968)
+     ) v5, (
+			SELECT v11."product" AS "nr0m1"
+            FROM "ss1"."productfeatureproduct1" v11
+            WHERE 5000 = v11."productfeature"
+           ) v15, (
+				   SELECT v16."product" AS "nr0m2"
+                   FROM "ss1"."productfeatureproduct1" v16
+                   WHERE 5000 = v16."productfeature"
+                  ) v20
+WHERE (v5."nr0m55" = v15."nr0m1" AND v5."nr0m55" = v20."nr0m2")
+)
+UNION ALL
+(
+SELECT DISTINCT v5."label10m46" AS "label10m46", v5."nr0m55" AS "nr0m55"
+FROM (
+      SELECT v3."label" AS "label10m46", v3."nr" AS "nr0m55"
+      FROM "ss5"."product2" v3
+      WHERE (v3."nr" IS NOT NULL AND v3."label" IS NOT NULL AND v3."propertynum1" IS NOT NULL) AND (v3."propertynum1" <= 968)
+     ) v5, (
+            SELECT v13."product" AS "nr0m1"
+            FROM "ss5"."productfeatureproduct2" v13
+            WHERE 5000 = v13."productfeature"
+           ) v15, (
+                   SELECT v18."product" AS "nr0m2"
+                   FROM "ss5"."productfeatureproduct2" v18
+                   WHERE 5000 = v18."productfeature"
+                  ) v20
+WHERE (v5."nr0m55" = v15."nr0m1" AND v5."nr0m55" = v20."nr0m2")
+)
 
-    UNION ALL
-
-        SELECT v4."propertynum1", v5."productfeature"
-        FROM "ss5"."product2" v4, "ss5"."productfeatureproduct2" v5, "ss3"."productfeature" v6
-        WHERE (
-            (v6."nr" >= 5000) AND
-            (v5."product" <= 15000) AND
-            v4."label" IS NOT NULL AND
-            v4."propertynum1" IS NOT NULL AND
-            v4."nr" = v5."product" AND
-            v5."productfeature" = v6."nr"
-            )
-        ) as v12
-GROUP BY v12."productfeature"
-
--- 18
-
-SELECT v12."productfeature" AS "Feature", AVG(v12."propertynum1") AS "mean"
-FROM(
-        SELECT v1."propertynum1", v2."productfeature"
-        FROM "ss1"."product1" v1, "ss1"."productfeatureproduct1" v2, "ss3"."productfeature" v3
-        WHERE (
-            (v3."nr" >= 5000) AND
-            (v2."product" <= 15000) AND
-            v1."label" IS NOT NULL AND
-            v1."propertynum1" IS NOT NULL AND
-            v1."nr" = v2."product" AND
-            v2."productfeature" = v3."nr"
-            )
-
-    UNION ALL
-
-        SELECT v4."propertynum1", v5."productfeature"
-        FROM "ss5"."product2" v4, "ss5"."productfeatureproduct2" v5, "ss3"."productfeature" v6
-        WHERE (
-            (v6."nr" >= 5000) AND
-            (v5."product" <= 15000) AND
-            v4."label" IS NOT NULL AND
-            v4."propertynum1" IS NOT NULL AND
-            v4."nr" = v5."product" AND
-            v5."productfeature" = v6."nr"
-            )
-        ) as v12
-GROUP BY v12."productfeature"
-
-19:42:04.776 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 02.sql
-19:42:04.779 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:42:04.780 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 19
+17:39:40.269 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 02.sql
+17:39:40.271 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+17:39:40.273 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 19
 
 SELECT v25."v26" AS "v26", v25."v6" AS "v6", v25."v9" AS "v9"
 FROM (SELECT 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Offer' AS "v26", 0 AS "v6", 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type' AS "v9"
@@ -854,9 +932,9 @@ FROM "ss4"."offer" v23
 WHERE (v23."validto" IS NOT NULL AND MOD(v23."deliverydays",3) = 0 AND v23."nr" <= 200000)
 ) v25
 
-19:42:04.799 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 03.sql
-19:42:04.802 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:42:04.803 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 125
+17:39:40.286 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 03.sql
+17:39:40.289 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+17:39:40.289 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 125
 -- CN
 
 SELECT DISTINCT v9."nr1m5" AS "nr1m5", v9."product1m5" AS "product1m5"
@@ -882,9 +960,9 @@ FROM "ss5"."product2" v5, "ss4"."offer" v6, "ss4"."vendor" v7
 WHERE ((v6."deliverydays" <= 3) AND (v5."nr" <= 125) AND v6."deliverydays" IS NOT NULL AND v6."price" IS NOT NULL AND v6."validto" IS NOT NULL AND v5."nr" = v6."product" AND v6."vendor" = v7."nr" AND 'CN' = v7."country")
 ) v9
 
-19:42:04.809 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 04.sql
-19:42:04.813 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:42:04.814 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 15000
+17:39:40.303 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 04.sql
+17:39:40.306 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+17:39:40.307 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 15000
 
 SELECT v76."comment10m20" AS "comment10m20", v76."label10m18" AS "label10m18", v76."label10m46" AS "label10m46", v76."label10m6" AS "label10m6", v76."propertynum1m25" AS "propertynum1m25", v76."propertynum1m40" AS "propertynum1m40", v76."propertynum1m41" AS "propertynum1m41", v76."propertytex1m30" AS "propertytex1m30", v76."propertytex1m31" AS "propertytex1m31", v76."propertytex1m32" AS "propertytex1m32", v76."propertytex1m33" AS "propertytex1m33", v76."propertytex1m34" AS "propertytex1m34"
 FROM (
@@ -990,95 +1068,121 @@ FROM (
          )
      ) v76
 
-19:42:10.118 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - null
+17:39:45.687 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - null
 null
-19:42:10.120 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 00.sql
-19:42:10.122 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:42:10.124 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 22
+17:39:45.689 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 00.sql
+17:39:45.692 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+17:39:45.693 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 2000
 
 SELECT v12."nr2m23" AS "nr2m23", COUNT(*) AS "v1"
 FROM (
+	  SELECT DISTINCT v1."nr" AS "nr2m23", v6."productfeature" AS "productfeature2m2"
+	  FROM "ss1"."product1" v1, "ss1"."productfeatureproduct1" v6
+	  WHERE v1."nr" <= 2000 AND v1."nr"=v6."product"
+	  UNION ALL
 	  SELECT DISTINCT v3."nr" AS "nr2m23", v8."productfeature" AS "productfeature2m2"
 	  FROM "ss5"."product2" v3, "ss5"."productfeatureproduct2" v8
-	  WHERE v3."nr"=v8."product"
+	  WHERE v3."nr" <= 2000 AND v3."nr"=v8."product"
     ) v12
 GROUP BY v12."nr2m23"
 
--- 22
+-- 2000
 
 SELECT v12."nr2m23" AS "nr2m23", COUNT(*) AS "v1"
 FROM (
+	  SELECT DISTINCT v1."nr" AS "nr2m23", v6."productfeature" AS "productfeature2m2"
+	  FROM "ss1"."product1" v1, "ss1"."productfeatureproduct1" v6
+	  WHERE v1."nr" <= 2000 AND v1."nr"=v6."product"
+	  UNION ALL
 	  SELECT DISTINCT v3."nr" AS "nr2m23", v8."productfeature" AS "productfeature2m2"
 	  FROM "ss5"."product2" v3, "ss5"."productfeatureproduct2" v8
-	  WHERE v3."nr"=v8."product"
+	  WHERE v3."nr" <= 2000 AND v3."nr"=v8."product"
     ) v12
 GROUP BY v12."nr2m23"
 
-19:42:10.160 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 01.sql
-19:42:10.163 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:42:10.165 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 23
+17:39:45.746 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 01.sql
+17:39:45.748 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+17:39:45.750 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 5000
+-- 5000
+-- 214
+(
+SELECT DISTINCT v5."label10m46" AS "label10m46", v5."nr0m55" AS "nr0m55"
+FROM (
+	  SELECT v1."label" AS "label10m46", v1."nr" AS "nr0m55"
+      FROM "ss1"."product1" v1
+      WHERE (v1."nr" IS NOT NULL AND v1."label" IS NOT NULL AND v1."propertynum1" IS NOT NULL) AND (v1."propertynum1" <= 214)
+     ) v5, (
+			SELECT v11."product" AS "nr0m1"
+            FROM "ss1"."productfeatureproduct1" v11
+            WHERE 5000 = v11."productfeature"
+           ) v15, (
+				   SELECT v16."product" AS "nr0m2"
+                   FROM "ss1"."productfeatureproduct1" v16
+                   WHERE 5000 = v16."productfeature"
+                  ) v20
+WHERE (v5."nr0m55" = v15."nr0m1" AND v5."nr0m55" = v20."nr0m2")
+)
+UNION ALL
+(
+SELECT DISTINCT v5."label10m46" AS "label10m46", v5."nr0m55" AS "nr0m55"
+FROM (
+      SELECT v3."label" AS "label10m46", v3."nr" AS "nr0m55"
+      FROM "ss5"."product2" v3
+      WHERE (v3."nr" IS NOT NULL AND v3."label" IS NOT NULL AND v3."propertynum1" IS NOT NULL) AND (v3."propertynum1" <= 214)
+     ) v5, (
+            SELECT v13."product" AS "nr0m1"
+            FROM "ss5"."productfeatureproduct2" v13
+            WHERE 5000 = v13."productfeature"
+           ) v15, (
+                   SELECT v18."product" AS "nr0m2"
+                   FROM "ss5"."productfeatureproduct2" v18
+                   WHERE 5000 = v18."productfeature"
+                  ) v20
+WHERE (v5."nr0m55" = v15."nr0m1" AND v5."nr0m55" = v20."nr0m2")
+)
 
-SELECT v12."productfeature" AS "Feature", AVG(v12."propertynum1") AS "mean"
-FROM(
-        SELECT v1."propertynum1", v2."productfeature"
-        FROM "ss1"."product1" v1, "ss1"."productfeatureproduct1" v2, "ss3"."productfeature" v3
-        WHERE (
-            (v3."nr" >= 5000) AND
-            (v2."product" <= 15000) AND
-            v1."label" IS NOT NULL AND
-            v1."propertynum1" IS NOT NULL AND
-            v1."nr" = v2."product" AND
-            v2."productfeature" = v3."nr"
-            )
+-- 5000
+-- 5000
+-- 214
+(
+SELECT DISTINCT v5."label10m46" AS "label10m46", v5."nr0m55" AS "nr0m55"
+FROM (
+	  SELECT v1."label" AS "label10m46", v1."nr" AS "nr0m55"
+      FROM "ss1"."product1" v1
+      WHERE (v1."nr" IS NOT NULL AND v1."label" IS NOT NULL AND v1."propertynum1" IS NOT NULL) AND (v1."propertynum1" <= 214)
+     ) v5, (
+			SELECT v11."product" AS "nr0m1"
+            FROM "ss1"."productfeatureproduct1" v11
+            WHERE 5000 = v11."productfeature"
+           ) v15, (
+				   SELECT v16."product" AS "nr0m2"
+                   FROM "ss1"."productfeatureproduct1" v16
+                   WHERE 5000 = v16."productfeature"
+                  ) v20
+WHERE (v5."nr0m55" = v15."nr0m1" AND v5."nr0m55" = v20."nr0m2")
+)
+UNION ALL
+(
+SELECT DISTINCT v5."label10m46" AS "label10m46", v5."nr0m55" AS "nr0m55"
+FROM (
+      SELECT v3."label" AS "label10m46", v3."nr" AS "nr0m55"
+      FROM "ss5"."product2" v3
+      WHERE (v3."nr" IS NOT NULL AND v3."label" IS NOT NULL AND v3."propertynum1" IS NOT NULL) AND (v3."propertynum1" <= 214)
+     ) v5, (
+            SELECT v13."product" AS "nr0m1"
+            FROM "ss5"."productfeatureproduct2" v13
+            WHERE 5000 = v13."productfeature"
+           ) v15, (
+                   SELECT v18."product" AS "nr0m2"
+                   FROM "ss5"."productfeatureproduct2" v18
+                   WHERE 5000 = v18."productfeature"
+                  ) v20
+WHERE (v5."nr0m55" = v15."nr0m1" AND v5."nr0m55" = v20."nr0m2")
+)
 
-    UNION ALL
-
-        SELECT v4."propertynum1", v5."productfeature"
-        FROM "ss5"."product2" v4, "ss5"."productfeatureproduct2" v5, "ss3"."productfeature" v6
-        WHERE (
-            (v6."nr" >= 5000) AND
-            (v5."product" <= 15000) AND
-            v4."label" IS NOT NULL AND
-            v4."propertynum1" IS NOT NULL AND
-            v4."nr" = v5."product" AND
-            v5."productfeature" = v6."nr"
-            )
-        ) as v12
-GROUP BY v12."productfeature"
-
--- 23
-
-SELECT v12."productfeature" AS "Feature", AVG(v12."propertynum1") AS "mean"
-FROM(
-        SELECT v1."propertynum1", v2."productfeature"
-        FROM "ss1"."product1" v1, "ss1"."productfeatureproduct1" v2, "ss3"."productfeature" v3
-        WHERE (
-            (v3."nr" >= 5000) AND
-            (v2."product" <= 15000) AND
-            v1."label" IS NOT NULL AND
-            v1."propertynum1" IS NOT NULL AND
-            v1."nr" = v2."product" AND
-            v2."productfeature" = v3."nr"
-            )
-
-    UNION ALL
-
-        SELECT v4."propertynum1", v5."productfeature"
-        FROM "ss5"."product2" v4, "ss5"."productfeatureproduct2" v5, "ss3"."productfeature" v6
-        WHERE (
-            (v6."nr" >= 5000) AND
-            (v5."product" <= 15000) AND
-            v4."label" IS NOT NULL AND
-            v4."propertynum1" IS NOT NULL AND
-            v4."nr" = v5."product" AND
-            v5."productfeature" = v6."nr"
-            )
-        ) as v12
-GROUP BY v12."productfeature"
-
-19:42:10.415 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 02.sql
-19:42:10.417 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:42:10.419 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 24
+17:39:45.778 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 02.sql
+17:39:45.782 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+17:39:45.784 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 24
 
 SELECT v25."v26" AS "v26", v25."v6" AS "v6", v25."v9" AS "v9"
 FROM (SELECT 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Offer' AS "v26", 0 AS "v6", 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type' AS "v9"
@@ -1182,9 +1286,9 @@ FROM "ss4"."offer" v23
 WHERE (v23."validto" IS NOT NULL AND MOD(v23."deliverydays",3) = 0 AND v23."nr" <= 200000)
 ) v25
 
-19:42:10.436 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 03.sql
-19:42:10.439 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:42:10.439 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 125
+17:39:45.797 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 03.sql
+17:39:45.801 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+17:39:45.801 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 125
 -- CN
 
 SELECT DISTINCT v9."nr1m5" AS "nr1m5", v9."product1m5" AS "product1m5"
@@ -1210,9 +1314,9 @@ FROM "ss5"."product2" v5, "ss4"."offer" v6, "ss4"."vendor" v7
 WHERE ((v6."deliverydays" <= 3) AND (v5."nr" <= 125) AND v6."deliverydays" IS NOT NULL AND v6."price" IS NOT NULL AND v6."validto" IS NOT NULL AND v5."nr" = v6."product" AND v6."vendor" = v7."nr" AND 'CN' = v7."country")
 ) v9
 
-19:42:10.446 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 04.sql
-19:42:10.449 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:42:10.449 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 15000
+17:39:45.809 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 04.sql
+17:39:45.814 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+17:39:45.815 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 15000
 
 SELECT v76."comment10m20" AS "comment10m20", v76."label10m18" AS "label10m18", v76."label10m46" AS "label10m46", v76."label10m6" AS "label10m6", v76."propertynum1m25" AS "propertynum1m25", v76."propertynum1m40" AS "propertynum1m40", v76."propertynum1m41" AS "propertynum1m41", v76."propertytex1m30" AS "propertytex1m30", v76."propertytex1m31" AS "propertytex1m31", v76."propertytex1m32" AS "propertytex1m32", v76."propertytex1m33" AS "propertytex1m33", v76."propertytex1m34" AS "propertytex1m34"
 FROM (
@@ -1318,95 +1422,121 @@ FROM (
          )
      ) v76
 
-19:42:15.380 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - null
+17:39:50.920 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - null
 null
-19:42:15.383 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 00.sql
-19:42:15.386 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:42:15.387 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 27
+17:39:50.922 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 00.sql
+17:39:50.925 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+17:39:50.926 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 2000
 
 SELECT v12."nr2m23" AS "nr2m23", COUNT(*) AS "v1"
 FROM (
+	  SELECT DISTINCT v1."nr" AS "nr2m23", v6."productfeature" AS "productfeature2m2"
+	  FROM "ss1"."product1" v1, "ss1"."productfeatureproduct1" v6
+	  WHERE v1."nr" <= 2000 AND v1."nr"=v6."product"
+	  UNION ALL
 	  SELECT DISTINCT v3."nr" AS "nr2m23", v8."productfeature" AS "productfeature2m2"
 	  FROM "ss5"."product2" v3, "ss5"."productfeatureproduct2" v8
-	  WHERE v3."nr"=v8."product"
+	  WHERE v3."nr" <= 2000 AND v3."nr"=v8."product"
     ) v12
 GROUP BY v12."nr2m23"
 
--- 27
+-- 2000
 
 SELECT v12."nr2m23" AS "nr2m23", COUNT(*) AS "v1"
 FROM (
+	  SELECT DISTINCT v1."nr" AS "nr2m23", v6."productfeature" AS "productfeature2m2"
+	  FROM "ss1"."product1" v1, "ss1"."productfeatureproduct1" v6
+	  WHERE v1."nr" <= 2000 AND v1."nr"=v6."product"
+	  UNION ALL
 	  SELECT DISTINCT v3."nr" AS "nr2m23", v8."productfeature" AS "productfeature2m2"
 	  FROM "ss5"."product2" v3, "ss5"."productfeatureproduct2" v8
-	  WHERE v3."nr"=v8."product"
+	  WHERE v3."nr" <= 2000 AND v3."nr"=v8."product"
     ) v12
 GROUP BY v12."nr2m23"
 
-19:42:15.422 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 01.sql
-19:42:15.425 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:42:15.427 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 28
+17:39:50.980 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 01.sql
+17:39:50.983 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+17:39:50.984 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 5000
+-- 5000
+-- 1218
+(
+SELECT DISTINCT v5."label10m46" AS "label10m46", v5."nr0m55" AS "nr0m55"
+FROM (
+	  SELECT v1."label" AS "label10m46", v1."nr" AS "nr0m55"
+      FROM "ss1"."product1" v1
+      WHERE (v1."nr" IS NOT NULL AND v1."label" IS NOT NULL AND v1."propertynum1" IS NOT NULL) AND (v1."propertynum1" <= 1218)
+     ) v5, (
+			SELECT v11."product" AS "nr0m1"
+            FROM "ss1"."productfeatureproduct1" v11
+            WHERE 5000 = v11."productfeature"
+           ) v15, (
+				   SELECT v16."product" AS "nr0m2"
+                   FROM "ss1"."productfeatureproduct1" v16
+                   WHERE 5000 = v16."productfeature"
+                  ) v20
+WHERE (v5."nr0m55" = v15."nr0m1" AND v5."nr0m55" = v20."nr0m2")
+)
+UNION ALL
+(
+SELECT DISTINCT v5."label10m46" AS "label10m46", v5."nr0m55" AS "nr0m55"
+FROM (
+      SELECT v3."label" AS "label10m46", v3."nr" AS "nr0m55"
+      FROM "ss5"."product2" v3
+      WHERE (v3."nr" IS NOT NULL AND v3."label" IS NOT NULL AND v3."propertynum1" IS NOT NULL) AND (v3."propertynum1" <= 1218)
+     ) v5, (
+            SELECT v13."product" AS "nr0m1"
+            FROM "ss5"."productfeatureproduct2" v13
+            WHERE 5000 = v13."productfeature"
+           ) v15, (
+                   SELECT v18."product" AS "nr0m2"
+                   FROM "ss5"."productfeatureproduct2" v18
+                   WHERE 5000 = v18."productfeature"
+                  ) v20
+WHERE (v5."nr0m55" = v15."nr0m1" AND v5."nr0m55" = v20."nr0m2")
+)
 
-SELECT v12."productfeature" AS "Feature", AVG(v12."propertynum1") AS "mean"
-FROM(
-        SELECT v1."propertynum1", v2."productfeature"
-        FROM "ss1"."product1" v1, "ss1"."productfeatureproduct1" v2, "ss3"."productfeature" v3
-        WHERE (
-            (v3."nr" >= 5000) AND
-            (v2."product" <= 15000) AND
-            v1."label" IS NOT NULL AND
-            v1."propertynum1" IS NOT NULL AND
-            v1."nr" = v2."product" AND
-            v2."productfeature" = v3."nr"
-            )
+-- 5000
+-- 5000
+-- 1218
+(
+SELECT DISTINCT v5."label10m46" AS "label10m46", v5."nr0m55" AS "nr0m55"
+FROM (
+	  SELECT v1."label" AS "label10m46", v1."nr" AS "nr0m55"
+      FROM "ss1"."product1" v1
+      WHERE (v1."nr" IS NOT NULL AND v1."label" IS NOT NULL AND v1."propertynum1" IS NOT NULL) AND (v1."propertynum1" <= 1218)
+     ) v5, (
+			SELECT v11."product" AS "nr0m1"
+            FROM "ss1"."productfeatureproduct1" v11
+            WHERE 5000 = v11."productfeature"
+           ) v15, (
+				   SELECT v16."product" AS "nr0m2"
+                   FROM "ss1"."productfeatureproduct1" v16
+                   WHERE 5000 = v16."productfeature"
+                  ) v20
+WHERE (v5."nr0m55" = v15."nr0m1" AND v5."nr0m55" = v20."nr0m2")
+)
+UNION ALL
+(
+SELECT DISTINCT v5."label10m46" AS "label10m46", v5."nr0m55" AS "nr0m55"
+FROM (
+      SELECT v3."label" AS "label10m46", v3."nr" AS "nr0m55"
+      FROM "ss5"."product2" v3
+      WHERE (v3."nr" IS NOT NULL AND v3."label" IS NOT NULL AND v3."propertynum1" IS NOT NULL) AND (v3."propertynum1" <= 1218)
+     ) v5, (
+            SELECT v13."product" AS "nr0m1"
+            FROM "ss5"."productfeatureproduct2" v13
+            WHERE 5000 = v13."productfeature"
+           ) v15, (
+                   SELECT v18."product" AS "nr0m2"
+                   FROM "ss5"."productfeatureproduct2" v18
+                   WHERE 5000 = v18."productfeature"
+                  ) v20
+WHERE (v5."nr0m55" = v15."nr0m1" AND v5."nr0m55" = v20."nr0m2")
+)
 
-    UNION ALL
-
-        SELECT v4."propertynum1", v5."productfeature"
-        FROM "ss5"."product2" v4, "ss5"."productfeatureproduct2" v5, "ss3"."productfeature" v6
-        WHERE (
-            (v6."nr" >= 5000) AND
-            (v5."product" <= 15000) AND
-            v4."label" IS NOT NULL AND
-            v4."propertynum1" IS NOT NULL AND
-            v4."nr" = v5."product" AND
-            v5."productfeature" = v6."nr"
-            )
-        ) as v12
-GROUP BY v12."productfeature"
-
--- 28
-
-SELECT v12."productfeature" AS "Feature", AVG(v12."propertynum1") AS "mean"
-FROM(
-        SELECT v1."propertynum1", v2."productfeature"
-        FROM "ss1"."product1" v1, "ss1"."productfeatureproduct1" v2, "ss3"."productfeature" v3
-        WHERE (
-            (v3."nr" >= 5000) AND
-            (v2."product" <= 15000) AND
-            v1."label" IS NOT NULL AND
-            v1."propertynum1" IS NOT NULL AND
-            v1."nr" = v2."product" AND
-            v2."productfeature" = v3."nr"
-            )
-
-    UNION ALL
-
-        SELECT v4."propertynum1", v5."productfeature"
-        FROM "ss5"."product2" v4, "ss5"."productfeatureproduct2" v5, "ss3"."productfeature" v6
-        WHERE (
-            (v6."nr" >= 5000) AND
-            (v5."product" <= 15000) AND
-            v4."label" IS NOT NULL AND
-            v4."propertynum1" IS NOT NULL AND
-            v4."nr" = v5."product" AND
-            v5."productfeature" = v6."nr"
-            )
-        ) as v12
-GROUP BY v12."productfeature"
-
-19:42:15.602 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 02.sql
-19:42:15.606 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:42:15.607 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 29
+17:39:51.007 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 02.sql
+17:39:51.010 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+17:39:51.012 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 29
 
 SELECT v25."v26" AS "v26", v25."v6" AS "v6", v25."v9" AS "v9"
 FROM (SELECT 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Offer' AS "v26", 0 AS "v6", 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type' AS "v9"
@@ -1510,9 +1640,9 @@ FROM "ss4"."offer" v23
 WHERE (v23."validto" IS NOT NULL AND MOD(v23."deliverydays",3) = 0 AND v23."nr" <= 200000)
 ) v25
 
-19:42:15.626 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 03.sql
-19:42:15.628 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:42:15.628 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 125
+17:39:51.024 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 03.sql
+17:39:51.027 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+17:39:51.027 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 125
 -- CN
 
 SELECT DISTINCT v9."nr1m5" AS "nr1m5", v9."product1m5" AS "product1m5"
@@ -1538,9 +1668,9 @@ FROM "ss5"."product2" v5, "ss4"."offer" v6, "ss4"."vendor" v7
 WHERE ((v6."deliverydays" <= 3) AND (v5."nr" <= 125) AND v6."deliverydays" IS NOT NULL AND v6."price" IS NOT NULL AND v6."validto" IS NOT NULL AND v5."nr" = v6."product" AND v6."vendor" = v7."nr" AND 'CN' = v7."country")
 ) v9
 
-19:42:15.634 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 04.sql
-19:42:15.637 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:42:15.637 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 15000
+17:39:51.035 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 04.sql
+17:39:51.038 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+17:39:51.038 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 15000
 
 SELECT v76."comment10m20" AS "comment10m20", v76."label10m18" AS "label10m18", v76."label10m46" AS "label10m46", v76."label10m6" AS "label10m6", v76."propertynum1m25" AS "propertynum1m25", v76."propertynum1m40" AS "propertynum1m40", v76."propertynum1m41" AS "propertynum1m41", v76."propertytex1m30" AS "propertytex1m30", v76."propertytex1m31" AS "propertytex1m31", v76."propertytex1m32" AS "propertytex1m32", v76."propertytex1m33" AS "propertytex1m33", v76."propertytex1m34" AS "propertytex1m34"
 FROM (
@@ -1646,95 +1776,121 @@ FROM (
          )
      ) v76
 
-19:42:20.669 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - null
+17:39:56.441 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - null
 null
-19:42:20.671 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 00.sql
-19:42:20.674 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:42:20.675 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 32
+17:39:56.443 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 00.sql
+17:39:56.446 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+17:39:56.446 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 2000
 
 SELECT v12."nr2m23" AS "nr2m23", COUNT(*) AS "v1"
 FROM (
+	  SELECT DISTINCT v1."nr" AS "nr2m23", v6."productfeature" AS "productfeature2m2"
+	  FROM "ss1"."product1" v1, "ss1"."productfeatureproduct1" v6
+	  WHERE v1."nr" <= 2000 AND v1."nr"=v6."product"
+	  UNION ALL
 	  SELECT DISTINCT v3."nr" AS "nr2m23", v8."productfeature" AS "productfeature2m2"
 	  FROM "ss5"."product2" v3, "ss5"."productfeatureproduct2" v8
-	  WHERE v3."nr"=v8."product"
+	  WHERE v3."nr" <= 2000 AND v3."nr"=v8."product"
     ) v12
 GROUP BY v12."nr2m23"
 
--- 32
+-- 2000
 
 SELECT v12."nr2m23" AS "nr2m23", COUNT(*) AS "v1"
 FROM (
+	  SELECT DISTINCT v1."nr" AS "nr2m23", v6."productfeature" AS "productfeature2m2"
+	  FROM "ss1"."product1" v1, "ss1"."productfeatureproduct1" v6
+	  WHERE v1."nr" <= 2000 AND v1."nr"=v6."product"
+	  UNION ALL
 	  SELECT DISTINCT v3."nr" AS "nr2m23", v8."productfeature" AS "productfeature2m2"
 	  FROM "ss5"."product2" v3, "ss5"."productfeatureproduct2" v8
-	  WHERE v3."nr"=v8."product"
+	  WHERE v3."nr" <= 2000 AND v3."nr"=v8."product"
     ) v12
 GROUP BY v12."nr2m23"
 
-19:42:20.712 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 01.sql
-19:42:20.715 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:42:20.716 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 33
+17:39:56.497 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 01.sql
+17:39:56.500 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+17:39:56.501 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 5000
+-- 5000
+-- 1007
+(
+SELECT DISTINCT v5."label10m46" AS "label10m46", v5."nr0m55" AS "nr0m55"
+FROM (
+	  SELECT v1."label" AS "label10m46", v1."nr" AS "nr0m55"
+      FROM "ss1"."product1" v1
+      WHERE (v1."nr" IS NOT NULL AND v1."label" IS NOT NULL AND v1."propertynum1" IS NOT NULL) AND (v1."propertynum1" <= 1007)
+     ) v5, (
+			SELECT v11."product" AS "nr0m1"
+            FROM "ss1"."productfeatureproduct1" v11
+            WHERE 5000 = v11."productfeature"
+           ) v15, (
+				   SELECT v16."product" AS "nr0m2"
+                   FROM "ss1"."productfeatureproduct1" v16
+                   WHERE 5000 = v16."productfeature"
+                  ) v20
+WHERE (v5."nr0m55" = v15."nr0m1" AND v5."nr0m55" = v20."nr0m2")
+)
+UNION ALL
+(
+SELECT DISTINCT v5."label10m46" AS "label10m46", v5."nr0m55" AS "nr0m55"
+FROM (
+      SELECT v3."label" AS "label10m46", v3."nr" AS "nr0m55"
+      FROM "ss5"."product2" v3
+      WHERE (v3."nr" IS NOT NULL AND v3."label" IS NOT NULL AND v3."propertynum1" IS NOT NULL) AND (v3."propertynum1" <= 1007)
+     ) v5, (
+            SELECT v13."product" AS "nr0m1"
+            FROM "ss5"."productfeatureproduct2" v13
+            WHERE 5000 = v13."productfeature"
+           ) v15, (
+                   SELECT v18."product" AS "nr0m2"
+                   FROM "ss5"."productfeatureproduct2" v18
+                   WHERE 5000 = v18."productfeature"
+                  ) v20
+WHERE (v5."nr0m55" = v15."nr0m1" AND v5."nr0m55" = v20."nr0m2")
+)
 
-SELECT v12."productfeature" AS "Feature", AVG(v12."propertynum1") AS "mean"
-FROM(
-        SELECT v1."propertynum1", v2."productfeature"
-        FROM "ss1"."product1" v1, "ss1"."productfeatureproduct1" v2, "ss3"."productfeature" v3
-        WHERE (
-            (v3."nr" >= 5000) AND
-            (v2."product" <= 15000) AND
-            v1."label" IS NOT NULL AND
-            v1."propertynum1" IS NOT NULL AND
-            v1."nr" = v2."product" AND
-            v2."productfeature" = v3."nr"
-            )
+-- 5000
+-- 5000
+-- 1007
+(
+SELECT DISTINCT v5."label10m46" AS "label10m46", v5."nr0m55" AS "nr0m55"
+FROM (
+	  SELECT v1."label" AS "label10m46", v1."nr" AS "nr0m55"
+      FROM "ss1"."product1" v1
+      WHERE (v1."nr" IS NOT NULL AND v1."label" IS NOT NULL AND v1."propertynum1" IS NOT NULL) AND (v1."propertynum1" <= 1007)
+     ) v5, (
+			SELECT v11."product" AS "nr0m1"
+            FROM "ss1"."productfeatureproduct1" v11
+            WHERE 5000 = v11."productfeature"
+           ) v15, (
+				   SELECT v16."product" AS "nr0m2"
+                   FROM "ss1"."productfeatureproduct1" v16
+                   WHERE 5000 = v16."productfeature"
+                  ) v20
+WHERE (v5."nr0m55" = v15."nr0m1" AND v5."nr0m55" = v20."nr0m2")
+)
+UNION ALL
+(
+SELECT DISTINCT v5."label10m46" AS "label10m46", v5."nr0m55" AS "nr0m55"
+FROM (
+      SELECT v3."label" AS "label10m46", v3."nr" AS "nr0m55"
+      FROM "ss5"."product2" v3
+      WHERE (v3."nr" IS NOT NULL AND v3."label" IS NOT NULL AND v3."propertynum1" IS NOT NULL) AND (v3."propertynum1" <= 1007)
+     ) v5, (
+            SELECT v13."product" AS "nr0m1"
+            FROM "ss5"."productfeatureproduct2" v13
+            WHERE 5000 = v13."productfeature"
+           ) v15, (
+                   SELECT v18."product" AS "nr0m2"
+                   FROM "ss5"."productfeatureproduct2" v18
+                   WHERE 5000 = v18."productfeature"
+                  ) v20
+WHERE (v5."nr0m55" = v15."nr0m1" AND v5."nr0m55" = v20."nr0m2")
+)
 
-    UNION ALL
-
-        SELECT v4."propertynum1", v5."productfeature"
-        FROM "ss5"."product2" v4, "ss5"."productfeatureproduct2" v5, "ss3"."productfeature" v6
-        WHERE (
-            (v6."nr" >= 5000) AND
-            (v5."product" <= 15000) AND
-            v4."label" IS NOT NULL AND
-            v4."propertynum1" IS NOT NULL AND
-            v4."nr" = v5."product" AND
-            v5."productfeature" = v6."nr"
-            )
-        ) as v12
-GROUP BY v12."productfeature"
-
--- 33
-
-SELECT v12."productfeature" AS "Feature", AVG(v12."propertynum1") AS "mean"
-FROM(
-        SELECT v1."propertynum1", v2."productfeature"
-        FROM "ss1"."product1" v1, "ss1"."productfeatureproduct1" v2, "ss3"."productfeature" v3
-        WHERE (
-            (v3."nr" >= 5000) AND
-            (v2."product" <= 15000) AND
-            v1."label" IS NOT NULL AND
-            v1."propertynum1" IS NOT NULL AND
-            v1."nr" = v2."product" AND
-            v2."productfeature" = v3."nr"
-            )
-
-    UNION ALL
-
-        SELECT v4."propertynum1", v5."productfeature"
-        FROM "ss5"."product2" v4, "ss5"."productfeatureproduct2" v5, "ss3"."productfeature" v6
-        WHERE (
-            (v6."nr" >= 5000) AND
-            (v5."product" <= 15000) AND
-            v4."label" IS NOT NULL AND
-            v4."propertynum1" IS NOT NULL AND
-            v4."nr" = v5."product" AND
-            v5."productfeature" = v6."nr"
-            )
-        ) as v12
-GROUP BY v12."productfeature"
-
-19:42:20.975 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 02.sql
-19:42:20.978 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:42:20.980 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 34
+17:39:56.523 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 02.sql
+17:39:56.525 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+17:39:56.527 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 34
 
 SELECT v25."v26" AS "v26", v25."v6" AS "v6", v25."v9" AS "v9"
 FROM (SELECT 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Offer' AS "v26", 0 AS "v6", 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type' AS "v9"
@@ -1838,9 +1994,9 @@ FROM "ss4"."offer" v23
 WHERE (v23."validto" IS NOT NULL AND MOD(v23."deliverydays",3) = 0 AND v23."nr" <= 200000)
 ) v25
 
-19:42:20.999 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 03.sql
-19:42:21.002 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:42:21.002 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 125
+17:39:56.538 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 03.sql
+17:39:56.541 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+17:39:56.541 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 125
 -- CN
 
 SELECT DISTINCT v9."nr1m5" AS "nr1m5", v9."product1m5" AS "product1m5"
@@ -1866,9 +2022,9 @@ FROM "ss5"."product2" v5, "ss4"."offer" v6, "ss4"."vendor" v7
 WHERE ((v6."deliverydays" <= 3) AND (v5."nr" <= 125) AND v6."deliverydays" IS NOT NULL AND v6."price" IS NOT NULL AND v6."validto" IS NOT NULL AND v5."nr" = v6."product" AND v6."vendor" = v7."nr" AND 'CN' = v7."country")
 ) v9
 
-19:42:21.009 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 04.sql
-19:42:21.012 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:42:21.012 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 15000
+17:39:56.548 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 04.sql
+17:39:56.551 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+17:39:56.552 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 15000
 
 SELECT v76."comment10m20" AS "comment10m20", v76."label10m18" AS "label10m18", v76."label10m46" AS "label10m46", v76."label10m6" AS "label10m6", v76."propertynum1m25" AS "propertynum1m25", v76."propertynum1m40" AS "propertynum1m40", v76."propertynum1m41" AS "propertynum1m41", v76."propertytex1m30" AS "propertytex1m30", v76."propertytex1m31" AS "propertytex1m31", v76."propertytex1m32" AS "propertytex1m32", v76."propertytex1m33" AS "propertytex1m33", v76."propertytex1m34" AS "propertytex1m34"
 FROM (
@@ -1974,95 +2130,121 @@ FROM (
          )
      ) v76
 
-19:42:26.016 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - null
+17:40:01.531 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - null
 null
-19:42:26.018 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 00.sql
-19:42:26.020 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:42:26.022 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 37
+17:40:01.533 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 00.sql
+17:40:01.535 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+17:40:01.536 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 2000
 
 SELECT v12."nr2m23" AS "nr2m23", COUNT(*) AS "v1"
 FROM (
+	  SELECT DISTINCT v1."nr" AS "nr2m23", v6."productfeature" AS "productfeature2m2"
+	  FROM "ss1"."product1" v1, "ss1"."productfeatureproduct1" v6
+	  WHERE v1."nr" <= 2000 AND v1."nr"=v6."product"
+	  UNION ALL
 	  SELECT DISTINCT v3."nr" AS "nr2m23", v8."productfeature" AS "productfeature2m2"
 	  FROM "ss5"."product2" v3, "ss5"."productfeatureproduct2" v8
-	  WHERE v3."nr"=v8."product"
+	  WHERE v3."nr" <= 2000 AND v3."nr"=v8."product"
     ) v12
 GROUP BY v12."nr2m23"
 
--- 37
+-- 2000
 
 SELECT v12."nr2m23" AS "nr2m23", COUNT(*) AS "v1"
 FROM (
+	  SELECT DISTINCT v1."nr" AS "nr2m23", v6."productfeature" AS "productfeature2m2"
+	  FROM "ss1"."product1" v1, "ss1"."productfeatureproduct1" v6
+	  WHERE v1."nr" <= 2000 AND v1."nr"=v6."product"
+	  UNION ALL
 	  SELECT DISTINCT v3."nr" AS "nr2m23", v8."productfeature" AS "productfeature2m2"
 	  FROM "ss5"."product2" v3, "ss5"."productfeatureproduct2" v8
-	  WHERE v3."nr"=v8."product"
+	  WHERE v3."nr" <= 2000 AND v3."nr"=v8."product"
     ) v12
 GROUP BY v12."nr2m23"
 
-19:42:26.056 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 01.sql
-19:42:26.059 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:42:26.060 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 38
+17:40:01.602 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 01.sql
+17:40:01.604 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+17:40:01.606 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 5000
+-- 5000
+-- 915
+(
+SELECT DISTINCT v5."label10m46" AS "label10m46", v5."nr0m55" AS "nr0m55"
+FROM (
+	  SELECT v1."label" AS "label10m46", v1."nr" AS "nr0m55"
+      FROM "ss1"."product1" v1
+      WHERE (v1."nr" IS NOT NULL AND v1."label" IS NOT NULL AND v1."propertynum1" IS NOT NULL) AND (v1."propertynum1" <= 915)
+     ) v5, (
+			SELECT v11."product" AS "nr0m1"
+            FROM "ss1"."productfeatureproduct1" v11
+            WHERE 5000 = v11."productfeature"
+           ) v15, (
+				   SELECT v16."product" AS "nr0m2"
+                   FROM "ss1"."productfeatureproduct1" v16
+                   WHERE 5000 = v16."productfeature"
+                  ) v20
+WHERE (v5."nr0m55" = v15."nr0m1" AND v5."nr0m55" = v20."nr0m2")
+)
+UNION ALL
+(
+SELECT DISTINCT v5."label10m46" AS "label10m46", v5."nr0m55" AS "nr0m55"
+FROM (
+      SELECT v3."label" AS "label10m46", v3."nr" AS "nr0m55"
+      FROM "ss5"."product2" v3
+      WHERE (v3."nr" IS NOT NULL AND v3."label" IS NOT NULL AND v3."propertynum1" IS NOT NULL) AND (v3."propertynum1" <= 915)
+     ) v5, (
+            SELECT v13."product" AS "nr0m1"
+            FROM "ss5"."productfeatureproduct2" v13
+            WHERE 5000 = v13."productfeature"
+           ) v15, (
+                   SELECT v18."product" AS "nr0m2"
+                   FROM "ss5"."productfeatureproduct2" v18
+                   WHERE 5000 = v18."productfeature"
+                  ) v20
+WHERE (v5."nr0m55" = v15."nr0m1" AND v5."nr0m55" = v20."nr0m2")
+)
 
-SELECT v12."productfeature" AS "Feature", AVG(v12."propertynum1") AS "mean"
-FROM(
-        SELECT v1."propertynum1", v2."productfeature"
-        FROM "ss1"."product1" v1, "ss1"."productfeatureproduct1" v2, "ss3"."productfeature" v3
-        WHERE (
-            (v3."nr" >= 5000) AND
-            (v2."product" <= 15000) AND
-            v1."label" IS NOT NULL AND
-            v1."propertynum1" IS NOT NULL AND
-            v1."nr" = v2."product" AND
-            v2."productfeature" = v3."nr"
-            )
+-- 5000
+-- 5000
+-- 915
+(
+SELECT DISTINCT v5."label10m46" AS "label10m46", v5."nr0m55" AS "nr0m55"
+FROM (
+	  SELECT v1."label" AS "label10m46", v1."nr" AS "nr0m55"
+      FROM "ss1"."product1" v1
+      WHERE (v1."nr" IS NOT NULL AND v1."label" IS NOT NULL AND v1."propertynum1" IS NOT NULL) AND (v1."propertynum1" <= 915)
+     ) v5, (
+			SELECT v11."product" AS "nr0m1"
+            FROM "ss1"."productfeatureproduct1" v11
+            WHERE 5000 = v11."productfeature"
+           ) v15, (
+				   SELECT v16."product" AS "nr0m2"
+                   FROM "ss1"."productfeatureproduct1" v16
+                   WHERE 5000 = v16."productfeature"
+                  ) v20
+WHERE (v5."nr0m55" = v15."nr0m1" AND v5."nr0m55" = v20."nr0m2")
+)
+UNION ALL
+(
+SELECT DISTINCT v5."label10m46" AS "label10m46", v5."nr0m55" AS "nr0m55"
+FROM (
+      SELECT v3."label" AS "label10m46", v3."nr" AS "nr0m55"
+      FROM "ss5"."product2" v3
+      WHERE (v3."nr" IS NOT NULL AND v3."label" IS NOT NULL AND v3."propertynum1" IS NOT NULL) AND (v3."propertynum1" <= 915)
+     ) v5, (
+            SELECT v13."product" AS "nr0m1"
+            FROM "ss5"."productfeatureproduct2" v13
+            WHERE 5000 = v13."productfeature"
+           ) v15, (
+                   SELECT v18."product" AS "nr0m2"
+                   FROM "ss5"."productfeatureproduct2" v18
+                   WHERE 5000 = v18."productfeature"
+                  ) v20
+WHERE (v5."nr0m55" = v15."nr0m1" AND v5."nr0m55" = v20."nr0m2")
+)
 
-    UNION ALL
-
-        SELECT v4."propertynum1", v5."productfeature"
-        FROM "ss5"."product2" v4, "ss5"."productfeatureproduct2" v5, "ss3"."productfeature" v6
-        WHERE (
-            (v6."nr" >= 5000) AND
-            (v5."product" <= 15000) AND
-            v4."label" IS NOT NULL AND
-            v4."propertynum1" IS NOT NULL AND
-            v4."nr" = v5."product" AND
-            v5."productfeature" = v6."nr"
-            )
-        ) as v12
-GROUP BY v12."productfeature"
-
--- 38
-
-SELECT v12."productfeature" AS "Feature", AVG(v12."propertynum1") AS "mean"
-FROM(
-        SELECT v1."propertynum1", v2."productfeature"
-        FROM "ss1"."product1" v1, "ss1"."productfeatureproduct1" v2, "ss3"."productfeature" v3
-        WHERE (
-            (v3."nr" >= 5000) AND
-            (v2."product" <= 15000) AND
-            v1."label" IS NOT NULL AND
-            v1."propertynum1" IS NOT NULL AND
-            v1."nr" = v2."product" AND
-            v2."productfeature" = v3."nr"
-            )
-
-    UNION ALL
-
-        SELECT v4."propertynum1", v5."productfeature"
-        FROM "ss5"."product2" v4, "ss5"."productfeatureproduct2" v5, "ss3"."productfeature" v6
-        WHERE (
-            (v6."nr" >= 5000) AND
-            (v5."product" <= 15000) AND
-            v4."label" IS NOT NULL AND
-            v4."propertynum1" IS NOT NULL AND
-            v4."nr" = v5."product" AND
-            v5."productfeature" = v6."nr"
-            )
-        ) as v12
-GROUP BY v12."productfeature"
-
-19:42:26.248 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 02.sql
-19:42:26.251 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:42:26.253 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 39
+17:40:01.635 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 02.sql
+17:40:01.638 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+17:40:01.640 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 39
 
 SELECT v25."v26" AS "v26", v25."v6" AS "v6", v25."v9" AS "v9"
 FROM (SELECT 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Offer' AS "v26", 0 AS "v6", 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type' AS "v9"
@@ -2166,9 +2348,9 @@ FROM "ss4"."offer" v23
 WHERE (v23."validto" IS NOT NULL AND MOD(v23."deliverydays",3) = 0 AND v23."nr" <= 200000)
 ) v25
 
-19:42:26.270 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 03.sql
-19:42:26.273 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:42:26.273 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 125
+17:40:01.653 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 03.sql
+17:40:01.656 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+17:40:01.656 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 125
 -- CN
 
 SELECT DISTINCT v9."nr1m5" AS "nr1m5", v9."product1m5" AS "product1m5"
@@ -2194,9 +2376,9 @@ FROM "ss5"."product2" v5, "ss4"."offer" v6, "ss4"."vendor" v7
 WHERE ((v6."deliverydays" <= 3) AND (v5."nr" <= 125) AND v6."deliverydays" IS NOT NULL AND v6."price" IS NOT NULL AND v6."validto" IS NOT NULL AND v5."nr" = v6."product" AND v6."vendor" = v7."nr" AND 'CN' = v7."country")
 ) v9
 
-19:42:26.283 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 04.sql
-19:42:26.286 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:42:26.287 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 15000
+17:40:01.667 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 04.sql
+17:40:01.669 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+17:40:01.670 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 15000
 
 SELECT v76."comment10m20" AS "comment10m20", v76."label10m18" AS "label10m18", v76."label10m46" AS "label10m46", v76."label10m6" AS "label10m6", v76."propertynum1m25" AS "propertynum1m25", v76."propertynum1m40" AS "propertynum1m40", v76."propertynum1m41" AS "propertynum1m41", v76."propertytex1m30" AS "propertytex1m30", v76."propertytex1m31" AS "propertytex1m31", v76."propertytex1m32" AS "propertytex1m32", v76."propertytex1m33" AS "propertytex1m33", v76."propertytex1m34" AS "propertytex1m34"
 FROM (
@@ -2302,95 +2484,121 @@ FROM (
          )
      ) v76
 
-19:42:31.299 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - null
+17:40:06.977 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - null
 null
-19:42:31.301 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 00.sql
-19:42:31.303 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:42:31.305 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 42
+17:40:06.979 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 00.sql
+17:40:06.982 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+17:40:06.982 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 2000
 
 SELECT v12."nr2m23" AS "nr2m23", COUNT(*) AS "v1"
 FROM (
+	  SELECT DISTINCT v1."nr" AS "nr2m23", v6."productfeature" AS "productfeature2m2"
+	  FROM "ss1"."product1" v1, "ss1"."productfeatureproduct1" v6
+	  WHERE v1."nr" <= 2000 AND v1."nr"=v6."product"
+	  UNION ALL
 	  SELECT DISTINCT v3."nr" AS "nr2m23", v8."productfeature" AS "productfeature2m2"
 	  FROM "ss5"."product2" v3, "ss5"."productfeatureproduct2" v8
-	  WHERE v3."nr"=v8."product"
+	  WHERE v3."nr" <= 2000 AND v3."nr"=v8."product"
     ) v12
 GROUP BY v12."nr2m23"
 
--- 42
+-- 2000
 
 SELECT v12."nr2m23" AS "nr2m23", COUNT(*) AS "v1"
 FROM (
+	  SELECT DISTINCT v1."nr" AS "nr2m23", v6."productfeature" AS "productfeature2m2"
+	  FROM "ss1"."product1" v1, "ss1"."productfeatureproduct1" v6
+	  WHERE v1."nr" <= 2000 AND v1."nr"=v6."product"
+	  UNION ALL
 	  SELECT DISTINCT v3."nr" AS "nr2m23", v8."productfeature" AS "productfeature2m2"
 	  FROM "ss5"."product2" v3, "ss5"."productfeatureproduct2" v8
-	  WHERE v3."nr"=v8."product"
+	  WHERE v3."nr" <= 2000 AND v3."nr"=v8."product"
     ) v12
 GROUP BY v12."nr2m23"
 
-19:42:31.339 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 01.sql
-19:42:31.341 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:42:31.343 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 43
+17:40:07.033 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 01.sql
+17:40:07.035 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+17:40:07.037 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 5000
+-- 5000
+-- 802
+(
+SELECT DISTINCT v5."label10m46" AS "label10m46", v5."nr0m55" AS "nr0m55"
+FROM (
+	  SELECT v1."label" AS "label10m46", v1."nr" AS "nr0m55"
+      FROM "ss1"."product1" v1
+      WHERE (v1."nr" IS NOT NULL AND v1."label" IS NOT NULL AND v1."propertynum1" IS NOT NULL) AND (v1."propertynum1" <= 802)
+     ) v5, (
+			SELECT v11."product" AS "nr0m1"
+            FROM "ss1"."productfeatureproduct1" v11
+            WHERE 5000 = v11."productfeature"
+           ) v15, (
+				   SELECT v16."product" AS "nr0m2"
+                   FROM "ss1"."productfeatureproduct1" v16
+                   WHERE 5000 = v16."productfeature"
+                  ) v20
+WHERE (v5."nr0m55" = v15."nr0m1" AND v5."nr0m55" = v20."nr0m2")
+)
+UNION ALL
+(
+SELECT DISTINCT v5."label10m46" AS "label10m46", v5."nr0m55" AS "nr0m55"
+FROM (
+      SELECT v3."label" AS "label10m46", v3."nr" AS "nr0m55"
+      FROM "ss5"."product2" v3
+      WHERE (v3."nr" IS NOT NULL AND v3."label" IS NOT NULL AND v3."propertynum1" IS NOT NULL) AND (v3."propertynum1" <= 802)
+     ) v5, (
+            SELECT v13."product" AS "nr0m1"
+            FROM "ss5"."productfeatureproduct2" v13
+            WHERE 5000 = v13."productfeature"
+           ) v15, (
+                   SELECT v18."product" AS "nr0m2"
+                   FROM "ss5"."productfeatureproduct2" v18
+                   WHERE 5000 = v18."productfeature"
+                  ) v20
+WHERE (v5."nr0m55" = v15."nr0m1" AND v5."nr0m55" = v20."nr0m2")
+)
 
-SELECT v12."productfeature" AS "Feature", AVG(v12."propertynum1") AS "mean"
-FROM(
-        SELECT v1."propertynum1", v2."productfeature"
-        FROM "ss1"."product1" v1, "ss1"."productfeatureproduct1" v2, "ss3"."productfeature" v3
-        WHERE (
-            (v3."nr" >= 5000) AND
-            (v2."product" <= 15000) AND
-            v1."label" IS NOT NULL AND
-            v1."propertynum1" IS NOT NULL AND
-            v1."nr" = v2."product" AND
-            v2."productfeature" = v3."nr"
-            )
+-- 5000
+-- 5000
+-- 802
+(
+SELECT DISTINCT v5."label10m46" AS "label10m46", v5."nr0m55" AS "nr0m55"
+FROM (
+	  SELECT v1."label" AS "label10m46", v1."nr" AS "nr0m55"
+      FROM "ss1"."product1" v1
+      WHERE (v1."nr" IS NOT NULL AND v1."label" IS NOT NULL AND v1."propertynum1" IS NOT NULL) AND (v1."propertynum1" <= 802)
+     ) v5, (
+			SELECT v11."product" AS "nr0m1"
+            FROM "ss1"."productfeatureproduct1" v11
+            WHERE 5000 = v11."productfeature"
+           ) v15, (
+				   SELECT v16."product" AS "nr0m2"
+                   FROM "ss1"."productfeatureproduct1" v16
+                   WHERE 5000 = v16."productfeature"
+                  ) v20
+WHERE (v5."nr0m55" = v15."nr0m1" AND v5."nr0m55" = v20."nr0m2")
+)
+UNION ALL
+(
+SELECT DISTINCT v5."label10m46" AS "label10m46", v5."nr0m55" AS "nr0m55"
+FROM (
+      SELECT v3."label" AS "label10m46", v3."nr" AS "nr0m55"
+      FROM "ss5"."product2" v3
+      WHERE (v3."nr" IS NOT NULL AND v3."label" IS NOT NULL AND v3."propertynum1" IS NOT NULL) AND (v3."propertynum1" <= 802)
+     ) v5, (
+            SELECT v13."product" AS "nr0m1"
+            FROM "ss5"."productfeatureproduct2" v13
+            WHERE 5000 = v13."productfeature"
+           ) v15, (
+                   SELECT v18."product" AS "nr0m2"
+                   FROM "ss5"."productfeatureproduct2" v18
+                   WHERE 5000 = v18."productfeature"
+                  ) v20
+WHERE (v5."nr0m55" = v15."nr0m1" AND v5."nr0m55" = v20."nr0m2")
+)
 
-    UNION ALL
-
-        SELECT v4."propertynum1", v5."productfeature"
-        FROM "ss5"."product2" v4, "ss5"."productfeatureproduct2" v5, "ss3"."productfeature" v6
-        WHERE (
-            (v6."nr" >= 5000) AND
-            (v5."product" <= 15000) AND
-            v4."label" IS NOT NULL AND
-            v4."propertynum1" IS NOT NULL AND
-            v4."nr" = v5."product" AND
-            v5."productfeature" = v6."nr"
-            )
-        ) as v12
-GROUP BY v12."productfeature"
-
--- 43
-
-SELECT v12."productfeature" AS "Feature", AVG(v12."propertynum1") AS "mean"
-FROM(
-        SELECT v1."propertynum1", v2."productfeature"
-        FROM "ss1"."product1" v1, "ss1"."productfeatureproduct1" v2, "ss3"."productfeature" v3
-        WHERE (
-            (v3."nr" >= 5000) AND
-            (v2."product" <= 15000) AND
-            v1."label" IS NOT NULL AND
-            v1."propertynum1" IS NOT NULL AND
-            v1."nr" = v2."product" AND
-            v2."productfeature" = v3."nr"
-            )
-
-    UNION ALL
-
-        SELECT v4."propertynum1", v5."productfeature"
-        FROM "ss5"."product2" v4, "ss5"."productfeatureproduct2" v5, "ss3"."productfeature" v6
-        WHERE (
-            (v6."nr" >= 5000) AND
-            (v5."product" <= 15000) AND
-            v4."label" IS NOT NULL AND
-            v4."propertynum1" IS NOT NULL AND
-            v4."nr" = v5."product" AND
-            v5."productfeature" = v6."nr"
-            )
-        ) as v12
-GROUP BY v12."productfeature"
-
-19:42:31.663 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 02.sql
-19:42:31.666 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:42:31.668 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 44
+17:40:07.059 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 02.sql
+17:40:07.062 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+17:40:07.064 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 44
 
 SELECT v25."v26" AS "v26", v25."v6" AS "v6", v25."v9" AS "v9"
 FROM (SELECT 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Offer' AS "v26", 0 AS "v6", 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type' AS "v9"
@@ -2494,9 +2702,9 @@ FROM "ss4"."offer" v23
 WHERE (v23."validto" IS NOT NULL AND MOD(v23."deliverydays",3) = 0 AND v23."nr" <= 200000)
 ) v25
 
-19:42:31.683 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 03.sql
-19:42:31.686 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:42:31.686 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 125
+17:40:07.075 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 03.sql
+17:40:07.078 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+17:40:07.078 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 125
 -- CN
 
 SELECT DISTINCT v9."nr1m5" AS "nr1m5", v9."product1m5" AS "product1m5"
@@ -2522,9 +2730,9 @@ FROM "ss5"."product2" v5, "ss4"."offer" v6, "ss4"."vendor" v7
 WHERE ((v6."deliverydays" <= 3) AND (v5."nr" <= 125) AND v6."deliverydays" IS NOT NULL AND v6."price" IS NOT NULL AND v6."validto" IS NOT NULL AND v5."nr" = v6."product" AND v6."vendor" = v7."nr" AND 'CN' = v7."country")
 ) v9
 
-19:42:31.692 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 04.sql
-19:42:31.694 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:42:31.694 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 15000
+17:40:07.085 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 04.sql
+17:40:07.088 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+17:40:07.088 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 15000
 
 SELECT v76."comment10m20" AS "comment10m20", v76."label10m18" AS "label10m18", v76."label10m46" AS "label10m46", v76."label10m6" AS "label10m6", v76."propertynum1m25" AS "propertynum1m25", v76."propertynum1m40" AS "propertynum1m40", v76."propertynum1m41" AS "propertynum1m41", v76."propertytex1m30" AS "propertytex1m30", v76."propertytex1m31" AS "propertytex1m31", v76."propertytex1m32" AS "propertytex1m32", v76."propertytex1m33" AS "propertytex1m33", v76."propertytex1m34" AS "propertytex1m34"
 FROM (
@@ -2630,95 +2838,121 @@ FROM (
          )
      ) v76
 
-19:42:36.574 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - null
+17:40:12.257 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - null
 null
-19:42:36.576 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 00.sql
-19:42:36.579 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:42:36.581 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 47
+17:40:12.259 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 00.sql
+17:40:12.262 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+17:40:12.262 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 2000
 
 SELECT v12."nr2m23" AS "nr2m23", COUNT(*) AS "v1"
 FROM (
+	  SELECT DISTINCT v1."nr" AS "nr2m23", v6."productfeature" AS "productfeature2m2"
+	  FROM "ss1"."product1" v1, "ss1"."productfeatureproduct1" v6
+	  WHERE v1."nr" <= 2000 AND v1."nr"=v6."product"
+	  UNION ALL
 	  SELECT DISTINCT v3."nr" AS "nr2m23", v8."productfeature" AS "productfeature2m2"
 	  FROM "ss5"."product2" v3, "ss5"."productfeatureproduct2" v8
-	  WHERE v3."nr"=v8."product"
+	  WHERE v3."nr" <= 2000 AND v3."nr"=v8."product"
     ) v12
 GROUP BY v12."nr2m23"
 
--- 47
+-- 2000
 
 SELECT v12."nr2m23" AS "nr2m23", COUNT(*) AS "v1"
 FROM (
+	  SELECT DISTINCT v1."nr" AS "nr2m23", v6."productfeature" AS "productfeature2m2"
+	  FROM "ss1"."product1" v1, "ss1"."productfeatureproduct1" v6
+	  WHERE v1."nr" <= 2000 AND v1."nr"=v6."product"
+	  UNION ALL
 	  SELECT DISTINCT v3."nr" AS "nr2m23", v8."productfeature" AS "productfeature2m2"
 	  FROM "ss5"."product2" v3, "ss5"."productfeatureproduct2" v8
-	  WHERE v3."nr"=v8."product"
+	  WHERE v3."nr" <= 2000 AND v3."nr"=v8."product"
     ) v12
 GROUP BY v12."nr2m23"
 
-19:42:36.614 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 01.sql
-19:42:36.617 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:42:36.618 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 48
+17:40:12.314 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 01.sql
+17:40:12.316 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+17:40:12.318 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 5000
+-- 5000
+-- 700
+(
+SELECT DISTINCT v5."label10m46" AS "label10m46", v5."nr0m55" AS "nr0m55"
+FROM (
+	  SELECT v1."label" AS "label10m46", v1."nr" AS "nr0m55"
+      FROM "ss1"."product1" v1
+      WHERE (v1."nr" IS NOT NULL AND v1."label" IS NOT NULL AND v1."propertynum1" IS NOT NULL) AND (v1."propertynum1" <= 700)
+     ) v5, (
+			SELECT v11."product" AS "nr0m1"
+            FROM "ss1"."productfeatureproduct1" v11
+            WHERE 5000 = v11."productfeature"
+           ) v15, (
+				   SELECT v16."product" AS "nr0m2"
+                   FROM "ss1"."productfeatureproduct1" v16
+                   WHERE 5000 = v16."productfeature"
+                  ) v20
+WHERE (v5."nr0m55" = v15."nr0m1" AND v5."nr0m55" = v20."nr0m2")
+)
+UNION ALL
+(
+SELECT DISTINCT v5."label10m46" AS "label10m46", v5."nr0m55" AS "nr0m55"
+FROM (
+      SELECT v3."label" AS "label10m46", v3."nr" AS "nr0m55"
+      FROM "ss5"."product2" v3
+      WHERE (v3."nr" IS NOT NULL AND v3."label" IS NOT NULL AND v3."propertynum1" IS NOT NULL) AND (v3."propertynum1" <= 700)
+     ) v5, (
+            SELECT v13."product" AS "nr0m1"
+            FROM "ss5"."productfeatureproduct2" v13
+            WHERE 5000 = v13."productfeature"
+           ) v15, (
+                   SELECT v18."product" AS "nr0m2"
+                   FROM "ss5"."productfeatureproduct2" v18
+                   WHERE 5000 = v18."productfeature"
+                  ) v20
+WHERE (v5."nr0m55" = v15."nr0m1" AND v5."nr0m55" = v20."nr0m2")
+)
 
-SELECT v12."productfeature" AS "Feature", AVG(v12."propertynum1") AS "mean"
-FROM(
-        SELECT v1."propertynum1", v2."productfeature"
-        FROM "ss1"."product1" v1, "ss1"."productfeatureproduct1" v2, "ss3"."productfeature" v3
-        WHERE (
-            (v3."nr" >= 5000) AND
-            (v2."product" <= 15000) AND
-            v1."label" IS NOT NULL AND
-            v1."propertynum1" IS NOT NULL AND
-            v1."nr" = v2."product" AND
-            v2."productfeature" = v3."nr"
-            )
+-- 5000
+-- 5000
+-- 700
+(
+SELECT DISTINCT v5."label10m46" AS "label10m46", v5."nr0m55" AS "nr0m55"
+FROM (
+	  SELECT v1."label" AS "label10m46", v1."nr" AS "nr0m55"
+      FROM "ss1"."product1" v1
+      WHERE (v1."nr" IS NOT NULL AND v1."label" IS NOT NULL AND v1."propertynum1" IS NOT NULL) AND (v1."propertynum1" <= 700)
+     ) v5, (
+			SELECT v11."product" AS "nr0m1"
+            FROM "ss1"."productfeatureproduct1" v11
+            WHERE 5000 = v11."productfeature"
+           ) v15, (
+				   SELECT v16."product" AS "nr0m2"
+                   FROM "ss1"."productfeatureproduct1" v16
+                   WHERE 5000 = v16."productfeature"
+                  ) v20
+WHERE (v5."nr0m55" = v15."nr0m1" AND v5."nr0m55" = v20."nr0m2")
+)
+UNION ALL
+(
+SELECT DISTINCT v5."label10m46" AS "label10m46", v5."nr0m55" AS "nr0m55"
+FROM (
+      SELECT v3."label" AS "label10m46", v3."nr" AS "nr0m55"
+      FROM "ss5"."product2" v3
+      WHERE (v3."nr" IS NOT NULL AND v3."label" IS NOT NULL AND v3."propertynum1" IS NOT NULL) AND (v3."propertynum1" <= 700)
+     ) v5, (
+            SELECT v13."product" AS "nr0m1"
+            FROM "ss5"."productfeatureproduct2" v13
+            WHERE 5000 = v13."productfeature"
+           ) v15, (
+                   SELECT v18."product" AS "nr0m2"
+                   FROM "ss5"."productfeatureproduct2" v18
+                   WHERE 5000 = v18."productfeature"
+                  ) v20
+WHERE (v5."nr0m55" = v15."nr0m1" AND v5."nr0m55" = v20."nr0m2")
+)
 
-    UNION ALL
-
-        SELECT v4."propertynum1", v5."productfeature"
-        FROM "ss5"."product2" v4, "ss5"."productfeatureproduct2" v5, "ss3"."productfeature" v6
-        WHERE (
-            (v6."nr" >= 5000) AND
-            (v5."product" <= 15000) AND
-            v4."label" IS NOT NULL AND
-            v4."propertynum1" IS NOT NULL AND
-            v4."nr" = v5."product" AND
-            v5."productfeature" = v6."nr"
-            )
-        ) as v12
-GROUP BY v12."productfeature"
-
--- 48
-
-SELECT v12."productfeature" AS "Feature", AVG(v12."propertynum1") AS "mean"
-FROM(
-        SELECT v1."propertynum1", v2."productfeature"
-        FROM "ss1"."product1" v1, "ss1"."productfeatureproduct1" v2, "ss3"."productfeature" v3
-        WHERE (
-            (v3."nr" >= 5000) AND
-            (v2."product" <= 15000) AND
-            v1."label" IS NOT NULL AND
-            v1."propertynum1" IS NOT NULL AND
-            v1."nr" = v2."product" AND
-            v2."productfeature" = v3."nr"
-            )
-
-    UNION ALL
-
-        SELECT v4."propertynum1", v5."productfeature"
-        FROM "ss5"."product2" v4, "ss5"."productfeatureproduct2" v5, "ss3"."productfeature" v6
-        WHERE (
-            (v6."nr" >= 5000) AND
-            (v5."product" <= 15000) AND
-            v4."label" IS NOT NULL AND
-            v4."propertynum1" IS NOT NULL AND
-            v4."nr" = v5."product" AND
-            v5."productfeature" = v6."nr"
-            )
-        ) as v12
-GROUP BY v12."productfeature"
-
-19:42:36.788 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 02.sql
-19:42:36.791 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:42:36.793 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 49
+17:40:12.339 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 02.sql
+17:40:12.342 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+17:40:12.343 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 49
 
 SELECT v25."v26" AS "v26", v25."v6" AS "v6", v25."v9" AS "v9"
 FROM (SELECT 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Offer' AS "v26", 0 AS "v6", 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type' AS "v9"
@@ -2822,9 +3056,9 @@ FROM "ss4"."offer" v23
 WHERE (v23."validto" IS NOT NULL AND MOD(v23."deliverydays",3) = 0 AND v23."nr" <= 200000)
 ) v25
 
-19:42:36.808 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 03.sql
-19:42:36.811 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:42:36.811 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 125
+17:40:12.354 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 03.sql
+17:40:12.357 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+17:40:12.357 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 125
 -- CN
 
 SELECT DISTINCT v9."nr1m5" AS "nr1m5", v9."product1m5" AS "product1m5"
@@ -2850,9 +3084,9 @@ FROM "ss5"."product2" v5, "ss4"."offer" v6, "ss4"."vendor" v7
 WHERE ((v6."deliverydays" <= 3) AND (v5."nr" <= 125) AND v6."deliverydays" IS NOT NULL AND v6."price" IS NOT NULL AND v6."validto" IS NOT NULL AND v5."nr" = v6."product" AND v6."vendor" = v7."nr" AND 'CN' = v7."country")
 ) v9
 
-19:42:36.816 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 04.sql
-19:42:36.819 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:42:36.820 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 15000
+17:40:12.364 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 04.sql
+17:40:12.366 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+17:40:12.367 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 15000
 
 SELECT v76."comment10m20" AS "comment10m20", v76."label10m18" AS "label10m18", v76."label10m46" AS "label10m46", v76."label10m6" AS "label10m6", v76."propertynum1m25" AS "propertynum1m25", v76."propertynum1m40" AS "propertynum1m40", v76."propertynum1m41" AS "propertynum1m41", v76."propertytex1m30" AS "propertytex1m30", v76."propertytex1m31" AS "propertytex1m31", v76."propertytex1m32" AS "propertytex1m32", v76."propertytex1m33" AS "propertytex1m33", v76."propertytex1m34" AS "propertytex1m34"
 FROM (
@@ -2958,95 +3192,121 @@ FROM (
          )
      ) v76
 
-19:42:41.677 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - null
+17:40:17.415 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - null
 null
-19:42:41.678 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 00.sql
-19:42:41.681 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:42:41.682 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 52
+17:40:17.417 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 00.sql
+17:40:17.420 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+17:40:17.420 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 2000
 
 SELECT v12."nr2m23" AS "nr2m23", COUNT(*) AS "v1"
 FROM (
+	  SELECT DISTINCT v1."nr" AS "nr2m23", v6."productfeature" AS "productfeature2m2"
+	  FROM "ss1"."product1" v1, "ss1"."productfeatureproduct1" v6
+	  WHERE v1."nr" <= 2000 AND v1."nr"=v6."product"
+	  UNION ALL
 	  SELECT DISTINCT v3."nr" AS "nr2m23", v8."productfeature" AS "productfeature2m2"
 	  FROM "ss5"."product2" v3, "ss5"."productfeatureproduct2" v8
-	  WHERE v3."nr"=v8."product"
+	  WHERE v3."nr" <= 2000 AND v3."nr"=v8."product"
     ) v12
 GROUP BY v12."nr2m23"
 
--- 52
+-- 2000
 
 SELECT v12."nr2m23" AS "nr2m23", COUNT(*) AS "v1"
 FROM (
+	  SELECT DISTINCT v1."nr" AS "nr2m23", v6."productfeature" AS "productfeature2m2"
+	  FROM "ss1"."product1" v1, "ss1"."productfeatureproduct1" v6
+	  WHERE v1."nr" <= 2000 AND v1."nr"=v6."product"
+	  UNION ALL
 	  SELECT DISTINCT v3."nr" AS "nr2m23", v8."productfeature" AS "productfeature2m2"
 	  FROM "ss5"."product2" v3, "ss5"."productfeatureproduct2" v8
-	  WHERE v3."nr"=v8."product"
+	  WHERE v3."nr" <= 2000 AND v3."nr"=v8."product"
     ) v12
 GROUP BY v12."nr2m23"
 
-19:42:41.715 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 01.sql
-19:42:41.718 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:42:41.720 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 53
+17:40:17.468 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 01.sql
+17:40:17.470 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+17:40:17.472 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 5000
+-- 5000
+-- 375
+(
+SELECT DISTINCT v5."label10m46" AS "label10m46", v5."nr0m55" AS "nr0m55"
+FROM (
+	  SELECT v1."label" AS "label10m46", v1."nr" AS "nr0m55"
+      FROM "ss1"."product1" v1
+      WHERE (v1."nr" IS NOT NULL AND v1."label" IS NOT NULL AND v1."propertynum1" IS NOT NULL) AND (v1."propertynum1" <= 375)
+     ) v5, (
+			SELECT v11."product" AS "nr0m1"
+            FROM "ss1"."productfeatureproduct1" v11
+            WHERE 5000 = v11."productfeature"
+           ) v15, (
+				   SELECT v16."product" AS "nr0m2"
+                   FROM "ss1"."productfeatureproduct1" v16
+                   WHERE 5000 = v16."productfeature"
+                  ) v20
+WHERE (v5."nr0m55" = v15."nr0m1" AND v5."nr0m55" = v20."nr0m2")
+)
+UNION ALL
+(
+SELECT DISTINCT v5."label10m46" AS "label10m46", v5."nr0m55" AS "nr0m55"
+FROM (
+      SELECT v3."label" AS "label10m46", v3."nr" AS "nr0m55"
+      FROM "ss5"."product2" v3
+      WHERE (v3."nr" IS NOT NULL AND v3."label" IS NOT NULL AND v3."propertynum1" IS NOT NULL) AND (v3."propertynum1" <= 375)
+     ) v5, (
+            SELECT v13."product" AS "nr0m1"
+            FROM "ss5"."productfeatureproduct2" v13
+            WHERE 5000 = v13."productfeature"
+           ) v15, (
+                   SELECT v18."product" AS "nr0m2"
+                   FROM "ss5"."productfeatureproduct2" v18
+                   WHERE 5000 = v18."productfeature"
+                  ) v20
+WHERE (v5."nr0m55" = v15."nr0m1" AND v5."nr0m55" = v20."nr0m2")
+)
 
-SELECT v12."productfeature" AS "Feature", AVG(v12."propertynum1") AS "mean"
-FROM(
-        SELECT v1."propertynum1", v2."productfeature"
-        FROM "ss1"."product1" v1, "ss1"."productfeatureproduct1" v2, "ss3"."productfeature" v3
-        WHERE (
-            (v3."nr" >= 5000) AND
-            (v2."product" <= 15000) AND
-            v1."label" IS NOT NULL AND
-            v1."propertynum1" IS NOT NULL AND
-            v1."nr" = v2."product" AND
-            v2."productfeature" = v3."nr"
-            )
+-- 5000
+-- 5000
+-- 375
+(
+SELECT DISTINCT v5."label10m46" AS "label10m46", v5."nr0m55" AS "nr0m55"
+FROM (
+	  SELECT v1."label" AS "label10m46", v1."nr" AS "nr0m55"
+      FROM "ss1"."product1" v1
+      WHERE (v1."nr" IS NOT NULL AND v1."label" IS NOT NULL AND v1."propertynum1" IS NOT NULL) AND (v1."propertynum1" <= 375)
+     ) v5, (
+			SELECT v11."product" AS "nr0m1"
+            FROM "ss1"."productfeatureproduct1" v11
+            WHERE 5000 = v11."productfeature"
+           ) v15, (
+				   SELECT v16."product" AS "nr0m2"
+                   FROM "ss1"."productfeatureproduct1" v16
+                   WHERE 5000 = v16."productfeature"
+                  ) v20
+WHERE (v5."nr0m55" = v15."nr0m1" AND v5."nr0m55" = v20."nr0m2")
+)
+UNION ALL
+(
+SELECT DISTINCT v5."label10m46" AS "label10m46", v5."nr0m55" AS "nr0m55"
+FROM (
+      SELECT v3."label" AS "label10m46", v3."nr" AS "nr0m55"
+      FROM "ss5"."product2" v3
+      WHERE (v3."nr" IS NOT NULL AND v3."label" IS NOT NULL AND v3."propertynum1" IS NOT NULL) AND (v3."propertynum1" <= 375)
+     ) v5, (
+            SELECT v13."product" AS "nr0m1"
+            FROM "ss5"."productfeatureproduct2" v13
+            WHERE 5000 = v13."productfeature"
+           ) v15, (
+                   SELECT v18."product" AS "nr0m2"
+                   FROM "ss5"."productfeatureproduct2" v18
+                   WHERE 5000 = v18."productfeature"
+                  ) v20
+WHERE (v5."nr0m55" = v15."nr0m1" AND v5."nr0m55" = v20."nr0m2")
+)
 
-    UNION ALL
-
-        SELECT v4."propertynum1", v5."productfeature"
-        FROM "ss5"."product2" v4, "ss5"."productfeatureproduct2" v5, "ss3"."productfeature" v6
-        WHERE (
-            (v6."nr" >= 5000) AND
-            (v5."product" <= 15000) AND
-            v4."label" IS NOT NULL AND
-            v4."propertynum1" IS NOT NULL AND
-            v4."nr" = v5."product" AND
-            v5."productfeature" = v6."nr"
-            )
-        ) as v12
-GROUP BY v12."productfeature"
-
--- 53
-
-SELECT v12."productfeature" AS "Feature", AVG(v12."propertynum1") AS "mean"
-FROM(
-        SELECT v1."propertynum1", v2."productfeature"
-        FROM "ss1"."product1" v1, "ss1"."productfeatureproduct1" v2, "ss3"."productfeature" v3
-        WHERE (
-            (v3."nr" >= 5000) AND
-            (v2."product" <= 15000) AND
-            v1."label" IS NOT NULL AND
-            v1."propertynum1" IS NOT NULL AND
-            v1."nr" = v2."product" AND
-            v2."productfeature" = v3."nr"
-            )
-
-    UNION ALL
-
-        SELECT v4."propertynum1", v5."productfeature"
-        FROM "ss5"."product2" v4, "ss5"."productfeatureproduct2" v5, "ss3"."productfeature" v6
-        WHERE (
-            (v6."nr" >= 5000) AND
-            (v5."product" <= 15000) AND
-            v4."label" IS NOT NULL AND
-            v4."propertynum1" IS NOT NULL AND
-            v4."nr" = v5."product" AND
-            v5."productfeature" = v6."nr"
-            )
-        ) as v12
-GROUP BY v12."productfeature"
-
-19:42:41.945 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 02.sql
-19:42:41.948 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:42:41.950 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 54
+17:40:17.493 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 02.sql
+17:40:17.496 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+17:40:17.497 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 54
 
 SELECT v25."v26" AS "v26", v25."v6" AS "v6", v25."v9" AS "v9"
 FROM (SELECT 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Offer' AS "v26", 0 AS "v6", 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type' AS "v9"
@@ -3150,9 +3410,9 @@ FROM "ss4"."offer" v23
 WHERE (v23."validto" IS NOT NULL AND MOD(v23."deliverydays",3) = 0 AND v23."nr" <= 200000)
 ) v25
 
-19:42:41.966 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 03.sql
-19:42:41.969 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:42:41.970 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 125
+17:40:17.507 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 03.sql
+17:40:17.510 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+17:40:17.510 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 125
 -- CN
 
 SELECT DISTINCT v9."nr1m5" AS "nr1m5", v9."product1m5" AS "product1m5"
@@ -3178,9 +3438,9 @@ FROM "ss5"."product2" v5, "ss4"."offer" v6, "ss4"."vendor" v7
 WHERE ((v6."deliverydays" <= 3) AND (v5."nr" <= 125) AND v6."deliverydays" IS NOT NULL AND v6."price" IS NOT NULL AND v6."validto" IS NOT NULL AND v5."nr" = v6."product" AND v6."vendor" = v7."nr" AND 'CN' = v7."country")
 ) v9
 
-19:42:41.976 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 04.sql
-19:42:41.979 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:42:41.979 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 15000
+17:40:17.516 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 04.sql
+17:40:17.519 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+17:40:17.519 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 15000
 
 SELECT v76."comment10m20" AS "comment10m20", v76."label10m18" AS "label10m18", v76."label10m46" AS "label10m46", v76."label10m6" AS "label10m6", v76."propertynum1m25" AS "propertynum1m25", v76."propertynum1m40" AS "propertynum1m40", v76."propertynum1m41" AS "propertynum1m41", v76."propertytex1m30" AS "propertytex1m30", v76."propertytex1m31" AS "propertytex1m31", v76."propertytex1m32" AS "propertytex1m32", v76."propertytex1m33" AS "propertytex1m33", v76."propertytex1m34" AS "propertytex1m34"
 FROM (
@@ -3286,95 +3546,121 @@ FROM (
          )
      ) v76
 
-19:42:46.753 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - null
+17:40:22.894 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - null
 null
-19:42:46.756 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 00.sql
-19:42:46.759 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:42:46.760 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 57
+17:40:22.896 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 00.sql
+17:40:22.899 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+17:40:22.899 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 2000
 
 SELECT v12."nr2m23" AS "nr2m23", COUNT(*) AS "v1"
 FROM (
+	  SELECT DISTINCT v1."nr" AS "nr2m23", v6."productfeature" AS "productfeature2m2"
+	  FROM "ss1"."product1" v1, "ss1"."productfeatureproduct1" v6
+	  WHERE v1."nr" <= 2000 AND v1."nr"=v6."product"
+	  UNION ALL
 	  SELECT DISTINCT v3."nr" AS "nr2m23", v8."productfeature" AS "productfeature2m2"
 	  FROM "ss5"."product2" v3, "ss5"."productfeatureproduct2" v8
-	  WHERE v3."nr"=v8."product"
+	  WHERE v3."nr" <= 2000 AND v3."nr"=v8."product"
     ) v12
 GROUP BY v12."nr2m23"
 
--- 57
+-- 2000
 
 SELECT v12."nr2m23" AS "nr2m23", COUNT(*) AS "v1"
 FROM (
+	  SELECT DISTINCT v1."nr" AS "nr2m23", v6."productfeature" AS "productfeature2m2"
+	  FROM "ss1"."product1" v1, "ss1"."productfeatureproduct1" v6
+	  WHERE v1."nr" <= 2000 AND v1."nr"=v6."product"
+	  UNION ALL
 	  SELECT DISTINCT v3."nr" AS "nr2m23", v8."productfeature" AS "productfeature2m2"
 	  FROM "ss5"."product2" v3, "ss5"."productfeatureproduct2" v8
-	  WHERE v3."nr"=v8."product"
+	  WHERE v3."nr" <= 2000 AND v3."nr"=v8."product"
     ) v12
 GROUP BY v12."nr2m23"
 
-19:42:46.796 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 01.sql
-19:42:46.799 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:42:46.800 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 58
+17:40:22.949 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 01.sql
+17:40:22.951 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+17:40:22.953 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 5000
+-- 5000
+-- 856
+(
+SELECT DISTINCT v5."label10m46" AS "label10m46", v5."nr0m55" AS "nr0m55"
+FROM (
+	  SELECT v1."label" AS "label10m46", v1."nr" AS "nr0m55"
+      FROM "ss1"."product1" v1
+      WHERE (v1."nr" IS NOT NULL AND v1."label" IS NOT NULL AND v1."propertynum1" IS NOT NULL) AND (v1."propertynum1" <= 856)
+     ) v5, (
+			SELECT v11."product" AS "nr0m1"
+            FROM "ss1"."productfeatureproduct1" v11
+            WHERE 5000 = v11."productfeature"
+           ) v15, (
+				   SELECT v16."product" AS "nr0m2"
+                   FROM "ss1"."productfeatureproduct1" v16
+                   WHERE 5000 = v16."productfeature"
+                  ) v20
+WHERE (v5."nr0m55" = v15."nr0m1" AND v5."nr0m55" = v20."nr0m2")
+)
+UNION ALL
+(
+SELECT DISTINCT v5."label10m46" AS "label10m46", v5."nr0m55" AS "nr0m55"
+FROM (
+      SELECT v3."label" AS "label10m46", v3."nr" AS "nr0m55"
+      FROM "ss5"."product2" v3
+      WHERE (v3."nr" IS NOT NULL AND v3."label" IS NOT NULL AND v3."propertynum1" IS NOT NULL) AND (v3."propertynum1" <= 856)
+     ) v5, (
+            SELECT v13."product" AS "nr0m1"
+            FROM "ss5"."productfeatureproduct2" v13
+            WHERE 5000 = v13."productfeature"
+           ) v15, (
+                   SELECT v18."product" AS "nr0m2"
+                   FROM "ss5"."productfeatureproduct2" v18
+                   WHERE 5000 = v18."productfeature"
+                  ) v20
+WHERE (v5."nr0m55" = v15."nr0m1" AND v5."nr0m55" = v20."nr0m2")
+)
 
-SELECT v12."productfeature" AS "Feature", AVG(v12."propertynum1") AS "mean"
-FROM(
-        SELECT v1."propertynum1", v2."productfeature"
-        FROM "ss1"."product1" v1, "ss1"."productfeatureproduct1" v2, "ss3"."productfeature" v3
-        WHERE (
-            (v3."nr" >= 5000) AND
-            (v2."product" <= 15000) AND
-            v1."label" IS NOT NULL AND
-            v1."propertynum1" IS NOT NULL AND
-            v1."nr" = v2."product" AND
-            v2."productfeature" = v3."nr"
-            )
+-- 5000
+-- 5000
+-- 856
+(
+SELECT DISTINCT v5."label10m46" AS "label10m46", v5."nr0m55" AS "nr0m55"
+FROM (
+	  SELECT v1."label" AS "label10m46", v1."nr" AS "nr0m55"
+      FROM "ss1"."product1" v1
+      WHERE (v1."nr" IS NOT NULL AND v1."label" IS NOT NULL AND v1."propertynum1" IS NOT NULL) AND (v1."propertynum1" <= 856)
+     ) v5, (
+			SELECT v11."product" AS "nr0m1"
+            FROM "ss1"."productfeatureproduct1" v11
+            WHERE 5000 = v11."productfeature"
+           ) v15, (
+				   SELECT v16."product" AS "nr0m2"
+                   FROM "ss1"."productfeatureproduct1" v16
+                   WHERE 5000 = v16."productfeature"
+                  ) v20
+WHERE (v5."nr0m55" = v15."nr0m1" AND v5."nr0m55" = v20."nr0m2")
+)
+UNION ALL
+(
+SELECT DISTINCT v5."label10m46" AS "label10m46", v5."nr0m55" AS "nr0m55"
+FROM (
+      SELECT v3."label" AS "label10m46", v3."nr" AS "nr0m55"
+      FROM "ss5"."product2" v3
+      WHERE (v3."nr" IS NOT NULL AND v3."label" IS NOT NULL AND v3."propertynum1" IS NOT NULL) AND (v3."propertynum1" <= 856)
+     ) v5, (
+            SELECT v13."product" AS "nr0m1"
+            FROM "ss5"."productfeatureproduct2" v13
+            WHERE 5000 = v13."productfeature"
+           ) v15, (
+                   SELECT v18."product" AS "nr0m2"
+                   FROM "ss5"."productfeatureproduct2" v18
+                   WHERE 5000 = v18."productfeature"
+                  ) v20
+WHERE (v5."nr0m55" = v15."nr0m1" AND v5."nr0m55" = v20."nr0m2")
+)
 
-    UNION ALL
-
-        SELECT v4."propertynum1", v5."productfeature"
-        FROM "ss5"."product2" v4, "ss5"."productfeatureproduct2" v5, "ss3"."productfeature" v6
-        WHERE (
-            (v6."nr" >= 5000) AND
-            (v5."product" <= 15000) AND
-            v4."label" IS NOT NULL AND
-            v4."propertynum1" IS NOT NULL AND
-            v4."nr" = v5."product" AND
-            v5."productfeature" = v6."nr"
-            )
-        ) as v12
-GROUP BY v12."productfeature"
-
--- 58
-
-SELECT v12."productfeature" AS "Feature", AVG(v12."propertynum1") AS "mean"
-FROM(
-        SELECT v1."propertynum1", v2."productfeature"
-        FROM "ss1"."product1" v1, "ss1"."productfeatureproduct1" v2, "ss3"."productfeature" v3
-        WHERE (
-            (v3."nr" >= 5000) AND
-            (v2."product" <= 15000) AND
-            v1."label" IS NOT NULL AND
-            v1."propertynum1" IS NOT NULL AND
-            v1."nr" = v2."product" AND
-            v2."productfeature" = v3."nr"
-            )
-
-    UNION ALL
-
-        SELECT v4."propertynum1", v5."productfeature"
-        FROM "ss5"."product2" v4, "ss5"."productfeatureproduct2" v5, "ss3"."productfeature" v6
-        WHERE (
-            (v6."nr" >= 5000) AND
-            (v5."product" <= 15000) AND
-            v4."label" IS NOT NULL AND
-            v4."propertynum1" IS NOT NULL AND
-            v4."nr" = v5."product" AND
-            v5."productfeature" = v6."nr"
-            )
-        ) as v12
-GROUP BY v12."productfeature"
-
-19:42:47.009 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 02.sql
-19:42:47.011 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:42:47.013 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 59
+17:40:22.977 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 02.sql
+17:40:22.980 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+17:40:22.981 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 59
 
 SELECT v25."v26" AS "v26", v25."v6" AS "v6", v25."v9" AS "v9"
 FROM (SELECT 'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Offer' AS "v26", 0 AS "v6", 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type' AS "v9"
@@ -3478,9 +3764,9 @@ FROM "ss4"."offer" v23
 WHERE (v23."validto" IS NOT NULL AND MOD(v23."deliverydays",3) = 0 AND v23."nr" <= 200000)
 ) v25
 
-19:42:47.030 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 03.sql
-19:42:47.032 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:42:47.033 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 125
+17:40:22.995 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 03.sql
+17:40:22.998 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+17:40:22.998 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 125
 -- CN
 
 SELECT DISTINCT v9."nr1m5" AS "nr1m5", v9."product1m5" AS "product1m5"
@@ -3506,9 +3792,9 @@ FROM "ss5"."product2" v5, "ss4"."offer" v6, "ss4"."vendor" v7
 WHERE ((v6."deliverydays" <= 3) AND (v5."nr" <= 125) AND v6."deliverydays" IS NOT NULL AND v6."price" IS NOT NULL AND v6."validto" IS NOT NULL AND v5."nr" = v6."product" AND v6."vendor" = v7."nr" AND 'CN' = v7."country")
 ) v9
 
-19:42:47.039 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 04.sql
-19:42:47.042 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
-19:42:47.042 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 15000
+17:40:23.005 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - Doing query: 04.sql
+17:40:23.007 [Thread-0] DEBUG it.unibz.inf.mixer_main.execution.MixerThread - [mixer-debug] Call fillPlaceholders
+17:40:23.007 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - -- 15000
 
 SELECT v76."comment10m20" AS "comment10m20", v76."label10m18" AS "label10m18", v76."label10m46" AS "label10m46", v76."label10m6" AS "label10m6", v76."propertynum1m25" AS "propertynum1m25", v76."propertynum1m40" AS "propertynum1m40", v76."propertynum1m41" AS "propertynum1m41", v76."propertytex1m30" AS "propertytex1m30", v76."propertytex1m31" AS "propertytex1m31", v76."propertytex1m32" AS "propertytex1m32", v76."propertytex1m33" AS "propertytex1m33", v76."propertytex1m34" AS "propertytex1m34"
 FROM (
@@ -3614,5 +3900,5 @@ FROM (
          )
      ) v76
 
-19:42:52.082 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - null
+17:40:28.429 [Thread-0] INFO it.unibz.inf.mixer_main.execution.MixerThread - null
 null
