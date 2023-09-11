@@ -1,28 +1,26 @@
--- 15000
+-- 1000
 
-SELECT v76."comment10m20" AS "comment10m20", v76."label10m18" AS "label10m18", v76."label10m46" AS "label10m46", v76."label10m6" AS "label10m6", v76."propertynum1m25" AS "propertynum1m25", v76."propertynum1m40" AS "propertynum1m40", v76."propertynum1m41" AS "propertynum1m41", v76."propertytex1m30" AS "propertytex1m30", v76."propertytex1m31" AS "propertytex1m31", v76."propertytex1m32" AS "propertytex1m32", v76."propertytex1m33" AS "propertytex1m33", v76."propertytex1m34" AS "propertytex1m34"
+SELECT v11."deliverydays1m37" AS "deliverydays1m37", v11."label10m4" AS "label10m4", v11."label10m46" AS "label10m46", v11."nr1m21" AS "nr1m21", v11."offerwebpage1m24" AS "offerwebpage1m24", v11."price1m39" AS "price1m39", v11."product1m5" AS "product1m5", v11."validto1m45" AS "validto1m45", v11."vendor1m8" AS "vendor1m8"
 FROM (
-      SELECT v1o."p_nr" AS "nr2m23", v1o."p_label" AS "label10m46", v1o."p_comment" AS "comment10m20", v1o."pd_producer" AS "producer2m9",
-             v1o."pd_label" AS "label10m6", v1o."p_propertytex1" AS "propertytex1m34", v1o."p_propertytex2" AS "propertytex1m33",
-             v1o."p_propertytex3" AS "propertytex1m32", v1o."p_propertynum1" AS "propertynum1m41", v1o."p_propertynum2" AS "propertynum1m40",
-             v1o."p_propertytex4" AS "propertytex1m31", v1o."p_propertytex5" AS "propertytex1m30", v1o."p_propertynum4" AS "propertynum1m25",
-             v2o."f_label" AS "label10m18", v2o."productfeature" AS "productfeature2m2"
-      FROM "smatv"."ppd1" v1o, "smatv"."pfpf1" v2o
-      WHERE (v1o."p_nr" IS NOT NULL AND (v1o."p_nr" <= 15000) AND v1o."p_label" IS NOT NULL AND v1o."p_comment" IS NOT NULL AND v1o."p_propertytex1" IS NOT NULL
-	   AND v1o."p_propertytex2" IS NOT NULL AND v1o."p_propertytex3" IS NOT NULL AND v1o."p_propertynum1" IS NOT NULL
-	   AND v1o."p_propertynum2" IS NOT NULL AND v1o."pd_producer" IS NOT NULL AND (v2o."product"<=15000)
-	   AND v2o."product"=v1o."p_nr"
-	  )
-      UNION ALL
-      SELECT v1o."p_nr" AS "nr2m23", v1o."p_label" AS "label10m46", v1o."p_comment" AS "comment10m20", v1o."pd_producer" AS "producer2m9",
-             v1o."pd_label" AS "label10m6", v1o."p_propertytex1" AS "propertytex1m34", v1o."p_propertytex2" AS "propertytex1m33",
-             v1o."p_propertytex3" AS "propertytex1m32", v1o."p_propertynum1" AS "propertynum1m41", v1o."p_propertynum2" AS "propertynum1m40",
-             v1o."p_propertytex4" AS "propertytex1m31", v1o."p_propertytex5" AS "propertytex1m30", v1o."p_propertynum4" AS "propertynum1m25",
-             v2o."f_label" AS "label10m18", v2o."productfeature" AS "productfeature2m2"
-      FROM "smatv"."ppd2" v1o, "smatv"."pfpf2" v2o
-      WHERE (v1o."p_nr" IS NOT NULL AND (v1o."p_nr" <= 15000) AND v1o."p_label" IS NOT NULL AND v1o."p_comment" IS NOT NULL AND v1o."p_propertytex1" IS NOT NULL
-	   AND v1o."p_propertytex2" IS NOT NULL AND v1o."p_propertytex3" IS NOT NULL AND v1o."p_propertynum1" IS NOT NULL
-	   AND v1o."p_propertynum2" IS NOT NULL AND v1o."pd_producer" IS NOT NULL AND (v2o."product"<=15000)
-	   AND v2o."product"=v1o."p_nr"
-	  )
-) v76
+	  SELECT DISTINCT v9."deliverydays1m37" AS "deliverydays1m37", v9."homepage2m48" AS "homepage2m48",
+	  v9."label10m4" AS "label10m4", v9."label10m46" AS "label10m46", v9."nr1m21" AS "nr1m21",
+	  v9."offerwebpage1m24" AS "offerwebpage1m24", v9."price1m39" AS "price1m39", v9."product1m5" AS "product1m5",
+	  v9."validto1m45" AS "validto1m45", v9."vendor1m8" AS "vendor1m8"
+      FROM (
+		    SELECT v."o_deliverydays" AS "deliverydays1m37", v3."homepage" AS "homepage2m48", v3."label" AS "label10m4",
+		           v."p_label" AS "label10m46", v."o_nr" AS "nr1m21", v."o_offerwebpages" AS "offerwebpage1m24",
+		           v."o_price" AS "price1m39", v."p_nr" AS "product1m5", v."o_validto" AS "validto1m45", v."o_vendor" AS "vendor1m8"
+            FROM "smatv"."op1" v, "ss4"."vendor" v3
+            WHERE (v."p_label" IS NOT NULL AND (v."o_nr" <= 1000) AND v3."label" IS NOT NULL AND v3."homepage" IS NOT NULL AND
+                   v."o_offerwebpages" IS NOT NULL AND v."o_price" IS NOT NULL AND v."o_deliverydays" IS NOT NULL AND
+                   v."o_validto" IS NOT NULL AND v."o_vendor" = v3."nr")
+            UNION ALL
+            SELECT v."o_deliverydays" AS "deliverydays1m37", v7."homepage" AS "homepage2m48", v7."label" AS "label10m4",
+                   v."p_label" AS "label10m46", v."o_nr" AS "nr1m21", v."o_offerwebpages" AS "offerwebpage1m24",
+                   v."o_price" AS "price1m39", v."p_nr" AS "product1m5", v."o_validto" AS "validto1m45", v."o_vendor" AS "vendor1m8"
+            FROM "smatv"."op2" v, "ss4"."vendor" v7
+            WHERE (v."p_label" IS NOT NULL AND (v."o_nr" <= 1000) AND v7."label" IS NOT NULL AND v7."homepage" IS NOT NULL AND
+                   v."o_offerwebpages" IS NOT NULL AND v."o_price" IS NOT NULL AND v."o_deliverydays" IS NOT NULL AND
+                   v."o_validto" IS NOT NULL AND v."o_vendor" = v7."nr")
+           ) v9
+) v11

@@ -1,52 +1,22 @@
--- 15000
+-- 1000
 
-SELECT v76."comment10m20" AS "comment10m20", v76."label10m18" AS "label10m18", v76."label10m46" AS "label10m46", v76."label10m6" AS "label10m6", v76."propertynum1m25" AS "propertynum1m25", v76."propertynum1m40" AS "propertynum1m40", v76."propertynum1m41" AS "propertynum1m41", v76."propertytex1m30" AS "propertytex1m30", v76."propertytex1m31" AS "propertytex1m31", v76."propertytex1m32" AS "propertytex1m32", v76."propertytex1m33" AS "propertytex1m33", v76."propertytex1m34" AS "propertytex1m34"
+SELECT v11."deliverydays1m37" AS "deliverydays1m37", v11."label10m4" AS "label10m4", v11."label10m46" AS "label10m46", v11."nr1m21" AS "nr1m21", v11."offerwebpage1m24" AS "offerwebpage1m24", v11."price1m39" AS "price1m39", v11."product1m5" AS "product1m5", v11."validto1m45" AS "validto1m45", v11."vendor1m8" AS "vendor1m8"
 FROM (
-         (
-             SELECT DISTINCT v5."comment10m20" AS "comment10m20", v5."label10m18" AS "label10m18", v5."label10m46" AS "label10m46",
-                             v5."label10m6" AS "label10m6", CASE WHEN v5."propertynum1m25" IS NOT NULL THEN v5."nr2m23" ELSE NULL END AS "nr0m25",
-                             CASE WHEN v5."propertytex1m30" IS NOT NULL THEN v5."nr2m23" ELSE NULL END AS "nr0m30",
-                             CASE WHEN v5."propertytex1m31" IS NOT NULL THEN v5."nr2m23" ELSE NULL END AS "nr0m31",
-                             v5."nr2m23" AS "nr2m23", v5."producer2m9" AS "producer2m9", v5."productfeature2m2" AS "productfeature2m2",
-                             v5."propertynum1m25" AS "propertynum1m25", v5."propertynum1m40" AS "propertynum1m40",
-                             v5."propertynum1m41" AS "propertynum1m41", v5."propertytex1m30" AS "propertytex1m30",
-                             v5."propertytex1m31" AS "propertytex1m31", v5."propertytex1m32" AS "propertytex1m32",
-                             v5."propertytex1m33" AS "propertytex1m33", v5."propertytex1m34" AS "propertytex1m34"
-             FROM (
-                      SELECT v1."nr" AS "nr2m23", v1."label" AS "label10m46", v1."comment" AS "comment10m20", v1."producer" AS "producer2m9", v17."label" AS "label10m6",
-                             v29."label" AS "label10m18", v28."productfeature" AS "productfeature2m2",
-                             v1."propertytex1" AS "propertytex1m34", v1."propertytex2" AS "propertytex1m33", v1."propertytex3" AS "propertytex1m32",
-                             v1."propertynum1" AS "propertynum1m41", v1."propertynum2" AS "propertynum1m40", v1."propertytex4" AS "propertytex1m31",
-                             v1."propertytex5" AS "propertytex1m30", v1."propertynum4" AS "propertynum1m25"
-                      FROM "ss1"."product1" v1, "ss4"."producer" v17, "ss1"."productfeatureproduct1" v28, "ss3"."productfeature" v29
-                      WHERE (v1."nr" IS NOT NULL AND (v1."nr" <= 15000) AND v1."label" IS NOT NULL AND v1."comment" IS NOT NULL AND v1."producer"=v17."nr" AND
-                             v1."nr"=v28."product" AND v29."label" IS NOT NULL and v28."productfeature"=v29."nr" AND v1."propertytex1" IS NOT NULL AND
-                             v1."propertytex2" IS NOT NULL AND v1."propertytex3" IS NOT NULL AND v1."propertynum1" IS NOT NULL AND
-                             v1."propertynum2" IS NOT NULL)
-                  ) v5
-         )
-         UNION ALL
-         (
-             SELECT DISTINCT v5."comment10m20" AS "comment10m20", v5."label10m18" AS "label10m18", v5."label10m46" AS "label10m46",
-                             v5."label10m6" AS "label10m6", CASE WHEN v5."propertynum1m25" IS NOT NULL THEN v5."nr2m23" ELSE NULL END AS "nr0m25",
-                             CASE WHEN v5."propertytex1m30" IS NOT NULL THEN v5."nr2m23" ELSE NULL END AS "nr0m30",
-                             CASE WHEN v5."propertytex1m31" IS NOT NULL THEN v5."nr2m23" ELSE NULL END AS "nr0m31",
-                             v5."nr2m23" AS "nr2m23", v5."producer2m9" AS "producer2m9", v5."productfeature2m2" AS "productfeature2m2",
-                             v5."propertynum1m25" AS "propertynum1m25", v5."propertynum1m40" AS "propertynum1m40",
-                             v5."propertynum1m41" AS "propertynum1m41", v5."propertytex1m30" AS "propertytex1m30",
-                             v5."propertytex1m31" AS "propertytex1m31", v5."propertytex1m32" AS "propertytex1m32",
-                             v5."propertytex1m33" AS "propertytex1m33", v5."propertytex1m34" AS "propertytex1m34"
-             FROM (
-                      SELECT v1."nr" AS "nr2m23", v1."label" AS "label10m46", v1."comment" AS "comment10m20", v1."producer" AS "producer2m9", v17."label" AS "label10m6",
-                             v29."label" AS "label10m18", v28."productfeature" AS "productfeature2m2",
-                             v1."propertytex1" AS "propertytex1m34", v1."propertytex2" AS "propertytex1m33", v1."propertytex3" AS "propertytex1m32",
-                             v1."propertynum1" AS "propertynum1m41", v1."propertynum2" AS "propertynum1m40", v1."propertytex4" AS "propertytex1m31",
-                             v1."propertytex5" AS "propertytex1m30", v1."propertynum4" AS "propertynum1m25"
-                      FROM "ss5"."product2" v1, "ss4"."producer" v17, "ss5"."productfeatureproduct2" v28, "ss3"."productfeature" v29
-                      WHERE (v1."nr" IS NOT NULL AND (v1."nr" <= 15000) AND v1."label" IS NOT NULL AND v1."comment" IS NOT NULL AND v1."producer"=v17."nr" AND
-                             v1."nr"=v28."product" AND v29."label" IS NOT NULL and v28."productfeature"=v29."nr" AND v1."propertytex1" IS NOT NULL AND
-                             v1."propertytex2" IS NOT NULL AND v1."propertytex3" IS NOT NULL AND v1."propertynum1" IS NOT NULL AND
-                             v1."propertynum2" IS NOT NULL)
-                  ) v5
-         )
-     ) v76
+         SELECT DISTINCT v9."deliverydays1m37" AS "deliverydays1m37", v9."homepage2m48" AS "homepage2m48",
+                         v9."label10m4" AS "label10m4", v9."label10m46" AS "label10m46", v9."nr1m21" AS "nr1m21",
+                         v9."offerwebpage1m24" AS "offerwebpage1m24", v9."price1m39" AS "price1m39", v9."product1m5" AS "product1m5",
+                         v9."validto1m45" AS "validto1m45", v9."vendor1m8" AS "vendor1m8"
+         FROM (
+                  SELECT v2."deliverydays" AS "deliverydays1m37", v3."homepage" AS "homepage2m48", v3."label" AS "label10m4",
+                         v1."label" AS "label10m46", v2."nr" AS "nr1m21", v2."offerwebpage" AS "offerwebpage1m24",
+                         v2."price" AS "price1m39", v1."nr" AS "product1m5", v2."validto" AS "validto1m45", v2."vendor" AS "vendor1m8"
+                  FROM "ss1"."product1" v1, "ss4"."offer" v2, "ss4"."vendor" v3
+                  WHERE (v1."label" IS NOT NULL AND (v2."nr" <= 1000) AND v3."label" IS NOT NULL AND v3."homepage" IS NOT NULL AND v2."offerwebpage" IS NOT NULL AND v2."price" IS NOT NULL AND v2."deliverydays" IS NOT NULL AND v2."validto" IS NOT NULL AND v1."nr" = v2."product" AND v2."vendor" = v3."nr")
+                  UNION ALL
+                  SELECT v6."deliverydays" AS "deliverydays1m37", v7."homepage" AS "homepage2m48", v7."label" AS "label10m4",
+                         v5."label" AS "label10m46", v6."nr" AS "nr1m21", v6."offerwebpage" AS "offerwebpage1m24",
+                         v6."price" AS "price1m39", v5."nr" AS "product1m5", v6."validto" AS "validto1m45", v6."vendor" AS "vendor1m8"
+                  FROM "ss5"."product2" v5, "ss4"."offer" v6, "ss4"."vendor" v7
+                  WHERE (v5."label" IS NOT NULL AND (v6."nr" <= 1000) AND v7."label" IS NOT NULL AND v7."homepage" IS NOT NULL AND v6."offerwebpage" IS NOT NULL AND v6."price" IS NOT NULL AND v6."deliverydays" IS NOT NULL AND v6."validto" IS NOT NULL AND v5."nr" = v6."product" AND v6."vendor" = v7."nr")
+              ) v9
+     ) v11
