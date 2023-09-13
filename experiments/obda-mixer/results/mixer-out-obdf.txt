@@ -1,4 +1,0 @@
-Exception in thread "Thread-0" java.lang.NullPointerException
-	at java.base/java.util.Arrays.sort(Arrays.java:1249)
-	at it.unibz.inf.mixer_main.execution.TemplateQuerySelector.<init>(TemplateQuerySelector.java:52)
-	at it.unibz.inf.mixer_main.execution.MixerThread.run(MixerThread.java:100)
