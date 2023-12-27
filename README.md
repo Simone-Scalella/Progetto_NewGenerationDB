@@ -123,3 +123,7 @@ Modificando la query ottimizzata, aggiungendo o cambiando delle condizioni, si v
 Quando saranno disponibili le componenti per l’ottimizzazione, si potrà riprendere la fase di questo progetto relativa alla scrittura di nuove query, in maniera tale da testare le capacità di ottimizzazione del sistema in maniera più approfondita e per comprendere al meglio pregi e difetti di questa architettura.
 
 In conclusione, i risultati che abbiamo ottenuto sono analoghi a quelli che hanno ottenuto gli autori dell’articolo, quindi, le ottimizzazioni implementate rendono la valutazione delle query effettivamente più veloce. L’ottimizzazione viene effettuata nel primo livello dell’architettura, quello rappresentato da obda. Durante la fase di traduzione applica gli hint per ottimizzare, con e senza viste materializzate, la query. Purtroppo, non si è potuto testare ulteriormente tale meccanismo. La traduzione delle query sparql è chiara ed è applicabile per ottenere delle query che possono essere mandate in esecuzione sugli altri container.
+
+# Autori
+* Zhang Yihang: [Github](https://github.com/Accout-Personal)
+* Scalella Simone: [Github](https://github.com/Simone-Scalella)
